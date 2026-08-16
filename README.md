@@ -4,6 +4,8 @@
 
 # WebLibre
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 <p align="center"><strong>A privacy-focused Android browser with powerful browsing separation, local-first tools, and deep customization.</strong></p>
 
 <p align="center">

@@ -1,0 +1,569 @@
+{
+  "@@locale": "en",
+  "appTitle": "WebLibre",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "initializationError": "Initialization Error",
+  "@initializationError": {
+    "description": "Title shown when app fails to initialize"
+  },
+  "couldNotInitializeApp": "Could not initialize App",
+  "@couldNotInitializeApp": {
+    "description": "Error message when app initialization fails"
+  },
+  "downloadCompleted": "Download completed",
+  "@downloadCompleted": {
+    "description": "Snackbar message for completed download"
+  },
+  "open": "Open",
+  "@open": {
+    "description": "Button to open a file"
+  },
+  "couldNotOpenDownloadedFile": "Could not open downloaded file",
+  "@couldNotOpenDownloadedFile": {
+    "description": "Error message when opening downloaded file fails"
+  },
+  "downloadFailed": "Download failed: {fileName}",
+  "@downloadFailed": {
+    "description": "Error message for failed download",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings screen title"
+  },
+  "generalSettings": "General",
+  "@generalSettings": {
+    "description": "General settings section"
+  },
+  "privacySecurity": "Privacy & Security",
+  "@privacySecurity": {
+    "description": "Privacy and Security settings section"
+  },
+  "search": "Search",
+  "@search": {
+    "description": "Search label"
+  },
+  "extensions": "Extensions",
+  "@extensions": {
+    "description": "Extensions section"
+  },
+  "advanced": "Advanced",
+  "@advanced": {
+    "description": "Advanced settings section"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "Save button"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "done": "Done",
+  "@done": {
+    "description": "Done button"
+  },
+  "retry": "Retry",
+  "@retry": {
+    "description": "Retry button"
+  },
+  "close": "Close",
+  "@close": {
+    "description": "Close button"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "OK button"
+  },
+  "enable": "Enable",
+  "@enable": {
+    "description": "Enable toggle"
+  },
+  "disable": "Disable",
+  "@disable": {
+    "description": "Disable toggle"
+  },
+  "newTab": "New Tab",
+  "@newTab": {
+    "description": "New tab action"
+  },
+  "newPrivateTab": "New Private Tab",
+  "@newPrivateTab": {
+    "description": "New private tab action"
+  },
+  "closeTab": "Close Tab",
+  "@closeTab": {
+    "description": "Close tab action"
+  },
+  "bookmarks": "Bookmarks",
+  "@bookmarks": {
+    "description": "Bookmarks section"
+  },
+  "history": "History",
+  "@history": {
+    "description": "History section"
+  },
+  "downloads": "Downloads",
+  "@downloads": {
+    "description": "Downloads section"
+  },
+  "translatePage": "Translate Page",
+  "@translatePage": {
+    "description": "Translate page button"
+  },
+  "showOriginal": "Show Original",
+  "@showOriginal": {
+    "description": "Show original untranslated page"
+  },
+  "retranslate": "Retranslate",
+  "@retranslate": {
+    "description": "Retranslate button"
+  },
+  "translate": "Translate",
+  "@translate": {
+    "description": "Translate button"
+  },
+  "failedToRestorePage": "Failed to restore page",
+  "@failedToRestorePage": {
+    "description": "Error when page restoration fails"
+  },
+  "failedToTranslatePage": "Failed to translate page",
+  "@failedToTranslatePage": {
+    "description": "Error when translation fails"
+  },
+  "translationError": "Translation error: {errorName}",
+  "@translationError": {
+    "description": "Translation error message",
+    "placeholders": {
+      "errorName": {
+        "type": "String"
+      }
+    }
+  },
+  "from": "From",
+  "@from": {
+    "description": "Translation source language label"
+  },
+  "to": "To",
+  "@to": {
+    "description": "Translation target language label"
+  },
+  "reload": "Reload",
+  "@reload": {
+    "description": "Reload page action"
+  },
+  "stop": "Stop",
+  "@stop": {
+    "description": "Stop loading action"
+  },
+  "forward": "Forward",
+  "@forward": {
+    "description": "Navigate forward"
+  },
+  "back": "Back",
+  "@back": {
+    "description": "Navigate back"
+  },
+  "share": "Share",
+  "@share": {
+    "description": "Share action"
+  },
+  "findInPage": "Find in Page",
+  "@findInPage": {
+    "description": "Find in page action"
+  },
+  "desktopSite": "Desktop Site",
+  "@desktopSite": {
+    "description": "Toggle desktop site"
+  },
+  "clearData": "Clear Data",
+  "@clearData": {
+    "description": "Clear browsing data"
+  },
+  "clearSiteData": "Clear Site Data",
+  "@clearSiteData": {
+    "description": "Clear site data"
+  },
+  "cookies": "Cookies",
+  "@cookies": {
+    "description": "Cookies label"
+  },
+  "cachedFiles": "Cached Files",
+  "@cachedFiles": {
+    "description": "Cached files label"
+  },
+  "siteData": "Site Data",
+  "@siteData": {
+    "description": "Site data label"
+  },
+  "browsingHistory": "Browsing History",
+  "@browsingHistory": {
+    "description": "Browsing history label"
+  },
+  "about": "About",
+  "@about": {
+    "description": "About section"
+  },
+  "version": "Version",
+  "@version": {
+    "description": "App version label"
+  },
+  "license": "License",
+  "@license": {
+    "description": "License label"
+  },
+  "sourceCode": "Source Code",
+  "@sourceCode": {
+    "description": "Source code link"
+  },
+  "privacyPolicy": "Privacy Policy",
+  "@privacyPolicy": {
+    "description": "Privacy policy link"
+  },
+  "enableSearchSuggestions": "Search Suggestions",
+  "@enableSearchSuggestions": {
+    "description": "Search suggestions toggle"
+  },
+  "defaultSearchEngine": "Default Search Engine",
+  "@defaultSearchEngine": {
+    "description": "Default search engine setting"
+  },
+  "addSearchEngine": "Add Search Engine",
+  "@addSearchEngine": {
+    "description": "Add custom search engine"
+  },
+  "removeSearchEngine": "Remove",
+  "@removeSearchEngine": {
+    "description": "Remove search engine"
+  },
+  "editSearchEngine": "Edit",
+  "@editSearchEngine": {
+    "description": "Edit search engine"
+  },
+  "container": "Container",
+  "@container": {
+    "description": "Container label"
+  },
+  "containers": "Containers",
+  "@containers": {
+    "description": "Containers section"
+  },
+  "newContainer": "New Container",
+  "@newContainer": {
+    "description": "Create new container"
+  },
+  "color": "Color",
+  "@color": {
+    "description": "Color picker label"
+  },
+  "name": "Name",
+  "@name": {
+    "description": "Name input label"
+  },
+  "icon": "Icon",
+  "@icon": {
+    "description": "Icon picker label"
+  },
+  "proxy": "Proxy",
+  "@proxy": {
+    "description": "Proxy settings section"
+  },
+  "tor": "Tor",
+  "@tor": {
+    "description": "Tor settings section"
+  },
+  "connections": "Connections",
+  "@connections": {
+    "description": "Connections section"
+  },
+  "connected": "Connected",
+  "@connected": {
+    "description": "Connection status connected"
+  },
+  "disconnected": "Disconnected",
+  "@disconnected": {
+    "description": "Connection status disconnected"
+  },
+  "connecting": "Connecting...",
+  "@connecting": {
+    "description": "Connection status connecting"
+  },
+  "error": "Error",
+  "@error": {
+    "description": "Generic error label"
+  },
+  "warning": "Warning",
+  "@warning": {
+    "description": "Generic warning label"
+  },
+  "loading": "Loading...",
+  "@loading": {
+    "description": "Loading indicator text"
+  },
+  "noResults": "No results found",
+  "@noResults": {
+    "description": "No search results message"
+  },
+  "searchSettings": "Search Settings",
+  "@searchSettings": {
+    "description": "Search within settings"
+  },
+  "languageRegionSettings": "Language & Region Settings",
+  "@languageRegionSettings": {
+    "description": "Language and region settings title"
+  },
+  "browserLanguages": "Browser Languages",
+  "@browserLanguages": {
+    "description": "Browser languages setting"
+  },
+  "customLocale": "Custom Locale",
+  "@customLocale": {
+    "description": "Custom locale setting"
+  },
+  "pureBlack": "Pure Black (OLED)",
+  "@pureBlack": {
+    "description": "Pure black OLED setting"
+  },
+  "refreshRate": "Refresh Rate",
+  "@refreshRate": {
+    "description": "Display refresh rate setting"
+  },
+  "systemDefault": "System Default",
+  "@systemDefault": {
+    "description": "System default option"
+  },
+  "high": "High",
+  "@high": {
+    "description": "High refresh rate option"
+  },
+  "low": "Low",
+  "@low": {
+    "description": "Low refresh rate option"
+  },
+  "uiScale": "UI Scale",
+  "@uiScale": {
+    "description": "UI scale factor setting"
+  },
+  "fontSize": "Font Size",
+  "@fontSize": {
+    "description": "Font size setting"
+  },
+  "disableAnimations": "Disable Animations",
+  "@disableAnimations": {
+    "description": "Disable animations setting"
+  },
+  "resetAllPreferences": "Reset All Preferences",
+  "@resetAllPreferences": {
+    "description": "Reset all settings to defaults"
+  },
+  "showCloseButton": "Show Close Button",
+  "@showCloseButton": {
+    "description": "Show close button on new tab screen"
+  },
+  "customTabs": "Custom Tabs",
+  "@customTabs": {
+    "description": "Custom tabs toggle"
+  },
+  "updateAllExtensions": "Update All",
+  "@updateAllExtensions": {
+    "description": "Update all extensions button"
+  },
+  "installExtension": "Install",
+  "@installExtension": {
+    "description": "Install extension button"
+  },
+  "uninstallExtension": "Remove",
+  "@uninstallExtension": {
+    "description": "Remove extension button"
+  },
+  "extensionsSettings": "Extensions",
+  "@extensionsSettings": {
+    "description": "Extensions settings section title"
+  },
+  "allowUnsignedExtensions": "Allow Unsigned Extensions",
+  "@allowUnsignedExtensions": {
+    "description": "Allow unsigned extensions setting"
+  },
+  "searchHistory": "Search History",
+  "@searchHistory": {
+    "description": "Search history label"
+  },
+  "clearHistory": "Clear History",
+  "@clearHistory": {
+    "description": "Clear history action"
+  },
+  "recentSearches": "Recent Searches",
+  "@recentSearches": {
+    "description": "Recent searches label"
+  },
+  "topSites": "Shortcuts",
+  "@topSites": {
+    "description": "Top sites / shortcuts label"
+  },
+  "pinShortcut": "Pin",
+  "@pinShortcut": {
+    "description": "Pin shortcut action"
+  },
+  "unpinShortcut": "Unpin",
+  "@unpinShortcut": {
+    "description": "Unpin shortcut action"
+  },
+  "editShortcut": "Edit",
+  "@editShortcut": {
+    "description": "Edit shortcut action"
+  },
+  "removeShortcut": "Remove",
+  "@removeShortcut": {
+    "description": "Remove shortcut action"
+  },
+  "onboardingWelcome": "Welcome to WebLibre",
+  "@onboardingWelcome": {
+    "description": "Onboarding welcome title"
+  },
+  "onboardingGetStarted": "Get Started",
+  "@onboardingGetStarted": {
+    "description": "Onboarding get started button"
+  },
+  "onboardingNext": "Next",
+  "@onboardingNext": {
+    "description": "Onboarding next button"
+  },
+  "onboardingSkip": "Skip",
+  "@onboardingSkip": {
+    "description": "Onboarding skip button"
+  },
+  "onboardingFinish": "Finish",
+  "@onboardingFinish": {
+    "description": "Onboarding finish button"
+  },
+  "restoreBackup": "Restore Backup",
+  "@restoreBackup": {
+    "description": "Restore backup button"
+  },
+  "createBackup": "Create Backup",
+  "@createBackup": {
+    "description": "Create backup button"
+  },
+  "backupPassword": "Backup Password",
+  "@backupPassword": {
+    "description": "Backup password input"
+  },
+  "importBookmarks": "Import Bookmarks",
+  "@importBookmarks": {
+    "description": "Import bookmarks action"
+  },
+  "exportBookmarks": "Export Bookmarks",
+  "@exportBookmarks": {
+    "description": "Export bookmarks action"
+  },
+  "printPage": "Print",
+  "@printPage": {
+    "description": "Print page action"
+  },
+  "saveAsPdf": "Save as PDF",
+  "@saveAsPdf": {
+    "description": "Save page as PDF action"
+  },
+  "exportAsImage": "Save as Image",
+  "@exportAsImage": {
+    "description": "Export page as image action"
+  },
+  "exportAsMarkdown": "Export as Markdown",
+  "@exportAsMarkdown": {
+    "description": "Export page as markdown action"
+  },
+  "copyAsMarkdown": "Copy as Markdown",
+  "@copyAsMarkdown": {
+    "description": "Copy page as markdown action"
+  },
+  "copyImage": "Copy Image",
+  "@copyImage": {
+    "description": "Copy image action"
+  },
+  "copyLink": "Copy Link",
+  "@copyLink": {
+    "description": "Copy link action"
+  },
+  "openInNewTab": "Open in New Tab",
+  "@openInNewTab": {
+    "description": "Open link in new tab"
+  },
+  "openInPrivateTab": "Open in Private Tab",
+  "@openInPrivateTab": {
+    "description": "Open link in private tab"
+  },
+  "openInContainer": "Open in Container",
+  "@openInContainer": {
+    "description": "Open link in container tab"
+  },
+  "screenshotProtection": "Screenshot Protection",
+  "@screenshotProtection": {
+    "description": "Screenshot protection setting"
+  },
+  "privateTabsNotification": "Private tabs are open",
+  "@privateTabsNotification": {
+    "description": "Notification text for private tabs"
+  },
+  "closeAllPrivateTabs": "Close All Private Tabs",
+  "@closeAllPrivateTabs": {
+    "description": "Close all private tabs action"
+  },
+  "lockOnStartupOnly": "Lock on Startup Only",
+  "@lockOnStartupOnly": {
+    "description": "Lock on startup only setting"
+  },
+  "trackingProtection": "Tracking Protection",
+  "@trackingProtection": {
+    "description": "Tracking protection label"
+  },
+  "enhancedTrackingProtection": "Enhanced Tracking Protection",
+  "@enhancedTrackingProtection": {
+    "description": "Enhanced tracking protection label"
+  },
+  "contentBlocking": "Content Blocking",
+  "@contentBlocking": {
+    "description": "Content blocking label"
+  },
+  "safeBrowsing": "Safe Browsing",
+  "@safeBrowsing": {
+    "description": "Safe browsing setting"
+  },
+  "geolocationPrivacy": "Geolocation Privacy",
+  "@geolocationPrivacy": {
+    "description": "Geolocation privacy setting"
+  },
+  "webglPrivacy": "WebGL Privacy",
+  "@webglPrivacy": {
+    "description": "WebGL privacy setting"
+  },
+  "webrtcIpLeak": "WebRTC IP Leak Prevention",
+  "@webrtcIpLeak": {
+    "description": "WebRTC IP leak prevention"
+  },
+  "certificateTransparency": "Certificate Transparency",
+  "@certificateTransparency": {
+    "description": "Certificate transparency setting"
+  },
+  "urlCleaner": "URL Cleaner",
+  "@urlCleaner": {
+    "description": "URL cleaner setting"
+  },
+  "dnsOverHttps": "DNS over HTTPS",
+  "@dnsOverHttps": {
+    "description": "DNS over HTTPS setting"
+  },
+  "customDns": "Custom DNS",
+  "@customDns": {
+    "description": "Custom DNS setting"
+  }
+}
