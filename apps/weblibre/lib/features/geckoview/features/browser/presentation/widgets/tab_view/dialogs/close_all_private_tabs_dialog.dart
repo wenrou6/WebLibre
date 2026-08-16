@@ -18,6 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 Future<bool?> showCloseAllPrivateTabsDialog(BuildContext context) {
   return showDialog<bool?>(
@@ -25,22 +26,22 @@ Future<bool?> showCloseAllPrivateTabsDialog(BuildContext context) {
     builder: (BuildContext context) {
       return AlertDialog(
         icon: const Icon(Icons.warning),
-        title: const Text('Close All Private Tabs'),
-        content: const Text(
-          'Are you sure you want to close all displayed private tabs?',
+        title: Text(AppLocalizations.of(context)!.closeAllPrivateTabs),
+        content: Text(
+          AppLocalizations.of(context)!.closeAllPrivateTabsQuestion,
         ),
         actions: <Widget>[
           TextButton(
             onPressed: () {
               Navigator.pop(context, false);
             },
-            child: const Text('Cancel'),
+            child: Text(AppLocalizations.of(context)!.cancel),
           ),
           TextButton(
             onPressed: () {
               Navigator.pop(context, true);
             },
-            child: const Text('Close'),
+            child: Text(AppLocalizations.of(context)!.close),
           ),
         ],
       );

@@ -22,6 +22,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/data/models/drag_data.dart';
 import 'package:weblibre/features/geckoview/features/tabs/data/models/container_data.dart';
@@ -170,21 +171,25 @@ class _TabDropActionSheet extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const ListTile(
-            title: Text('Drop tab onto tab'),
-            subtitle: Text('Choose how these tabs should be related.'),
+          ListTile(
+            title: Text(AppLocalizations.of(context)!.dropTabOntoTab),
+            subtitle: Text(AppLocalizations.of(context)!.chooseTabRelationship),
           ),
           ListTile(
             leading: const Icon(MdiIcons.folderPlus),
-            title: const Text('Create container'),
-            subtitle: const Text('Create a new container with both tabs.'),
+            title: Text(AppLocalizations.of(context)!.createContainer),
+            subtitle: Text(
+              AppLocalizations.of(context)!.createContainerWithBothTabs,
+            ),
             onTap: () =>
                 Navigator.of(context).pop(_TabDropAction.createContainer),
           ),
           ListTile(
             leading: const Icon(MdiIcons.fileTree),
-            title: const Text('Assign new parent'),
-            subtitle: const Text('Make the dropped-on tab the parent.'),
+            title: Text(AppLocalizations.of(context)!.assignNewParent),
+            subtitle: Text(
+              AppLocalizations.of(context)!.makeDroppedOnTabParent,
+            ),
             onTap: () => Navigator.of(context).pop(_TabDropAction.assignParent),
           ),
         ],

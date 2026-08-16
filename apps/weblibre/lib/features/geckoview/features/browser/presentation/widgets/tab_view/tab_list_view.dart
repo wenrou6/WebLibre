@@ -26,6 +26,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_reorderable_grid_view/widgets/custom_draggable.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:nullability/nullability.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/providers/global_drop.dart';
 import 'package:weblibre/core/providers/persisted_bool.dart';
 import 'package:weblibre/core/routing/routes.dart';
@@ -196,7 +197,9 @@ class _TabListView extends HookConsumerWidget {
       skipLoadingOnReload: true,
       data: (tabs) {
         if (tabs.isEmpty) {
-          return const Center(child: Text('No synced tabs available'));
+          return Center(
+            child: Text(AppLocalizations.of(context)!.noSyncedTabsAvailable),
+          );
         }
 
         return Padding(
@@ -227,8 +230,13 @@ class _TabListView extends HookConsumerWidget {
         );
       },
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (error, _) =>
-          Center(child: Text('Failed to load synced tabs: $error')),
+      error: (error, _) => Center(
+        child: Text(
+          AppLocalizations.of(
+            context,
+          )!.failedToLoadSyncedTabs(error.toString()),
+        ),
+      ),
     );
   }
 

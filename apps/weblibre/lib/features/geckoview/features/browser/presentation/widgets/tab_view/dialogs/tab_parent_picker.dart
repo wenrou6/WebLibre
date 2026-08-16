@@ -20,6 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/tab_view/tab_preview.dart';
 import 'package:weblibre/features/geckoview/features/tabs/domain/providers.dart';
 import 'package:weblibre/features/geckoview/features/tabs/domain/repositories/tab.dart';
@@ -95,14 +96,24 @@ class _TabParentPickerSheet extends HookConsumerWidget {
       builder: (context, scrollController) {
         return movingTabAsync.when(
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (e, _) => Center(child: Text('Error: $e')),
+          error: (e, _) => Center(
+            child: Text(
+              AppLocalizations.of(context)!.errorWithDetails(e.toString()),
+            ),
+          ),
           data: (movingTab) {
             if (movingTab == null) {
-              return const Center(child: Text('Tab no longer exists'));
+              return Center(
+                child: Text(AppLocalizations.of(context)!.tabNoLongerExists),
+              );
             }
             return descendantsAsync.when(
               loading: () => const Center(child: CircularProgressIndicator()),
-              error: (e, _) => Center(child: Text('Error: $e')),
+              error: (e, _) => Center(
+                child: Text(
+                  AppLocalizations.of(context)!.errorWithDetails(e.toString()),
+                ),
+              ),
               data: (descendants) {
                 final excluded = descendants.keys.toSet()..add(tabId);
                 final containerId = movingTab.containerId;
@@ -112,7 +123,13 @@ class _TabParentPickerSheet extends HookConsumerWidget {
                 return candidatesAsync.when(
                   loading: () =>
                       const Center(child: CircularProgressIndicator()),
-                  error: (e, _) => Center(child: Text('Error: $e')),
+                  error: (e, _) => Center(
+                    child: Text(
+                      AppLocalizations.of(
+                        context,
+                      )!.errorWithDetails(e.toString()),
+                    ),
+                  ),
                   data: (tabs) {
                     final candidates = tabs
                         .where((t) => !excluded.contains(t.id))
@@ -135,8 +152,14 @@ class _TabParentPickerSheet extends HookConsumerWidget {
                         SliverToBoxAdapter(
                           child: ListTile(
                             leading: const Icon(MdiIcons.fileTreeOutline),
-                            title: const Text('Make standalone'),
-                            subtitle: const Text('Detach from current parent'),
+                            title: Text(
+                              AppLocalizations.of(context)!.makeStandalone,
+                            ),
+                            subtitle: Text(
+                              AppLocalizations.of(
+                                context,
+                              )!.detachFromCurrentParent,
+                            ),
                             enabled: movingTab.parentId != null,
                             onTap: () => Navigator.of(
                               context,

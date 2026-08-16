@@ -18,6 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 
@@ -54,17 +55,17 @@ class _ClearContainerDataDialog extends HookWidget {
 
     return AlertDialog(
       icon: const Icon(MdiIcons.databaseRemove),
-      title: const Text('Clear Container Data'),
+      title: Text(AppLocalizations.of(context)!.clearContainerData),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('This will clear all data for this container:'),
+          Text(AppLocalizations.of(context)!.clearAllContainerDataPrompt),
           const SizedBox(height: 8),
-          const Text('• Cookies'),
-          const Text('• Site data'),
-          const Text('• Cache'),
-          const Text('• Permissions'),
+          Text('• ${AppLocalizations.of(context)!.cookies}'),
+          Text('• ${AppLocalizations.of(context)!.siteData}'),
+          Text('• ${AppLocalizations.of(context)!.cache}'),
+          Text('• ${AppLocalizations.of(context)!.permissions}'),
           const SizedBox(height: 8),
           Text(
             '$tabCount tab(s) will be closed.',
@@ -80,7 +81,9 @@ class _ClearContainerDataDialog extends HookWidget {
                 reopenTabs.value = value;
               }
             },
-            title: const Text('Recreate tabs after clearing'),
+            title: Text(
+              AppLocalizations.of(context)!.recreateTabsAfterClearing,
+            ),
             contentPadding: EdgeInsets.zero,
             controlAffinity: ListTileControlAffinity.trailing,
           ),
@@ -97,7 +100,7 @@ class _ClearContainerDataDialog extends HookWidget {
               ),
             );
           },
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         TextButton(
           onPressed: () {
@@ -109,7 +112,7 @@ class _ClearContainerDataDialog extends HookWidget {
               ),
             );
           },
-          child: const Text('Clear Data'),
+          child: Text(AppLocalizations.of(context)!.clearDataAction),
         ),
       ],
     );

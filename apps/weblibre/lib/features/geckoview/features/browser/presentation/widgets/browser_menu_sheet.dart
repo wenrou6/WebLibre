@@ -98,6 +98,7 @@ import 'package:weblibre/features/user/domain/providers.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/proxy_routing_settings.dart';
 import 'package:weblibre/features/web_search/domain/controllers/sandbox_capture_controller.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/presentation/controllers/website_title.dart';
 import 'package:weblibre/presentation/hooks/cached_future.dart';
 import 'package:weblibre/presentation/hooks/menu_controller.dart';
@@ -283,7 +284,9 @@ class _NavigationRow extends HookConsumerWidget {
           direction: HistoryMenuDirection.back,
           child: _buildNavIcon(
             icon: isLoading ? Icons.close : Icons.arrow_back,
-            label: isLoading ? 'Stop' : 'Back',
+            label: isLoading
+                ? AppLocalizations.of(context)!.stop
+                : AppLocalizations.of(context)!.back,
             disabled: !isLoading && !history.canGoBack,
             onTap: () async {
               final controller = ref.read(
@@ -317,7 +320,7 @@ class _NavigationRow extends HookConsumerWidget {
           direction: HistoryMenuDirection.forward,
           child: _buildNavIcon(
             icon: Icons.arrow_forward,
-            label: 'Forward',
+            label: AppLocalizations.of(context)!.forward,
             disabled: !history.canGoForward,
             onTap: () async {
               await ref
@@ -354,7 +357,7 @@ class _NavigationRow extends HookConsumerWidget {
                   Navigator.pop(context);
                 }
               },
-              child: const Text('Close Others'),
+              child: Text(AppLocalizations.of(context)!.closeOthers),
             ),
             if (host != null && host.isNotEmpty)
               MenuItemButton(
@@ -372,7 +375,7 @@ class _NavigationRow extends HookConsumerWidget {
                     Navigator.pop(context);
                   }
                 },
-                child: const Text('Close from Same Host'),
+                child: Text(AppLocalizations.of(context)!.closeFromSameHost),
               ),
             MenuItemButton(
               leadingIcon: const Icon(Icons.account_tree),
@@ -390,12 +393,12 @@ class _NavigationRow extends HookConsumerWidget {
                   Navigator.pop(context);
                 }
               },
-              child: const Text('Close Tab and Descendants'),
+              child: Text(AppLocalizations.of(context)!.closeTabAndDescendants),
             ),
           ],
           child: _buildNavIcon(
             icon: MdiIcons.tabMinus,
-            label: 'Close Tab',
+            label: AppLocalizations.of(context)!.closeTab,
             onTap: () async {
               final tabState = ref.read(tabStateProvider(selectedTabId));
               if (tabState != null && tabState.tabMode is IsolatedTabMode) {
@@ -449,12 +452,12 @@ class _NavigationRow extends HookConsumerWidget {
                   Navigator.pop(context);
                 }
               },
-              child: const Text('Hard Refresh'),
+              child: Text(AppLocalizations.of(context)!.hardRefresh),
             ),
           ],
           child: _buildNavIcon(
             icon: Icons.refresh,
-            label: 'Reload',
+            label: AppLocalizations.of(context)!.reload,
             onTap: () async {
               await ref
                   .read(tabSessionProvider(tabId: selectedTabId).notifier)
@@ -537,7 +540,7 @@ class _PageActionsCard extends HookConsumerWidget {
         // Add Bookmark
         ListTile(
           leading: const Icon(MdiIcons.bookmarkPlus),
-          title: const Text('Add Bookmark'),
+          title: Text(AppLocalizations.of(context)!.addBookmark),
           onTap: () async {
             final tabState = ref.read(tabStateProvider(selectedTabId))!;
             final bookmarkUrl =
@@ -559,7 +562,7 @@ class _PageActionsCard extends HookConsumerWidget {
         // Find in page
         ListTile(
           leading: const Icon(Icons.search),
-          title: const Text('Find in Page'),
+          title: Text(AppLocalizations.of(context)!.findInPage),
           onTap: () {
             ref.read(bottomSheetControllerProvider.notifier).requestDismiss();
             ref
@@ -604,7 +607,7 @@ class _QuickTogglesGrid extends ConsumerWidget {
       toggles.add(
         _QuickToggle(
           icon: MdiIcons.monitor,
-          label: 'Desktop',
+          label: AppLocalizations.of(context)!.desktop,
           active: desktopEnabled,
           onTap: () {
             ref
@@ -643,7 +646,7 @@ class _QuickTogglesGrid extends ConsumerWidget {
           icon: (readerVisible && isReaderActive)
               ? MdiIcons.bookOpen
               : MdiIcons.bookOpenOutline,
-          label: 'Reader',
+          label: AppLocalizations.of(context)!.reader,
           active: readerVisible && isReaderActive,
           enabled: readerVisible && !isReaderLoading,
           onTap: () async {
@@ -658,7 +661,7 @@ class _QuickTogglesGrid extends ConsumerWidget {
         toggles.add(
           _QuickToggle(
             icon: MdiIcons.gestureSwipe,
-            label: 'Gestures',
+            label: AppLocalizations.of(context)!.gestures,
             active: gestureSettings.active,
             onTap: () async {
               await ref
@@ -823,7 +826,7 @@ class _AddToHomeScreenTile extends ConsumerWidget {
         _buildDivider(),
         ListTile(
           leading: const Icon(Icons.add_to_home_screen),
-          title: const Text('Add to Home Screen'),
+          title: Text(AppLocalizations.of(context)!.addToHomeScreen),
           onTap: () async {
             if (isInstallable) {
               // Site has valid manifest — use existing PWA install flow
@@ -874,19 +877,28 @@ class _PinTopSiteTile extends HookConsumerWidget {
                 .read(topSiteRepositoryProvider.notifier)
                 .unpinSiteByUrl(url);
             if (context.mounted) {
-              ui_helper.showInfoMessage(context, 'Unpinned from Shortcuts');
+              ui_helper.showInfoMessage(
+                context,
+                AppLocalizations.of(context)!.unpinnedFromShortcuts,
+              );
             }
           } else {
             await ref
                 .read(topSiteRepositoryProvider.notifier)
                 .addPinnedSite(title: tabState.titleOrAuthority, url: url);
             if (context.mounted) {
-              ui_helper.showInfoMessage(context, 'Pinned to Shortcuts');
+              ui_helper.showInfoMessage(
+                context,
+                AppLocalizations.of(context)!.pinnedToShortcuts,
+              );
             }
           }
         } catch (e) {
           if (context.mounted) {
-            ui_helper.showErrorMessage(context, 'Failed to update Shortcuts');
+            ui_helper.showErrorMessage(
+              context,
+              AppLocalizations.of(context)!.failedToUpdateShortcuts,
+            );
           }
         }
       },
@@ -957,7 +969,7 @@ class _FetchFeedsTile extends HookConsumerWidget {
           _buildDivider(),
           ListTile(
             leading: const Icon(Icons.rss_feed),
-            title: const Text('Fetch Feeds on Page'),
+            title: Text(AppLocalizations.of(context)!.fetchFeedsOnPage),
             onTap: () {
               showFeeds.value = true;
             },
@@ -975,9 +987,9 @@ class _FetchFeedsTile extends HookConsumerWidget {
           return Column(
             children: [
               _buildDivider(),
-              const ListTile(
-                leading: Icon(Icons.rss_feed_outlined),
-                title: Text('No Web Feeds Found'),
+              ListTile(
+                leading: const Icon(Icons.rss_feed_outlined),
+                title: Text(AppLocalizations.of(context)!.noWebFeedsFound),
                 enabled: false,
               ),
             ],
@@ -989,7 +1001,7 @@ class _FetchFeedsTile extends HookConsumerWidget {
             _buildDivider(),
             ListTile(
               leading: const Icon(Icons.rss_feed),
-              title: const Text('Available Web Feeds'),
+              title: Text(AppLocalizations.of(context)!.availableWebFeeds),
               trailing: Badge(label: Text(feeds.value!.length.toString())),
               onTap: () async {
                 Navigator.pop(context);
@@ -1007,9 +1019,9 @@ class _FetchFeedsTile extends HookConsumerWidget {
       loading: () => Column(
         children: [
           _buildDivider(),
-          const ListTile(
-            leading: Icon(Icons.rss_feed),
-            title: Text('Fetching Web Feeds...'),
+          ListTile(
+            leading: const Icon(Icons.rss_feed),
+            title: Text(AppLocalizations.of(context)!.fetchingWebFeeds),
             trailing: SizedBox(
               width: 20,
               height: 20,
@@ -1053,7 +1065,7 @@ class _TabActionsCard extends HookConsumerWidget {
         if (!showMore.value)
           ListTile(
             leading: const Icon(Icons.more_horiz),
-            title: const Text('More'),
+            title: Text(AppLocalizations.of(context)!.more),
             subtitle: const Text(
               'Clone Tab, Export, Pin Shortcut, Fetch Feeds',
             ),
@@ -1087,7 +1099,7 @@ class _CloneTabExpansion extends ConsumerWidget {
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: ExpansionTile(
         leading: const Icon(MdiIcons.contentDuplicate),
-        title: const Text('Clone Tab'),
+        title: Text(AppLocalizations.of(context)!.cloneTab),
         children: [
           _buildSubTile(
             'Regular',
@@ -1218,7 +1230,7 @@ class _ContainerExpansion extends ConsumerWidget {
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: ExpansionTile(
         leading: const Icon(MdiIcons.folder),
-        title: const Text('Containers'),
+        title: Text(AppLocalizations.of(context)!.containers),
         children: [
           _buildSubTile(
             'Manage Containers',
@@ -1397,13 +1409,19 @@ class _ShareExpansion extends HookConsumerWidget {
 
     void applyCleanUrl() {
       if (cleaner.applyCleanUrl()) {
-        ui_helper.showInfoMessage(context, 'URL cleaned');
+        ui_helper.showInfoMessage(
+          context,
+          AppLocalizations.of(context)!.urlCleaned,
+        );
       }
     }
 
     void applySelectedTrackingRemovals(String previewUrl) {
       if (cleaner.applyPreviewUrl(previewUrl)) {
-        ui_helper.showInfoMessage(context, 'URL preview applied');
+        ui_helper.showInfoMessage(
+          context,
+          AppLocalizations.of(context)!.urlPreviewApplied,
+        );
       }
     }
 
@@ -1425,7 +1443,7 @@ class _ShareExpansion extends HookConsumerWidget {
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: ExpansionTile(
         leading: const Icon(Icons.share),
-        title: const Text('Share'),
+        title: Text(AppLocalizations.of(context)!.share),
         children: [
           if (showCleanerTile)
             UrlCleanerTile(
@@ -1635,7 +1653,7 @@ class _SendToDeviceExpansion extends ConsumerWidget {
                           } else {
                             ui_helper.showErrorMessage(
                               context,
-                              'Failed to send tab',
+                              AppLocalizations.of(context)!.failedToSendTab,
                             );
                           }
                         }
@@ -1644,7 +1662,7 @@ class _SendToDeviceExpansion extends ConsumerWidget {
                   )
                   .toList(growable: false);
             },
-            loading: () => const [
+            loading: () => [
               ListTile(
                 contentPadding: EdgeInsets.only(left: 72, right: 16),
                 leading: Icon(Icons.devices_other, size: 18),
@@ -1654,11 +1672,11 @@ class _SendToDeviceExpansion extends ConsumerWidget {
                 ),
               ),
             ],
-            error: (_, _) => const [
+            error: (_, _) => [
               ListTile(
                 contentPadding: EdgeInsets.only(left: 72, right: 16),
                 title: Text(
-                  'Failed to load devices',
+                  AppLocalizations.of(context)!.failedToLoadDevices,
                   style: TextStyle(fontSize: 13),
                 ),
               ),
@@ -1681,7 +1699,7 @@ class _ExportExpansion extends ConsumerWidget {
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: ExpansionTile(
         leading: const Icon(MdiIcons.fileExport),
-        title: const Text('Export'),
+        title: Text(AppLocalizations.of(context)!.export),
         children: [
           // Copy as Markdown
           _buildSubTile(
@@ -1700,7 +1718,7 @@ class _ExportExpansion extends ConsumerWidget {
                     'Markdown copied to clipboard',
                   );
                 }
-              }, const Text('Copy as Markdown'));
+              }, Text(AppLocalizations.of(context)!.copyAsMarkdown));
             },
           ),
 
@@ -1720,7 +1738,7 @@ class _ExportExpansion extends ConsumerWidget {
                   allowedExtensions: ['md'],
                   bytes: utf8.encode(content),
                 );
-              }, const Text('Export as Markdown'));
+              }, Text(AppLocalizations.of(context)!.exportAsMarkdown));
             },
           ),
 
@@ -1775,7 +1793,10 @@ class _ExportExpansion extends ConsumerWidget {
                     .printContent();
               } catch (e) {
                 if (context.mounted) {
-                  ui_helper.showErrorMessage(context, 'Failed to print page');
+                  ui_helper.showErrorMessage(
+                    context,
+                    AppLocalizations.of(context)!.failedToPrintPage,
+                  );
                 }
               }
               if (context.mounted) Navigator.pop(context);
@@ -1856,7 +1877,7 @@ class _ExtensionsCard extends HookConsumerWidget {
           data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
           child: ExpansionTile(
             leading: const Icon(MdiIcons.puzzle),
-            title: const Text('Extensions'),
+            title: Text(AppLocalizations.of(context)!.extensions),
             initiallyExpanded: extensionsExpanded,
             onExpansionChanged: (_) => ref
                 .read(
@@ -1883,7 +1904,9 @@ class _ExtensionsCard extends HookConsumerWidget {
                         const VerticalDivider(indent: 4, endIndent: 4),
                         IconButton(
                           icon: const Icon(Icons.settings, size: 20),
-                          tooltip: 'Extension settings',
+                          tooltip: AppLocalizations.of(
+                            context,
+                          )!.extensionSettings,
                           onPressed: () async {
                             await openExtensionSettings(extension.extensionId);
                           },
@@ -1918,7 +1941,9 @@ class _ExtensionsCard extends HookConsumerWidget {
                         const VerticalDivider(indent: 4, endIndent: 4),
                         IconButton(
                           icon: const Icon(Icons.settings, size: 20),
-                          tooltip: 'Extension settings',
+                          tooltip: AppLocalizations.of(
+                            context,
+                          )!.extensionSettings,
                           onPressed: () async {
                             await openExtensionSettings(extension.extensionId);
                           },
@@ -2343,7 +2368,7 @@ class _ConnectionCard extends ConsumerWidget {
           data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
           child: ExpansionTile(
             leading: Icon(headerIcon, color: headerColor),
-            title: const Text('Connection'),
+            title: Text(AppLocalizations.of(context)!.connection),
             subtitle: Text(
               _routingSummary(routing),
               style:
@@ -2535,7 +2560,7 @@ class _ConnectionRow extends StatelessWidget {
           const VerticalDivider(indent: 4, endIndent: 4),
           IconButton(
             icon: const Icon(Icons.chevron_right),
-            tooltip: 'Edit',
+            tooltip: AppLocalizations.of(context)!.edit,
             onPressed: () => onEdit(),
           ),
         ],
@@ -2633,7 +2658,7 @@ class _QuickLinksGrid extends ConsumerWidget {
     final items = <_QuickLinkItem>[
       _QuickLinkItem(
         icon: Icons.history,
-        label: 'History',
+        label: AppLocalizations.of(context)!.history,
         onTap: () async {
           Navigator.pop(context);
           await const HistoryRoute().push(context);
@@ -2641,7 +2666,7 @@ class _QuickLinksGrid extends ConsumerWidget {
       ),
       _QuickLinkItem(
         icon: MdiIcons.bookmarkMultiple,
-        label: 'Bookmarks',
+        label: AppLocalizations.of(context)!.bookmarks,
         onTap: () async {
           Navigator.pop(context);
           await BookmarkListRoute(
@@ -2651,7 +2676,7 @@ class _QuickLinksGrid extends ConsumerWidget {
       ),
       _QuickLinkItem(
         icon: MdiIcons.fileDownload,
-        label: 'Downloads',
+        label: AppLocalizations.of(context)!.downloads,
         onTap: () async {
           Navigator.pop(context);
           await const HistoryDownloadsRoute().push(context);
@@ -2659,7 +2684,7 @@ class _QuickLinksGrid extends ConsumerWidget {
       ),
       _QuickLinkItem(
         icon: MdiIcons.exclamationThick,
-        label: 'Bangs',
+        label: AppLocalizations.of(context)!.bangs,
         onTap: () async {
           Navigator.pop(context);
           await const BangMenuRoute().push(context);
@@ -2667,7 +2692,7 @@ class _QuickLinksGrid extends ConsumerWidget {
       ),
       _QuickLinkItem(
         icon: Icons.rss_feed,
-        label: 'Feeds',
+        label: AppLocalizations.of(context)!.feeds,
         onTap: () async {
           Navigator.pop(context);
           await context.push(FeedListRoute().location);
@@ -2675,7 +2700,7 @@ class _QuickLinksGrid extends ConsumerWidget {
       ),
       _QuickLinkItem(
         icon: Icons.explore,
-        label: 'Small Web',
+        label: AppLocalizations.of(context)!.smallWeb,
         onTap: () async {
           Navigator.pop(context);
           await ref.read(smallWebModeControllerProvider.notifier).enter();
@@ -2798,7 +2823,7 @@ class _ProfileCard extends HookConsumerWidget {
         _buildDivider(),
         ListTile(
           leading: const Icon(Icons.settings),
-          title: const Text('Settings'),
+          title: Text(AppLocalizations.of(context)!.settings),
           onTap: () async {
             Navigator.pop(context);
             await SettingsRoute().push(context);
@@ -2865,7 +2890,7 @@ class _SyncTile extends HookConsumerWidget {
         turns: Tween<double>(begin: 0, end: -1).animate(controller),
         child: const Icon(Icons.sync),
       ),
-      title: const Text('Sync Now'),
+      title: Text(AppLocalizations.of(context)!.syncNow),
       onTap: () async {
         await ref.read(syncRepositoryProvider.notifier).syncNow();
 
@@ -2906,7 +2931,7 @@ class _SettingsCard extends StatelessWidget {
       children: [
         ListTile(
           leading: const Icon(Icons.info),
-          title: const Text('About'),
+          title: Text(AppLocalizations.of(context)!.about),
           onTap: () async {
             Navigator.pop(context);
             await AboutRoute().push(context);

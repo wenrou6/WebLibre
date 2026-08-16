@@ -20,6 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/design/app_colors.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/geckoview/domain/controllers/bottom_sheet.dart';
@@ -233,7 +234,7 @@ class CloneTabMenu extends HookConsumerWidget {
           onPressed: selectedTabId == null
               ? null
               : () => _cloneTabAsRegular(context, ref, selectedTabId!),
-          child: const Text('Clone as Regular'),
+          child: Text(AppLocalizations.of(context)!.cloneAsRegular),
         ),
         MenuItemButton(
           leadingIcon: Icon(
@@ -243,7 +244,7 @@ class CloneTabMenu extends HookConsumerWidget {
           onPressed: selectedTabId == null
               ? null
               : () => _cloneTabAsPrivate(context, ref, selectedTabId!),
-          child: const Text('Clone as Private'),
+          child: Text(AppLocalizations.of(context)!.cloneAsPrivate),
         ),
         if (showIsolatedTabUi)
           MenuItemButton(
@@ -254,7 +255,7 @@ class CloneTabMenu extends HookConsumerWidget {
             onPressed: selectedTabId == null
                 ? null
                 : () => _cloneTabAsIsolated(context, ref, selectedTabId!),
-            child: const Text('Clone as Isolated'),
+            child: Text(AppLocalizations.of(context)!.cloneAsIsolated),
           ),
       ],
       child: child,

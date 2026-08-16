@@ -19,6 +19,7 @@
  */
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/logger.dart';
 import 'package:weblibre/features/gestures/data/models/gesture_settings.dart';
 import 'package:weblibre/features/gestures/domain/repositories/gesture_settings.dart';
@@ -72,7 +73,7 @@ class GestureExclusionSection extends HookConsumerWidget {
       onChanged: (masterEnabled && host != null && parentRule == null)
           ? (enabled) => _toggleExclusion(context, ref, host, enabled)
           : null,
-      title: const Text('Gestures'),
+      title: Text(AppLocalizations.of(context)!.gestures),
       subtitle: Text(subtitle),
       secondary: Icon(
         isEnabledHere ? Icons.gesture : Icons.do_not_touch_outlined,

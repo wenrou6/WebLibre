@@ -21,6 +21,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/entities/font_size_constants.dart';
 import 'package:weblibre/features/settings/presentation/controllers/save_settings.dart';
 import 'package:weblibre/features/user/data/models/engine_settings.dart';
@@ -126,7 +127,9 @@ class FontSizeBottomSheet extends ConsumerWidget {
               const SizedBox(height: 16),
               TextButton(
                 onPressed: () => _resetFontSize(ref),
-                child: const Text('Reset to 100%'),
+                child: Text(
+                  AppLocalizations.of(context)!.resetToHundredPercent,
+                ),
               ),
             ],
           ],

@@ -20,6 +20,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 enum BookmarkAllChoice { fast, detailed }
 
@@ -28,13 +29,13 @@ Future<BookmarkAllChoice?> showBookmarkAllDialog(BuildContext context) {
   return showDialog<BookmarkAllChoice>(
     context: context,
     builder: (context) => SimpleDialog(
-      title: const Text('Bookmark All Tabs'),
+      title: Text(AppLocalizations.of(context)!.bookmarkAllTabs),
       children: [
         ListTile(
           leading: const Icon(MdiIcons.fastForward),
-          title: const Text('Fast'),
-          subtitle: const Text(
-            'Automatically add all tabs to a selected folder',
+          title: Text(AppLocalizations.of(context)!.fast),
+          subtitle: Text(
+            AppLocalizations.of(context)!.automaticallyAddTabsToFolder,
           ),
           onTap: () {
             Navigator.of(context).pop(BookmarkAllChoice.fast);
@@ -42,8 +43,8 @@ Future<BookmarkAllChoice?> showBookmarkAllDialog(BuildContext context) {
         ),
         ListTile(
           leading: const Icon(MdiIcons.stepForward),
-          title: const Text('Detailed'),
-          subtitle: const Text('Review and edit each bookmark individually'),
+          title: Text(AppLocalizations.of(context)!.detailed),
+          subtitle: Text(AppLocalizations.of(context)!.reviewEachBookmark),
           onTap: () {
             Navigator.of(context).pop(BookmarkAllChoice.detailed);
           },

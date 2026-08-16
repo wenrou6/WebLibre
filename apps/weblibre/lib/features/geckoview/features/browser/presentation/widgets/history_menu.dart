@@ -22,8 +22,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/geckoview/domain/entities/states/history.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_detail_state.dart';
-import 'package:weblibre/features/geckoview/domain/providers/tab_state.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/history_menu_item.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 enum HistoryMenuDirection { back, forward }
 
@@ -45,8 +45,10 @@ class HistoryMenu extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final historyState = ref.watch(tabHistoryStateProvider(selectedTabId));
 
-    final menuItems = useMemoized(() => _buildMenuItems(historyState), [
+    final l10n = AppLocalizations.of(context)!;
+    final menuItems = useMemoized(() => _buildMenuItems(historyState, l10n), [
       historyState,
+      l10n,
     ]);
 
     return MenuAnchor(
@@ -57,14 +59,17 @@ class HistoryMenu extends HookConsumerWidget {
     );
   }
 
-  List<Widget> _buildMenuItems(HistoryState historyState) {
+  List<Widget> _buildMenuItems(
+    HistoryState historyState,
+    AppLocalizations l10n,
+  ) {
     if (historyState.items.isEmpty) {
       return [
         MenuItemButton(
           child: Text(
             direction == HistoryMenuDirection.back
-                ? 'No previous pages'
-                : 'No forward pages',
+                ? l10n.noPreviousPages
+                : l10n.noForwardPages,
           ),
         ),
       ];
@@ -83,8 +88,8 @@ class HistoryMenu extends HookConsumerWidget {
 
     if (historyItems.isEmpty) {
       final message = direction == HistoryMenuDirection.back
-          ? 'No previous pages'
-          : 'No forward pages';
+          ? l10n.noPreviousPages
+          : l10n.noForwardPages;
       return [MenuItemButton(child: Text(message))];
     }
 

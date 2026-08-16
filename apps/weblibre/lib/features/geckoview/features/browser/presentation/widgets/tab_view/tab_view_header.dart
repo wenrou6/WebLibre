@@ -55,6 +55,7 @@ import 'package:weblibre/features/geckoview/features/tabs/presentation/widgets/c
 import 'package:weblibre/features/proxy/presentation/controllers/ensure_proxy_started.dart';
 import 'package:weblibre/features/sync/domain/repositories/sync.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/presentation/hooks/menu_controller.dart';
 import 'package:weblibre/presentation/widgets/speech_to_text_button.dart';
 import 'package:weblibre/utils/ui_helper.dart' as ui_helper;
@@ -200,6 +201,7 @@ class TabViewHeader extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final searchMode = useState(false);
     final searchTextFocus = useFocusNode();
     final searchTextController = useTextEditingController();
@@ -257,7 +259,7 @@ class TabViewHeader extends HookConsumerWidget {
             if (context.mounted) {
               ui_helper.showInfoMessage(
                 context,
-                'Tab reordering is only available in default manual mode',
+                l10n.reorderingRequiresManualMode,
               );
             }
           }
@@ -322,7 +324,7 @@ class TabViewHeader extends HookConsumerWidget {
                         icon: const Icon(MdiIcons.tabSearch),
                         iconSize: 18,
                         padding: EdgeInsets.zero,
-                        tooltip: 'Search inside tabs',
+                        tooltip: l10n.searchInsideTabs,
                         onPressed: () {
                           searchMode.value = true;
                           searchTextFocus.requestFocus();
@@ -371,7 +373,13 @@ class TabViewHeader extends HookConsumerWidget {
                                           : Icons.radio_button_unchecked,
                                     ),
                                     trailingIcon: Icon(icon, color: color),
-                                    child: Text(type.label),
+                                    child: Text(switch (type) {
+                                      TabTypeFilter.all => l10n.allTabs,
+                                      TabTypeFilter.regularOnly => l10n.regular,
+                                      TabTypeFilter.privateOnly => l10n.private,
+                                      TabTypeFilter.isolatedOnly =>
+                                        l10n.isolated,
+                                    }),
                                     onPressed: () {
                                       ref
                                           .read(
@@ -382,7 +390,7 @@ class TabViewHeader extends HookConsumerWidget {
                                     },
                                   );
                                 }).toList(),
-                                child: const Text('Tab Type'),
+                                child: Text(l10n.tabType),
                               ),
                               // Sort
                               SubmenuButton(
@@ -431,10 +439,10 @@ class TabViewHeader extends HookConsumerWidget {
                                                       .sortPinnedFirst,
                                                 );
                                           },
-                                    child: const Text('Sort Pinned First'),
+                                    child: Text(l10n.sortPinnedFirst),
                                   ),
                                 ],
-                                child: const Text('Sort'),
+                                child: Text(l10n.sort),
                               ),
                               MenuItemButton(
                                 leadingIcon: Icon(
@@ -452,7 +460,7 @@ class TabViewHeader extends HookConsumerWidget {
                                         !filterOptions.showHierarchicalTabs,
                                       );
                                 },
-                                child: const Text('Hierarchical View'),
+                                child: Text(l10n.hierarchicalView),
                               ),
                               const Divider(),
                               // Date range picker
@@ -476,7 +484,7 @@ class TabViewHeader extends HookConsumerWidget {
                                     ? Text(
                                         '${DateFormat.yMd().format(filterOptions.dateRange!.start)} - ${DateFormat.yMd().format(filterOptions.dateRange!.end)}',
                                       )
-                                    : const Text('Filter Date'),
+                                    : Text(l10n.filterDate),
                                 onPressed: () async {
                                   final range = await showDateRangePicker(
                                     context: context,
@@ -535,13 +543,13 @@ class TabViewHeader extends HookConsumerWidget {
                                       ),
                                     )
                                     .toList(),
-                                child: const Text('Quick Interval'),
+                                child: Text(l10n.quickInterval),
                               ),
                               const Divider(),
                               // Reset
                               MenuItemButton(
                                 leadingIcon: const Icon(MdiIcons.restore),
-                                child: const Text('Reset Filter'),
+                                child: Text(l10n.resetFilter),
                                 onPressed: () {
                                   ref
                                       .read(
@@ -553,7 +561,7 @@ class TabViewHeader extends HookConsumerWidget {
                               ),
                             ],
                             child: IconButton(
-                              tooltip: 'Filter & Sort',
+                              tooltip: l10n.filterAndSort,
                               onPressed: () {
                                 if (filterMenuController.isOpen) {
                                   filterMenuController.close();
@@ -576,7 +584,11 @@ class TabViewHeader extends HookConsumerWidget {
                           .map(
                             (mode) => MenuItemButton(
                               leadingIcon: Icon(mode.icon),
-                              child: Text(mode.label),
+                              child: Text(switch (mode) {
+                                TabsViewMode.list => l10n.listView,
+                                TabsViewMode.grid => l10n.gridView,
+                                TabsViewMode.tree => l10n.treeView,
+                              }),
                               onPressed: () {
                                 if (mode == TabsViewMode.tree) {
                                   searchTextController.clear();
@@ -593,7 +605,7 @@ class TabViewHeader extends HookConsumerWidget {
                           )
                           .toList(),
                       child: IconButton(
-                        tooltip: 'Change view mode',
+                        tooltip: l10n.changeViewMode,
                         onPressed: isSyncedScope
                             ? null
                             : () {
@@ -643,10 +655,12 @@ class TabViewHeader extends HookConsumerWidget {
                               iconSize: 18,
                               padding: EdgeInsets.zero,
                               tooltip: downloadProgress != null
-                                  ? 'Downloading AI models (${downloadProgress.progress.toInt()}%)'
+                                  ? l10n.downloadingAiModels(
+                                      downloadProgress.progress.toInt(),
+                                    )
                                   : tabSuggestionsEnabled
-                                  ? 'Disable AI tab suggestions'
-                                  : 'Enable AI tab suggestions',
+                                  ? l10n.disableAiTabSuggestions
+                                  : l10n.enableAiTabSuggestions,
                               onPressed: () async {
                                 if (!tabSuggestionsEnabled) {
                                   final result =
@@ -687,10 +701,10 @@ class TabViewHeader extends HookConsumerWidget {
                         iconSize: 18,
                         padding: EdgeInsets.zero,
                         tooltip: tabsReorderable
-                            ? 'Disable reordering mode'
+                            ? l10n.disableReorderingMode
                             : canManualReorder
-                            ? 'Enable reordering mode'
-                            : 'Reordering requires default manual mode',
+                            ? l10n.enableReorderingMode
+                            : l10n.reorderingRequiresManualMode,
                         onPressed: canManualReorder
                             ? () {
                                 final wasEnabled = tabsReorderable;
@@ -706,7 +720,7 @@ class TabViewHeader extends HookConsumerWidget {
                                 if (!wasEnabled && context.mounted) {
                                   ui_helper.showInfoMessage(
                                     context,
-                                    'Drag and drop tabs to reorder them',
+                                    l10n.dragTabsToReorder,
                                   );
                                 }
                               }
@@ -750,7 +764,7 @@ class TabViewHeader extends HookConsumerWidget {
                                         }
                                       }
                                     },
-                              child: const Text('All Tabs'),
+                              child: Text(l10n.allTabs),
                             ),
                             MenuItemButton(
                               leadingIcon: Icon(
@@ -791,7 +805,7 @@ class TabViewHeader extends HookConsumerWidget {
                                         }
                                       }
                                     },
-                              child: const Text('Private Tabs'),
+                              child: Text(l10n.privateTabs),
                             ),
                             if (showIsolatedTabUi)
                               MenuItemButton(
@@ -852,7 +866,7 @@ class TabViewHeader extends HookConsumerWidget {
                                           );
                                         }
                                       },
-                                child: const Text('Isolated Tabs'),
+                                child: Text(l10n.isolatedTabs),
                               ),
                             if (tabsViewMode != TabsViewMode.tree)
                               MenuItemButton(
@@ -906,10 +920,10 @@ class TabViewHeader extends HookConsumerWidget {
                                           );
                                         }
                                       },
-                                child: const Text('Filtered Tabs'),
+                                child: Text(l10n.filteredTabs),
                               ),
                           ],
-                          child: const Text('Close Tabs'),
+                          child: Text(l10n.closeTabs),
                         ),
                         MenuItemButton(
                           leadingIcon: const Icon(MdiIcons.bookmarkPlusOutline),
@@ -952,7 +966,7 @@ class TabViewHeader extends HookConsumerWidget {
                                     if (context.mounted) {
                                       ui_helper.showInfoMessage(
                                         context,
-                                        '${tabData.length} bookmark(s) added',
+                                        l10n.bookmarksAdded(tabData.length),
                                       );
                                     }
                                   } else {
@@ -970,7 +984,7 @@ class TabViewHeader extends HookConsumerWidget {
                                     }
                                   }
                                 },
-                          child: const Text('Bookmark all'),
+                          child: Text(l10n.bookmarkAll),
                         ),
                         Consumer(
                           builder: (context, ref, child) {
@@ -997,7 +1011,7 @@ class TabViewHeader extends HookConsumerWidget {
                                   leadingIcon: const Icon(
                                     MdiIcons.databaseRemove,
                                   ),
-                                  child: const Text('Clear Container Data'),
+                                  child: Text(l10n.clearContainerData),
                                   onPressed: () async {
                                     final containerId = selectedContainer!.id;
                                     final tabs = await ref
@@ -1093,8 +1107,10 @@ class TabViewHeader extends HookConsumerWidget {
                                           ui_helper.showInfoMessage(
                                             context,
                                             shouldReopenTabs
-                                                ? 'Container data cleared successfully'
-                                                : 'Container data cleared. ${tabs.length} tab(s) closed.',
+                                                ? l10n.containerDataCleared
+                                                : l10n.containerDataClearedTabsClosed(
+                                                    tabs.length,
+                                                  ),
                                           );
                                         }
                                       } catch (e, s) {
@@ -1106,7 +1122,9 @@ class TabViewHeader extends HookConsumerWidget {
                                         if (context.mounted) {
                                           ui_helper.showErrorMessage(
                                             context,
-                                            'Error clearing data: $e',
+                                            l10n.errorClearingData(
+                                              e.toString(),
+                                            ),
                                           );
                                         }
                                       }
@@ -1123,7 +1141,7 @@ class TabViewHeader extends HookConsumerWidget {
                         ),
                       ],
                       child: IconButton(
-                        tooltip: 'Tab actions',
+                        tooltip: l10n.tabActions,
                         onPressed: () {
                           if (tabsActionMenuController.isOpen) {
                             tabsActionMenuController.close();

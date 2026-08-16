@@ -37,6 +37,7 @@ import 'package:weblibre/features/geckoview/features/tabs/data/entities/tab_mode
 import 'package:weblibre/features/geckoview/features/tabs/utils/container_colors.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/features/web_search/domain/controllers/sandbox_capture_controller.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/presentation/widgets/uri_breadcrumb.dart';
 
 class CompactAppBarTitle extends ConsumerWidget {
@@ -748,7 +749,7 @@ class _EmptyRailAddressField extends StatelessWidget {
         child: RotatedBox(
           quarterTurns: quarterTurns,
           child: Text(
-            'Search or enter URL',
+            AppLocalizations.of(context)!.searchOrEnterUrl,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: theme.textTheme.bodyMedium?.copyWith(
@@ -818,7 +819,7 @@ class _EmptyAppBarAddressField extends StatelessWidget {
           ),
           alignment: Alignment.center,
           child: Text(
-            'Search or enter URL',
+            AppLocalizations.of(context)!.searchOrEnterUrl,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: theme.textTheme.bodyMedium?.copyWith(

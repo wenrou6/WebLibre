@@ -17,6 +17,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 /// Shows a dialog asking the user whether to keep a temporary tab.
@@ -26,16 +27,16 @@ Future<bool?> showKeepTabDialog(BuildContext context) {
   return showDialog<bool>(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Keep tab?'),
-      content: const Text('Do you want to keep this tab or discard it?'),
+      title: Text(AppLocalizations.of(context)!.keepTabQuestion),
+      content: Text(AppLocalizations.of(context)!.keepTabPrompt),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(false),
-          child: const Text('Discard'),
+          child: Text(AppLocalizations.of(context)!.discard),
         ),
         FilledButton(
           onPressed: () => Navigator.of(context).pop(true),
-          child: const Text('Keep'),
+          child: Text(AppLocalizations.of(context)!.keep),
         ),
       ],
     ),

@@ -18,6 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 
 Future<bool?> showEnableAiTabSuggestionsDialog(BuildContext context) {
@@ -26,7 +27,7 @@ Future<bool?> showEnableAiTabSuggestionsDialog(BuildContext context) {
     builder: (BuildContext context) {
       return AlertDialog(
         icon: const Icon(MdiIcons.download),
-        title: const Text('Enable AI Tab Suggestions'),
+        title: Text(AppLocalizations.of(context)!.enableAiTabSuggestionsTitle),
         content: const Text(
           'Enabling this feature may require downloading AI models. '
           'The download size and progress cannot be determined in advance.\n\n'
@@ -37,13 +38,13 @@ Future<bool?> showEnableAiTabSuggestionsDialog(BuildContext context) {
             onPressed: () {
               Navigator.pop(context, false);
             },
-            child: const Text('Cancel'),
+            child: Text(AppLocalizations.of(context)!.cancel),
           ),
           TextButton(
             onPressed: () {
               Navigator.pop(context, true);
             },
-            child: const Text('Enable'),
+            child: Text(AppLocalizations.of(context)!.enable),
           ),
         ],
       );

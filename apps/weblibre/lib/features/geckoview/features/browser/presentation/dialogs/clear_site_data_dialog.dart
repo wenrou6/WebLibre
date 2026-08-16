@@ -17,6 +17,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 /// Shows a confirmation dialog before clearing site data.
@@ -31,7 +32,7 @@ Future<bool?> showClearSiteDataDialog(
     context: context,
     builder: (context) => AlertDialog(
       icon: const Icon(Icons.warning),
-      title: const Text('Clear Site Data'),
+      title: Text(AppLocalizations.of(context)!.clearSiteDataTitle),
       content: Text(
         'This will clear $formattedTypes for $host.\n\n'
         'You may need to log in again.',
@@ -39,11 +40,11 @@ Future<bool?> showClearSiteDataDialog(
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context, false),
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         FilledButton(
           onPressed: () => Navigator.pop(context, true),
-          child: const Text('Clear'),
+          child: Text(AppLocalizations.of(context)!.clear),
         ),
       ],
     ),

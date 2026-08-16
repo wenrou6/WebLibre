@@ -28,6 +28,7 @@ import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:skeletonizer/skeletonizer.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_session.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_state.dart';
 import 'package:weblibre/features/geckoview/features/browser/presentation/dialogs/qr_code.dart';
@@ -94,13 +95,19 @@ class ShareBottomSheet extends HookConsumerWidget {
 
     void applyCleanUrl() {
       if (cleaner.applyCleanUrl()) {
-        ui_helper.showInfoMessage(context, 'URL cleaned');
+        ui_helper.showInfoMessage(
+          context,
+          AppLocalizations.of(context)!.urlCleaned,
+        );
       }
     }
 
     void applySelectedTrackingRemovals(String previewUrl) {
       if (cleaner.applyPreviewUrl(previewUrl)) {
-        ui_helper.showInfoMessage(context, 'URL preview applied');
+        ui_helper.showInfoMessage(
+          context,
+          AppLocalizations.of(context)!.urlPreviewApplied,
+        );
       }
     }
 
@@ -135,7 +142,7 @@ class ShareBottomSheet extends HookConsumerWidget {
             // Copy Address
             ListTile(
               leading: const Icon(MdiIcons.contentCopy),
-              title: const Text('Copy Address'),
+              title: Text(AppLocalizations.of(context)!.copyAddress),
               trailing: trackingStatusTrailing,
               onTap: () async {
                 await Clipboard.setData(
@@ -151,7 +158,7 @@ class ShareBottomSheet extends HookConsumerWidget {
             // Share Screenshot
             ListTile(
               leading: const Icon(Icons.mobile_screen_share),
-              title: const Text('Share Screenshot'),
+              title: Text(AppLocalizations.of(context)!.shareScreenshot),
               onTap: () async {
                 final screenshot = await ref
                     .read(selectedTabSessionProvider)
@@ -178,7 +185,7 @@ class ShareBottomSheet extends HookConsumerWidget {
             // Share Link
             ListTile(
               leading: const Icon(Icons.share),
-              title: const Text('Share Link'),
+              title: Text(AppLocalizations.of(context)!.shareLink),
               trailing: trackingStatusTrailing,
               onTap: () async {
                 await SharePlus.instance.share(ShareParams(uri: effectiveUrl));
@@ -192,7 +199,7 @@ class ShareBottomSheet extends HookConsumerWidget {
             // Show QR Code
             ListTile(
               leading: const Icon(Icons.qr_code),
-              title: const Text('Show QR Code'),
+              title: Text(AppLocalizations.of(context)!.showQrCode),
               trailing: trackingStatusTrailing,
               onTap: () async {
                 if (context.mounted) {
@@ -323,7 +330,7 @@ class _ShareHeader extends StatelessWidget {
               IconButton.filledTonal(
                 onPressed: onClean,
                 icon: const Icon(MdiIcons.linkVariantRemove),
-                tooltip: 'Remove tracking',
+                tooltip: AppLocalizations.of(context)!.removeTracking,
               ),
           ],
         ),
@@ -383,7 +390,7 @@ class _SendToDeviceTile extends ConsumerWidget {
         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
           leading: const Icon(Icons.send_outlined),
-          title: const Text('Send To Device'),
+          title: Text(AppLocalizations.of(context)!.sendToDevice),
           children: devices.when(
             data: (deviceList) {
               final targets = deviceList
@@ -393,10 +400,10 @@ class _SendToDeviceTile extends ConsumerWidget {
                   .toList(growable: false);
 
               if (targets.isEmpty) {
-                return const [
+                return [
                   ListTile(
                     contentPadding: EdgeInsets.only(left: 72, right: 16),
-                    title: Text('No target devices'),
+                    title: Text(AppLocalizations.of(context)!.noTargetDevices),
                   ),
                 ];
               }
@@ -442,12 +449,14 @@ class _SendToDeviceTile extends ConsumerWidget {
                           if (success) {
                             ui_helper.showInfoMessage(
                               context,
-                              'Sent tab to ${device.displayName}',
+                              AppLocalizations.of(
+                                context,
+                              )!.sentTabToDevice(device.displayName),
                             );
                           } else {
                             ui_helper.showErrorMessage(
                               context,
-                              'Failed to send tab',
+                              AppLocalizations.of(context)!.failedToSendTab,
                             );
                           }
                         }
@@ -456,17 +465,17 @@ class _SendToDeviceTile extends ConsumerWidget {
                   )
                   .toList(growable: false);
             },
-            loading: () => const [
+            loading: () => [
               ListTile(
                 contentPadding: EdgeInsets.only(left: 72, right: 16),
                 leading: Icon(Icons.devices_other, size: 18),
-                title: Text('Loading devices...'),
+                title: Text(AppLocalizations.of(context)!.loadingDevices),
               ),
             ],
-            error: (_, _) => const [
+            error: (_, _) => [
               ListTile(
                 contentPadding: EdgeInsets.only(left: 72, right: 16),
-                title: Text('Failed to load devices'),
+                title: Text(AppLocalizations.of(context)!.failedToLoadDevices),
               ),
             ],
           ),

@@ -18,6 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 
 Future<void> showQrCode(BuildContext context, String data) {
@@ -62,7 +63,7 @@ Future<void> showQrCode(BuildContext context, String data) {
                 children: [
                   TextButton(
                     onPressed: () => Navigator.of(context).pop(),
-                    child: const Text('Close'),
+                    child: Text(AppLocalizations.of(context)!.close),
                   ),
                 ],
               ),

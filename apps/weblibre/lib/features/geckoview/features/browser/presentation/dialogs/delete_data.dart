@@ -22,6 +22,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:nullability/nullability.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/services/browser_data.dart';
 import 'package:weblibre/features/user/data/models/general_settings.dart';
 
@@ -91,7 +92,7 @@ class _DeleteDataSheet extends HookConsumerWidget {
                 backgroundColor: Theme.of(context).colorScheme.error,
                 foregroundColor: Theme.of(context).colorScheme.onError,
               ),
-              label: const Text('Delete'),
+              label: Text(AppLocalizations.of(context)!.delete),
               icon: const Icon(Icons.delete_forever),
             ),
           ],

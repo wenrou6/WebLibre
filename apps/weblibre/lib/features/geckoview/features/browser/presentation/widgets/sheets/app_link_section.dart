@@ -23,6 +23,7 @@ import 'package:flutter_mozilla_components/flutter_mozilla_components.dart'
     show AppLinkTarget, AppLinksMode, GeckoAppLinksService;
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/features/app_links/domain/entities/app_link_rule.dart';
 import 'package:weblibre/features/app_links/domain/entities/context_app_link_policy.dart';
 import 'package:weblibre/features/app_links/domain/services/effective_app_link_policy.dart';
@@ -69,14 +70,16 @@ class AppLinkSection extends HookConsumerWidget {
           ),
         ),
         if (policy == null || isLoadingTarget)
-          const Skeletonizer(
+          Skeletonizer(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 ListTile(
                   leading: Icon(Icons.link),
-                  title: Text('Open links for this site'),
-                  subtitle: Text('Follows the default'),
+                  title: Text(
+                    AppLocalizations.of(context)!.openLinksForThisSite,
+                  ),
+                  subtitle: Text(AppLocalizations.of(context)!.followsDefault),
                 ),
               ],
             ),
@@ -123,24 +126,24 @@ class _SiteRuleTile extends ConsumerWidget {
 
     return ListTile(
       leading: Icon(icon, color: color),
-      title: const Text('Open links for this site'),
+      title: Text(AppLocalizations.of(context)!.openLinksForThisSite),
       subtitle: Text(_subtitle(scope, rule, choice, canAlwaysOpen)),
       trailing: DropdownButton<_SiteRuleChoice>(
         value: choice,
         underline: const SizedBox(),
         items: [
-          const DropdownMenuItem(
+          DropdownMenuItem(
             value: _SiteRuleChoice.followDefault,
-            child: Text('Follow default'),
+            child: Text(AppLocalizations.of(context)!.followDefault),
           ),
           DropdownMenuItem(
             value: _SiteRuleChoice.alwaysOpen,
             enabled: canAlwaysOpen || choice == _SiteRuleChoice.alwaysOpen,
-            child: const Text('Open in app'),
+            child: Text(AppLocalizations.of(context)!.openInAppLowercase),
           ),
-          const DropdownMenuItem(
+          DropdownMenuItem(
             value: _SiteRuleChoice.neverOpen,
-            child: Text('Keep in browser'),
+            child: Text(AppLocalizations.of(context)!.keepInBrowser),
           ),
         ],
         onChanged: scope == null || scope.isEmpty

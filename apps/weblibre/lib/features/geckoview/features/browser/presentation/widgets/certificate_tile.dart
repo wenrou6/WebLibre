@@ -22,6 +22,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/extensions/uri.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_state.dart';
 import 'package:weblibre/features/web_search/domain/controllers/sandbox_capture_controller.dart';
@@ -48,7 +49,7 @@ class CertificateTile extends HookConsumerWidget {
           MdiIcons.archiveLockOutline,
           color: Theme.of(context).colorScheme.tertiary,
         ),
-        title: const Text('Sandboxed capture'),
+        title: Text(AppLocalizations.of(context)!.sandboxedCapture),
         subtitle: const Text(
           'Page is served from an offline archive — no live connection.',
         ),
@@ -85,8 +86,12 @@ class CertificateTile extends HookConsumerWidget {
       } else if (!tabState.isLoading) {
         return ListTile(
           leading: const Icon(MdiIcons.lock),
-          title: const Text('Connection is secure'),
-          subtitle: Text('Verified By: ${tabState.securityInfoState.issuer}'),
+          title: Text(AppLocalizations.of(context)!.connectionIsSecure),
+          subtitle: Text(
+            AppLocalizations.of(
+              context,
+            )!.verifiedBy(tabState.securityInfoState.issuer),
+          ),
         );
       } else {
         return Skeletonizer(

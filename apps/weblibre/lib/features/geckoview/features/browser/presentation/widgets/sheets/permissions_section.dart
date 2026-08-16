@@ -21,6 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_session.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/entities/permission_type.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/entities/site_permissions.dart';
@@ -55,7 +56,11 @@ class PermissionsSection extends HookConsumerWidget {
       ),
       error: (error, stack) => Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Text('Error loading permissions: $error'),
+        child: Text(
+          AppLocalizations.of(
+            context,
+          )!.errorLoadingPermissions(error.toString()),
+        ),
       ),
     );
   }
@@ -217,18 +222,18 @@ class _PermissionTile extends StatelessWidget {
       trailing: DropdownButton<SitePermissionStatus>(
         value: currentStatus,
         underline: const SizedBox(),
-        items: const [
+        items: [
           DropdownMenuItem(
             value: SitePermissionStatus.noDecision,
-            child: Text('Ask'),
+            child: Text(AppLocalizations.of(context)!.ask),
           ),
           DropdownMenuItem(
             value: SitePermissionStatus.allowed,
-            child: Text('Allow'),
+            child: Text(AppLocalizations.of(context)!.allow),
           ),
           DropdownMenuItem(
             value: SitePermissionStatus.blocked,
-            child: Text('Block'),
+            child: Text(AppLocalizations.of(context)!.block),
           ),
         ],
         onChanged: (value) {
@@ -259,22 +264,22 @@ class _AutoplayTile extends StatelessWidget {
 
     return ListTile(
       leading: const Icon(Icons.play_circle),
-      title: const Text('Autoplay'),
+      title: Text(AppLocalizations.of(context)!.autoplay),
       trailing: DropdownButton<_AutoplayCombined>(
         value: combinedStatus,
         underline: const SizedBox(),
-        items: const [
+        items: [
           DropdownMenuItem(
             value: _AutoplayCombined.allowAll,
-            child: Text('Allow All'),
+            child: Text(AppLocalizations.of(context)!.allowAll),
           ),
           DropdownMenuItem(
             value: _AutoplayCombined.blockAudible,
-            child: Text('Block Audible'),
+            child: Text(AppLocalizations.of(context)!.blockAudible),
           ),
           DropdownMenuItem(
             value: _AutoplayCombined.blockAll,
-            child: Text('Block All'),
+            child: Text(AppLocalizations.of(context)!.blockAll),
           ),
         ],
         onChanged: (value) {

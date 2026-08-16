@@ -20,6 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/logger.dart';
 import 'package:weblibre/features/geckoview/domain/providers/desktop_mode.dart';
 import 'package:weblibre/features/user/data/models/general_settings.dart';
@@ -55,7 +56,7 @@ class DesktopModeSection extends HookConsumerWidget {
       onChanged: (host != null && parentRule == null)
           ? (enabled) => _toggleRule(context, ref, host, enabled)
           : null,
-      title: const Text('Always use desktop site'),
+      title: Text(AppLocalizations.of(context)!.alwaysUseDesktopSite),
       subtitle: Text(
         host == null
             ? 'Unavailable on this page'

@@ -21,6 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/geckoview/domain/providers.dart';
@@ -82,7 +83,7 @@ class ExtensionShortcutMenu extends HookConsumerWidget {
             await const AddonManagerRoute().push<void>(context);
           },
           leadingIcon: const Icon(MdiIcons.puzzleEdit),
-          child: const Text('Manage extensions'),
+          child: Text(AppLocalizations.of(context)!.manageExtensions),
         ),
       ],
       child: Visibility(

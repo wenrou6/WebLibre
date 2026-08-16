@@ -20,6 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/logger.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_session.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/repositories/tracking_protection.dart';
@@ -56,7 +57,9 @@ class TrackingProtectionSection extends HookConsumerWidget {
         final colorScheme = Theme.of(context).colorScheme;
 
         return ListTile(
-          title: const Text('Failed to load tracking protection'),
+          title: Text(
+            AppLocalizations.of(context)!.failedToLoadTrackingProtection,
+          ),
           leading: Icon(Icons.error_outline, color: colorScheme.error),
         );
       },
@@ -75,7 +78,7 @@ class _TrackingProtectionTile extends ConsumerWidget {
     return SwitchListTile.adaptive(
       value: isEnabled,
       onChanged: (enabled) => _toggleProtection(context, ref, enabled),
-      title: const Text('Enhanced Tracking Protection'),
+      title: Text(AppLocalizations.of(context)!.enhancedTrackingProtection),
       subtitle: Text(
         isEnabled
             ? 'Trackers on this site are being blocked'
@@ -113,7 +116,12 @@ class _TrackingProtectionTile extends ConsumerWidget {
     } catch (e, s) {
       logger.e('Failed to toggle tracking protection', error: e, stackTrace: s);
       if (context.mounted) {
-        showErrorMessage(context, 'Failed to toggle tracking protection: $e');
+        showErrorMessage(
+          context,
+          AppLocalizations.of(
+            context,
+          )!.failedToToggleTrackingProtection(e.toString()),
+        );
       }
     }
   }

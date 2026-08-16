@@ -23,6 +23,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:path/path.dart' as p;
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/services/browser_addon.dart';
 import 'package:weblibre/utils/ui_helper.dart';
 
@@ -120,7 +121,7 @@ class _InstallLocalAddonSheet extends HookConsumerWidget {
             OutlinedButton.icon(
               onPressed: isInstalling.value ? null : pickFile,
               icon: const Icon(Icons.folder_open),
-              label: const Text('Select XPI File'),
+              label: Text(AppLocalizations.of(context)!.selectXpiFile),
             ),
             const SizedBox(height: 8),
             Container(
@@ -185,7 +186,7 @@ class _InstallLocalAddonSheet extends HookConsumerWidget {
                       width: 20,
                       child: CircularProgressIndicator(strokeWidth: 2),
                     )
-                  : const Text('Install'),
+                  : Text(AppLocalizations.of(context)!.installExtension),
             ),
           ],
         ),

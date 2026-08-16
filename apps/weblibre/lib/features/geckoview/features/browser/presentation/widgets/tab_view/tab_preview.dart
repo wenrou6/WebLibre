@@ -23,6 +23,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/design/app_colors.dart';
 import 'package:weblibre/features/geckoview/domain/entities/states/tab.dart';
 import 'package:weblibre/features/geckoview/domain/providers/tab_detail_state.dart';
@@ -260,13 +261,19 @@ class GridTabPreview extends HookConsumerWidget {
                               onDeleteAll?.call(displayUrl.host);
                             },
                             leadingIcon: const Icon(Icons.language),
-                            child: const Text('Close from Same Host'),
+                            child: Text(
+                              AppLocalizations.of(context)!.closeFromSameHost,
+                            ),
                           ),
                           if (onCloseSubtree != null)
                             MenuItemButton(
                               onPressed: onCloseSubtree,
                               leadingIcon: const Icon(Icons.account_tree),
-                              child: const Text('Close Tab and Descendants'),
+                              child: Text(
+                                AppLocalizations.of(
+                                  context,
+                                )!.closeTabAndDescendants,
+                              ),
                             ),
                         ],
                         child: SizedBox(
@@ -352,7 +359,9 @@ class GridTabPreview extends HookConsumerWidget {
                                           context,
                                           'Tab unpinned',
                                           action: SnackBarAction(
-                                            label: 'Undo',
+                                            label: AppLocalizations.of(
+                                              context,
+                                            )!.undo,
                                             onPressed: () async {
                                               await ref
                                                   .read(
@@ -641,13 +650,19 @@ class ListTabPreview extends HookConsumerWidget {
                           onDeleteAll?.call(displayUrl.host);
                         },
                         leadingIcon: const Icon(Icons.language),
-                        child: const Text('Close from Same Host'),
+                        child: Text(
+                          AppLocalizations.of(context)!.closeFromSameHost,
+                        ),
                       ),
                       if (onCloseSubtree != null)
                         MenuItemButton(
                           onPressed: onCloseSubtree,
                           leadingIcon: const Icon(Icons.account_tree),
-                          child: const Text('Close Tab and Descendants'),
+                          child: Text(
+                            AppLocalizations.of(
+                              context,
+                            )!.closeTabAndDescendants,
+                          ),
                         ),
                     ],
                     child: IconButton(
