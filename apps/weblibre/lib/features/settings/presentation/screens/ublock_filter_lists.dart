@@ -906,8 +906,8 @@ class _ExternalListsCard extends StatelessWidget {
             ),
           ),
           if (lists.isEmpty)
-            const Padding(
-              padding: EdgeInsets.fromLTRB(16, 8, 16, 12),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(l10n.noExternalListsConfigured),
@@ -988,6 +988,7 @@ class _ExternalListRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final hasDescription =

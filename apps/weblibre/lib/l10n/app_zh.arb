@@ -211,5 +211,1407 @@
   "generalSettingsSubtitle": "外观、下载和常规行为",
   "webLibreIsDefaultBrowser": "WebLibre 是默认浏览器",
   "defaultButton": "默认",
-  "setButton": "设置"
+  "setButton": "设置",
+  "searchSettingsHint": "搜索设置",
+  "@searchSettingsHint": {
+    "description": "Hint shown in settings search fields"
+  },
+  "noSettingsAvailable": "暂无可用设置。",
+  "@noSettingsAvailable": {
+    "description": "Empty state when a settings screen has no entries"
+  },
+  "noSettingsMatch": "没有与“{query}”匹配的设置。",
+  "@noSettingsMatch": {
+    "description": "Empty state for settings search results",
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteAllExceptionsQuestion": "删除所有例外网站？",
+  "@deleteAllExceptionsQuestion": {
+    "description": "Confirmation dialog title for deleting tracking protection exceptions"
+  },
+  "reenableTrackingProtectionAllExceptionSites": "这将为所有例外网站重新启用跟踪保护。",
+  "@reenableTrackingProtectionAllExceptionSites": {
+    "description": "Confirmation dialog message for deleting all tracking protection exceptions"
+  },
+  "userAgentChanged": "用户代理已更改",
+  "@userAgentChanged": {
+    "description": "Dialog title shown after changing the user agent"
+  },
+  "browserRestartForUserAgent": "需要重启浏览器才能使新的用户代理生效。",
+  "@browserRestartForUserAgent": {
+    "description": "Dialog message explaining that a user agent change requires restart"
+  },
+  "later": "稍后",
+  "@later": {
+    "description": "Button to postpone an action"
+  },
+  "restartNow": "立即重启",
+  "@restartNow": {
+    "description": "Button to restart the app immediately"
+  },
+  "entryCopied": "条目已复制",
+  "@entryCopied": {
+    "description": "Snackbar shown after copying a log entry"
+  },
+  "messageLabel": "消息：",
+  "@messageLabel": {
+    "description": "Message field label in log details"
+  },
+  "errorLabel": "错误：",
+  "@errorLabel": {
+    "description": "Error field label in log details"
+  },
+  "stackTraceLabel": "堆栈跟踪：",
+  "@stackTraceLabel": {
+    "description": "Stack trace field label in log details"
+  },
+  "copy": "复制",
+  "@copy": {
+    "description": "Copy action"
+  },
+  "sync": "同步",
+  "@sync": {
+    "description": "Sync action"
+  },
+  "chooseSearchProvider": "选择搜索提供商",
+  "@chooseSearchProvider": {
+    "description": "Button prompting the user to select a search provider"
+  },
+  "nothingAddedYet": "尚未添加任何内容。",
+  "@nothingAddedYet": {
+    "description": "Empty state for reusable settings lists"
+  },
+  "add": "添加",
+  "@add": {
+    "description": "Add action tooltip"
+  },
+  "remove": "移除",
+  "@remove": {
+    "description": "Remove action tooltip"
+  },
+  "entries": "条目数",
+  "@entries": {
+    "description": "Number of synchronized entries label"
+  },
+  "lastSync": "上次同步",
+  "@lastSync": {
+    "description": "Last synchronization time label"
+  },
+  "notAvailable": "不可用",
+  "@notAvailable": {
+    "description": "Value is not available"
+  },
+  "searchAllSettings": "搜索所有设置",
+  "@searchAllSettings": {
+    "description": "Hint on the main settings search field"
+  },
+  "appearanceDownloads": "外观、下载",
+  "@appearanceDownloads": {
+    "description": "General settings category subtitle"
+  },
+  "browsing": "浏览",
+  "@browsing": {
+    "description": "Browsing settings category title"
+  },
+  "tabsNavigationExternalLinks": "标签页、导航、外部链接",
+  "@tabsNavigationExternalLinks": {
+    "description": "Browsing settings category subtitle"
+  },
+  "homeAndNewTab": "主页与新标签页",
+  "@homeAndNewTab": {
+    "description": "Home and new tab settings title"
+  },
+  "homeAndNewTabSubtitle": "设置主页和新标签页显示的内容",
+  "@homeAndNewTabSubtitle": {
+    "description": "Home and new tab settings subtitle"
+  },
+  "gestures": "手势",
+  "@gestures": {
+    "description": "Gesture settings category title"
+  },
+  "strokeGesturesForBrowserActions": "使用轨迹手势执行浏览器操作",
+  "@strokeGesturesForBrowserActions": {
+    "description": "Gesture settings category subtitle"
+  },
+  "toolbarAndLayout": "工具栏与布局",
+  "@toolbarAndLayout": {
+    "description": "Toolbar and layout settings category title"
+  },
+  "toolbarAndLayoutSubtitle": "标签栏、工具栏、快速切换器、标签页视图",
+  "@toolbarAndLayoutSubtitle": {
+    "description": "Toolbar and layout settings category subtitle"
+  },
+  "webContent": "网页内容",
+  "@webContent": {
+    "description": "Web content settings category title"
+  },
+  "webContentSubtitle": "页面显示、PDF、阅读模式、AI",
+  "@webContentSubtitle": {
+    "description": "Web content settings category subtitle"
+  },
+  "notifications": "通知",
+  "@notifications": {
+    "description": "Notification settings category title"
+  },
+  "notificationsSettingsSubtitle": "网页推送、分发服务、网站订阅",
+  "@notificationsSettingsSubtitle": {
+    "description": "Notification settings category subtitle"
+  },
+  "searchCategorySubtitle": "搜索提供商、Bang 快捷指令、搜索历史",
+  "@searchCategorySubtitle": {
+    "description": "Search settings category subtitle"
+  },
+  "trackingProtectionDataClearing": "跟踪保护、数据清除",
+  "@trackingProtectionDataClearing": {
+    "description": "Privacy and security settings category subtitle"
+  },
+  "connectionsAndRouting": "连接与路由",
+  "@connectionsAndRouting": {
+    "description": "Proxy settings category subtitle"
+  },
+  "installManageExtensionSources": "安装并管理扩展来源",
+  "@installManageExtensionSources": {
+    "description": "Extensions settings category subtitle"
+  },
+  "webLibreAccount": "WebLibre 账户",
+  "@webLibreAccount": {
+    "description": "WebLibre account settings category title"
+  },
+  "signInSyncSettings": "登录、同步设置",
+  "@signInSyncSettings": {
+    "description": "WebLibre account settings category subtitle"
+  },
+  "firefoxSync": "Firefox 同步",
+  "@firefoxSync": {
+    "description": "Firefox Sync settings category title"
+  },
+  "firefoxSyncSubtitle": "账户、立即同步、同步项目选择",
+  "@firefoxSyncSubtitle": {
+    "description": "Firefox Sync settings category subtitle"
+  },
+  "advancedCategorySubtitle": "JavaScript、用户代理、调试",
+  "@advancedCategorySubtitle": {
+    "description": "Advanced settings category subtitle"
+  },
+  "browser": "浏览器",
+  "@browser": {
+    "description": "Browser settings group title"
+  },
+  "servicesAndAdvanced": "服务与高级设置",
+  "@servicesAndAdvanced": {
+    "description": "Services and advanced settings group title"
+  },
+  "startup": "启动",
+  "@startup": {
+    "description": "Startup settings section title"
+  },
+  "whenNoTabToShow": "没有可显示的标签页时",
+  "@whenNoTabToShow": {
+    "description": "Home target setting title"
+  },
+  "onStartupAndAfterClosingLastTab": "应用启动时以及关闭最后一个标签页后",
+  "@onStartupAndAfterClosingLastTab": {
+    "description": "Home target setting subtitle"
+  },
+  "applyWhenLastTabCloses": "关闭最后一个标签页时应用",
+  "@applyWhenLastTabCloses": {
+    "description": "Apply home target on last tab close setting"
+  },
+  "otherwiseOpenTabFromAnotherContainer": "否则将改为打开其他容器中的标签页",
+  "@otherwiseOpenTabFromAnotherContainer": {
+    "description": "Home target on last tab close metadata subtitle"
+  },
+  "layout": "布局",
+  "@layout": {
+    "description": "Layout settings section title"
+  },
+  "customizeHomeSections": "自定义主页版块",
+  "@customizeHomeSections": {
+    "description": "Customize home page sections setting"
+  },
+  "chooseOrderHomePage": "选择主页显示的内容并调整顺序",
+  "@chooseOrderHomePage": {
+    "description": "Customize home page sections subtitle"
+  },
+  "customizeNewTabSections": "自定义新标签页版块",
+  "@customizeNewTabSections": {
+    "description": "Customize new tab sections setting"
+  },
+  "chooseOrderNewTabPage": "选择新标签页显示的内容并调整顺序",
+  "@chooseOrderNewTabPage": {
+    "description": "Customize new tab sections subtitle"
+  },
+  "address": "地址",
+  "@address": {
+    "description": "Web address field label"
+  },
+  "enterAddressOrShowHomePage": "请输入地址，否则将显示主页",
+  "@enterAddressOrShowHomePage": {
+    "description": "Validation message for an empty custom home address"
+  },
+  "notValidAddress": "地址无效",
+  "@notValidAddress": {
+    "description": "Validation message for an invalid address"
+  },
+  "closingLastTabStaysInContainer": "关闭容器中的最后一个标签页后将停留在该容器，而不会打开其他位置的标签页",
+  "@closingLastTabStaysInContainer": {
+    "description": "Detailed description of applying the home target after closing the last tab"
+  },
+  "homePage": "主页",
+  "@homePage": {
+    "description": "Home target option"
+  },
+  "lastOpenedTab": "上次打开的标签页",
+  "@lastOpenedTab": {
+    "description": "Resume last tab home target option"
+  },
+  "customAddress": "自定义地址",
+  "@customAddress": {
+    "description": "Custom URL home target option"
+  },
+  "showChosenHomeSections": "显示快捷方式和你选择的版块",
+  "@showChosenHomeSections": {
+    "description": "Home page target description"
+  },
+  "pickUpWhereLeftOff": "从上次离开的地方继续",
+  "@pickUpWhereLeftOff": {
+    "description": "Resume last tab target description"
+  },
+  "openSpecificPage": "打开指定页面",
+  "@openSpecificPage": {
+    "description": "Custom address target description"
+  },
+  "providers": "提供商",
+  "@providers": {
+    "description": "Search providers settings section"
+  },
+  "defaultSearchProvider": "默认搜索提供商",
+  "@defaultSearchProvider": {
+    "description": "Default search provider setting"
+  },
+  "chooseDefaultSearchEngine": "选择用于搜索的默认引擎",
+  "@chooseDefaultSearchEngine": {
+    "description": "Default search provider subtitle"
+  },
+  "defaultAutocompleteProvider": "默认自动补全提供商",
+  "@defaultAutocompleteProvider": {
+    "description": "Default autocomplete provider setting"
+  },
+  "chooseSearchSuggestionsProvider": "选择提供搜索建议的服务",
+  "@chooseSearchSuggestionsProvider": {
+    "description": "Autocomplete provider subtitle"
+  },
+  "customSearchEngines": "自定义搜索引擎",
+  "@customSearchEngines": {
+    "description": "Custom search engines setting"
+  },
+  "addManageSearchProviders": "添加并管理你自己的搜索提供商",
+  "@addManageSearchProviders": {
+    "description": "Custom search engines subtitle"
+  },
+  "bangShortcuts": "Bang 快捷指令",
+  "@bangShortcuts": {
+    "description": "Bang shortcuts settings section"
+  },
+  "bangSettings": "Bang 设置",
+  "@bangSettings": {
+    "description": "Bang settings entry title"
+  },
+  "manageBangRepositories": "管理 Bang 仓库和使用数据",
+  "@manageBangRepositories": {
+    "description": "Bang settings entry subtitle"
+  },
+  "historyAndSuggestions": "历史记录与建议",
+  "@historyAndSuggestions": {
+    "description": "Search history and suggestions settings section"
+  },
+  "searchHistoryLimit": "搜索历史上限",
+  "@searchHistoryLimit": {
+    "description": "Search history limit setting"
+  },
+  "maximumRecentSearches": "要保留的最近搜索记录最大数量",
+  "@maximumRecentSearches": {
+    "description": "Search history limit subtitle"
+  },
+  "allowClipboardAccessSuggestions": "允许读取剪贴板以提供建议",
+  "@allowClipboardAccessSuggestions": {
+    "description": "Clipboard access for search suggestions setting"
+  },
+  "browserReadClipboardSuggestUrls": "浏览器可以读取剪贴板并建议网址",
+  "@browserReadClipboardSuggestUrls": {
+    "description": "Clipboard search suggestions subtitle"
+  },
+  "autocompleteOnEnter": "按回车键时自动补全",
+  "@autocompleteOnEnter": {
+    "description": "Accept autocomplete on submit setting"
+  },
+  "acceptInlineSuggestionOnEnterShort": "按回车键时接受行内建议",
+  "@acceptInlineSuggestionOnEnterShort": {
+    "description": "Short autocomplete on enter subtitle used in search metadata"
+  },
+  "acceptInlineSuggestionOnEnter": "按下键盘回车键时接受行内建议",
+  "@acceptInlineSuggestionOnEnter": {
+    "description": "Autocomplete on enter setting description"
+  },
+  "popularSiteSuggestions": "热门网站建议",
+  "@popularSiteSuggestions": {
+    "description": "Popular site autocomplete setting"
+  },
+  "completeTextWithKnownDomainsShort": "使用知名域名补全输入内容",
+  "@completeTextWithKnownDomainsShort": {
+    "description": "Short popular site suggestions subtitle used in search metadata"
+  },
+  "completeTextWithKnownDomains": "当历史记录中没有匹配项时，使用知名域名补全输入内容",
+  "@completeTextWithKnownDomains": {
+    "description": "Popular site suggestions setting description"
+  },
+  "localSearchIndex": "本地搜索索引",
+  "@localSearchIndex": {
+    "description": "Local search index settings section"
+  },
+  "enableLocalSearchIndex": "启用本地搜索索引",
+  "@enableLocalSearchIndex": {
+    "description": "Enable local search index setting"
+  },
+  "indexVisitedPagesLocally": "在本地索引访问过的页面以搜索内容",
+  "@indexVisitedPagesLocally": {
+    "description": "Local search index metadata subtitle"
+  },
+  "indexPrivateTabs": "索引隐私标签页",
+  "@indexPrivateTabs": {
+    "description": "Index private tabs setting"
+  },
+  "includePrivateTabsLocalIndexShort": "将隐私标签页加入本地索引",
+  "@includePrivateTabsLocalIndexShort": {
+    "description": "Index private tabs metadata subtitle"
+  },
+  "indexedPages": "已索引页面",
+  "@indexedPages": {
+    "description": "Indexed page count setting"
+  },
+  "viewClearLocalIndex": "查看并清除本地索引",
+  "@viewClearLocalIndex": {
+    "description": "Indexed pages metadata subtitle"
+  },
+  "searchSettingsSubtitle": "设置搜索提供商、Bang 快捷指令、历史建议和设备端搜索。",
+  "@searchSettingsSubtitle": {
+    "description": "Search settings screen subtitle"
+  },
+  "disabled": "已禁用",
+  "@disabled": {
+    "description": "Disabled option label"
+  },
+  "entriesLowercase": "条",
+  "@entriesLowercase": {
+    "description": "Suffix for a numeric number of entries field"
+  },
+  "pleaseEnterValue": "请输入一个值",
+  "@pleaseEnterValue": {
+    "description": "Required numeric value validation message"
+  },
+  "pleaseEnterValidNumber": "请输入有效数字",
+  "@pleaseEnterValidNumber": {
+    "description": "Invalid numeric value validation message"
+  },
+  "valueBetweenZeroAndHundred": "值必须介于 0 到 100 之间",
+  "@valueBetweenZeroAndHundred": {
+    "description": "Search history limit range validation message"
+  },
+  "localSearchIndexDescription": "在本地索引访问过的页面，让浏览器可以搜索其中的内容。访问元数据仍保留在引擎中，仅页面文本存储在设备上。",
+  "@localSearchIndexDescription": {
+    "description": "Detailed local search index setting description"
+  },
+  "indexPrivateTabsDescription": "将在隐私标签页中打开的页面加入本地索引。默认关闭。",
+  "@indexPrivateTabsDescription": {
+    "description": "Index private tabs setting description"
+  },
+  "clearLocalSearchIndexQuestion": "清除本地搜索索引？",
+  "@clearLocalSearchIndexQuestion": {
+    "description": "Confirmation title for clearing the local search index"
+  },
+  "clearLocalSearchIndexDescription": "这将删除所有本地索引的页面内容，不会影响引擎中的历史记录（访问元数据）。",
+  "@clearLocalSearchIndexDescription": {
+    "description": "Confirmation message for clearing the local search index"
+  },
+  "pagesIndexed": "已索引 {count} 个页面",
+  "@pagesIndexed": {
+    "description": "Number of locally indexed pages",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "loadingEllipsis": "正在加载…",
+  "@loadingEllipsis": {
+    "description": "Loading state using an ellipsis character"
+  },
+  "contentAndIdentity": "内容与身份标识",
+  "@contentAndIdentity": {
+    "description": "Advanced content and identity settings section"
+  },
+  "enableJavaScript": "启用 JavaScript",
+  "@enableJavaScript": {
+    "description": "Enable JavaScript setting"
+  },
+  "turnWebsiteScriptingOnOff": "开启或关闭网站脚本",
+  "@turnWebsiteScriptingOnOff": {
+    "description": "Enable JavaScript metadata subtitle"
+  },
+  "customUserAgent": "自定义用户代理",
+  "@customUserAgent": {
+    "description": "Custom user agent setting"
+  },
+  "overrideBrowserUserAgent": "覆盖浏览器的用户代理字符串",
+  "@overrideBrowserUserAgent": {
+    "description": "Custom user agent subtitle"
+  },
+  "useThirdPartyCaCertificates": "使用第三方 CA 证书",
+  "@useThirdPartyCaCertificates": {
+    "description": "Use third-party CA certificates setting"
+  },
+  "allowAndroidCaStoreCertificates": "允许使用 Android CA 存储中的证书",
+  "@allowAndroidCaStoreCertificates": {
+    "description": "Third-party CA certificates metadata subtitle"
+  },
+  "experimental": "实验性功能",
+  "@experimental": {
+    "description": "Experimental settings section"
+  },
+  "experimentalFeatures": "实验性功能",
+  "@experimentalFeatures": {
+    "description": "Experimental features setting"
+  },
+  "experimentalFeaturesSubtitle": "底层运行时功能与启动行为",
+  "@experimentalFeaturesSubtitle": {
+    "description": "Experimental features setting subtitle"
+  },
+  "developerTools": "开发者工具",
+  "@developerTools": {
+    "description": "Developer tools settings section"
+  },
+  "unmountEngineOffScreen": "离开页面时卸载引擎",
+  "@unmountEngineOffScreen": {
+    "description": "Unmount browser engine while off-screen setting"
+  },
+  "freeEngineUnderOverlay": "当覆盖界面位于上层时释放网页引擎",
+  "@freeEngineUnderOverlay": {
+    "description": "Unmount engine metadata subtitle"
+  },
+  "iconCache": "图标缓存",
+  "@iconCache": {
+    "description": "Icon cache setting"
+  },
+  "storedFavicons": "已存储的网站图标",
+  "@storedFavicons": {
+    "description": "Icon cache subtitle"
+  },
+  "mlDownloads": "机器学习下载内容",
+  "@mlDownloads": {
+    "description": "Downloaded machine learning files setting"
+  },
+  "downloadedAiModelsRuntimeFiles": "已下载的 AI 模型和运行时文件",
+  "@downloadedAiModelsRuntimeFiles": {
+    "description": "Machine learning downloads subtitle"
+  },
+  "errorLogs": "错误日志",
+  "@errorLogs": {
+    "description": "Error logs setting"
+  },
+  "viewCopyLogsIssueReporting": "查看并复制日志以便报告问题",
+  "@viewCopyLogsIssueReporting": {
+    "description": "Error logs setting subtitle"
+  },
+  "dartVm": "Dart 虚拟机",
+  "@dartVm": {
+    "description": "Dart VM developer setting"
+  },
+  "copyDartVmServiceUrl": "复制 Dart VM 服务网址",
+  "@copyDartVmServiceUrl": {
+    "description": "Dart VM developer setting subtitle"
+  },
+  "resetUi": "重置界面",
+  "@resetUi": {
+    "description": "Reset UI developer setting"
+  },
+  "rebuildEntireBrowserUi": "重新构建整个浏览器界面",
+  "@rebuildEntireBrowserUi": {
+    "description": "Reset UI developer setting subtitle"
+  },
+  "advancedSettingsSubtitle": "设置引擎行为、运行时覆盖项和开发者工具。",
+  "@advancedSettingsSubtitle": {
+    "description": "Advanced settings screen subtitle"
+  },
+  "javascriptDisabledWarning": "关闭 JavaScript 可以提升安全性、隐私性和速度，但可能导致某些网站无法正常工作。",
+  "@javascriptDisabledWarning": {
+    "description": "Detailed JavaScript setting warning"
+  },
+  "thirdPartyCertificatesAndroidCaStore": "允许使用 Android CA 存储中的第三方证书",
+  "@thirdPartyCertificatesAndroidCaStore": {
+    "description": "Detailed third-party CA certificate setting description"
+  },
+  "unmountEngineOffScreenDescription": "当全屏覆盖界面（设置、标签页、搜索）位于上层时卸载网页引擎并释放资源。在 Android 12 及更低版本上始终执行此操作；启用后，Android 13 及更高版本也会采用相同行为，返回页面时可能会重新加载。",
+  "@unmountEngineOffScreenDescription": {
+    "description": "Detailed description for unmounting the web engine off-screen"
+  },
+  "size": "大小",
+  "@size": {
+    "description": "Storage size label"
+  },
+  "clearMlDownloadsQuestion": "清除机器学习下载内容？",
+  "@clearMlDownloadsQuestion": {
+    "description": "Confirmation title for clearing machine learning files"
+  },
+  "clearMlDownloadsDescription": "这将清除此配置文件下载的 AI 模型和 ONNX 运行时文件。需要时会重新下载。再次使用机器学习功能前请重启 WebLibre。",
+  "@clearMlDownloadsDescription": {
+    "description": "Confirmation message for clearing machine learning files"
+  },
+  "mlDownloadsCleared": "机器学习下载内容已清除。重试前请重启 WebLibre。",
+  "@mlDownloadsCleared": {
+    "description": "Success message after clearing machine learning files"
+  },
+  "failedToClearMlDownloads": "无法清除机器学习下载内容：{error}",
+  "@failedToClearMlDownloads": {
+    "description": "Error message after failing to clear machine learning files",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "clearing": "正在清除",
+  "@clearing": {
+    "description": "Progress label while clearing data"
+  },
+  "serviceUrlCopied": "服务网址已复制",
+  "@serviceUrlCopied": {
+    "description": "Snackbar after copying the Dart VM service URL"
+  },
+  "reset": "重置",
+  "@reset": {
+    "description": "Reset action"
+  },
+  "manageProxyProfilesAndConnections": "管理代理配置和连接",
+  "@manageProxyProfilesAndConnections": {
+    "description": "Proxy connections entry subtitle"
+  },
+  "proxyRouting": "代理路由",
+  "@proxyRouting": {
+    "description": "Proxy routing entry title"
+  },
+  "chooseProxyForRegularAndPrivateTabs": "选择普通标签页和隐私标签页使用的代理",
+  "@chooseProxyForRegularAndPrivateTabs": {
+    "description": "Proxy routing entry subtitle"
+  },
+  "proxySettingsSubtitle": "管理代理连接并选择哪些标签页使用代理。",
+  "@proxySettingsSubtitle": {
+    "description": "Proxy settings screen subtitle"
+  },
+  "manageExtensions": "管理扩展",
+  "@manageExtensions": {
+    "description": "Extensions entry title"
+  },
+  "browseInstalledAndAvailableExtensions": "浏览已安装、已停用、可用和不受支持的扩展",
+  "@browseInstalledAndAvailableExtensions": {
+    "description": "Extensions entry subtitle"
+  },
+  "customCollection": "自定义集合",
+  "@customCollection": {
+    "description": "Custom extension collection entry title"
+  },
+  "useCustomMozillaAddonCollection": "使用自定义 Mozilla 扩展集合",
+  "@useCustomMozillaAddonCollection": {
+    "description": "Custom extension collection entry subtitle"
+  },
+  "updates": "更新",
+  "@updates": {
+    "description": "Extensions update section title"
+  },
+  "automaticUpdates": "自动更新",
+  "@automaticUpdates": {
+    "description": "Automatic extension updates title"
+  },
+  "automaticExtensionUpdatesEvery12Hours": "每 12 小时自动检查并安装扩展更新",
+  "@automaticExtensionUpdatesEvery12Hours": {
+    "description": "Automatic extension updates subtitle"
+  },
+  "security": "安全",
+  "@security": {
+    "description": "Extensions security section title"
+  },
+  "unsignedExtensionsNotVerifiedByMozilla": "未签名扩展未经 Mozilla 验证",
+  "@unsignedExtensionsNotVerifiedByMozilla": {
+    "description": "Unsigned extension setting subtitle"
+  },
+  "extensionsSettingsSubtitle": "管理附加组件、更新行为和扩展安全性。",
+  "@extensionsSettingsSubtitle": {
+    "description": "Extensions settings screen subtitle"
+  },
+  "extensionSettingFailedToLoad": "加载失败：{error}",
+  "@extensionSettingFailedToLoad": {
+    "description": "Error shown when an extension setting cannot be loaded",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "unsignedExtensionTrustWarning": "只从可信来源安装未签名扩展。它们可能包含恶意代码。",
+  "@unsignedExtensionTrustWarning": {
+    "description": "Warning shown while unsigned extensions are enabled"
+  },
+  "allowUnsignedExtensionsQuestion": "允许未签名扩展？",
+  "@allowUnsignedExtensionsQuestion": {
+    "description": "Confirmation dialog title for unsigned extensions"
+  },
+  "unsignedExtensionsSecurityWarning": "警告：这会显著降低浏览器的安全性。",
+  "@unsignedExtensionsSecurityWarning": {
+    "description": "Security warning in unsigned extension confirmation"
+  },
+  "unsignedExtensionsRiskDetails": "未签名扩展会绕过 Mozilla 的安全审核流程。恶意扩展可能：\n\n• 读取和修改你在任何网站上看到的所有内容\n• 窃取密码、银行信息和个人数据\n• 在不知情的情况下监控你的浏览活动\n• 在设备上安装其他恶意软件",
+  "@unsignedExtensionsRiskDetails": {
+    "description": "Risk details in unsigned extension confirmation"
+  },
+  "unsignedExtensionsDeveloperOnly": "仅当你是正在安装自己开发的扩展的开发者，或完全信任来源时才启用此选项。",
+  "@unsignedExtensionsDeveloperOnly": {
+    "description": "Final caution in unsigned extension confirmation"
+  },
+  "allow": "允许",
+  "@allow": {
+    "description": "Unsigned extension confirmation action"
+  },
+  "allowAfterSeconds": "允许（{seconds}）",
+  "@allowAfterSeconds": {
+    "description": "Disabled unsigned extension action during countdown",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "runtimeAndStartup": "运行时与启动",
+  "@runtimeAndStartup": {
+    "description": "Experimental settings section title"
+  },
+  "isolatedContentProcess": "隔离内容进程",
+  "@isolatedContentProcess": {
+    "description": "Isolated content process setting title"
+  },
+  "runWebContentInIsolatedProcess": "在隔离进程中运行网页内容",
+  "@runWebContentInIsolatedProcess": {
+    "description": "Isolated content process entry subtitle"
+  },
+  "appZygoteProcess": "应用 Zygote 进程",
+  "@appZygoteProcess": {
+    "description": "App zygote process setting title"
+  },
+  "preloadContentServiceForFasterIsolatedStartup": "预加载内容服务以加快隔离启动",
+  "@preloadContentServiceForFasterIsolatedStartup": {
+    "description": "App zygote process entry subtitle"
+  },
+  "experimentalSettingsSubtitle": "运行时隔离和启动行为。",
+  "@experimentalSettingsSubtitle": {
+    "description": "Experimental settings screen subtitle"
+  },
+  "isolatedContentProcessRequiresRestart": "在隔离进程中运行网页内容。需要重启应用。",
+  "@isolatedContentProcessRequiresRestart": {
+    "description": "Isolated content process switch subtitle"
+  },
+  "appZygoteProcessRequiresAndroidAndRestart": "预加载内容服务以加快隔离进程启动。需要 Android 10 或更高版本并重启应用。",
+  "@appZygoteProcessRequiresAndroidAndRestart": {
+    "description": "App zygote process switch subtitle"
+  },
+  "customExtensionCollection": "自定义扩展集合",
+  "@customExtensionCollection": {
+    "description": "Custom extension collection screen title"
+  },
+  "collectionSource": "集合来源",
+  "@collectionSource": {
+    "description": "Custom extension collection section title"
+  },
+  "collectionConfiguration": "集合配置",
+  "@collectionConfiguration": {
+    "description": "Custom extension collection entry title"
+  },
+  "collectionConfigurationSubtitle": "Mozilla 服务器、集合所有者和集合名称",
+  "@collectionConfigurationSubtitle": {
+    "description": "Custom extension collection entry subtitle"
+  },
+  "serverUrl": "服务器 URL",
+  "@serverUrl": {
+    "description": "Custom extension collection server field label"
+  },
+  "collectionUser": "集合用户",
+  "@collectionUser": {
+    "description": "Custom extension collection user field label"
+  },
+  "collectionName": "集合名称",
+  "@collectionName": {
+    "description": "Custom extension collection name field label"
+  },
+  "actions": "操作",
+  "@actions": {
+    "description": "Custom extension collection actions section title"
+  },
+  "saveAndRestartBrowser": "保存并重启浏览器",
+  "@saveAndRestartBrowser": {
+    "description": "Save custom extension collection action"
+  },
+  "applyCustomCollectionAndRestartBrowser": "应用自定义集合并重启浏览器",
+  "@applyCustomCollectionAndRestartBrowser": {
+    "description": "Save custom extension collection entry subtitle"
+  },
+  "usageData": "使用数据",
+  "@usageData": {
+    "description": "Bang settings usage section title"
+  },
+  "bangFrequencies": "Bang 使用频率",
+  "@bangFrequencies": {
+    "description": "Bang frequency setting title"
+  },
+  "bangFrequenciesSubtitle": "用于 Bang 推荐的使用记录",
+  "@bangFrequenciesSubtitle": {
+    "description": "Bang frequency setting subtitle"
+  },
+  "repositories": "仓库",
+  "@repositories": {
+    "description": "Bang repositories section title"
+  },
+  "generalBangs": "常规 Bang",
+  "@generalBangs": {
+    "description": "General Bang repository title"
+  },
+  "syncOnDemandFromGitHub": "按需从 GitHub 同步",
+  "@syncOnDemandFromGitHub": {
+    "description": "Bang repository subtitle"
+  },
+  "kagiBangs": "Kagi Bang",
+  "@kagiBangs": {
+    "description": "Kagi Bang repository title"
+  },
+  "bangSettingsTitle": "Bang 设置",
+  "@bangSettingsTitle": {
+    "description": "Bang settings screen title"
+  },
+  "bangSettingsSubtitle": "Bang 快捷方式使用情况、仓库和按需同步。",
+  "@bangSettingsSubtitle": {
+    "description": "Bang settings screen subtitle"
+  },
+  "desktopModeSites": "桌面模式网站",
+  "@desktopModeSites": {
+    "description": "Desktop mode sites screen title"
+  },
+  "desktopModeSitesDescription": "这些网站始终以桌面模式加载，会覆盖默认设置。子域名也包含在内（例如，\"example.com\" 也会涵盖 \"m.example.com\"）。",
+  "@desktopModeSitesDescription": {
+    "description": "Desktop mode sites screen description"
+  },
+  "noSitesAdded": "未添加网站。",
+  "@noSitesAdded": {
+    "description": "Empty desktop mode sites state"
+  },
+  "moduleSearchProviders": "搜索提供商",
+  "@moduleSearchProviders": {
+    "description": "Search module label"
+  },
+  "moduleSuggestions": "建议",
+  "@moduleSuggestions": {
+    "description": "Search module label"
+  },
+  "moduleTabs": "标签页",
+  "@moduleTabs": {
+    "description": "Search module label"
+  },
+  "moduleArticles": "文章",
+  "@moduleArticles": {
+    "description": "Search module label"
+  },
+  "moduleHistoryEngine": "历史记录（引擎）",
+  "@moduleHistoryEngine": {
+    "description": "Search module label"
+  },
+  "moduleLocalContent": "本地内容",
+  "@moduleLocalContent": {
+    "description": "Search module label"
+  },
+  "modulePopularSites": "热门网站",
+  "@modulePopularSites": {
+    "description": "Search module label"
+  },
+  "moduleHistoryHighlights": "历史记录精选",
+  "@moduleHistoryHighlights": {
+    "description": "Search module label"
+  },
+  "moduleShortcuts": "快捷方式",
+  "@moduleShortcuts": {
+    "description": "Search module label"
+  },
+  "moduleRecentHistory": "最近历史记录",
+  "@moduleRecentHistory": {
+    "description": "Search module label"
+  },
+  "moduleRecentArticles": "最近文章",
+  "@moduleRecentArticles": {
+    "description": "Search module label"
+  },
+  "moduleRecentTabs": "最近标签页",
+  "@moduleRecentTabs": {
+    "description": "Search module label"
+  },
+  "moduleFrequentBangs": "常用 Bang",
+  "@moduleFrequentBangs": {
+    "description": "Search module label"
+  },
+  "moduleQuote": "名言",
+  "@moduleQuote": {
+    "description": "Search module label"
+  },
+  "moduleQuickActions": "快速操作",
+  "@moduleQuickActions": {
+    "description": "Search module label"
+  },
+  "customizeHome": "自定义主页",
+  "@customizeHome": {
+    "description": "Home module layout screen title"
+  },
+  "customizeNewTab": "自定义新标签页",
+  "@customizeNewTab": {
+    "description": "New tab module layout screen title"
+  },
+  "customizeSearch": "自定义搜索",
+  "@customizeSearch": {
+    "description": "Search module layout screen title"
+  },
+  "moduleSurfaceReorderDescription": "拖动可重新排序。关闭某个分区开关可在此隐藏它，不会影响其他页面。",
+  "@moduleSurfaceReorderDescription": {
+    "description": "Module layout screen explanatory text"
+  },
+  "resetToDefaults": "恢复默认设置",
+  "@resetToDefaults": {
+    "description": "Module layout reset action"
+  },
+  "trackingProtectionExceptions": "跟踪保护例外",
+  "@trackingProtectionExceptions": {
+    "description": "Tracking protection exceptions screen title"
+  },
+  "searchExceptionUrls": "搜索例外网址",
+  "@searchExceptionUrls": {
+    "description": "Tracking protection exceptions search hint"
+  },
+  "deleteAll": "全部删除",
+  "@deleteAll": {
+    "description": "Delete all tracking protection exceptions action"
+  },
+  "exceptionList": "例外列表",
+  "@exceptionList": {
+    "description": "Tracking protection exception list section title"
+  },
+  "siteWithTrackingProtectionDisabled": "已停用跟踪保护的网站",
+  "@siteWithTrackingProtectionDisabled": {
+    "description": "Tracking protection exception entry subtitle"
+  },
+  "failedToDeleteExceptions": "删除例外失败：{error}",
+  "@failedToDeleteExceptions": {
+    "description": "Tracking protection delete error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToRemoveException": "移除例外失败：{error}",
+  "@failedToRemoveException": {
+    "description": "Tracking protection remove error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "removeException": "移除例外",
+  "@removeException": {
+    "description": "Tracking protection exception remove tooltip"
+  },
+  "noExceptions": "没有例外",
+  "@noExceptions": {
+    "description": "Empty tracking protection exceptions title"
+  },
+  "exceptionSitesAppearHere": "添加到例外的网站会显示在这里",
+  "@exceptionSitesAppearHere": {
+    "description": "Empty tracking protection exceptions description"
+  },
+  "errorLoadingExceptions": "加载例外时出错",
+  "@errorLoadingExceptions": {
+    "description": "Tracking protection exceptions error state title"
+  },
+  "logLevelFatal": "致命",
+  "@logLevelFatal": {
+    "description": "Log level label"
+  },
+  "logLevelAll": "全部",
+  "@logLevelAll": {
+    "description": "Log level label"
+  },
+  "logLevelVerbose": "详细",
+  "@logLevelVerbose": {
+    "description": "Log level label"
+  },
+  "logLevelUnexpected": "异常",
+  "@logLevelUnexpected": {
+    "description": "Log level label"
+  },
+  "logLevelNothing": "无",
+  "@logLevelNothing": {
+    "description": "Log level label"
+  },
+  "logLevelOff": "关闭",
+  "@logLevelOff": {
+    "description": "Log level label"
+  },
+  "accordion": "手风琴式",
+  "accordionSubtitle": "可展开的堆叠标签组",
+  "addBookmark": "添加书签",
+  "addChildTab": "添加子标签页",
+  "addIsolatedTab": "添加隔离标签页",
+  "addPrivateTab": "添加隐私标签页",
+  "addRegularTab": "添加普通标签页",
+  "addressBar": "地址栏",
+  "allowLoginAppCallbacks": "允许登录应用回调",
+  "allowLoginAppCallbacksSubtitle": "允许在浏览器登录后返回应用的链接",
+  "always": "始终",
+  "alwaysKeepInBrowser": "始终保留在浏览器中",
+  "alwaysOpenInApp": "始终在应用中打开",
+  "alwaysOpenLinksInBrowser": "始终在浏览器中打开链接",
+  "alwaysOpenLinksInNativeApps": "始终在原生应用中打开链接",
+  "alwaysRequestDesktopSite": "始终请求桌面版网站",
+  "alwaysRequestDesktopSiteSubtitle": "默认以桌面模式打开新标签页",
+  "askBeforeOpening": "打开前询问",
+  "askBeforeOpeningLinksInAppsSubtitle": "在原生应用中打开链接前询问",
+  "askHowBookmarkOpens": "询问书签的打开方式",
+  "askHowExternalLinksOpen": "询问外部链接的打开方式",
+  "autoHideTabBar": "自动隐藏标签栏",
+  "autoHideTabBarSubtitle": "滚动页面时隐藏标签栏",
+  "background": "后台",
+  "backgroundTabBehavior": "后台标签页行为",
+  "backgroundTabBehaviorSubtitle": "选择标签页在后台打开后的行为",
+  "bookmark": "书签",
+  "bookmarkOpenBehavior": "书签打开行为",
+  "bookmarkOpenBehaviorSubtitle": "选择点击书签时的打开方式",
+  "bottomSheetTabView": "底部面板",
+  "bottomSheetTabViewSubtitle": "在底部面板中显示标签页",
+  "browsingNavigationSection": "导航",
+  "browsingSettings": "浏览",
+  "browsingSettingsSubtitle": "标签页、导航、应用链接和小型网页行为。",
+  "browsingTabsSection": "标签页",
+  "cloneAsIsolated": "克隆为隔离标签页",
+  "cloneAsPrivate": "克隆为隐私标签页",
+  "cloneAsRegular": "克隆为普通标签页",
+  "closeButtonsOnAllTabs": "在所有标签页上显示关闭按钮",
+  "closeButtonsOnAllTabsSubtitle": "在每个标签页上显示关闭按钮",
+  "closeFromSameHost": "关闭同一主机的标签页",
+  "closeOthers": "关闭其他标签页",
+  "compact": "紧凑",
+  "compactTabBarSubtitle": "单行紧凑标签页",
+  "containerTabs": "容器标签页",
+  "containerTabsSubtitle": "按容器分组标签页",
+  "contextualToolbarSection": "上下文工具栏",
+  "continueIntoNextContainer": "继续到下一个容器",
+  "continueIntoNextContainerSubtitle": "经过容器最后一个标签页后移至下一个容器",
+  "createChildTabs": "创建子标签页",
+  "createChildTabsSubtitle": "在同一容器上下文中打开标签页里的链接",
+  "customTab": "自定义标签页",
+  "customTabsBrowsingSubtitle": "控制 WebLibre 处理 Android 自定义标签页的方式",
+  "customizeSwitcherButtons": "自定义切换器按钮",
+  "customizeSwitcherButtonsSubtitle": "选择快速标签页切换器中显示的按钮",
+  "customizeToolbarButtons": "自定义工具栏按钮",
+  "customizeToolbarButtonsSubtitle": "选择并排列上下文工具栏按钮",
+  "decreaseFont": "缩小字体",
+  "desktopModeSection": "桌面模式",
+  "desktopModeSitesSubtitle": "始终以桌面模式加载的网站",
+  "disableGestures": "禁用手势",
+  "doubleBackToCloseTab": "双击返回关闭标签页",
+  "doubleBackToCloseTabSubtitle": "需要按两次返回键才能关闭当前标签页",
+  "duplicateTab": "复制标签页",
+  "enableGestures": "启用手势",
+  "extensionsMenu": "扩展菜单",
+  "externalLinkHandling": "外部链接处理",
+  "externalLinkHandlingSubtitle": "选择外部链接在 WebLibre 中的打开方式",
+  "externalLinksSection": "外部链接",
+  "hardRefreshBypassCache": "强制刷新（绕过缓存）",
+  "hideQuickTabSwitcherBar": "隐藏快速标签页切换栏",
+  "hideTabBar": "隐藏标签栏",
+  "historyMenuForwardPages": "历史记录菜单（后续页面）",
+  "historyMenuPreviousPages": "历史记录菜单（先前页面）",
+  "home": "主页",
+  "homeScreenSection": "主屏幕",
+  "increaseFont": "增大字体",
+  "installSitesAsApps": "将网站安装为应用",
+  "installSitesAsAppsSubtitle": "允许将没有清单的网站安装为应用",
+  "livePreview": "实时预览",
+  "livePreviewSubtitle": "预览工具栏和布局更改",
+  "longPressUrlToCopy": "长按网址复制",
+  "longPressUrlToCopySubtitle": "长按地址栏复制当前网址",
+  "loopAround": "循环",
+  "loopAroundSubtitle": "到达第一个或最后一个标签页后从另一端继续",
+  "menu": "菜单",
+  "navigateSequentialTabs": "按顺序浏览标签页",
+  "navigateSequentialTabsSubtitle": "移至相邻标签页",
+  "never": "从不",
+  "newTabDefault": "新标签页默认类型",
+  "newTabDefaultSubtitle": "选择手动创建标签页的默认类型",
+  "newestFirst": "最新优先",
+  "off": "关闭",
+  "offerAppStoreFallback": "提供应用商店备选项",
+  "offerAppStoreFallbackSubtitle": "没有已安装应用能打开链接时，提议查找应用",
+  "oldestFirst": "最早优先",
+  "openBookmarkCustomTab": "在自定义标签页中打开书签",
+  "openBookmarkIsolatedTab": "在隔离标签页中打开书签",
+  "openBookmarkPrivateTab": "在隐私标签页中打开书签",
+  "openBookmarkRegularTab": "在普通标签页中打开书签",
+  "openBookmarks": "打开书签",
+  "openExternalLinksIsolatedTab": "在隔离标签页中打开外部链接",
+  "openExternalLinksPrivateTab": "在隐私标签页中打开外部链接",
+  "openExternalLinksRegularTab": "在普通标签页中打开外部链接",
+  "openLinksInApps": "在应用中打开链接",
+  "openLinksInAppsSubtitle": "选择外部应用链接的打开方式",
+  "openSettings": "打开设置",
+  "pageDown": "向下翻页",
+  "pageUp": "向上翻页",
+  "positionBottom": "底部",
+  "positionBottomSubtitle": "将栏放置在底部",
+  "positionLeft": "左侧",
+  "positionRight": "右侧",
+  "positionTop": "顶部",
+  "positionTopSubtitle": "将栏放置在顶部",
+  "previewBank": "银行",
+  "previewNews": "新闻",
+  "previewPageContent": "页面内容",
+  "prompt": "询问",
+  "pullToRefresh": "下拉刷新",
+  "pullToRefreshSubtitle": "在页面上向下滑动以重新加载",
+  "quickSwitcherHierarchyDepth": "快速切换器层级深度",
+  "quickSwitcherHierarchyDepthSubtitle": "选择要显示的标签页层级数",
+  "quickSwitcherHierarchyLevelCount": "{count} 层",
+  "@quickSwitcherHierarchyLevelCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quickSwitcherHistoryFallback": "快速切换器历史记录回退",
+  "quickSwitcherHistoryFallbackSubtitle": "层级中没有匹配项时使用最近访问的标签页",
+  "quickSwitcherTitleWidth": "快速切换器标题宽度",
+  "quickSwitcherTitleWidthSubtitle": "选择标签页标题占用的空间",
+  "quickTabSwitcherSection": "快速标签页切换器",
+  "quit": "退出",
+  "quitWithoutConfirmation": "不经确认退出",
+  "readerMode": "阅读模式",
+  "recentlyUsedTabs": "最近使用的标签页",
+  "recentlyUsedTabsSubtitle": "在快速切换器中显示最近使用的标签页",
+  "rememberedSiteRules": "已记住的网站规则",
+  "removeBookmark": "移除书签",
+  "removeRule": "移除规则",
+  "scrollToBottom": "滚动到底部",
+  "scrollToTop": "滚动到顶部",
+  "searchToolbarLayoutSettings": "搜索工具栏和布局设置",
+  "sequentialTabNavigation": "顺序标签页导航",
+  "sequentialTabNavigationSubtitle": "选择按顺序浏览标签页时在何处结束",
+  "showContainerUi": "显示容器界面",
+  "showContainerUiSubtitle": "显示容器选择器、菜单和管理功能",
+  "showContextualToolbar": "显示上下文工具栏",
+  "showContextualToolbarSubtitle": "浏览时显示上下文工具栏",
+  "showFaviconsInListView": "在列表视图中显示网站图标",
+  "showFaviconsInListViewSubtitle": "在标签页旁显示网站图标",
+  "showIsolatedTabUi": "显示隔离标签页界面",
+  "showIsolatedTabUiSubtitle": "在界面中显示创建隔离标签页的选项",
+  "showTitlesInQuickTabSwitcher": "在快速标签页切换器中显示标题",
+  "showTitlesInQuickTabSwitcherSubtitle": "在快速切换器中显示标签页标题",
+  "showTranslationOptions": "显示翻译选项",
+  "smallWebTabDefault": "小型网页标签页默认类型",
+  "smallWebTabDefaultSubtitle": "选择进入小型网页时使用的标签页类型",
+  "stayAndOfferToSwitch": "停留并提议切换",
+  "stayAndOfferToSwitchSubtitle": "停留在当前标签页并提议切换",
+  "switchImmediately": "立即切换",
+  "switchImmediatelySubtitle": "切换到新打开的后台标签页",
+  "switchToLastUsedTab": "切换到上次使用的标签页",
+  "switchToLastUsedTabSubtitle": "返回之前使用的标签页",
+  "tabBarDirection": "标签栏方向",
+  "tabBarDirectionSubtitle": "选择标签页在标签栏中的排列方式",
+  "tabBarPosition": "标签栏位置",
+  "tabBarPositionSubtitle": "选择标签栏的显示位置",
+  "tabBarSection": "标签栏",
+  "tabBarStyle": "标签栏样式",
+  "tabBarStyleSubtitle": "选择标签栏布局",
+  "tabBarSwipeBehavior": "标签栏滑动行为",
+  "tabBarSwipeBehaviorSubtitle": "选择在标签栏上水平滑动时的行为",
+  "tabListDirection": "标签页列表方向",
+  "tabListDirectionSubtitle": "选择标签页在列表视图中的排列方式",
+  "tabStacking": "标签页堆叠",
+  "tabStackingSubtitle": "选择标签页的分组和显示方式",
+  "tabTypeIsolated": "隔离",
+  "tabTypePrivate": "隐私",
+  "tabTypeRegular": "普通",
+  "tabViewSection": "标签页视图",
+  "tabs": "标签页",
+  "textSize": "文字大小",
+  "twoRows": "两行",
+  "twoRowsSubtitle": "用两行显示标签页",
+  "unshortener": "短链接还原",
+  "unshortenerSubtitle": "短链接解析器和 API 令牌",
+  "urlCleanerBrowsingSubtitle": "跟踪参数移除规则和目录更新",
+  "verticalSideRailSubtitle": "在垂直侧栏中显示标签页",
+  "webLibrePreview": "WebLibre 预览",
+  "withTitle": "带标题",
+  "withTitleSubtitle": "在标签栏中显示标签页标题",
+  "addExternalFilterList": "添加外部过滤列表",
+  "addExternalList": "添加外部列表",
+  "ads": "广告",
+  "adsAnalyticsAndSocialTrackers": "广告、分析和社交跟踪器",
+  "adsAnalyticsAndSocialTrackersSubtitle": "阻止广告、分析、社交和 Mozilla 社交跟踪器类别",
+  "advancedFingerprintingProtection": "高级指纹保护",
+  "advancedSecurity": "高级安全",
+  "allCookiesMayBreakSites": "所有 Cookie（可能导致网站异常）",
+  "allTabs": "所有标签页",
+  "allThirdPartyCookies": "所有第三方 Cookie",
+  "allowlistExceptions": "允许列表例外",
+  "allowlistExceptionsSubtitle": "用于解决网站严重和轻微问题的兼容性例外",
+  "alreadyAdded": "已添加",
+  "alwaysAllowed": "始终允许",
+  "alwaysBlocked": "始终阻止",
+  "annoyances": "烦扰内容",
+  "appOpeningProtection": "应用打开保护",
+  "appPolicyWithPackage": "{policy} · {packageName}",
+  "@appPolicyWithPackage": {
+    "placeholders": {
+      "policy": {},
+      "packageName": {}
+    }
+  },
+  "apply": "应用",
+  "applyTo": "应用于",
+  "applyWebLibreHardenings": "应用 WebLibre 加固",
+  "applyWebLibreHardeningsDescription": "这将启用精选的附加过滤列表，并将合法的 URL 缩短器列表添加为外部列表。",
+  "applyWebLibreHardeningsQuestion": "应用 WebLibre 加固？",
+  "applyWebLibreHardeningsSubtitle": "启用精选的附加过滤列表。",
+  "autoClearHistory": "自动清除历史记录",
+  "autoClearHistorySummary": "自动删除超过所选时间的浏览历史记录",
+  "autoClearUnassignedTabs": "自动清除未分配标签页",
+  "autoClearUnassignedTabsSummary": "自动关闭超过所选时间的未分配标签页",
+  "autoSelectLanguages": "自动选择语言",
+  "autoSelectLanguagesSubtitle": "启用与设备语言匹配的区域过滤列表。",
+  "autoSelectedForLanguage": "已根据你的语言自动选择",
+  "block": "阻止",
+  "blockAppsFromOpeningBrowser": "阻止应用打开浏览器",
+  "blockAppsFromOpeningBrowserSubtitle": "打开其他应用发送到 WebLibre 的链接前询问。",
+  "blockAppsFromOpeningBrowserSummary": "打开其他应用链接前询问",
+  "blockCookies": "阻止 Cookie",
+  "blockCookiesSubtitle": "根据以下策略阻止 Cookie",
+  "blockInsecureHttpConnections": "阻止不安全的 HTTP 连接",
+  "blockInsecureHttpConnectionsSummary": "要求使用安全的 HTTPS 连接",
+  "blockLocalNetworkRequests": "阻止本地网络请求",
+  "blockLocalNetworkRequestsSubtitle": "阻止网页向本地网络地址发起请求",
+  "blockLocalNetworkRequestsSummary": "阻止向本地网络地址的请求",
+  "blockLocalNetworkTrackers": "阻止本地网络跟踪器",
+  "blockLocalNetworkTrackersSubtitle": "阻止跟踪器访问本地网络资源",
+  "blockLocalNetworkTrackersSummary": "阻止跟踪器访问本地资源",
+  "blockTrackingContent": "阻止跟踪内容",
+  "blockTrackingContentSubtitle": "阻止网站中嵌入的跟踪脚本和资源",
+  "bounceTrackingProtection": "跳转跟踪保护",
+  "bounceTrackingProtectionSubtitle": "阻止通过网站间中间 URL 重定向收集数据的重定向跟踪器",
+  "bounceTrackingProtectionSummary": "阻止使用中间重定向的跟踪器",
+  "cachedImagesAndFiles": "缓存的图片和文件",
+  "cachedImagesAndFilesDescription": "缓存的图片和文件",
+  "chooseLanguagesWebsitesCanSee": "选择网站可见的语言",
+  "chooseTrackingProtectionAggressiveness": "选择跟踪保护强度",
+  "completeHardening": "完整加固",
+  "completeHardeningSearchTerms": "概览 完整加固 应用 重置所有分组加固偏好",
+  "completeHardeningSubtitle": "应用或重置所有分组加固偏好",
+  "completeHardeningToggleSubtitle": "一次切换所有分组加固偏好。",
+  "configureBrowserLanguagesSubtitle": "配置向网站公开的语言偏好",
+  "connectionSecurity": "连接安全",
+  "contentBlockingDatabase": "内容阻止数据库",
+  "contentBlockingDatabaseSubtitle": "管理跟踪器和广告阻止数据库",
+  "contentBlockingDatabaseSummary": "跟踪器和广告阻止数据库",
+  "cookieBlockingModeAndPolicySelection": "Cookie 阻止模式和策略选择",
+  "cookieNotices": "Cookie 提示",
+  "cookiePolicy": "Cookie 策略",
+  "cookiesAndSiteData": "Cookie 和网站数据",
+  "cookiesAndSiteDataDescription": "Cookie 和网站数据",
+  "couldNotLoadPreferenceSettings": "无法加载偏好设置",
+  "crossSiteAndSocialMediaTrackers": "跨站和社交媒体跟踪器",
+  "cryptominers": "加密货币挖矿程序",
+  "cryptominersSubtitle": "阻止使用设备挖掘加密货币的脚本",
+  "custom": "自定义",
+  "customResolverUrl": "自定义解析器 URL",
+  "customTrackingProtection": "自定义跟踪保护",
+  "customTrackingProtectionChoiceSubtitle": "选择要启用的跟踪保护",
+  "customTrackingProtectionSubtitle": "自定义 Cookie、内容、跟踪器和指纹控制。",
+  "dataManagement": "数据管理",
+  "defaultFilterLists": "默认",
+  "defaultOn": "默认启用",
+  "defaultProtection": "默认保护",
+  "defaultProtectionSubtitle": "仅在默认 DNS 失败时使用 DoH",
+  "deleteBrowsingData": "删除浏览数据",
+  "deleteBrowsingDataSummary": "清除选定的浏览数据",
+  "descriptionOptional": "描述（可选）",
+  "dohProtectionLevelDescription": "HTTPS 上的域名系统（DNS）会通过加密连接发送域名请求，提供安全 DNS，让其他人更难看到你即将访问的网站。",
+  "dohProvider": "DoH 提供商",
+  "dohResolverSettingsSubtitle": "保护级别、提供商选择和自定义解析器 URL",
+  "dohSettingsSubtitle": "加密 DNS 保护级别和解析器选择。",
+  "durationDays": "{count, plural, =1{{count} 天} other{{count} 天}}",
+  "@durationDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "durationMonths": "{count, plural, =1{{count} 个月} other{{count} 个月}}",
+  "@durationMonths": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "durationWeeks": "{count, plural, =1{{count} 周} other{{count} 周}}",
+  "@durationWeeks": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "edit": "编辑",
+  "editExternalFilterList": "编辑外部过滤列表",
+  "enabled": "已启用",
+  "encryptDnsLookups": "加密 DNS 查询",
+  "extensionsWebApi": "扩展 Web API",
+  "extensionsWebApiSubtitle": "为网页内容和扩展页面启用 mozAddonManager API。需要重启应用。",
+  "extensionsWebApiSummary": "公开扩展 Web API",
+  "externalListDescriptionHint": "例如：烦扰内容 — 作者",
+  "externalListUrlHint": "https://example.com/list.txt",
+  "externalLists": "外部列表",
+  "externalListsRawUrlsNote": "原始 URL 会作为外部列表转发给 uBlock Origin。描述仅在 WebLibre 中显示。",
+  "failedToLoadFilterListAssets": "加载过滤列表资源失败：{error}",
+  "@failedToLoadFilterListAssets": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "filterLists": "过滤列表",
+  "fingerprintProtection": "指纹保护",
+  "fingerprintProtectionSubtitle": "精细控制浏览器指纹",
+  "fingerprinting": "指纹识别",
+  "fissionSiteIsolation": "Fission（站点隔离）",
+  "fissionSiteIsolationSubtitle": "将每个站点隔离到独立操作系统进程以提升安全性。需要重启应用。",
+  "fissionSiteIsolationSummary": "将站点隔离到独立进程",
+  "fixWebsiteMajorIssues": "修复网站严重问题",
+  "fixWebsiteMajorIssuesSubtitle": "应用避免网站严重故障所需的例外（推荐）",
+  "fixWebsiteMinorIssues": "修复网站轻微问题",
+  "fixWebsiteMinorIssuesSubtitle": "应用例外以修复轻微问题并启用便利功能",
+  "globalPrivacyControl": "全局隐私控制",
+  "globalPrivacyControlSummary": "告知网站不要出售或共享你的数据",
+  "googleSafeBrowsing": "Google 安全浏览",
+  "groupControls": "分组控制",
+  "groupControlsCompleteHardening": "分组控制 完整加固",
+  "hardeningGroups": "加固分组",
+  "incognitoMode": "隐私浏览模式",
+  "incognitoModeSubtitle": "使用隐私浏览模式",
+  "incognitoModeSummary": "隐私浏览",
+  "increasedProtection": "增强保护",
+  "increasedProtectionSubtitle": "优先使用 DoH，默认 DNS 作为后备",
+  "invalidUrl": "URL 无效",
+  "knownFingerprinters": "已知指纹识别器",
+  "knownFingerprintersSubtitle": "阻止收集信息以唯一识别设备的脚本",
+  "listUrl": "列表 URL",
+  "loadDefaults": "加载默认值",
+  "loadHardenedDefaults": "加载加固默认值",
+  "localNetworkAccess": "本地网络访问",
+  "localNetworkAccessSubtitle": "启用本地网络和设备访问阻止",
+  "localNetworkAccessSummary": "控制对本地网络资源的访问",
+  "malware": "恶意软件",
+  "manageWithWebLibre": "使用 WebLibre 管理",
+  "manageWithWebLibreSubtitle": "WebLibre 会在下次浏览器启动时控制 uBlock Origin 启用的过滤列表。",
+  "managedApps": "受管理的应用",
+  "management": "管理",
+  "managementBaselineNote": "启用管理会从 uBO 的常用基准列表开始，并保留“我的过滤器”。",
+  "maxProtection": "最大保护",
+  "maxProtectionSubtitle": "仅使用 DoH，无后备解析器",
+  "multipurpose": "多用途",
+  "networkProtection": "网络保护",
+  "noExternalListsConfigured": "未配置外部列表。",
+  "noExternalListsMatch": "没有匹配“{query}”的外部列表。",
+  "@noExternalListsMatch": {
+    "placeholders": {
+      "query": {}
+    }
+  },
+  "openTabs": "打开的标签页",
+  "optional": "可选",
+  "overrideTargets": "覆盖目标",
+  "overview": "概览",
+  "preferenceSettings": "偏好设置",
+  "privacy": "隐私",
+  "privacySecuritySettingsSubtitle": "跟踪保护、网络安全和隐私控制。",
+  "privacySignalsAndModes": "隐私信号和模式",
+  "privateModeOnly": "仅隐私模式",
+  "privateTabsOnly": "仅隐私标签页",
+  "protectionLevel": "保护级别",
+  "queryParameterStripping": "移除查询参数",
+  "queryParameterStrippingSummary": "从 URL 中移除跟踪参数，防止跨站跟踪",
+  "quickActions": "快捷操作",
+  "recentSearchesDataDescription": "最近搜索",
+  "redirectTrackers": "重定向跟踪器",
+  "redirectTrackersSubtitle": "阻止通过中间 URL 重定向收集数据的跟踪器",
+  "regions": "区域",
+  "resetAllPreferencesDescription": "这将把所有用户定义的 Web 引擎偏好恢复为默认值。",
+  "resetAllPreferencesQuestion": "重置所有偏好？",
+  "resetToDefaultsDescription": "这将把 uBlock Origin 恢复为默认过滤列表配置，并移除你添加的外部列表。",
+  "resetToDefaultsQuestion": "重置为默认值？",
+  "resetToDefaultsSubtitle": "恢复 uBlock Origin 的默认过滤列表配置。",
+  "resistFingerprinting": "抵抗指纹识别",
+  "resistFingerprintingSubtitle": "高级指纹保护加固",
+  "resolverSettings": "解析器设置",
+  "safeBrowsingMalwareProtection": "安全浏览恶意软件保护",
+  "safeBrowsingMalwareProtectionSubtitle": "针对危险网站和恶意下载发出警告。",
+  "safeBrowsingMalwareProtectionSummary": "针对恶意软件和危险下载发出警告",
+  "safeBrowsingPhishingProtection": "安全浏览网络钓鱼保护",
+  "safeBrowsingPhishingProtectionSubtitle": "针对欺诈网站和登录页面发出警告。",
+  "safeBrowsingPhishingProtectionSummary": "针对网络钓鱼网站发出警告",
+  "screenshotProtectionAndroidSubtitle": "阻止 Android 上的屏幕截图和录屏",
+  "screenshotProtectionSummary": "阻止屏幕截图和录屏",
+  "searchFingerprintOverrideTargets": "搜索指纹覆盖目标",
+  "searchHardeningGroups": "搜索加固分组",
+  "searchHardeningSettings": "搜索加固设置",
+  "searchListsGroupsExternalUrls": "搜索列表、分组和外部 URL",
+  "sitePermissions": "网站权限",
+  "standard": "标准",
+  "standardTrackingProtectionSubtitle": "适合日常浏览的均衡保护",
+  "strict": "严格",
+  "strictTrackingProtectionSubtitle": "更强的保护，可能导致部分网站异常",
+  "socialWidgets": "社交组件",
+  "suspectedFingerprinters": "疑似指纹识别器",
+  "suspectedFingerprintersAndTabScope": "疑似指纹识别器和标签页范围",
+  "suspectedFingerprintersSubtitle": "阻止可能用于跟踪你的其他指纹技术",
+  "totalCookieProtectionRecommended": "全面 Cookie 保护（推荐）",
+  "trackers": "跟踪器",
+  "trackersSubtitle": "加密货币挖矿程序、已知指纹识别器和重定向跟踪器",
+  "trackingContent": "跟踪内容",
+  "trackingProtectionExceptionsSubtitle": "管理不受跟踪保护的网站",
+  "trackingScriptsAndScopeForBlocking": "要阻止的跟踪脚本和范围",
+  "ublockFilterLists": "uBlock 过滤列表",
+  "ublockFilterListsAndHardenings": "uBlock 过滤列表和加固",
+  "ublockFilterListsAndHardeningsSubtitle": "管理过滤列表并应用 WebLibre 加固",
+  "ublockFilterListsRestartMessage": "更改 uBlock Origin 过滤列表需要重启应用才能生效。由于缓存，部分更改可能需要几分钟并再次重启才能完全应用。",
+  "unvisitedSites": "未访问的网站",
+  "urlMustBeProvided": "必须提供 URL",
+  "useDefaultDnsResolver": "使用默认 DNS 解析器",
+  "visitSupportPage": "访问支持页面",
+  "webEngineHardening": "Web 引擎加固",
+  "webEngineHardeningSummary": "加固 Web 引擎偏好"
 }

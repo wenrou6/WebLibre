@@ -1369,6 +1369,3786 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Set'**
   String get setButton;
+
+  /// Hint shown in settings search fields
+  ///
+  /// In en, this message translates to:
+  /// **'Search settings'**
+  String get searchSettingsHint;
+
+  /// Empty state when a settings screen has no entries
+  ///
+  /// In en, this message translates to:
+  /// **'No settings available.'**
+  String get noSettingsAvailable;
+
+  /// Empty state for settings search results
+  ///
+  /// In en, this message translates to:
+  /// **'No settings match \"{query}\".'**
+  String noSettingsMatch(String query);
+
+  /// Confirmation dialog title for deleting tracking protection exceptions
+  ///
+  /// In en, this message translates to:
+  /// **'Delete All Exceptions?'**
+  String get deleteAllExceptionsQuestion;
+
+  /// Confirmation dialog message for deleting all tracking protection exceptions
+  ///
+  /// In en, this message translates to:
+  /// **'This will re-enable tracking protection for all exception sites.'**
+  String get reenableTrackingProtectionAllExceptionSites;
+
+  /// Dialog title shown after changing the user agent
+  ///
+  /// In en, this message translates to:
+  /// **'User Agent Changed'**
+  String get userAgentChanged;
+
+  /// Dialog message explaining that a user agent change requires restart
+  ///
+  /// In en, this message translates to:
+  /// **'The browser needs to restart for the new user agent to take effect.'**
+  String get browserRestartForUserAgent;
+
+  /// Button to postpone an action
+  ///
+  /// In en, this message translates to:
+  /// **'Later'**
+  String get later;
+
+  /// Button to restart the app immediately
+  ///
+  /// In en, this message translates to:
+  /// **'Restart Now'**
+  String get restartNow;
+
+  /// Snackbar shown after copying a log entry
+  ///
+  /// In en, this message translates to:
+  /// **'Entry copied'**
+  String get entryCopied;
+
+  /// Message field label in log details
+  ///
+  /// In en, this message translates to:
+  /// **'Message:'**
+  String get messageLabel;
+
+  /// Error field label in log details
+  ///
+  /// In en, this message translates to:
+  /// **'Error:'**
+  String get errorLabel;
+
+  /// Stack trace field label in log details
+  ///
+  /// In en, this message translates to:
+  /// **'Stack Trace:'**
+  String get stackTraceLabel;
+
+  /// Copy action
+  ///
+  /// In en, this message translates to:
+  /// **'Copy'**
+  String get copy;
+
+  /// Sync action
+  ///
+  /// In en, this message translates to:
+  /// **'Sync'**
+  String get sync;
+
+  /// Button prompting the user to select a search provider
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a search provider'**
+  String get chooseSearchProvider;
+
+  /// Empty state for reusable settings lists
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing added yet.'**
+  String get nothingAddedYet;
+
+  /// Add action tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Add'**
+  String get add;
+
+  /// Remove action tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Remove'**
+  String get remove;
+
+  /// Number of synchronized entries label
+  ///
+  /// In en, this message translates to:
+  /// **'Entries'**
+  String get entries;
+
+  /// Last synchronization time label
+  ///
+  /// In en, this message translates to:
+  /// **'Last Sync'**
+  String get lastSync;
+
+  /// Value is not available
+  ///
+  /// In en, this message translates to:
+  /// **'N/A'**
+  String get notAvailable;
+
+  /// Hint on the main settings search field
+  ///
+  /// In en, this message translates to:
+  /// **'Search all settings'**
+  String get searchAllSettings;
+
+  /// General settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Appearance, downloads'**
+  String get appearanceDownloads;
+
+  /// Browsing settings category title
+  ///
+  /// In en, this message translates to:
+  /// **'Browsing'**
+  String get browsing;
+
+  /// Browsing settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Tabs, navigation, external links'**
+  String get tabsNavigationExternalLinks;
+
+  /// Home and new tab settings title
+  ///
+  /// In en, this message translates to:
+  /// **'Home & New Tab'**
+  String get homeAndNewTab;
+
+  /// Home and new tab settings subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'What the home and new tab pages show'**
+  String get homeAndNewTabSubtitle;
+
+  /// Gesture settings category title
+  ///
+  /// In en, this message translates to:
+  /// **'Gestures'**
+  String get gestures;
+
+  /// Gesture settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Stroke gestures for browser actions'**
+  String get strokeGesturesForBrowserActions;
+
+  /// Toolbar and layout settings category title
+  ///
+  /// In en, this message translates to:
+  /// **'Toolbar & Layout'**
+  String get toolbarAndLayout;
+
+  /// Toolbar and layout settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Tab bar, toolbar, quick switcher, tab view'**
+  String get toolbarAndLayoutSubtitle;
+
+  /// Web content settings category title
+  ///
+  /// In en, this message translates to:
+  /// **'Web Content'**
+  String get webContent;
+
+  /// Web content settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Page display, PDF, reader mode, AI'**
+  String get webContentSubtitle;
+
+  /// Notification settings category title
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// Notification settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Web push delivery, distributor, site subscriptions'**
+  String get notificationsSettingsSubtitle;
+
+  /// Search settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Providers, bangs, search history'**
+  String get searchCategorySubtitle;
+
+  /// Privacy and security settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Tracking protection, data clearing'**
+  String get trackingProtectionDataClearing;
+
+  /// Proxy settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Connections and routing'**
+  String get connectionsAndRouting;
+
+  /// Extensions settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Install and manage extension sources'**
+  String get installManageExtensionSources;
+
+  /// WebLibre account settings category title
+  ///
+  /// In en, this message translates to:
+  /// **'WebLibre Account'**
+  String get webLibreAccount;
+
+  /// WebLibre account settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in, sync settings'**
+  String get signInSyncSettings;
+
+  /// Firefox Sync settings category title
+  ///
+  /// In en, this message translates to:
+  /// **'Firefox Sync'**
+  String get firefoxSync;
+
+  /// Firefox Sync settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Account, sync now, engine selection'**
+  String get firefoxSyncSubtitle;
+
+  /// Advanced settings category subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'JavaScript, user agent, debugging'**
+  String get advancedCategorySubtitle;
+
+  /// Browser settings group title
+  ///
+  /// In en, this message translates to:
+  /// **'Browser'**
+  String get browser;
+
+  /// Services and advanced settings group title
+  ///
+  /// In en, this message translates to:
+  /// **'Services & Advanced'**
+  String get servicesAndAdvanced;
+
+  /// Startup settings section title
+  ///
+  /// In en, this message translates to:
+  /// **'Startup'**
+  String get startup;
+
+  /// Home target setting title
+  ///
+  /// In en, this message translates to:
+  /// **'When there is no tab to show'**
+  String get whenNoTabToShow;
+
+  /// Home target setting subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'On startup, and after closing the last tab'**
+  String get onStartupAndAfterClosingLastTab;
+
+  /// Apply home target on last tab close setting
+  ///
+  /// In en, this message translates to:
+  /// **'Apply when the last tab closes'**
+  String get applyWhenLastTabCloses;
+
+  /// Home target on last tab close metadata subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Otherwise a tab from another container is opened instead'**
+  String get otherwiseOpenTabFromAnotherContainer;
+
+  /// Layout settings section title
+  ///
+  /// In en, this message translates to:
+  /// **'Layout'**
+  String get layout;
+
+  /// Customize home page sections setting
+  ///
+  /// In en, this message translates to:
+  /// **'Customize home sections'**
+  String get customizeHomeSections;
+
+  /// Customize home page sections subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Choose and order what the home page shows'**
+  String get chooseOrderHomePage;
+
+  /// Customize new tab sections setting
+  ///
+  /// In en, this message translates to:
+  /// **'Customize new tab sections'**
+  String get customizeNewTabSections;
+
+  /// Customize new tab sections subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Choose and order what the new tab page shows'**
+  String get chooseOrderNewTabPage;
+
+  /// Web address field label
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get address;
+
+  /// Validation message for an empty custom home address
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an address, or the home page is shown instead'**
+  String get enterAddressOrShowHomePage;
+
+  /// Validation message for an invalid address
+  ///
+  /// In en, this message translates to:
+  /// **'Not a valid address'**
+  String get notValidAddress;
+
+  /// Detailed description of applying the home target after closing the last tab
+  ///
+  /// In en, this message translates to:
+  /// **'Closing the last tab in a container stays there instead of opening a tab from somewhere else'**
+  String get closingLastTabStaysInContainer;
+
+  /// Home target option
+  ///
+  /// In en, this message translates to:
+  /// **'Home page'**
+  String get homePage;
+
+  /// Resume last tab home target option
+  ///
+  /// In en, this message translates to:
+  /// **'Last opened tab'**
+  String get lastOpenedTab;
+
+  /// Custom URL home target option
+  ///
+  /// In en, this message translates to:
+  /// **'Custom address'**
+  String get customAddress;
+
+  /// Home page target description
+  ///
+  /// In en, this message translates to:
+  /// **'Show shortcuts and the sections you have chosen'**
+  String get showChosenHomeSections;
+
+  /// Resume last tab target description
+  ///
+  /// In en, this message translates to:
+  /// **'Pick up where you left off'**
+  String get pickUpWhereLeftOff;
+
+  /// Custom address target description
+  ///
+  /// In en, this message translates to:
+  /// **'Open a specific page'**
+  String get openSpecificPage;
+
+  /// Search providers settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Providers'**
+  String get providers;
+
+  /// Default search provider setting
+  ///
+  /// In en, this message translates to:
+  /// **'Default Search Provider'**
+  String get defaultSearchProvider;
+
+  /// Default search provider subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Choose the default engine for searches'**
+  String get chooseDefaultSearchEngine;
+
+  /// Default autocomplete provider setting
+  ///
+  /// In en, this message translates to:
+  /// **'Default Autocomplete Provider'**
+  String get defaultAutocompleteProvider;
+
+  /// Autocomplete provider subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Choose the provider for search suggestions'**
+  String get chooseSearchSuggestionsProvider;
+
+  /// Custom search engines setting
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Search Engines'**
+  String get customSearchEngines;
+
+  /// Custom search engines subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Add and manage your own search providers'**
+  String get addManageSearchProviders;
+
+  /// Bang shortcuts settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Bang Shortcuts'**
+  String get bangShortcuts;
+
+  /// Bang settings entry title
+  ///
+  /// In en, this message translates to:
+  /// **'Bang Settings'**
+  String get bangSettings;
+
+  /// Bang settings entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Manage bang repositories and usage data'**
+  String get manageBangRepositories;
+
+  /// Search history and suggestions settings section
+  ///
+  /// In en, this message translates to:
+  /// **'History & Suggestions'**
+  String get historyAndSuggestions;
+
+  /// Search history limit setting
+  ///
+  /// In en, this message translates to:
+  /// **'Search History Limit'**
+  String get searchHistoryLimit;
+
+  /// Search history limit subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Maximum number of recent searches to remember'**
+  String get maximumRecentSearches;
+
+  /// Clipboard access for search suggestions setting
+  ///
+  /// In en, this message translates to:
+  /// **'Allow clipboard access for suggestions'**
+  String get allowClipboardAccessSuggestions;
+
+  /// Clipboard search suggestions subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Browser can read clipboard to suggest URLs'**
+  String get browserReadClipboardSuggestUrls;
+
+  /// Accept autocomplete on submit setting
+  ///
+  /// In en, this message translates to:
+  /// **'Autocomplete on enter'**
+  String get autocompleteOnEnter;
+
+  /// Short autocomplete on enter subtitle used in search metadata
+  ///
+  /// In en, this message translates to:
+  /// **'Accept the inline suggestion when pressing enter'**
+  String get acceptInlineSuggestionOnEnterShort;
+
+  /// Autocomplete on enter setting description
+  ///
+  /// In en, this message translates to:
+  /// **'Accept the inline suggestion when pressing enter on the keyboard'**
+  String get acceptInlineSuggestionOnEnter;
+
+  /// Popular site autocomplete setting
+  ///
+  /// In en, this message translates to:
+  /// **'Popular site suggestions'**
+  String get popularSiteSuggestions;
+
+  /// Short popular site suggestions subtitle used in search metadata
+  ///
+  /// In en, this message translates to:
+  /// **'Complete typed text with well-known domains'**
+  String get completeTextWithKnownDomainsShort;
+
+  /// Popular site suggestions setting description
+  ///
+  /// In en, this message translates to:
+  /// **'Complete typed text with well-known domains when your history has no match'**
+  String get completeTextWithKnownDomains;
+
+  /// Local search index settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Local Search Index'**
+  String get localSearchIndex;
+
+  /// Enable local search index setting
+  ///
+  /// In en, this message translates to:
+  /// **'Enable local search index'**
+  String get enableLocalSearchIndex;
+
+  /// Local search index metadata subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Index visited pages locally for content search'**
+  String get indexVisitedPagesLocally;
+
+  /// Index private tabs setting
+  ///
+  /// In en, this message translates to:
+  /// **'Index private tabs'**
+  String get indexPrivateTabs;
+
+  /// Index private tabs metadata subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Include private tabs in the local index'**
+  String get includePrivateTabsLocalIndexShort;
+
+  /// Indexed page count setting
+  ///
+  /// In en, this message translates to:
+  /// **'Indexed pages'**
+  String get indexedPages;
+
+  /// Indexed pages metadata subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'View and clear the local index'**
+  String get viewClearLocalIndex;
+
+  /// Search settings screen subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Providers, bangs, history suggestions, and on-device search.'**
+  String get searchSettingsSubtitle;
+
+  /// Disabled option label
+  ///
+  /// In en, this message translates to:
+  /// **'Disabled'**
+  String get disabled;
+
+  /// Suffix for a numeric number of entries field
+  ///
+  /// In en, this message translates to:
+  /// **'entries'**
+  String get entriesLowercase;
+
+  /// Required numeric value validation message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a value'**
+  String get pleaseEnterValue;
+
+  /// Invalid numeric value validation message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid number'**
+  String get pleaseEnterValidNumber;
+
+  /// Search history limit range validation message
+  ///
+  /// In en, this message translates to:
+  /// **'Value must be between 0 and 100'**
+  String get valueBetweenZeroAndHundred;
+
+  /// Detailed local search index setting description
+  ///
+  /// In en, this message translates to:
+  /// **'Index visited pages locally so the browser can search their content. Visit metadata stays in the engine; only page text is stored on-device.'**
+  String get localSearchIndexDescription;
+
+  /// Index private tabs setting description
+  ///
+  /// In en, this message translates to:
+  /// **'Include pages opened in private tabs in the local index. Off by default.'**
+  String get indexPrivateTabsDescription;
+
+  /// Confirmation title for clearing the local search index
+  ///
+  /// In en, this message translates to:
+  /// **'Clear local search index?'**
+  String get clearLocalSearchIndexQuestion;
+
+  /// Confirmation message for clearing the local search index
+  ///
+  /// In en, this message translates to:
+  /// **'This removes all locally indexed page content. Engine history (visit metadata) is not affected.'**
+  String get clearLocalSearchIndexDescription;
+
+  /// Number of locally indexed pages
+  ///
+  /// In en, this message translates to:
+  /// **'{count} pages indexed'**
+  String pagesIndexed(int count);
+
+  /// Loading state using an ellipsis character
+  ///
+  /// In en, this message translates to:
+  /// **'Loading…'**
+  String get loadingEllipsis;
+
+  /// Advanced content and identity settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Content & Identity'**
+  String get contentAndIdentity;
+
+  /// Enable JavaScript setting
+  ///
+  /// In en, this message translates to:
+  /// **'Enable JavaScript'**
+  String get enableJavaScript;
+
+  /// Enable JavaScript metadata subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Turn website scripting on or off'**
+  String get turnWebsiteScriptingOnOff;
+
+  /// Custom user agent setting
+  ///
+  /// In en, this message translates to:
+  /// **'Custom User Agent'**
+  String get customUserAgent;
+
+  /// Custom user agent subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Override the browser user agent string'**
+  String get overrideBrowserUserAgent;
+
+  /// Use third-party CA certificates setting
+  ///
+  /// In en, this message translates to:
+  /// **'Use third party CA certificates'**
+  String get useThirdPartyCaCertificates;
+
+  /// Third-party CA certificates metadata subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Allow Android CA store certificates'**
+  String get allowAndroidCaStoreCertificates;
+
+  /// Experimental settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Experimental'**
+  String get experimental;
+
+  /// Experimental features setting
+  ///
+  /// In en, this message translates to:
+  /// **'Experimental Features'**
+  String get experimentalFeatures;
+
+  /// Experimental features setting subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Low-level runtime features and startup behavior'**
+  String get experimentalFeaturesSubtitle;
+
+  /// Developer tools settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Developer Tools'**
+  String get developerTools;
+
+  /// Unmount browser engine while off-screen setting
+  ///
+  /// In en, this message translates to:
+  /// **'Unmount Engine Off-Screen'**
+  String get unmountEngineOffScreen;
+
+  /// Unmount engine metadata subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Free the web engine when an overlay is on top'**
+  String get freeEngineUnderOverlay;
+
+  /// Icon cache setting
+  ///
+  /// In en, this message translates to:
+  /// **'Icon Cache'**
+  String get iconCache;
+
+  /// Icon cache subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Stored favicons'**
+  String get storedFavicons;
+
+  /// Downloaded machine learning files setting
+  ///
+  /// In en, this message translates to:
+  /// **'ML Downloads'**
+  String get mlDownloads;
+
+  /// Machine learning downloads subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Downloaded AI models and runtime files'**
+  String get downloadedAiModelsRuntimeFiles;
+
+  /// Error logs setting
+  ///
+  /// In en, this message translates to:
+  /// **'Error Logs'**
+  String get errorLogs;
+
+  /// Error logs setting subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'View and copy logs for issue reporting'**
+  String get viewCopyLogsIssueReporting;
+
+  /// Dart VM developer setting
+  ///
+  /// In en, this message translates to:
+  /// **'Dart VM'**
+  String get dartVm;
+
+  /// Dart VM developer setting subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Copy Dart VM service URL'**
+  String get copyDartVmServiceUrl;
+
+  /// Reset UI developer setting
+  ///
+  /// In en, this message translates to:
+  /// **'Reset UI'**
+  String get resetUi;
+
+  /// Reset UI developer setting subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Rebuild the entire browser UI'**
+  String get rebuildEntireBrowserUi;
+
+  /// Advanced settings screen subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Engine behavior, runtime overrides, and developer tools.'**
+  String get advancedSettingsSubtitle;
+
+  /// Detailed JavaScript setting warning
+  ///
+  /// In en, this message translates to:
+  /// **'While turning off JavaScript can boost security, privacy, and speed, it may cause some sites to not work as intended.'**
+  String get javascriptDisabledWarning;
+
+  /// Detailed third-party CA certificate setting description
+  ///
+  /// In en, this message translates to:
+  /// **'Allows the use of third party certificates from the Android CA store'**
+  String get thirdPartyCertificatesAndroidCaStore;
+
+  /// Detailed description for unmounting the web engine off-screen
+  ///
+  /// In en, this message translates to:
+  /// **'Unmount the web engine while a full-screen overlay (settings, tabs, search) is on top, freeing its resources. On Android 12 and lower this is always done; enabling it applies the same behavior on Android 13+, which may cause the page to reload when returning.'**
+  String get unmountEngineOffScreenDescription;
+
+  /// Storage size label
+  ///
+  /// In en, this message translates to:
+  /// **'Size'**
+  String get size;
+
+  /// Confirmation title for clearing machine learning files
+  ///
+  /// In en, this message translates to:
+  /// **'Clear ML downloads?'**
+  String get clearMlDownloadsQuestion;
+
+  /// Confirmation message for clearing machine learning files
+  ///
+  /// In en, this message translates to:
+  /// **'This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart WebLibre before retrying ML features.'**
+  String get clearMlDownloadsDescription;
+
+  /// Success message after clearing machine learning files
+  ///
+  /// In en, this message translates to:
+  /// **'ML downloads cleared. Restart WebLibre before retrying.'**
+  String get mlDownloadsCleared;
+
+  /// Error message after failing to clear machine learning files
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to clear ML downloads: {error}'**
+  String failedToClearMlDownloads(String error);
+
+  /// Progress label while clearing data
+  ///
+  /// In en, this message translates to:
+  /// **'Clearing'**
+  String get clearing;
+
+  /// Snackbar after copying the Dart VM service URL
+  ///
+  /// In en, this message translates to:
+  /// **'Service URL copied'**
+  String get serviceUrlCopied;
+
+  /// Reset action
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get reset;
+
+  /// Proxy connections entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Manage proxy profiles and connections'**
+  String get manageProxyProfilesAndConnections;
+
+  /// Proxy routing entry title
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy Routing'**
+  String get proxyRouting;
+
+  /// Proxy routing entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Choose which proxy carries regular and private tabs'**
+  String get chooseProxyForRegularAndPrivateTabs;
+
+  /// Proxy settings screen subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Manage proxy connections and choose which tabs use them.'**
+  String get proxySettingsSubtitle;
+
+  /// Extensions entry title
+  ///
+  /// In en, this message translates to:
+  /// **'Manage Extensions'**
+  String get manageExtensions;
+
+  /// Extensions entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Browse installed, disabled, available, and unsupported extensions'**
+  String get browseInstalledAndAvailableExtensions;
+
+  /// Custom extension collection entry title
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Collection'**
+  String get customCollection;
+
+  /// Custom extension collection entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Use a custom Mozilla addon collection'**
+  String get useCustomMozillaAddonCollection;
+
+  /// Extensions update section title
+  ///
+  /// In en, this message translates to:
+  /// **'Updates'**
+  String get updates;
+
+  /// Automatic extension updates title
+  ///
+  /// In en, this message translates to:
+  /// **'Automatic updates'**
+  String get automaticUpdates;
+
+  /// Automatic extension updates subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Automatically check for and install extension updates every 12 hours'**
+  String get automaticExtensionUpdatesEvery12Hours;
+
+  /// Extensions security section title
+  ///
+  /// In en, this message translates to:
+  /// **'Security'**
+  String get security;
+
+  /// Unsigned extension setting subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Unsigned extensions have not been verified by Mozilla'**
+  String get unsignedExtensionsNotVerifiedByMozilla;
+
+  /// Extensions settings screen subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Manage add-ons, update behavior, and extension security.'**
+  String get extensionsSettingsSubtitle;
+
+  /// Error shown when an extension setting cannot be loaded
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load: {error}'**
+  String extensionSettingFailedToLoad(String error);
+
+  /// Warning shown while unsigned extensions are enabled
+  ///
+  /// In en, this message translates to:
+  /// **'Only install unsigned extensions from sources you trust. They may contain malicious code.'**
+  String get unsignedExtensionTrustWarning;
+
+  /// Confirmation dialog title for unsigned extensions
+  ///
+  /// In en, this message translates to:
+  /// **'Allow unsigned extensions?'**
+  String get allowUnsignedExtensionsQuestion;
+
+  /// Security warning in unsigned extension confirmation
+  ///
+  /// In en, this message translates to:
+  /// **'Warning: This significantly weakens your browser\'s security.'**
+  String get unsignedExtensionsSecurityWarning;
+
+  /// Risk details in unsigned extension confirmation
+  ///
+  /// In en, this message translates to:
+  /// **'Unsigned extensions bypass Mozilla\'s safety review process. Malicious extensions can:\n\n• Read and modify everything you see on any website\n• Steal passwords, banking details, and personal data\n• Monitor your browsing activity silently\n• Install additional malware on your device'**
+  String get unsignedExtensionsRiskDetails;
+
+  /// Final caution in unsigned extension confirmation
+  ///
+  /// In en, this message translates to:
+  /// **'Only enable this if you are a developer installing your own extension or absolutely trust the source.'**
+  String get unsignedExtensionsDeveloperOnly;
+
+  /// Unsigned extension confirmation action
+  ///
+  /// In en, this message translates to:
+  /// **'Allow'**
+  String get allow;
+
+  /// Disabled unsigned extension action during countdown
+  ///
+  /// In en, this message translates to:
+  /// **'Allow ({seconds})'**
+  String allowAfterSeconds(int seconds);
+
+  /// Experimental settings section title
+  ///
+  /// In en, this message translates to:
+  /// **'Runtime & Startup'**
+  String get runtimeAndStartup;
+
+  /// Isolated content process setting title
+  ///
+  /// In en, this message translates to:
+  /// **'Isolated Content Process'**
+  String get isolatedContentProcess;
+
+  /// Isolated content process entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Run web content in an isolated process'**
+  String get runWebContentInIsolatedProcess;
+
+  /// App zygote process setting title
+  ///
+  /// In en, this message translates to:
+  /// **'App Zygote Process'**
+  String get appZygoteProcess;
+
+  /// App zygote process entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Preload the content service for faster isolated startup'**
+  String get preloadContentServiceForFasterIsolatedStartup;
+
+  /// Experimental settings screen subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Runtime isolation and startup behavior.'**
+  String get experimentalSettingsSubtitle;
+
+  /// Isolated content process switch subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Run web content in an isolated process. Requires app restart.'**
+  String get isolatedContentProcessRequiresRestart;
+
+  /// App zygote process switch subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Preload the content service for faster isolated process startup. Requires Android 10+ and app restart.'**
+  String get appZygoteProcessRequiresAndroidAndRestart;
+
+  /// Custom extension collection screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Extension Collection'**
+  String get customExtensionCollection;
+
+  /// Custom extension collection section title
+  ///
+  /// In en, this message translates to:
+  /// **'Collection Source'**
+  String get collectionSource;
+
+  /// Custom extension collection entry title
+  ///
+  /// In en, this message translates to:
+  /// **'Collection configuration'**
+  String get collectionConfiguration;
+
+  /// Custom extension collection entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Mozilla server, collection owner, and collection name'**
+  String get collectionConfigurationSubtitle;
+
+  /// Custom extension collection server field label
+  ///
+  /// In en, this message translates to:
+  /// **'Server URL'**
+  String get serverUrl;
+
+  /// Custom extension collection user field label
+  ///
+  /// In en, this message translates to:
+  /// **'Collection User'**
+  String get collectionUser;
+
+  /// Custom extension collection name field label
+  ///
+  /// In en, this message translates to:
+  /// **'Collection Name'**
+  String get collectionName;
+
+  /// Custom extension collection actions section title
+  ///
+  /// In en, this message translates to:
+  /// **'Actions'**
+  String get actions;
+
+  /// Save custom extension collection action
+  ///
+  /// In en, this message translates to:
+  /// **'Save & Restart Browser'**
+  String get saveAndRestartBrowser;
+
+  /// Save custom extension collection entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Apply the custom collection and restart the browser'**
+  String get applyCustomCollectionAndRestartBrowser;
+
+  /// Bang settings usage section title
+  ///
+  /// In en, this message translates to:
+  /// **'Usage Data'**
+  String get usageData;
+
+  /// Bang frequency setting title
+  ///
+  /// In en, this message translates to:
+  /// **'Bang Frequencies'**
+  String get bangFrequencies;
+
+  /// Bang frequency setting subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Tracked usage for bang recommendations'**
+  String get bangFrequenciesSubtitle;
+
+  /// Bang repositories section title
+  ///
+  /// In en, this message translates to:
+  /// **'Repositories'**
+  String get repositories;
+
+  /// General Bang repository title
+  ///
+  /// In en, this message translates to:
+  /// **'General Bangs'**
+  String get generalBangs;
+
+  /// Bang repository subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Sync on demand from GitHub'**
+  String get syncOnDemandFromGitHub;
+
+  /// Kagi Bang repository title
+  ///
+  /// In en, this message translates to:
+  /// **'Kagi Bangs'**
+  String get kagiBangs;
+
+  /// Bang settings screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Bang Settings'**
+  String get bangSettingsTitle;
+
+  /// Bang settings screen subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Bang shortcuts usage, repositories, and on-demand sync.'**
+  String get bangSettingsSubtitle;
+
+  /// Desktop mode sites screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Desktop mode sites'**
+  String get desktopModeSites;
+
+  /// Desktop mode sites screen description
+  ///
+  /// In en, this message translates to:
+  /// **'These sites always load in desktop mode, overriding the default. Subdomains are included (e.g. \"example.com\" also covers \"m.example.com\").'**
+  String get desktopModeSitesDescription;
+
+  /// Empty desktop mode sites state
+  ///
+  /// In en, this message translates to:
+  /// **'No sites added.'**
+  String get noSitesAdded;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Search Providers'**
+  String get moduleSearchProviders;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Suggestions'**
+  String get moduleSuggestions;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Tabs'**
+  String get moduleTabs;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Articles'**
+  String get moduleArticles;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'History (engine)'**
+  String get moduleHistoryEngine;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Local content'**
+  String get moduleLocalContent;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Popular Sites'**
+  String get modulePopularSites;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'History Highlights'**
+  String get moduleHistoryHighlights;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Shortcuts'**
+  String get moduleShortcuts;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Recent History'**
+  String get moduleRecentHistory;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Articles'**
+  String get moduleRecentArticles;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Tabs'**
+  String get moduleRecentTabs;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Frequent Bangs'**
+  String get moduleFrequentBangs;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Quote'**
+  String get moduleQuote;
+
+  /// Search module label
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Actions'**
+  String get moduleQuickActions;
+
+  /// Home module layout screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Customize Home'**
+  String get customizeHome;
+
+  /// New tab module layout screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Customize New Tab'**
+  String get customizeNewTab;
+
+  /// Search module layout screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Customize Search'**
+  String get customizeSearch;
+
+  /// Module layout screen explanatory text
+  ///
+  /// In en, this message translates to:
+  /// **'Drag to reorder. Switch a section off to hide it here without affecting the other page.'**
+  String get moduleSurfaceReorderDescription;
+
+  /// Module layout reset action
+  ///
+  /// In en, this message translates to:
+  /// **'Reset to Defaults'**
+  String get resetToDefaults;
+
+  /// Tracking protection exceptions screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Tracking Protection Exceptions'**
+  String get trackingProtectionExceptions;
+
+  /// Tracking protection exceptions search hint
+  ///
+  /// In en, this message translates to:
+  /// **'Search exception URLs'**
+  String get searchExceptionUrls;
+
+  /// Delete all tracking protection exceptions action
+  ///
+  /// In en, this message translates to:
+  /// **'Delete All'**
+  String get deleteAll;
+
+  /// Tracking protection exception list section title
+  ///
+  /// In en, this message translates to:
+  /// **'Exception List'**
+  String get exceptionList;
+
+  /// Tracking protection exception entry subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Site with tracking protection disabled'**
+  String get siteWithTrackingProtectionDisabled;
+
+  /// Tracking protection delete error
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to delete exceptions: {error}'**
+  String failedToDeleteExceptions(String error);
+
+  /// Tracking protection remove error
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to remove exception: {error}'**
+  String failedToRemoveException(String error);
+
+  /// Tracking protection exception remove tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Remove exception'**
+  String get removeException;
+
+  /// Empty tracking protection exceptions title
+  ///
+  /// In en, this message translates to:
+  /// **'No exceptions'**
+  String get noExceptions;
+
+  /// Empty tracking protection exceptions description
+  ///
+  /// In en, this message translates to:
+  /// **'Sites added to exceptions will appear here'**
+  String get exceptionSitesAppearHere;
+
+  /// Tracking protection exceptions error state title
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading exceptions'**
+  String get errorLoadingExceptions;
+
+  /// Log level label
+  ///
+  /// In en, this message translates to:
+  /// **'Fatal'**
+  String get logLevelFatal;
+
+  /// Log level label
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get logLevelAll;
+
+  /// Log level label
+  ///
+  /// In en, this message translates to:
+  /// **'Verbose'**
+  String get logLevelVerbose;
+
+  /// Log level label
+  ///
+  /// In en, this message translates to:
+  /// **'Unexpected'**
+  String get logLevelUnexpected;
+
+  /// Log level label
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing'**
+  String get logLevelNothing;
+
+  /// Log level label
+  ///
+  /// In en, this message translates to:
+  /// **'Off'**
+  String get logLevelOff;
+
+  /// No description provided for @accordion.
+  ///
+  /// In en, this message translates to:
+  /// **'Accordion'**
+  String get accordion;
+
+  /// No description provided for @accordionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Expandable stacked tab groups'**
+  String get accordionSubtitle;
+
+  /// No description provided for @addBookmark.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Bookmark'**
+  String get addBookmark;
+
+  /// No description provided for @addChildTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Child Tab'**
+  String get addChildTab;
+
+  /// No description provided for @addIsolatedTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Isolated Tab'**
+  String get addIsolatedTab;
+
+  /// No description provided for @addPrivateTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Private Tab'**
+  String get addPrivateTab;
+
+  /// No description provided for @addRegularTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Regular Tab'**
+  String get addRegularTab;
+
+  /// No description provided for @addressBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Address Bar'**
+  String get addressBar;
+
+  /// No description provided for @allowLoginAppCallbacks.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow Login App Callbacks'**
+  String get allowLoginAppCallbacks;
+
+  /// No description provided for @allowLoginAppCallbacksSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow links that return to an app after browser login'**
+  String get allowLoginAppCallbacksSubtitle;
+
+  /// No description provided for @always.
+  ///
+  /// In en, this message translates to:
+  /// **'Always'**
+  String get always;
+
+  /// No description provided for @alwaysKeepInBrowser.
+  ///
+  /// In en, this message translates to:
+  /// **'Always keep in browser'**
+  String get alwaysKeepInBrowser;
+
+  /// No description provided for @alwaysOpenInApp.
+  ///
+  /// In en, this message translates to:
+  /// **'Always open in app'**
+  String get alwaysOpenInApp;
+
+  /// No description provided for @alwaysOpenLinksInBrowser.
+  ///
+  /// In en, this message translates to:
+  /// **'Always open links in browser'**
+  String get alwaysOpenLinksInBrowser;
+
+  /// No description provided for @alwaysOpenLinksInNativeApps.
+  ///
+  /// In en, this message translates to:
+  /// **'Always open links in native apps'**
+  String get alwaysOpenLinksInNativeApps;
+
+  /// No description provided for @alwaysRequestDesktopSite.
+  ///
+  /// In en, this message translates to:
+  /// **'Always Request Desktop Site'**
+  String get alwaysRequestDesktopSite;
+
+  /// No description provided for @alwaysRequestDesktopSiteSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Open new tabs in desktop mode by default'**
+  String get alwaysRequestDesktopSiteSubtitle;
+
+  /// No description provided for @askBeforeOpening.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask before opening'**
+  String get askBeforeOpening;
+
+  /// No description provided for @askBeforeOpeningLinksInAppsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask before opening links in native apps'**
+  String get askBeforeOpeningLinksInAppsSubtitle;
+
+  /// No description provided for @askHowBookmarkOpens.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask how the bookmark should open'**
+  String get askHowBookmarkOpens;
+
+  /// No description provided for @askHowExternalLinksOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask how external links should open'**
+  String get askHowExternalLinksOpen;
+
+  /// No description provided for @autoHideTabBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-Hide Tab Bar'**
+  String get autoHideTabBar;
+
+  /// No description provided for @autoHideTabBarSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide the tab bar while scrolling pages'**
+  String get autoHideTabBarSubtitle;
+
+  /// No description provided for @background.
+  ///
+  /// In en, this message translates to:
+  /// **'Background'**
+  String get background;
+
+  /// No description provided for @backgroundTabBehavior.
+  ///
+  /// In en, this message translates to:
+  /// **'Background Tab Behavior'**
+  String get backgroundTabBehavior;
+
+  /// No description provided for @backgroundTabBehaviorSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose what happens after a tab opens in the background'**
+  String get backgroundTabBehaviorSubtitle;
+
+  /// No description provided for @bookmark.
+  ///
+  /// In en, this message translates to:
+  /// **'Bookmark'**
+  String get bookmark;
+
+  /// No description provided for @bookmarkOpenBehavior.
+  ///
+  /// In en, this message translates to:
+  /// **'Bookmark Open Behavior'**
+  String get bookmarkOpenBehavior;
+
+  /// No description provided for @bookmarkOpenBehaviorSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how tapping a bookmark opens it'**
+  String get bookmarkOpenBehaviorSubtitle;
+
+  /// No description provided for @bottomSheetTabView.
+  ///
+  /// In en, this message translates to:
+  /// **'Bottom Sheet'**
+  String get bottomSheetTabView;
+
+  /// No description provided for @bottomSheetTabViewSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show tabs in a bottom sheet'**
+  String get bottomSheetTabViewSubtitle;
+
+  /// No description provided for @browsingNavigationSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Navigation'**
+  String get browsingNavigationSection;
+
+  /// No description provided for @browsingSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Browsing'**
+  String get browsingSettings;
+
+  /// No description provided for @browsingSettingsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tabs, navigation, app links, and Small Web behavior.'**
+  String get browsingSettingsSubtitle;
+
+  /// No description provided for @browsingTabsSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Tabs'**
+  String get browsingTabsSection;
+
+  /// No description provided for @cloneAsIsolated.
+  ///
+  /// In en, this message translates to:
+  /// **'Clone as Isolated'**
+  String get cloneAsIsolated;
+
+  /// No description provided for @cloneAsPrivate.
+  ///
+  /// In en, this message translates to:
+  /// **'Clone as Private'**
+  String get cloneAsPrivate;
+
+  /// No description provided for @cloneAsRegular.
+  ///
+  /// In en, this message translates to:
+  /// **'Clone as Regular'**
+  String get cloneAsRegular;
+
+  /// No description provided for @closeButtonsOnAllTabs.
+  ///
+  /// In en, this message translates to:
+  /// **'Close Buttons on All Tabs'**
+  String get closeButtonsOnAllTabs;
+
+  /// No description provided for @closeButtonsOnAllTabsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show a close button on every tab'**
+  String get closeButtonsOnAllTabsSubtitle;
+
+  /// No description provided for @closeFromSameHost.
+  ///
+  /// In en, this message translates to:
+  /// **'Close from Same Host'**
+  String get closeFromSameHost;
+
+  /// No description provided for @closeOthers.
+  ///
+  /// In en, this message translates to:
+  /// **'Close Others'**
+  String get closeOthers;
+
+  /// No description provided for @compact.
+  ///
+  /// In en, this message translates to:
+  /// **'Compact'**
+  String get compact;
+
+  /// No description provided for @compactTabBarSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'A single compact row of tabs'**
+  String get compactTabBarSubtitle;
+
+  /// No description provided for @containerTabs.
+  ///
+  /// In en, this message translates to:
+  /// **'Container Tabs'**
+  String get containerTabs;
+
+  /// No description provided for @containerTabsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Group tabs by container'**
+  String get containerTabsSubtitle;
+
+  /// No description provided for @contextualToolbarSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Contextual Toolbar'**
+  String get contextualToolbarSection;
+
+  /// No description provided for @continueIntoNextContainer.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue into Next Container'**
+  String get continueIntoNextContainer;
+
+  /// No description provided for @continueIntoNextContainerSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Move to the next container after its last tab'**
+  String get continueIntoNextContainerSubtitle;
+
+  /// No description provided for @createChildTabs.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Child Tabs'**
+  String get createChildTabs;
+
+  /// No description provided for @createChildTabsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Open links from tabs in the same container context'**
+  String get createChildTabsSubtitle;
+
+  /// No description provided for @customTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Tab'**
+  String get customTab;
+
+  /// No description provided for @customTabsBrowsingSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Control how WebLibre handles Android custom tabs'**
+  String get customTabsBrowsingSubtitle;
+
+  /// No description provided for @customizeSwitcherButtons.
+  ///
+  /// In en, this message translates to:
+  /// **'Customize Switcher Buttons'**
+  String get customizeSwitcherButtons;
+
+  /// No description provided for @customizeSwitcherButtonsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose buttons shown in the quick tab switcher'**
+  String get customizeSwitcherButtonsSubtitle;
+
+  /// No description provided for @customizeToolbarButtons.
+  ///
+  /// In en, this message translates to:
+  /// **'Customize Toolbar Buttons'**
+  String get customizeToolbarButtons;
+
+  /// No description provided for @customizeToolbarButtonsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose and arrange contextual toolbar buttons'**
+  String get customizeToolbarButtonsSubtitle;
+
+  /// No description provided for @decreaseFont.
+  ///
+  /// In en, this message translates to:
+  /// **'Decrease Font'**
+  String get decreaseFont;
+
+  /// No description provided for @desktopModeSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Desktop Mode'**
+  String get desktopModeSection;
+
+  /// No description provided for @desktopModeSitesSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sites that always load in desktop mode'**
+  String get desktopModeSitesSubtitle;
+
+  /// No description provided for @disableGestures.
+  ///
+  /// In en, this message translates to:
+  /// **'Disable gestures'**
+  String get disableGestures;
+
+  /// No description provided for @doubleBackToCloseTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Double Back to Close Tab'**
+  String get doubleBackToCloseTab;
+
+  /// No description provided for @doubleBackToCloseTabSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Require double back press before closing the current tab'**
+  String get doubleBackToCloseTabSubtitle;
+
+  /// No description provided for @duplicateTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Duplicate Tab'**
+  String get duplicateTab;
+
+  /// No description provided for @enableGestures.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable gestures'**
+  String get enableGestures;
+
+  /// No description provided for @extensionsMenu.
+  ///
+  /// In en, this message translates to:
+  /// **'Extensions Menu'**
+  String get extensionsMenu;
+
+  /// No description provided for @externalLinkHandling.
+  ///
+  /// In en, this message translates to:
+  /// **'External Link Handling'**
+  String get externalLinkHandling;
+
+  /// No description provided for @externalLinkHandlingSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how external links open in WebLibre'**
+  String get externalLinkHandlingSubtitle;
+
+  /// No description provided for @externalLinksSection.
+  ///
+  /// In en, this message translates to:
+  /// **'External Links'**
+  String get externalLinksSection;
+
+  /// No description provided for @hardRefreshBypassCache.
+  ///
+  /// In en, this message translates to:
+  /// **'Hard Refresh (bypass cache)'**
+  String get hardRefreshBypassCache;
+
+  /// No description provided for @hideQuickTabSwitcherBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide Quick Tab Switcher Bar'**
+  String get hideQuickTabSwitcherBar;
+
+  /// No description provided for @hideTabBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide Tab Bar'**
+  String get hideTabBar;
+
+  /// No description provided for @historyMenuForwardPages.
+  ///
+  /// In en, this message translates to:
+  /// **'History Menu (Forward pages)'**
+  String get historyMenuForwardPages;
+
+  /// No description provided for @historyMenuPreviousPages.
+  ///
+  /// In en, this message translates to:
+  /// **'History Menu (Previous pages)'**
+  String get historyMenuPreviousPages;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @homeScreenSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Home Screen'**
+  String get homeScreenSection;
+
+  /// No description provided for @increaseFont.
+  ///
+  /// In en, this message translates to:
+  /// **'Increase Font'**
+  String get increaseFont;
+
+  /// No description provided for @installSitesAsApps.
+  ///
+  /// In en, this message translates to:
+  /// **'Install Sites as Apps'**
+  String get installSitesAsApps;
+
+  /// No description provided for @installSitesAsAppsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow websites without a manifest to be installed as apps'**
+  String get installSitesAsAppsSubtitle;
+
+  /// No description provided for @livePreview.
+  ///
+  /// In en, this message translates to:
+  /// **'Live Preview'**
+  String get livePreview;
+
+  /// No description provided for @livePreviewSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Preview toolbar and layout changes'**
+  String get livePreviewSubtitle;
+
+  /// No description provided for @longPressUrlToCopy.
+  ///
+  /// In en, this message translates to:
+  /// **'Long Press URL to Copy'**
+  String get longPressUrlToCopy;
+
+  /// No description provided for @longPressUrlToCopySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy the current URL by long-pressing the address bar'**
+  String get longPressUrlToCopySubtitle;
+
+  /// No description provided for @loopAround.
+  ///
+  /// In en, this message translates to:
+  /// **'Loop Around'**
+  String get loopAround;
+
+  /// No description provided for @loopAroundSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue from the other end after the first or last tab'**
+  String get loopAroundSubtitle;
+
+  /// No description provided for @menu.
+  ///
+  /// In en, this message translates to:
+  /// **'Menu'**
+  String get menu;
+
+  /// No description provided for @navigateSequentialTabs.
+  ///
+  /// In en, this message translates to:
+  /// **'Navigate Sequential Tabs'**
+  String get navigateSequentialTabs;
+
+  /// No description provided for @navigateSequentialTabsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Move to the adjacent tab'**
+  String get navigateSequentialTabsSubtitle;
+
+  /// No description provided for @never.
+  ///
+  /// In en, this message translates to:
+  /// **'Never'**
+  String get never;
+
+  /// No description provided for @newTabDefault.
+  ///
+  /// In en, this message translates to:
+  /// **'New Tab Default'**
+  String get newTabDefault;
+
+  /// No description provided for @newTabDefaultSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose the default type for manually created tabs'**
+  String get newTabDefaultSubtitle;
+
+  /// No description provided for @newestFirst.
+  ///
+  /// In en, this message translates to:
+  /// **'Newest first'**
+  String get newestFirst;
+
+  /// No description provided for @off.
+  ///
+  /// In en, this message translates to:
+  /// **'Off'**
+  String get off;
+
+  /// No description provided for @offerAppStoreFallback.
+  ///
+  /// In en, this message translates to:
+  /// **'Offer App Store Fallback'**
+  String get offerAppStoreFallback;
+
+  /// No description provided for @offerAppStoreFallbackSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Offer to find an app when no installed app can open a link'**
+  String get offerAppStoreFallbackSubtitle;
+
+  /// No description provided for @oldestFirst.
+  ///
+  /// In en, this message translates to:
+  /// **'Oldest first'**
+  String get oldestFirst;
+
+  /// No description provided for @openBookmarkCustomTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Open the bookmark in a custom tab'**
+  String get openBookmarkCustomTab;
+
+  /// No description provided for @openBookmarkIsolatedTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Open the bookmark in an isolated tab'**
+  String get openBookmarkIsolatedTab;
+
+  /// No description provided for @openBookmarkPrivateTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Open the bookmark in a private tab'**
+  String get openBookmarkPrivateTab;
+
+  /// No description provided for @openBookmarkRegularTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Open the bookmark in a regular tab'**
+  String get openBookmarkRegularTab;
+
+  /// No description provided for @openBookmarks.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Bookmarks'**
+  String get openBookmarks;
+
+  /// No description provided for @openExternalLinksIsolatedTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Open external links in an isolated tab'**
+  String get openExternalLinksIsolatedTab;
+
+  /// No description provided for @openExternalLinksPrivateTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Open external links in a private tab'**
+  String get openExternalLinksPrivateTab;
+
+  /// No description provided for @openExternalLinksRegularTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Open external links in a regular tab'**
+  String get openExternalLinksRegularTab;
+
+  /// No description provided for @openLinksInApps.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Links in Apps'**
+  String get openLinksInApps;
+
+  /// No description provided for @openLinksInAppsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how external app links open'**
+  String get openLinksInAppsSubtitle;
+
+  /// No description provided for @openSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Settings'**
+  String get openSettings;
+
+  /// No description provided for @pageDown.
+  ///
+  /// In en, this message translates to:
+  /// **'Page Down'**
+  String get pageDown;
+
+  /// No description provided for @pageUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Page Up'**
+  String get pageUp;
+
+  /// No description provided for @positionBottom.
+  ///
+  /// In en, this message translates to:
+  /// **'Bottom'**
+  String get positionBottom;
+
+  /// No description provided for @positionBottomSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Place the bar at the bottom'**
+  String get positionBottomSubtitle;
+
+  /// No description provided for @positionLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'Left'**
+  String get positionLeft;
+
+  /// No description provided for @positionRight.
+  ///
+  /// In en, this message translates to:
+  /// **'Right'**
+  String get positionRight;
+
+  /// No description provided for @positionTop.
+  ///
+  /// In en, this message translates to:
+  /// **'Top'**
+  String get positionTop;
+
+  /// No description provided for @positionTopSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Place the bar at the top'**
+  String get positionTopSubtitle;
+
+  /// No description provided for @previewBank.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank'**
+  String get previewBank;
+
+  /// No description provided for @previewNews.
+  ///
+  /// In en, this message translates to:
+  /// **'News'**
+  String get previewNews;
+
+  /// No description provided for @previewPageContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Page content'**
+  String get previewPageContent;
+
+  /// No description provided for @prompt.
+  ///
+  /// In en, this message translates to:
+  /// **'Prompt'**
+  String get prompt;
+
+  /// No description provided for @pullToRefresh.
+  ///
+  /// In en, this message translates to:
+  /// **'Pull to Refresh'**
+  String get pullToRefresh;
+
+  /// No description provided for @pullToRefreshSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Swipe down on pages to reload them'**
+  String get pullToRefreshSubtitle;
+
+  /// No description provided for @quickSwitcherHierarchyDepth.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Switcher Hierarchy Depth'**
+  String get quickSwitcherHierarchyDepth;
+
+  /// No description provided for @quickSwitcherHierarchyDepthSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how many tab hierarchy levels to show'**
+  String get quickSwitcherHierarchyDepthSubtitle;
+
+  /// No description provided for @quickSwitcherHierarchyLevelCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} levels'**
+  String quickSwitcherHierarchyLevelCount(int count);
+
+  /// No description provided for @quickSwitcherHistoryFallback.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Switcher History Fallback'**
+  String get quickSwitcherHistoryFallback;
+
+  /// No description provided for @quickSwitcherHistoryFallbackSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Use recently visited tabs when hierarchy has no match'**
+  String get quickSwitcherHistoryFallbackSubtitle;
+
+  /// No description provided for @quickSwitcherTitleWidth.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Switcher Title Width'**
+  String get quickSwitcherTitleWidth;
+
+  /// No description provided for @quickSwitcherTitleWidthSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how much space tab titles use'**
+  String get quickSwitcherTitleWidthSubtitle;
+
+  /// No description provided for @quickTabSwitcherSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Tab Switcher'**
+  String get quickTabSwitcherSection;
+
+  /// No description provided for @quit.
+  ///
+  /// In en, this message translates to:
+  /// **'Quit'**
+  String get quit;
+
+  /// No description provided for @quitWithoutConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Quit without confirmation'**
+  String get quitWithoutConfirmation;
+
+  /// No description provided for @readerMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Reader Mode'**
+  String get readerMode;
+
+  /// No description provided for @recentlyUsedTabs.
+  ///
+  /// In en, this message translates to:
+  /// **'Recently Used Tabs'**
+  String get recentlyUsedTabs;
+
+  /// No description provided for @recentlyUsedTabsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show recently used tabs in the quick switcher'**
+  String get recentlyUsedTabsSubtitle;
+
+  /// No description provided for @rememberedSiteRules.
+  ///
+  /// In en, this message translates to:
+  /// **'Remembered Site Rules'**
+  String get rememberedSiteRules;
+
+  /// No description provided for @removeBookmark.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove Bookmark'**
+  String get removeBookmark;
+
+  /// No description provided for @removeRule.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove rule'**
+  String get removeRule;
+
+  /// No description provided for @scrollToBottom.
+  ///
+  /// In en, this message translates to:
+  /// **'Scroll to Bottom'**
+  String get scrollToBottom;
+
+  /// No description provided for @scrollToTop.
+  ///
+  /// In en, this message translates to:
+  /// **'Scroll to Top'**
+  String get scrollToTop;
+
+  /// No description provided for @searchToolbarLayoutSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Search toolbar and layout settings'**
+  String get searchToolbarLayoutSettings;
+
+  /// No description provided for @sequentialTabNavigation.
+  ///
+  /// In en, this message translates to:
+  /// **'Sequential Tab Navigation'**
+  String get sequentialTabNavigation;
+
+  /// No description provided for @sequentialTabNavigationSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose where stepping through tabs in order ends'**
+  String get sequentialTabNavigationSubtitle;
+
+  /// No description provided for @showContainerUi.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Container UI'**
+  String get showContainerUi;
+
+  /// No description provided for @showContainerUiSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show container selectors, menus, and management'**
+  String get showContainerUiSubtitle;
+
+  /// No description provided for @showContextualToolbar.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Contextual Toolbar'**
+  String get showContextualToolbar;
+
+  /// No description provided for @showContextualToolbarSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show the contextual toolbar while browsing'**
+  String get showContextualToolbarSubtitle;
+
+  /// No description provided for @showFaviconsInListView.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Favicons in List View'**
+  String get showFaviconsInListView;
+
+  /// No description provided for @showFaviconsInListViewSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Display site icons beside tabs'**
+  String get showFaviconsInListViewSubtitle;
+
+  /// No description provided for @showIsolatedTabUi.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Isolated Tab UI'**
+  String get showIsolatedTabUi;
+
+  /// No description provided for @showIsolatedTabUiSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show isolated-tab creation options in the UI'**
+  String get showIsolatedTabUiSubtitle;
+
+  /// No description provided for @showTitlesInQuickTabSwitcher.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Titles in Quick Tab Switcher'**
+  String get showTitlesInQuickTabSwitcher;
+
+  /// No description provided for @showTitlesInQuickTabSwitcherSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Display tab titles in the quick switcher'**
+  String get showTitlesInQuickTabSwitcherSubtitle;
+
+  /// No description provided for @showTranslationOptions.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Translation Options'**
+  String get showTranslationOptions;
+
+  /// No description provided for @smallWebTabDefault.
+  ///
+  /// In en, this message translates to:
+  /// **'Small Web Tab Default'**
+  String get smallWebTabDefault;
+
+  /// No description provided for @smallWebTabDefaultSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose the tab type used when entering Small Web'**
+  String get smallWebTabDefaultSubtitle;
+
+  /// No description provided for @stayAndOfferToSwitch.
+  ///
+  /// In en, this message translates to:
+  /// **'Stay and Offer to Switch'**
+  String get stayAndOfferToSwitch;
+
+  /// No description provided for @stayAndOfferToSwitchSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Stay on the current tab and offer to switch'**
+  String get stayAndOfferToSwitchSubtitle;
+
+  /// No description provided for @switchImmediately.
+  ///
+  /// In en, this message translates to:
+  /// **'Switch Immediately'**
+  String get switchImmediately;
+
+  /// No description provided for @switchImmediatelySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Switch to the newly opened background tab'**
+  String get switchImmediatelySubtitle;
+
+  /// No description provided for @switchToLastUsedTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Switch to Last Used Tab'**
+  String get switchToLastUsedTab;
+
+  /// No description provided for @switchToLastUsedTabSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Return to the previously used tab'**
+  String get switchToLastUsedTabSubtitle;
+
+  /// No description provided for @tabBarDirection.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab Bar Direction'**
+  String get tabBarDirection;
+
+  /// No description provided for @tabBarDirectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how tabs are ordered in the tab bar'**
+  String get tabBarDirectionSubtitle;
+
+  /// No description provided for @tabBarPosition.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab Bar Position'**
+  String get tabBarPosition;
+
+  /// No description provided for @tabBarPositionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose where the tab bar appears'**
+  String get tabBarPositionSubtitle;
+
+  /// No description provided for @tabBarSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab Bar'**
+  String get tabBarSection;
+
+  /// No description provided for @tabBarStyle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab Bar Style'**
+  String get tabBarStyle;
+
+  /// No description provided for @tabBarStyleSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose the tab bar layout'**
+  String get tabBarStyleSubtitle;
+
+  /// No description provided for @tabBarSwipeBehavior.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab Bar Swipe Behavior'**
+  String get tabBarSwipeBehavior;
+
+  /// No description provided for @tabBarSwipeBehaviorSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose what horizontal swipes on the tab bar do'**
+  String get tabBarSwipeBehaviorSubtitle;
+
+  /// No description provided for @tabListDirection.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab List Direction'**
+  String get tabListDirection;
+
+  /// No description provided for @tabListDirectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how tabs are ordered in the list view'**
+  String get tabListDirectionSubtitle;
+
+  /// No description provided for @tabStacking.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab Stacking'**
+  String get tabStacking;
+
+  /// No description provided for @tabStackingSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how tabs are grouped and displayed'**
+  String get tabStackingSubtitle;
+
+  /// No description provided for @tabTypeIsolated.
+  ///
+  /// In en, this message translates to:
+  /// **'Isolated'**
+  String get tabTypeIsolated;
+
+  /// No description provided for @tabTypePrivate.
+  ///
+  /// In en, this message translates to:
+  /// **'Private'**
+  String get tabTypePrivate;
+
+  /// No description provided for @tabTypeRegular.
+  ///
+  /// In en, this message translates to:
+  /// **'Regular'**
+  String get tabTypeRegular;
+
+  /// No description provided for @tabViewSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab View'**
+  String get tabViewSection;
+
+  /// No description provided for @tabs.
+  ///
+  /// In en, this message translates to:
+  /// **'Tabs'**
+  String get tabs;
+
+  /// No description provided for @textSize.
+  ///
+  /// In en, this message translates to:
+  /// **'Text Size'**
+  String get textSize;
+
+  /// No description provided for @twoRows.
+  ///
+  /// In en, this message translates to:
+  /// **'Two Rows'**
+  String get twoRows;
+
+  /// No description provided for @twoRowsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show tabs across two rows'**
+  String get twoRowsSubtitle;
+
+  /// No description provided for @unshortener.
+  ///
+  /// In en, this message translates to:
+  /// **'Unshortener'**
+  String get unshortener;
+
+  /// No description provided for @unshortenerSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Short link resolver and API token'**
+  String get unshortenerSubtitle;
+
+  /// No description provided for @urlCleanerBrowsingSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tracking removal rules and catalog updates'**
+  String get urlCleanerBrowsingSubtitle;
+
+  /// No description provided for @verticalSideRailSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show tabs in a vertical side rail'**
+  String get verticalSideRailSubtitle;
+
+  /// No description provided for @webLibrePreview.
+  ///
+  /// In en, this message translates to:
+  /// **'WebLibre Preview'**
+  String get webLibrePreview;
+
+  /// No description provided for @withTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'With Title'**
+  String get withTitle;
+
+  /// No description provided for @withTitleSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Show tab titles in the tab bar'**
+  String get withTitleSubtitle;
+
+  /// No description provided for @addExternalFilterList.
+  ///
+  /// In en, this message translates to:
+  /// **'Add external filter list'**
+  String get addExternalFilterList;
+
+  /// No description provided for @addExternalList.
+  ///
+  /// In en, this message translates to:
+  /// **'Add external list'**
+  String get addExternalList;
+
+  /// No description provided for @ads.
+  ///
+  /// In en, this message translates to:
+  /// **'Ads'**
+  String get ads;
+
+  /// No description provided for @adsAnalyticsAndSocialTrackers.
+  ///
+  /// In en, this message translates to:
+  /// **'Ads, Analytics, and Social Trackers'**
+  String get adsAnalyticsAndSocialTrackers;
+
+  /// No description provided for @adsAnalyticsAndSocialTrackersSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block advertising, analytics, social, and Mozilla social tracker categories'**
+  String get adsAnalyticsAndSocialTrackersSubtitle;
+
+  /// No description provided for @advancedFingerprintingProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced Fingerprinting Protection'**
+  String get advancedFingerprintingProtection;
+
+  /// No description provided for @advancedSecurity.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced Security'**
+  String get advancedSecurity;
+
+  /// No description provided for @allCookiesMayBreakSites.
+  ///
+  /// In en, this message translates to:
+  /// **'All cookies (may break sites)'**
+  String get allCookiesMayBreakSites;
+
+  /// No description provided for @allTabs.
+  ///
+  /// In en, this message translates to:
+  /// **'All tabs'**
+  String get allTabs;
+
+  /// No description provided for @allThirdPartyCookies.
+  ///
+  /// In en, this message translates to:
+  /// **'All third-party cookies'**
+  String get allThirdPartyCookies;
+
+  /// No description provided for @allowlistExceptions.
+  ///
+  /// In en, this message translates to:
+  /// **'Allowlist exceptions'**
+  String get allowlistExceptions;
+
+  /// No description provided for @allowlistExceptionsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Compatibility exceptions for major and minor website issues'**
+  String get allowlistExceptionsSubtitle;
+
+  /// No description provided for @alreadyAdded.
+  ///
+  /// In en, this message translates to:
+  /// **'Already added'**
+  String get alreadyAdded;
+
+  /// No description provided for @alwaysAllowed.
+  ///
+  /// In en, this message translates to:
+  /// **'Always allowed'**
+  String get alwaysAllowed;
+
+  /// No description provided for @alwaysBlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Always blocked'**
+  String get alwaysBlocked;
+
+  /// No description provided for @annoyances.
+  ///
+  /// In en, this message translates to:
+  /// **'Annoyances'**
+  String get annoyances;
+
+  /// No description provided for @appOpeningProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'App-Opening Protection'**
+  String get appOpeningProtection;
+
+  /// No description provided for @appPolicyWithPackage.
+  ///
+  /// In en, this message translates to:
+  /// **'{policy} · {packageName}'**
+  String appPolicyWithPackage(Object policy, Object packageName);
+
+  /// No description provided for @apply.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply'**
+  String get apply;
+
+  /// No description provided for @applyTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply to'**
+  String get applyTo;
+
+  /// No description provided for @applyWebLibreHardenings.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply WebLibre Hardenings'**
+  String get applyWebLibreHardenings;
+
+  /// No description provided for @applyWebLibreHardeningsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'This will enable a curated set of additional filter lists and add a legitimate URL shortener list as an external list.'**
+  String get applyWebLibreHardeningsDescription;
+
+  /// No description provided for @applyWebLibreHardeningsQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply WebLibre Hardenings?'**
+  String get applyWebLibreHardeningsQuestion;
+
+  /// No description provided for @applyWebLibreHardeningsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable a curated set of additional filter lists.'**
+  String get applyWebLibreHardeningsSubtitle;
+
+  /// No description provided for @autoClearHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-Clear History'**
+  String get autoClearHistory;
+
+  /// No description provided for @autoClearHistorySummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Automatically delete browsing history older than the selected time period'**
+  String get autoClearHistorySummary;
+
+  /// No description provided for @autoClearUnassignedTabs.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-Clear Unassigned Tabs'**
+  String get autoClearUnassignedTabs;
+
+  /// No description provided for @autoClearUnassignedTabsSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Automatically close unassigned tabs older than the selected time period'**
+  String get autoClearUnassignedTabsSummary;
+
+  /// No description provided for @autoSelectLanguages.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-select languages'**
+  String get autoSelectLanguages;
+
+  /// No description provided for @autoSelectLanguagesSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable regional filter lists matching your device languages.'**
+  String get autoSelectLanguagesSubtitle;
+
+  /// No description provided for @autoSelectedForLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-selected for your language'**
+  String get autoSelectedForLanguage;
+
+  /// No description provided for @block.
+  ///
+  /// In en, this message translates to:
+  /// **'Block'**
+  String get block;
+
+  /// No description provided for @blockAppsFromOpeningBrowser.
+  ///
+  /// In en, this message translates to:
+  /// **'Block apps from opening your browser'**
+  String get blockAppsFromOpeningBrowser;
+
+  /// No description provided for @blockAppsFromOpeningBrowserSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask before opening links that other apps send to WebLibre.'**
+  String get blockAppsFromOpeningBrowserSubtitle;
+
+  /// No description provided for @blockAppsFromOpeningBrowserSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask before opening links from other apps'**
+  String get blockAppsFromOpeningBrowserSummary;
+
+  /// No description provided for @blockCookies.
+  ///
+  /// In en, this message translates to:
+  /// **'Block Cookies'**
+  String get blockCookies;
+
+  /// No description provided for @blockCookiesSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block cookies based on the policy below'**
+  String get blockCookiesSubtitle;
+
+  /// No description provided for @blockInsecureHttpConnections.
+  ///
+  /// In en, this message translates to:
+  /// **'Block insecure HTTP connections'**
+  String get blockInsecureHttpConnections;
+
+  /// No description provided for @blockInsecureHttpConnectionsSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Require secure HTTPS connections'**
+  String get blockInsecureHttpConnectionsSummary;
+
+  /// No description provided for @blockLocalNetworkRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Block Local Network Requests'**
+  String get blockLocalNetworkRequests;
+
+  /// No description provided for @blockLocalNetworkRequestsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block web page requests to local network addresses'**
+  String get blockLocalNetworkRequestsSubtitle;
+
+  /// No description provided for @blockLocalNetworkRequestsSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Block requests to local network addresses'**
+  String get blockLocalNetworkRequestsSummary;
+
+  /// No description provided for @blockLocalNetworkTrackers.
+  ///
+  /// In en, this message translates to:
+  /// **'Block Local Network Trackers'**
+  String get blockLocalNetworkTrackers;
+
+  /// No description provided for @blockLocalNetworkTrackersSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block trackers from accessing local network resources'**
+  String get blockLocalNetworkTrackersSubtitle;
+
+  /// No description provided for @blockLocalNetworkTrackersSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Block trackers accessing local resources'**
+  String get blockLocalNetworkTrackersSummary;
+
+  /// No description provided for @blockTrackingContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Block Tracking Content'**
+  String get blockTrackingContent;
+
+  /// No description provided for @blockTrackingContentSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block tracking scripts and resources embedded in websites'**
+  String get blockTrackingContentSubtitle;
+
+  /// No description provided for @bounceTrackingProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Bounce Tracking Protection'**
+  String get bounceTrackingProtection;
+
+  /// No description provided for @bounceTrackingProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Blocks redirect trackers that collect data through intermediate URL redirects between websites'**
+  String get bounceTrackingProtectionSubtitle;
+
+  /// No description provided for @bounceTrackingProtectionSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Block trackers using intermediate redirects'**
+  String get bounceTrackingProtectionSummary;
+
+  /// No description provided for @cachedImagesAndFiles.
+  ///
+  /// In en, this message translates to:
+  /// **'Cached images and files'**
+  String get cachedImagesAndFiles;
+
+  /// No description provided for @cachedImagesAndFilesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Cached images and files'**
+  String get cachedImagesAndFilesDescription;
+
+  /// No description provided for @chooseLanguagesWebsitesCanSee.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose languages websites can see'**
+  String get chooseLanguagesWebsitesCanSee;
+
+  /// No description provided for @chooseTrackingProtectionAggressiveness.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose tracking protection aggressiveness'**
+  String get chooseTrackingProtectionAggressiveness;
+
+  /// No description provided for @completeHardening.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete Hardening'**
+  String get completeHardening;
+
+  /// No description provided for @completeHardeningSearchTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'overview complete hardening apply reset all grouped hardening preferences'**
+  String get completeHardeningSearchTerms;
+
+  /// No description provided for @completeHardeningSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply or reset all grouped hardening preferences'**
+  String get completeHardeningSubtitle;
+
+  /// No description provided for @completeHardeningToggleSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Toggle all grouped hardening preferences at once.'**
+  String get completeHardeningToggleSubtitle;
+
+  /// No description provided for @configureBrowserLanguagesSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Configure language preferences exposed to websites'**
+  String get configureBrowserLanguagesSubtitle;
+
+  /// No description provided for @connectionSecurity.
+  ///
+  /// In en, this message translates to:
+  /// **'Connection Security'**
+  String get connectionSecurity;
+
+  /// No description provided for @contentBlockingDatabase.
+  ///
+  /// In en, this message translates to:
+  /// **'Content Blocking Database'**
+  String get contentBlockingDatabase;
+
+  /// No description provided for @contentBlockingDatabaseSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage the tracker and ad blocking database'**
+  String get contentBlockingDatabaseSubtitle;
+
+  /// No description provided for @contentBlockingDatabaseSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Tracker and ad blocking database'**
+  String get contentBlockingDatabaseSummary;
+
+  /// No description provided for @cookieBlockingModeAndPolicySelection.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookie blocking mode and policy selection'**
+  String get cookieBlockingModeAndPolicySelection;
+
+  /// No description provided for @cookieNotices.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookie Notices'**
+  String get cookieNotices;
+
+  /// No description provided for @cookiePolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookie Policy'**
+  String get cookiePolicy;
+
+  /// No description provided for @cookiesAndSiteData.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookies and site data'**
+  String get cookiesAndSiteData;
+
+  /// No description provided for @cookiesAndSiteDataDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookies and site data'**
+  String get cookiesAndSiteDataDescription;
+
+  /// No description provided for @couldNotLoadPreferenceSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load preference settings'**
+  String get couldNotLoadPreferenceSettings;
+
+  /// No description provided for @crossSiteAndSocialMediaTrackers.
+  ///
+  /// In en, this message translates to:
+  /// **'Cross-site and social media trackers'**
+  String get crossSiteAndSocialMediaTrackers;
+
+  /// No description provided for @cryptominers.
+  ///
+  /// In en, this message translates to:
+  /// **'Cryptominers'**
+  String get cryptominers;
+
+  /// No description provided for @cryptominersSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block scripts that use your device to mine cryptocurrency'**
+  String get cryptominersSubtitle;
+
+  /// No description provided for @custom.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom'**
+  String get custom;
+
+  /// No description provided for @customResolverUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Resolver URL'**
+  String get customResolverUrl;
+
+  /// No description provided for @customTrackingProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Tracking Protection'**
+  String get customTrackingProtection;
+
+  /// No description provided for @customTrackingProtectionChoiceSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose which tracking protections to enable'**
+  String get customTrackingProtectionChoiceSubtitle;
+
+  /// No description provided for @customTrackingProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom cookie, content, tracker, and fingerprinting controls.'**
+  String get customTrackingProtectionSubtitle;
+
+  /// No description provided for @dataManagement.
+  ///
+  /// In en, this message translates to:
+  /// **'Data Management'**
+  String get dataManagement;
+
+  /// No description provided for @defaultFilterLists.
+  ///
+  /// In en, this message translates to:
+  /// **'Default'**
+  String get defaultFilterLists;
+
+  /// No description provided for @defaultOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Default on'**
+  String get defaultOn;
+
+  /// No description provided for @defaultProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Default Protection'**
+  String get defaultProtection;
+
+  /// No description provided for @defaultProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'DoH used only when default DNS fails'**
+  String get defaultProtectionSubtitle;
+
+  /// No description provided for @deleteBrowsingData.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete browsing data'**
+  String get deleteBrowsingData;
+
+  /// No description provided for @deleteBrowsingDataSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear selected browsing data'**
+  String get deleteBrowsingDataSummary;
+
+  /// No description provided for @descriptionOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Description (optional)'**
+  String get descriptionOptional;
+
+  /// No description provided for @dohProtectionLevelDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Domain Name System (DNS) over HTTPS sends your request for a domain name through an encrypted connection, providing a secure DNS and making it harder for others to see which website you are about to access.'**
+  String get dohProtectionLevelDescription;
+
+  /// No description provided for @dohProvider.
+  ///
+  /// In en, this message translates to:
+  /// **'DoH Provider'**
+  String get dohProvider;
+
+  /// No description provided for @dohResolverSettingsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Protection level, provider choice, and custom resolver URL'**
+  String get dohResolverSettingsSubtitle;
+
+  /// No description provided for @dohSettingsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Encrypted DNS protection level and resolver selection.'**
+  String get dohSettingsSubtitle;
+
+  /// No description provided for @durationDays.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{{count} day} other{{count} days}}'**
+  String durationDays(int count);
+
+  /// No description provided for @durationMonths.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{{count} month} other{{count} months}}'**
+  String durationMonths(int count);
+
+  /// No description provided for @durationWeeks.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{{count} week} other{{count} weeks}}'**
+  String durationWeeks(int count);
+
+  /// No description provided for @edit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get edit;
+
+  /// No description provided for @editExternalFilterList.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit external filter list'**
+  String get editExternalFilterList;
+
+  /// No description provided for @enabled.
+  ///
+  /// In en, this message translates to:
+  /// **'Enabled'**
+  String get enabled;
+
+  /// No description provided for @encryptDnsLookups.
+  ///
+  /// In en, this message translates to:
+  /// **'Encrypt DNS lookups'**
+  String get encryptDnsLookups;
+
+  /// No description provided for @extensionsWebApi.
+  ///
+  /// In en, this message translates to:
+  /// **'Extensions Web API'**
+  String get extensionsWebApi;
+
+  /// No description provided for @extensionsWebApiSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable mozAddonManager API exposure for web content and extension pages. Requires app restart.'**
+  String get extensionsWebApiSubtitle;
+
+  /// No description provided for @extensionsWebApiSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Expose the extensions Web API'**
+  String get extensionsWebApiSummary;
+
+  /// No description provided for @externalListDescriptionHint.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Annoyances — myAuthor'**
+  String get externalListDescriptionHint;
+
+  /// No description provided for @externalListUrlHint.
+  ///
+  /// In en, this message translates to:
+  /// **'https://example.com/list.txt'**
+  String get externalListUrlHint;
+
+  /// No description provided for @externalLists.
+  ///
+  /// In en, this message translates to:
+  /// **'External Lists'**
+  String get externalLists;
+
+  /// No description provided for @externalListsRawUrlsNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in WebLibre.'**
+  String get externalListsRawUrlsNote;
+
+  /// No description provided for @failedToLoadFilterListAssets.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load filter list assets: {error}'**
+  String failedToLoadFilterListAssets(Object error);
+
+  /// No description provided for @filterLists.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter Lists'**
+  String get filterLists;
+
+  /// No description provided for @fingerprintProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Fingerprint Protection'**
+  String get fingerprintProtection;
+
+  /// No description provided for @fingerprintProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Granular control over browser fingerprinting'**
+  String get fingerprintProtectionSubtitle;
+
+  /// No description provided for @fingerprinting.
+  ///
+  /// In en, this message translates to:
+  /// **'Fingerprinting'**
+  String get fingerprinting;
+
+  /// No description provided for @fissionSiteIsolation.
+  ///
+  /// In en, this message translates to:
+  /// **'Fission (Site Isolation)'**
+  String get fissionSiteIsolation;
+
+  /// No description provided for @fissionSiteIsolationSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Isolates each site into a separate OS process for improved security. Requires app restart.'**
+  String get fissionSiteIsolationSubtitle;
+
+  /// No description provided for @fissionSiteIsolationSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Isolate sites into separate processes'**
+  String get fissionSiteIsolationSummary;
+
+  /// No description provided for @fixWebsiteMajorIssues.
+  ///
+  /// In en, this message translates to:
+  /// **'Fix website major issues'**
+  String get fixWebsiteMajorIssues;
+
+  /// No description provided for @fixWebsiteMajorIssuesSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply exceptions required to avoid major website breakage (recommended)'**
+  String get fixWebsiteMajorIssuesSubtitle;
+
+  /// No description provided for @fixWebsiteMinorIssues.
+  ///
+  /// In en, this message translates to:
+  /// **'Fix website minor issues'**
+  String get fixWebsiteMinorIssues;
+
+  /// No description provided for @fixWebsiteMinorIssuesSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply exceptions to fix minor issues and enable convenience features'**
+  String get fixWebsiteMinorIssuesSubtitle;
+
+  /// No description provided for @globalPrivacyControl.
+  ///
+  /// In en, this message translates to:
+  /// **'Global Privacy Control'**
+  String get globalPrivacyControl;
+
+  /// No description provided for @globalPrivacyControlSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell websites not to sell or share your data'**
+  String get globalPrivacyControlSummary;
+
+  /// No description provided for @googleSafeBrowsing.
+  ///
+  /// In en, this message translates to:
+  /// **'Google Safe Browsing'**
+  String get googleSafeBrowsing;
+
+  /// No description provided for @groupControls.
+  ///
+  /// In en, this message translates to:
+  /// **'Group Controls'**
+  String get groupControls;
+
+  /// No description provided for @groupControlsCompleteHardening.
+  ///
+  /// In en, this message translates to:
+  /// **'group controls complete hardening'**
+  String get groupControlsCompleteHardening;
+
+  /// No description provided for @hardeningGroups.
+  ///
+  /// In en, this message translates to:
+  /// **'Hardening Groups'**
+  String get hardeningGroups;
+
+  /// No description provided for @incognitoMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Incognito Mode'**
+  String get incognitoMode;
+
+  /// No description provided for @incognitoModeSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Use private browsing mode'**
+  String get incognitoModeSubtitle;
+
+  /// No description provided for @incognitoModeSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Private browsing'**
+  String get incognitoModeSummary;
+
+  /// No description provided for @increasedProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Increased Protection'**
+  String get increasedProtection;
+
+  /// No description provided for @increasedProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'DoH preferred, default DNS as fallback'**
+  String get increasedProtectionSubtitle;
+
+  /// No description provided for @invalidUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid URL'**
+  String get invalidUrl;
+
+  /// No description provided for @knownFingerprinters.
+  ///
+  /// In en, this message translates to:
+  /// **'Known Fingerprinters'**
+  String get knownFingerprinters;
+
+  /// No description provided for @knownFingerprintersSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block scripts that collect information to uniquely identify your device'**
+  String get knownFingerprintersSubtitle;
+
+  /// No description provided for @listUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'List URL'**
+  String get listUrl;
+
+  /// No description provided for @loadDefaults.
+  ///
+  /// In en, this message translates to:
+  /// **'Load Defaults'**
+  String get loadDefaults;
+
+  /// No description provided for @loadHardenedDefaults.
+  ///
+  /// In en, this message translates to:
+  /// **'Load Hardened Defaults'**
+  String get loadHardenedDefaults;
+
+  /// No description provided for @localNetworkAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Local Network Access'**
+  String get localNetworkAccess;
+
+  /// No description provided for @localNetworkAccessSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable local network and device access blocking'**
+  String get localNetworkAccessSubtitle;
+
+  /// No description provided for @localNetworkAccessSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Control access to local network resources'**
+  String get localNetworkAccessSummary;
+
+  /// No description provided for @malware.
+  ///
+  /// In en, this message translates to:
+  /// **'Malware'**
+  String get malware;
+
+  /// No description provided for @manageWithWebLibre.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage with WebLibre'**
+  String get manageWithWebLibre;
+
+  /// No description provided for @manageWithWebLibreSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'WebLibre controls uBlock Origin\'s enabled filter lists on next browser start.'**
+  String get manageWithWebLibreSubtitle;
+
+  /// No description provided for @managedApps.
+  ///
+  /// In en, this message translates to:
+  /// **'Managed apps'**
+  String get managedApps;
+
+  /// No description provided for @management.
+  ///
+  /// In en, this message translates to:
+  /// **'Management'**
+  String get management;
+
+  /// No description provided for @managementBaselineNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Enabling management starts from uBO\'s common baseline lists and preserves My filters.'**
+  String get managementBaselineNote;
+
+  /// No description provided for @maxProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Max Protection'**
+  String get maxProtection;
+
+  /// No description provided for @maxProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'DoH only, no fallback'**
+  String get maxProtectionSubtitle;
+
+  /// No description provided for @multipurpose.
+  ///
+  /// In en, this message translates to:
+  /// **'Multipurpose'**
+  String get multipurpose;
+
+  /// No description provided for @networkProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Network Protection'**
+  String get networkProtection;
+
+  /// No description provided for @noExternalListsConfigured.
+  ///
+  /// In en, this message translates to:
+  /// **'No external lists configured.'**
+  String get noExternalListsConfigured;
+
+  /// No description provided for @noExternalListsMatch.
+  ///
+  /// In en, this message translates to:
+  /// **'No external lists match \"{query}\".'**
+  String noExternalListsMatch(Object query);
+
+  /// No description provided for @openTabs.
+  ///
+  /// In en, this message translates to:
+  /// **'Open tabs'**
+  String get openTabs;
+
+  /// No description provided for @optional.
+  ///
+  /// In en, this message translates to:
+  /// **'Optional'**
+  String get optional;
+
+  /// No description provided for @overrideTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'Override Targets'**
+  String get overrideTargets;
+
+  /// No description provided for @overview.
+  ///
+  /// In en, this message translates to:
+  /// **'Overview'**
+  String get overview;
+
+  /// No description provided for @preferenceSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Preference Settings'**
+  String get preferenceSettings;
+
+  /// No description provided for @privacy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy'**
+  String get privacy;
+
+  /// No description provided for @privacySecuritySettingsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tracking protection, network security, and privacy controls.'**
+  String get privacySecuritySettingsSubtitle;
+
+  /// No description provided for @privacySignalsAndModes.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Signals and Modes'**
+  String get privacySignalsAndModes;
+
+  /// No description provided for @privateModeOnly.
+  ///
+  /// In en, this message translates to:
+  /// **'Private mode only'**
+  String get privateModeOnly;
+
+  /// No description provided for @privateTabsOnly.
+  ///
+  /// In en, this message translates to:
+  /// **'Private tabs only'**
+  String get privateTabsOnly;
+
+  /// No description provided for @protectionLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Protection Level'**
+  String get protectionLevel;
+
+  /// No description provided for @queryParameterStripping.
+  ///
+  /// In en, this message translates to:
+  /// **'Query Parameter Stripping'**
+  String get queryParameterStripping;
+
+  /// No description provided for @queryParameterStrippingSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Removes tracking parameters from URLs to prevent cross-site user tracking'**
+  String get queryParameterStrippingSummary;
+
+  /// No description provided for @quickActions.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Actions'**
+  String get quickActions;
+
+  /// No description provided for @recentSearchesDataDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent searches'**
+  String get recentSearchesDataDescription;
+
+  /// No description provided for @redirectTrackers.
+  ///
+  /// In en, this message translates to:
+  /// **'Redirect Trackers'**
+  String get redirectTrackers;
+
+  /// No description provided for @redirectTrackersSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block trackers that collect data through intermediate URL redirects'**
+  String get redirectTrackersSubtitle;
+
+  /// No description provided for @regions.
+  ///
+  /// In en, this message translates to:
+  /// **'Regions'**
+  String get regions;
+
+  /// No description provided for @resetAllPreferencesDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'This will reset all user-defined web engine preferences to their defaults.'**
+  String get resetAllPreferencesDescription;
+
+  /// No description provided for @resetAllPreferencesQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset all preferences?'**
+  String get resetAllPreferencesQuestion;
+
+  /// No description provided for @resetToDefaultsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'This will restore uBlock Origin to its default filter list configuration and remove any external lists you added.'**
+  String get resetToDefaultsDescription;
+
+  /// No description provided for @resetToDefaultsQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset to defaults?'**
+  String get resetToDefaultsQuestion;
+
+  /// No description provided for @resetToDefaultsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore uBlock Origin\'s default filter list configuration.'**
+  String get resetToDefaultsSubtitle;
+
+  /// No description provided for @resistFingerprinting.
+  ///
+  /// In en, this message translates to:
+  /// **'Resist Fingerprinting'**
+  String get resistFingerprinting;
+
+  /// No description provided for @resistFingerprintingSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced fingerprinting protection hardening'**
+  String get resistFingerprintingSubtitle;
+
+  /// No description provided for @resolverSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Resolver Settings'**
+  String get resolverSettings;
+
+  /// No description provided for @safeBrowsingMalwareProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Safe Browsing Malware Protection'**
+  String get safeBrowsingMalwareProtection;
+
+  /// No description provided for @safeBrowsingMalwareProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Warn about dangerous websites and malicious downloads.'**
+  String get safeBrowsingMalwareProtectionSubtitle;
+
+  /// No description provided for @safeBrowsingMalwareProtectionSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Warn about malware and dangerous downloads'**
+  String get safeBrowsingMalwareProtectionSummary;
+
+  /// No description provided for @safeBrowsingPhishingProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Safe Browsing Phishing Protection'**
+  String get safeBrowsingPhishingProtection;
+
+  /// No description provided for @safeBrowsingPhishingProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Warn about deceptive websites and login pages.'**
+  String get safeBrowsingPhishingProtectionSubtitle;
+
+  /// No description provided for @safeBrowsingPhishingProtectionSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Warn about phishing websites'**
+  String get safeBrowsingPhishingProtectionSummary;
+
+  /// No description provided for @screenshotProtectionAndroidSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Prevent screenshots and screen recording on Android'**
+  String get screenshotProtectionAndroidSubtitle;
+
+  /// No description provided for @screenshotProtectionSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Prevent screenshots and screen recording'**
+  String get screenshotProtectionSummary;
+
+  /// No description provided for @searchFingerprintOverrideTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'Search fingerprint override targets'**
+  String get searchFingerprintOverrideTargets;
+
+  /// No description provided for @searchHardeningGroups.
+  ///
+  /// In en, this message translates to:
+  /// **'Search hardening groups'**
+  String get searchHardeningGroups;
+
+  /// No description provided for @searchHardeningSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Search hardening settings'**
+  String get searchHardeningSettings;
+
+  /// No description provided for @searchListsGroupsExternalUrls.
+  ///
+  /// In en, this message translates to:
+  /// **'Search lists, groups, and external URLs'**
+  String get searchListsGroupsExternalUrls;
+
+  /// No description provided for @sitePermissions.
+  ///
+  /// In en, this message translates to:
+  /// **'Site permissions'**
+  String get sitePermissions;
+
+  /// No description provided for @standard.
+  ///
+  /// In en, this message translates to:
+  /// **'Standard'**
+  String get standard;
+
+  /// No description provided for @standardTrackingProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Balanced protection for everyday browsing'**
+  String get standardTrackingProtectionSubtitle;
+
+  /// No description provided for @strict.
+  ///
+  /// In en, this message translates to:
+  /// **'Strict'**
+  String get strict;
+
+  /// No description provided for @strictTrackingProtectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Stronger protection that may break some sites'**
+  String get strictTrackingProtectionSubtitle;
+
+  /// No description provided for @socialWidgets.
+  ///
+  /// In en, this message translates to:
+  /// **'Social Widgets'**
+  String get socialWidgets;
+
+  /// No description provided for @suspectedFingerprinters.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspected Fingerprinters'**
+  String get suspectedFingerprinters;
+
+  /// No description provided for @suspectedFingerprintersAndTabScope.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspected fingerprinters and tab scope'**
+  String get suspectedFingerprintersAndTabScope;
+
+  /// No description provided for @suspectedFingerprintersSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block additional fingerprinting techniques that may be used to track you'**
+  String get suspectedFingerprintersSubtitle;
+
+  /// No description provided for @totalCookieProtectionRecommended.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Cookie Protection (Recommended)'**
+  String get totalCookieProtectionRecommended;
+
+  /// No description provided for @trackers.
+  ///
+  /// In en, this message translates to:
+  /// **'Trackers'**
+  String get trackers;
+
+  /// No description provided for @trackersSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Cryptominers, known fingerprinters, and redirect trackers'**
+  String get trackersSubtitle;
+
+  /// No description provided for @trackingContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Tracking Content'**
+  String get trackingContent;
+
+  /// No description provided for @trackingProtectionExceptionsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage sites excluded from tracking protection'**
+  String get trackingProtectionExceptionsSubtitle;
+
+  /// No description provided for @trackingScriptsAndScopeForBlocking.
+  ///
+  /// In en, this message translates to:
+  /// **'Tracking scripts and scope for blocking'**
+  String get trackingScriptsAndScopeForBlocking;
+
+  /// No description provided for @ublockFilterLists.
+  ///
+  /// In en, this message translates to:
+  /// **'uBlock Filter Lists'**
+  String get ublockFilterLists;
+
+  /// No description provided for @ublockFilterListsAndHardenings.
+  ///
+  /// In en, this message translates to:
+  /// **'uBlock Filter Lists & Hardenings'**
+  String get ublockFilterListsAndHardenings;
+
+  /// No description provided for @ublockFilterListsAndHardeningsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage filter lists and apply WebLibre hardenings'**
+  String get ublockFilterListsAndHardeningsSubtitle;
+
+  /// No description provided for @ublockFilterListsRestartMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Changes to uBlock Origin filter lists require an app restart to take effect. Due to caching, some changes may need a few minutes and an additional restart to fully apply.'**
+  String get ublockFilterListsRestartMessage;
+
+  /// No description provided for @unvisitedSites.
+  ///
+  /// In en, this message translates to:
+  /// **'Unvisited sites'**
+  String get unvisitedSites;
+
+  /// No description provided for @urlMustBeProvided.
+  ///
+  /// In en, this message translates to:
+  /// **'URL must be provided'**
+  String get urlMustBeProvided;
+
+  /// No description provided for @useDefaultDnsResolver.
+  ///
+  /// In en, this message translates to:
+  /// **'Use your default DNS resolver'**
+  String get useDefaultDnsResolver;
+
+  /// No description provided for @visitSupportPage.
+  ///
+  /// In en, this message translates to:
+  /// **'Visit support page'**
+  String get visitSupportPage;
+
+  /// No description provided for @webEngineHardening.
+  ///
+  /// In en, this message translates to:
+  /// **'Web Engine Hardening'**
+  String get webEngineHardening;
+
+  /// No description provided for @webEngineHardeningSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Harden web engine preferences'**
+  String get webEngineHardeningSummary;
 }
 
 class _AppLocalizationsDelegate

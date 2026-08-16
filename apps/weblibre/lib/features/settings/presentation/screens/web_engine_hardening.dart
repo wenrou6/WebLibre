@@ -114,7 +114,7 @@ class WebEngineHardeningScreen extends HookConsumerWidget {
               data: (data) {
                 final overviewMatches =
                     query.isEmpty ||
-                    matchesSettingsSearch(query, const [
+                    matchesSettingsSearch(query, [
                       l10n.overview,
                       l10n.completeHardening,
                       l10n.completeHardeningSearchTerms,

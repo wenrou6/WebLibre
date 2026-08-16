@@ -872,5 +872,1407 @@
   "setButton": "Set",
   "@setButton": {
     "description": "Set"
-  }
+  },
+  "searchSettingsHint": "Search settings",
+  "@searchSettingsHint": {
+    "description": "Hint shown in settings search fields"
+  },
+  "noSettingsAvailable": "No settings available.",
+  "@noSettingsAvailable": {
+    "description": "Empty state when a settings screen has no entries"
+  },
+  "noSettingsMatch": "No settings match \"{query}\".",
+  "@noSettingsMatch": {
+    "description": "Empty state for settings search results",
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteAllExceptionsQuestion": "Delete All Exceptions?",
+  "@deleteAllExceptionsQuestion": {
+    "description": "Confirmation dialog title for deleting tracking protection exceptions"
+  },
+  "reenableTrackingProtectionAllExceptionSites": "This will re-enable tracking protection for all exception sites.",
+  "@reenableTrackingProtectionAllExceptionSites": {
+    "description": "Confirmation dialog message for deleting all tracking protection exceptions"
+  },
+  "userAgentChanged": "User Agent Changed",
+  "@userAgentChanged": {
+    "description": "Dialog title shown after changing the user agent"
+  },
+  "browserRestartForUserAgent": "The browser needs to restart for the new user agent to take effect.",
+  "@browserRestartForUserAgent": {
+    "description": "Dialog message explaining that a user agent change requires restart"
+  },
+  "later": "Later",
+  "@later": {
+    "description": "Button to postpone an action"
+  },
+  "restartNow": "Restart Now",
+  "@restartNow": {
+    "description": "Button to restart the app immediately"
+  },
+  "entryCopied": "Entry copied",
+  "@entryCopied": {
+    "description": "Snackbar shown after copying a log entry"
+  },
+  "messageLabel": "Message:",
+  "@messageLabel": {
+    "description": "Message field label in log details"
+  },
+  "errorLabel": "Error:",
+  "@errorLabel": {
+    "description": "Error field label in log details"
+  },
+  "stackTraceLabel": "Stack Trace:",
+  "@stackTraceLabel": {
+    "description": "Stack trace field label in log details"
+  },
+  "copy": "Copy",
+  "@copy": {
+    "description": "Copy action"
+  },
+  "sync": "Sync",
+  "@sync": {
+    "description": "Sync action"
+  },
+  "chooseSearchProvider": "Choose a search provider",
+  "@chooseSearchProvider": {
+    "description": "Button prompting the user to select a search provider"
+  },
+  "nothingAddedYet": "Nothing added yet.",
+  "@nothingAddedYet": {
+    "description": "Empty state for reusable settings lists"
+  },
+  "add": "Add",
+  "@add": {
+    "description": "Add action tooltip"
+  },
+  "remove": "Remove",
+  "@remove": {
+    "description": "Remove action tooltip"
+  },
+  "entries": "Entries",
+  "@entries": {
+    "description": "Number of synchronized entries label"
+  },
+  "lastSync": "Last Sync",
+  "@lastSync": {
+    "description": "Last synchronization time label"
+  },
+  "notAvailable": "N/A",
+  "@notAvailable": {
+    "description": "Value is not available"
+  },
+  "searchAllSettings": "Search all settings",
+  "@searchAllSettings": {
+    "description": "Hint on the main settings search field"
+  },
+  "appearanceDownloads": "Appearance, downloads",
+  "@appearanceDownloads": {
+    "description": "General settings category subtitle"
+  },
+  "browsing": "Browsing",
+  "@browsing": {
+    "description": "Browsing settings category title"
+  },
+  "tabsNavigationExternalLinks": "Tabs, navigation, external links",
+  "@tabsNavigationExternalLinks": {
+    "description": "Browsing settings category subtitle"
+  },
+  "homeAndNewTab": "Home & New Tab",
+  "@homeAndNewTab": {
+    "description": "Home and new tab settings title"
+  },
+  "homeAndNewTabSubtitle": "What the home and new tab pages show",
+  "@homeAndNewTabSubtitle": {
+    "description": "Home and new tab settings subtitle"
+  },
+  "gestures": "Gestures",
+  "@gestures": {
+    "description": "Gesture settings category title"
+  },
+  "strokeGesturesForBrowserActions": "Stroke gestures for browser actions",
+  "@strokeGesturesForBrowserActions": {
+    "description": "Gesture settings category subtitle"
+  },
+  "toolbarAndLayout": "Toolbar & Layout",
+  "@toolbarAndLayout": {
+    "description": "Toolbar and layout settings category title"
+  },
+  "toolbarAndLayoutSubtitle": "Tab bar, toolbar, quick switcher, tab view",
+  "@toolbarAndLayoutSubtitle": {
+    "description": "Toolbar and layout settings category subtitle"
+  },
+  "webContent": "Web Content",
+  "@webContent": {
+    "description": "Web content settings category title"
+  },
+  "webContentSubtitle": "Page display, PDF, reader mode, AI",
+  "@webContentSubtitle": {
+    "description": "Web content settings category subtitle"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "Notification settings category title"
+  },
+  "notificationsSettingsSubtitle": "Web push delivery, distributor, site subscriptions",
+  "@notificationsSettingsSubtitle": {
+    "description": "Notification settings category subtitle"
+  },
+  "searchCategorySubtitle": "Providers, bangs, search history",
+  "@searchCategorySubtitle": {
+    "description": "Search settings category subtitle"
+  },
+  "trackingProtectionDataClearing": "Tracking protection, data clearing",
+  "@trackingProtectionDataClearing": {
+    "description": "Privacy and security settings category subtitle"
+  },
+  "connectionsAndRouting": "Connections and routing",
+  "@connectionsAndRouting": {
+    "description": "Proxy settings category subtitle"
+  },
+  "installManageExtensionSources": "Install and manage extension sources",
+  "@installManageExtensionSources": {
+    "description": "Extensions settings category subtitle"
+  },
+  "webLibreAccount": "WebLibre Account",
+  "@webLibreAccount": {
+    "description": "WebLibre account settings category title"
+  },
+  "signInSyncSettings": "Sign in, sync settings",
+  "@signInSyncSettings": {
+    "description": "WebLibre account settings category subtitle"
+  },
+  "firefoxSync": "Firefox Sync",
+  "@firefoxSync": {
+    "description": "Firefox Sync settings category title"
+  },
+  "firefoxSyncSubtitle": "Account, sync now, engine selection",
+  "@firefoxSyncSubtitle": {
+    "description": "Firefox Sync settings category subtitle"
+  },
+  "advancedCategorySubtitle": "JavaScript, user agent, debugging",
+  "@advancedCategorySubtitle": {
+    "description": "Advanced settings category subtitle"
+  },
+  "browser": "Browser",
+  "@browser": {
+    "description": "Browser settings group title"
+  },
+  "servicesAndAdvanced": "Services & Advanced",
+  "@servicesAndAdvanced": {
+    "description": "Services and advanced settings group title"
+  },
+  "startup": "Startup",
+  "@startup": {
+    "description": "Startup settings section title"
+  },
+  "whenNoTabToShow": "When there is no tab to show",
+  "@whenNoTabToShow": {
+    "description": "Home target setting title"
+  },
+  "onStartupAndAfterClosingLastTab": "On startup, and after closing the last tab",
+  "@onStartupAndAfterClosingLastTab": {
+    "description": "Home target setting subtitle"
+  },
+  "applyWhenLastTabCloses": "Apply when the last tab closes",
+  "@applyWhenLastTabCloses": {
+    "description": "Apply home target on last tab close setting"
+  },
+  "otherwiseOpenTabFromAnotherContainer": "Otherwise a tab from another container is opened instead",
+  "@otherwiseOpenTabFromAnotherContainer": {
+    "description": "Home target on last tab close metadata subtitle"
+  },
+  "layout": "Layout",
+  "@layout": {
+    "description": "Layout settings section title"
+  },
+  "customizeHomeSections": "Customize home sections",
+  "@customizeHomeSections": {
+    "description": "Customize home page sections setting"
+  },
+  "chooseOrderHomePage": "Choose and order what the home page shows",
+  "@chooseOrderHomePage": {
+    "description": "Customize home page sections subtitle"
+  },
+  "customizeNewTabSections": "Customize new tab sections",
+  "@customizeNewTabSections": {
+    "description": "Customize new tab sections setting"
+  },
+  "chooseOrderNewTabPage": "Choose and order what the new tab page shows",
+  "@chooseOrderNewTabPage": {
+    "description": "Customize new tab sections subtitle"
+  },
+  "address": "Address",
+  "@address": {
+    "description": "Web address field label"
+  },
+  "enterAddressOrShowHomePage": "Enter an address, or the home page is shown instead",
+  "@enterAddressOrShowHomePage": {
+    "description": "Validation message for an empty custom home address"
+  },
+  "notValidAddress": "Not a valid address",
+  "@notValidAddress": {
+    "description": "Validation message for an invalid address"
+  },
+  "closingLastTabStaysInContainer": "Closing the last tab in a container stays there instead of opening a tab from somewhere else",
+  "@closingLastTabStaysInContainer": {
+    "description": "Detailed description of applying the home target after closing the last tab"
+  },
+  "homePage": "Home page",
+  "@homePage": {
+    "description": "Home target option"
+  },
+  "lastOpenedTab": "Last opened tab",
+  "@lastOpenedTab": {
+    "description": "Resume last tab home target option"
+  },
+  "customAddress": "Custom address",
+  "@customAddress": {
+    "description": "Custom URL home target option"
+  },
+  "showChosenHomeSections": "Show shortcuts and the sections you have chosen",
+  "@showChosenHomeSections": {
+    "description": "Home page target description"
+  },
+  "pickUpWhereLeftOff": "Pick up where you left off",
+  "@pickUpWhereLeftOff": {
+    "description": "Resume last tab target description"
+  },
+  "openSpecificPage": "Open a specific page",
+  "@openSpecificPage": {
+    "description": "Custom address target description"
+  },
+  "providers": "Providers",
+  "@providers": {
+    "description": "Search providers settings section"
+  },
+  "defaultSearchProvider": "Default Search Provider",
+  "@defaultSearchProvider": {
+    "description": "Default search provider setting"
+  },
+  "chooseDefaultSearchEngine": "Choose the default engine for searches",
+  "@chooseDefaultSearchEngine": {
+    "description": "Default search provider subtitle"
+  },
+  "defaultAutocompleteProvider": "Default Autocomplete Provider",
+  "@defaultAutocompleteProvider": {
+    "description": "Default autocomplete provider setting"
+  },
+  "chooseSearchSuggestionsProvider": "Choose the provider for search suggestions",
+  "@chooseSearchSuggestionsProvider": {
+    "description": "Autocomplete provider subtitle"
+  },
+  "customSearchEngines": "Custom Search Engines",
+  "@customSearchEngines": {
+    "description": "Custom search engines setting"
+  },
+  "addManageSearchProviders": "Add and manage your own search providers",
+  "@addManageSearchProviders": {
+    "description": "Custom search engines subtitle"
+  },
+  "bangShortcuts": "Bang Shortcuts",
+  "@bangShortcuts": {
+    "description": "Bang shortcuts settings section"
+  },
+  "bangSettings": "Bang Settings",
+  "@bangSettings": {
+    "description": "Bang settings entry title"
+  },
+  "manageBangRepositories": "Manage bang repositories and usage data",
+  "@manageBangRepositories": {
+    "description": "Bang settings entry subtitle"
+  },
+  "historyAndSuggestions": "History & Suggestions",
+  "@historyAndSuggestions": {
+    "description": "Search history and suggestions settings section"
+  },
+  "searchHistoryLimit": "Search History Limit",
+  "@searchHistoryLimit": {
+    "description": "Search history limit setting"
+  },
+  "maximumRecentSearches": "Maximum number of recent searches to remember",
+  "@maximumRecentSearches": {
+    "description": "Search history limit subtitle"
+  },
+  "allowClipboardAccessSuggestions": "Allow clipboard access for suggestions",
+  "@allowClipboardAccessSuggestions": {
+    "description": "Clipboard access for search suggestions setting"
+  },
+  "browserReadClipboardSuggestUrls": "Browser can read clipboard to suggest URLs",
+  "@browserReadClipboardSuggestUrls": {
+    "description": "Clipboard search suggestions subtitle"
+  },
+  "autocompleteOnEnter": "Autocomplete on enter",
+  "@autocompleteOnEnter": {
+    "description": "Accept autocomplete on submit setting"
+  },
+  "acceptInlineSuggestionOnEnterShort": "Accept the inline suggestion when pressing enter",
+  "@acceptInlineSuggestionOnEnterShort": {
+    "description": "Short autocomplete on enter subtitle used in search metadata"
+  },
+  "acceptInlineSuggestionOnEnter": "Accept the inline suggestion when pressing enter on the keyboard",
+  "@acceptInlineSuggestionOnEnter": {
+    "description": "Autocomplete on enter setting description"
+  },
+  "popularSiteSuggestions": "Popular site suggestions",
+  "@popularSiteSuggestions": {
+    "description": "Popular site autocomplete setting"
+  },
+  "completeTextWithKnownDomainsShort": "Complete typed text with well-known domains",
+  "@completeTextWithKnownDomainsShort": {
+    "description": "Short popular site suggestions subtitle used in search metadata"
+  },
+  "completeTextWithKnownDomains": "Complete typed text with well-known domains when your history has no match",
+  "@completeTextWithKnownDomains": {
+    "description": "Popular site suggestions setting description"
+  },
+  "localSearchIndex": "Local Search Index",
+  "@localSearchIndex": {
+    "description": "Local search index settings section"
+  },
+  "enableLocalSearchIndex": "Enable local search index",
+  "@enableLocalSearchIndex": {
+    "description": "Enable local search index setting"
+  },
+  "indexVisitedPagesLocally": "Index visited pages locally for content search",
+  "@indexVisitedPagesLocally": {
+    "description": "Local search index metadata subtitle"
+  },
+  "indexPrivateTabs": "Index private tabs",
+  "@indexPrivateTabs": {
+    "description": "Index private tabs setting"
+  },
+  "includePrivateTabsLocalIndexShort": "Include private tabs in the local index",
+  "@includePrivateTabsLocalIndexShort": {
+    "description": "Index private tabs metadata subtitle"
+  },
+  "indexedPages": "Indexed pages",
+  "@indexedPages": {
+    "description": "Indexed page count setting"
+  },
+  "viewClearLocalIndex": "View and clear the local index",
+  "@viewClearLocalIndex": {
+    "description": "Indexed pages metadata subtitle"
+  },
+  "searchSettingsSubtitle": "Providers, bangs, history suggestions, and on-device search.",
+  "@searchSettingsSubtitle": {
+    "description": "Search settings screen subtitle"
+  },
+  "disabled": "Disabled",
+  "@disabled": {
+    "description": "Disabled option label"
+  },
+  "entriesLowercase": "entries",
+  "@entriesLowercase": {
+    "description": "Suffix for a numeric number of entries field"
+  },
+  "pleaseEnterValue": "Please enter a value",
+  "@pleaseEnterValue": {
+    "description": "Required numeric value validation message"
+  },
+  "pleaseEnterValidNumber": "Please enter a valid number",
+  "@pleaseEnterValidNumber": {
+    "description": "Invalid numeric value validation message"
+  },
+  "valueBetweenZeroAndHundred": "Value must be between 0 and 100",
+  "@valueBetweenZeroAndHundred": {
+    "description": "Search history limit range validation message"
+  },
+  "localSearchIndexDescription": "Index visited pages locally so the browser can search their content. Visit metadata stays in the engine; only page text is stored on-device.",
+  "@localSearchIndexDescription": {
+    "description": "Detailed local search index setting description"
+  },
+  "indexPrivateTabsDescription": "Include pages opened in private tabs in the local index. Off by default.",
+  "@indexPrivateTabsDescription": {
+    "description": "Index private tabs setting description"
+  },
+  "clearLocalSearchIndexQuestion": "Clear local search index?",
+  "@clearLocalSearchIndexQuestion": {
+    "description": "Confirmation title for clearing the local search index"
+  },
+  "clearLocalSearchIndexDescription": "This removes all locally indexed page content. Engine history (visit metadata) is not affected.",
+  "@clearLocalSearchIndexDescription": {
+    "description": "Confirmation message for clearing the local search index"
+  },
+  "pagesIndexed": "{count} pages indexed",
+  "@pagesIndexed": {
+    "description": "Number of locally indexed pages",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "loadingEllipsis": "Loading…",
+  "@loadingEllipsis": {
+    "description": "Loading state using an ellipsis character"
+  },
+  "contentAndIdentity": "Content & Identity",
+  "@contentAndIdentity": {
+    "description": "Advanced content and identity settings section"
+  },
+  "enableJavaScript": "Enable JavaScript",
+  "@enableJavaScript": {
+    "description": "Enable JavaScript setting"
+  },
+  "turnWebsiteScriptingOnOff": "Turn website scripting on or off",
+  "@turnWebsiteScriptingOnOff": {
+    "description": "Enable JavaScript metadata subtitle"
+  },
+  "customUserAgent": "Custom User Agent",
+  "@customUserAgent": {
+    "description": "Custom user agent setting"
+  },
+  "overrideBrowserUserAgent": "Override the browser user agent string",
+  "@overrideBrowserUserAgent": {
+    "description": "Custom user agent subtitle"
+  },
+  "useThirdPartyCaCertificates": "Use third party CA certificates",
+  "@useThirdPartyCaCertificates": {
+    "description": "Use third-party CA certificates setting"
+  },
+  "allowAndroidCaStoreCertificates": "Allow Android CA store certificates",
+  "@allowAndroidCaStoreCertificates": {
+    "description": "Third-party CA certificates metadata subtitle"
+  },
+  "experimental": "Experimental",
+  "@experimental": {
+    "description": "Experimental settings section"
+  },
+  "experimentalFeatures": "Experimental Features",
+  "@experimentalFeatures": {
+    "description": "Experimental features setting"
+  },
+  "experimentalFeaturesSubtitle": "Low-level runtime features and startup behavior",
+  "@experimentalFeaturesSubtitle": {
+    "description": "Experimental features setting subtitle"
+  },
+  "developerTools": "Developer Tools",
+  "@developerTools": {
+    "description": "Developer tools settings section"
+  },
+  "unmountEngineOffScreen": "Unmount Engine Off-Screen",
+  "@unmountEngineOffScreen": {
+    "description": "Unmount browser engine while off-screen setting"
+  },
+  "freeEngineUnderOverlay": "Free the web engine when an overlay is on top",
+  "@freeEngineUnderOverlay": {
+    "description": "Unmount engine metadata subtitle"
+  },
+  "iconCache": "Icon Cache",
+  "@iconCache": {
+    "description": "Icon cache setting"
+  },
+  "storedFavicons": "Stored favicons",
+  "@storedFavicons": {
+    "description": "Icon cache subtitle"
+  },
+  "mlDownloads": "ML Downloads",
+  "@mlDownloads": {
+    "description": "Downloaded machine learning files setting"
+  },
+  "downloadedAiModelsRuntimeFiles": "Downloaded AI models and runtime files",
+  "@downloadedAiModelsRuntimeFiles": {
+    "description": "Machine learning downloads subtitle"
+  },
+  "errorLogs": "Error Logs",
+  "@errorLogs": {
+    "description": "Error logs setting"
+  },
+  "viewCopyLogsIssueReporting": "View and copy logs for issue reporting",
+  "@viewCopyLogsIssueReporting": {
+    "description": "Error logs setting subtitle"
+  },
+  "dartVm": "Dart VM",
+  "@dartVm": {
+    "description": "Dart VM developer setting"
+  },
+  "copyDartVmServiceUrl": "Copy Dart VM service URL",
+  "@copyDartVmServiceUrl": {
+    "description": "Dart VM developer setting subtitle"
+  },
+  "resetUi": "Reset UI",
+  "@resetUi": {
+    "description": "Reset UI developer setting"
+  },
+  "rebuildEntireBrowserUi": "Rebuild the entire browser UI",
+  "@rebuildEntireBrowserUi": {
+    "description": "Reset UI developer setting subtitle"
+  },
+  "advancedSettingsSubtitle": "Engine behavior, runtime overrides, and developer tools.",
+  "@advancedSettingsSubtitle": {
+    "description": "Advanced settings screen subtitle"
+  },
+  "javascriptDisabledWarning": "While turning off JavaScript can boost security, privacy, and speed, it may cause some sites to not work as intended.",
+  "@javascriptDisabledWarning": {
+    "description": "Detailed JavaScript setting warning"
+  },
+  "thirdPartyCertificatesAndroidCaStore": "Allows the use of third party certificates from the Android CA store",
+  "@thirdPartyCertificatesAndroidCaStore": {
+    "description": "Detailed third-party CA certificate setting description"
+  },
+  "unmountEngineOffScreenDescription": "Unmount the web engine while a full-screen overlay (settings, tabs, search) is on top, freeing its resources. On Android 12 and lower this is always done; enabling it applies the same behavior on Android 13+, which may cause the page to reload when returning.",
+  "@unmountEngineOffScreenDescription": {
+    "description": "Detailed description for unmounting the web engine off-screen"
+  },
+  "size": "Size",
+  "@size": {
+    "description": "Storage size label"
+  },
+  "clearMlDownloadsQuestion": "Clear ML downloads?",
+  "@clearMlDownloadsQuestion": {
+    "description": "Confirmation title for clearing machine learning files"
+  },
+  "clearMlDownloadsDescription": "This clears downloaded AI models and ONNX runtime files for this profile. They will be downloaded again when needed. Restart WebLibre before retrying ML features.",
+  "@clearMlDownloadsDescription": {
+    "description": "Confirmation message for clearing machine learning files"
+  },
+  "mlDownloadsCleared": "ML downloads cleared. Restart WebLibre before retrying.",
+  "@mlDownloadsCleared": {
+    "description": "Success message after clearing machine learning files"
+  },
+  "failedToClearMlDownloads": "Failed to clear ML downloads: {error}",
+  "@failedToClearMlDownloads": {
+    "description": "Error message after failing to clear machine learning files",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "clearing": "Clearing",
+  "@clearing": {
+    "description": "Progress label while clearing data"
+  },
+  "serviceUrlCopied": "Service URL copied",
+  "@serviceUrlCopied": {
+    "description": "Snackbar after copying the Dart VM service URL"
+  },
+  "reset": "Reset",
+  "@reset": {
+    "description": "Reset action"
+  },
+  "manageProxyProfilesAndConnections": "Manage proxy profiles and connections",
+  "@manageProxyProfilesAndConnections": {
+    "description": "Proxy connections entry subtitle"
+  },
+  "proxyRouting": "Proxy Routing",
+  "@proxyRouting": {
+    "description": "Proxy routing entry title"
+  },
+  "chooseProxyForRegularAndPrivateTabs": "Choose which proxy carries regular and private tabs",
+  "@chooseProxyForRegularAndPrivateTabs": {
+    "description": "Proxy routing entry subtitle"
+  },
+  "proxySettingsSubtitle": "Manage proxy connections and choose which tabs use them.",
+  "@proxySettingsSubtitle": {
+    "description": "Proxy settings screen subtitle"
+  },
+  "manageExtensions": "Manage Extensions",
+  "@manageExtensions": {
+    "description": "Extensions entry title"
+  },
+  "browseInstalledAndAvailableExtensions": "Browse installed, disabled, available, and unsupported extensions",
+  "@browseInstalledAndAvailableExtensions": {
+    "description": "Extensions entry subtitle"
+  },
+  "customCollection": "Custom Collection",
+  "@customCollection": {
+    "description": "Custom extension collection entry title"
+  },
+  "useCustomMozillaAddonCollection": "Use a custom Mozilla addon collection",
+  "@useCustomMozillaAddonCollection": {
+    "description": "Custom extension collection entry subtitle"
+  },
+  "updates": "Updates",
+  "@updates": {
+    "description": "Extensions update section title"
+  },
+  "automaticUpdates": "Automatic updates",
+  "@automaticUpdates": {
+    "description": "Automatic extension updates title"
+  },
+  "automaticExtensionUpdatesEvery12Hours": "Automatically check for and install extension updates every 12 hours",
+  "@automaticExtensionUpdatesEvery12Hours": {
+    "description": "Automatic extension updates subtitle"
+  },
+  "security": "Security",
+  "@security": {
+    "description": "Extensions security section title"
+  },
+  "unsignedExtensionsNotVerifiedByMozilla": "Unsigned extensions have not been verified by Mozilla",
+  "@unsignedExtensionsNotVerifiedByMozilla": {
+    "description": "Unsigned extension setting subtitle"
+  },
+  "extensionsSettingsSubtitle": "Manage add-ons, update behavior, and extension security.",
+  "@extensionsSettingsSubtitle": {
+    "description": "Extensions settings screen subtitle"
+  },
+  "extensionSettingFailedToLoad": "Failed to load: {error}",
+  "@extensionSettingFailedToLoad": {
+    "description": "Error shown when an extension setting cannot be loaded",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "unsignedExtensionTrustWarning": "Only install unsigned extensions from sources you trust. They may contain malicious code.",
+  "@unsignedExtensionTrustWarning": {
+    "description": "Warning shown while unsigned extensions are enabled"
+  },
+  "allowUnsignedExtensionsQuestion": "Allow unsigned extensions?",
+  "@allowUnsignedExtensionsQuestion": {
+    "description": "Confirmation dialog title for unsigned extensions"
+  },
+  "unsignedExtensionsSecurityWarning": "Warning: This significantly weakens your browser's security.",
+  "@unsignedExtensionsSecurityWarning": {
+    "description": "Security warning in unsigned extension confirmation"
+  },
+  "unsignedExtensionsRiskDetails": "Unsigned extensions bypass Mozilla's safety review process. Malicious extensions can:\n\n• Read and modify everything you see on any website\n• Steal passwords, banking details, and personal data\n• Monitor your browsing activity silently\n• Install additional malware on your device",
+  "@unsignedExtensionsRiskDetails": {
+    "description": "Risk details in unsigned extension confirmation"
+  },
+  "unsignedExtensionsDeveloperOnly": "Only enable this if you are a developer installing your own extension or absolutely trust the source.",
+  "@unsignedExtensionsDeveloperOnly": {
+    "description": "Final caution in unsigned extension confirmation"
+  },
+  "allow": "Allow",
+  "@allow": {
+    "description": "Unsigned extension confirmation action"
+  },
+  "allowAfterSeconds": "Allow ({seconds})",
+  "@allowAfterSeconds": {
+    "description": "Disabled unsigned extension action during countdown",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "runtimeAndStartup": "Runtime & Startup",
+  "@runtimeAndStartup": {
+    "description": "Experimental settings section title"
+  },
+  "isolatedContentProcess": "Isolated Content Process",
+  "@isolatedContentProcess": {
+    "description": "Isolated content process setting title"
+  },
+  "runWebContentInIsolatedProcess": "Run web content in an isolated process",
+  "@runWebContentInIsolatedProcess": {
+    "description": "Isolated content process entry subtitle"
+  },
+  "appZygoteProcess": "App Zygote Process",
+  "@appZygoteProcess": {
+    "description": "App zygote process setting title"
+  },
+  "preloadContentServiceForFasterIsolatedStartup": "Preload the content service for faster isolated startup",
+  "@preloadContentServiceForFasterIsolatedStartup": {
+    "description": "App zygote process entry subtitle"
+  },
+  "experimentalSettingsSubtitle": "Runtime isolation and startup behavior.",
+  "@experimentalSettingsSubtitle": {
+    "description": "Experimental settings screen subtitle"
+  },
+  "isolatedContentProcessRequiresRestart": "Run web content in an isolated process. Requires app restart.",
+  "@isolatedContentProcessRequiresRestart": {
+    "description": "Isolated content process switch subtitle"
+  },
+  "appZygoteProcessRequiresAndroidAndRestart": "Preload the content service for faster isolated process startup. Requires Android 10+ and app restart.",
+  "@appZygoteProcessRequiresAndroidAndRestart": {
+    "description": "App zygote process switch subtitle"
+  },
+  "customExtensionCollection": "Custom Extension Collection",
+  "@customExtensionCollection": {
+    "description": "Custom extension collection screen title"
+  },
+  "collectionSource": "Collection Source",
+  "@collectionSource": {
+    "description": "Custom extension collection section title"
+  },
+  "collectionConfiguration": "Collection configuration",
+  "@collectionConfiguration": {
+    "description": "Custom extension collection entry title"
+  },
+  "collectionConfigurationSubtitle": "Mozilla server, collection owner, and collection name",
+  "@collectionConfigurationSubtitle": {
+    "description": "Custom extension collection entry subtitle"
+  },
+  "serverUrl": "Server URL",
+  "@serverUrl": {
+    "description": "Custom extension collection server field label"
+  },
+  "collectionUser": "Collection User",
+  "@collectionUser": {
+    "description": "Custom extension collection user field label"
+  },
+  "collectionName": "Collection Name",
+  "@collectionName": {
+    "description": "Custom extension collection name field label"
+  },
+  "actions": "Actions",
+  "@actions": {
+    "description": "Custom extension collection actions section title"
+  },
+  "saveAndRestartBrowser": "Save & Restart Browser",
+  "@saveAndRestartBrowser": {
+    "description": "Save custom extension collection action"
+  },
+  "applyCustomCollectionAndRestartBrowser": "Apply the custom collection and restart the browser",
+  "@applyCustomCollectionAndRestartBrowser": {
+    "description": "Save custom extension collection entry subtitle"
+  },
+  "usageData": "Usage Data",
+  "@usageData": {
+    "description": "Bang settings usage section title"
+  },
+  "bangFrequencies": "Bang Frequencies",
+  "@bangFrequencies": {
+    "description": "Bang frequency setting title"
+  },
+  "bangFrequenciesSubtitle": "Tracked usage for bang recommendations",
+  "@bangFrequenciesSubtitle": {
+    "description": "Bang frequency setting subtitle"
+  },
+  "repositories": "Repositories",
+  "@repositories": {
+    "description": "Bang repositories section title"
+  },
+  "generalBangs": "General Bangs",
+  "@generalBangs": {
+    "description": "General Bang repository title"
+  },
+  "syncOnDemandFromGitHub": "Sync on demand from GitHub",
+  "@syncOnDemandFromGitHub": {
+    "description": "Bang repository subtitle"
+  },
+  "kagiBangs": "Kagi Bangs",
+  "@kagiBangs": {
+    "description": "Kagi Bang repository title"
+  },
+  "bangSettingsTitle": "Bang Settings",
+  "@bangSettingsTitle": {
+    "description": "Bang settings screen title"
+  },
+  "bangSettingsSubtitle": "Bang shortcuts usage, repositories, and on-demand sync.",
+  "@bangSettingsSubtitle": {
+    "description": "Bang settings screen subtitle"
+  },
+  "desktopModeSites": "Desktop mode sites",
+  "@desktopModeSites": {
+    "description": "Desktop mode sites screen title"
+  },
+  "desktopModeSitesDescription": "These sites always load in desktop mode, overriding the default. Subdomains are included (e.g. \"example.com\" also covers \"m.example.com\").",
+  "@desktopModeSitesDescription": {
+    "description": "Desktop mode sites screen description"
+  },
+  "noSitesAdded": "No sites added.",
+  "@noSitesAdded": {
+    "description": "Empty desktop mode sites state"
+  },
+  "moduleSearchProviders": "Search Providers",
+  "@moduleSearchProviders": {
+    "description": "Search module label"
+  },
+  "moduleSuggestions": "Suggestions",
+  "@moduleSuggestions": {
+    "description": "Search module label"
+  },
+  "moduleTabs": "Tabs",
+  "@moduleTabs": {
+    "description": "Search module label"
+  },
+  "moduleArticles": "Articles",
+  "@moduleArticles": {
+    "description": "Search module label"
+  },
+  "moduleHistoryEngine": "History (engine)",
+  "@moduleHistoryEngine": {
+    "description": "Search module label"
+  },
+  "moduleLocalContent": "Local content",
+  "@moduleLocalContent": {
+    "description": "Search module label"
+  },
+  "modulePopularSites": "Popular Sites",
+  "@modulePopularSites": {
+    "description": "Search module label"
+  },
+  "moduleHistoryHighlights": "History Highlights",
+  "@moduleHistoryHighlights": {
+    "description": "Search module label"
+  },
+  "moduleShortcuts": "Shortcuts",
+  "@moduleShortcuts": {
+    "description": "Search module label"
+  },
+  "moduleRecentHistory": "Recent History",
+  "@moduleRecentHistory": {
+    "description": "Search module label"
+  },
+  "moduleRecentArticles": "Recent Articles",
+  "@moduleRecentArticles": {
+    "description": "Search module label"
+  },
+  "moduleRecentTabs": "Recent Tabs",
+  "@moduleRecentTabs": {
+    "description": "Search module label"
+  },
+  "moduleFrequentBangs": "Frequent Bangs",
+  "@moduleFrequentBangs": {
+    "description": "Search module label"
+  },
+  "moduleQuote": "Quote",
+  "@moduleQuote": {
+    "description": "Search module label"
+  },
+  "moduleQuickActions": "Quick Actions",
+  "@moduleQuickActions": {
+    "description": "Search module label"
+  },
+  "customizeHome": "Customize Home",
+  "@customizeHome": {
+    "description": "Home module layout screen title"
+  },
+  "customizeNewTab": "Customize New Tab",
+  "@customizeNewTab": {
+    "description": "New tab module layout screen title"
+  },
+  "customizeSearch": "Customize Search",
+  "@customizeSearch": {
+    "description": "Search module layout screen title"
+  },
+  "moduleSurfaceReorderDescription": "Drag to reorder. Switch a section off to hide it here without affecting the other page.",
+  "@moduleSurfaceReorderDescription": {
+    "description": "Module layout screen explanatory text"
+  },
+  "resetToDefaults": "Reset to Defaults",
+  "@resetToDefaults": {
+    "description": "Module layout reset action"
+  },
+  "trackingProtectionExceptions": "Tracking Protection Exceptions",
+  "@trackingProtectionExceptions": {
+    "description": "Tracking protection exceptions screen title"
+  },
+  "searchExceptionUrls": "Search exception URLs",
+  "@searchExceptionUrls": {
+    "description": "Tracking protection exceptions search hint"
+  },
+  "deleteAll": "Delete All",
+  "@deleteAll": {
+    "description": "Delete all tracking protection exceptions action"
+  },
+  "exceptionList": "Exception List",
+  "@exceptionList": {
+    "description": "Tracking protection exception list section title"
+  },
+  "siteWithTrackingProtectionDisabled": "Site with tracking protection disabled",
+  "@siteWithTrackingProtectionDisabled": {
+    "description": "Tracking protection exception entry subtitle"
+  },
+  "failedToDeleteExceptions": "Failed to delete exceptions: {error}",
+  "@failedToDeleteExceptions": {
+    "description": "Tracking protection delete error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToRemoveException": "Failed to remove exception: {error}",
+  "@failedToRemoveException": {
+    "description": "Tracking protection remove error",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "removeException": "Remove exception",
+  "@removeException": {
+    "description": "Tracking protection exception remove tooltip"
+  },
+  "noExceptions": "No exceptions",
+  "@noExceptions": {
+    "description": "Empty tracking protection exceptions title"
+  },
+  "exceptionSitesAppearHere": "Sites added to exceptions will appear here",
+  "@exceptionSitesAppearHere": {
+    "description": "Empty tracking protection exceptions description"
+  },
+  "errorLoadingExceptions": "Error loading exceptions",
+  "@errorLoadingExceptions": {
+    "description": "Tracking protection exceptions error state title"
+  },
+  "logLevelFatal": "Fatal",
+  "@logLevelFatal": {
+    "description": "Log level label"
+  },
+  "logLevelAll": "All",
+  "@logLevelAll": {
+    "description": "Log level label"
+  },
+  "logLevelVerbose": "Verbose",
+  "@logLevelVerbose": {
+    "description": "Log level label"
+  },
+  "logLevelUnexpected": "Unexpected",
+  "@logLevelUnexpected": {
+    "description": "Log level label"
+  },
+  "logLevelNothing": "Nothing",
+  "@logLevelNothing": {
+    "description": "Log level label"
+  },
+  "logLevelOff": "Off",
+  "@logLevelOff": {
+    "description": "Log level label"
+  },
+  "accordion": "Accordion",
+  "accordionSubtitle": "Expandable stacked tab groups",
+  "addBookmark": "Add Bookmark",
+  "addChildTab": "Add Child Tab",
+  "addIsolatedTab": "Add Isolated Tab",
+  "addPrivateTab": "Add Private Tab",
+  "addRegularTab": "Add Regular Tab",
+  "addressBar": "Address Bar",
+  "allowLoginAppCallbacks": "Allow Login App Callbacks",
+  "allowLoginAppCallbacksSubtitle": "Allow links that return to an app after browser login",
+  "always": "Always",
+  "alwaysKeepInBrowser": "Always keep in browser",
+  "alwaysOpenInApp": "Always open in app",
+  "alwaysOpenLinksInBrowser": "Always open links in browser",
+  "alwaysOpenLinksInNativeApps": "Always open links in native apps",
+  "alwaysRequestDesktopSite": "Always Request Desktop Site",
+  "alwaysRequestDesktopSiteSubtitle": "Open new tabs in desktop mode by default",
+  "askBeforeOpening": "Ask before opening",
+  "askBeforeOpeningLinksInAppsSubtitle": "Ask before opening links in native apps",
+  "askHowBookmarkOpens": "Ask how the bookmark should open",
+  "askHowExternalLinksOpen": "Ask how external links should open",
+  "autoHideTabBar": "Auto-Hide Tab Bar",
+  "autoHideTabBarSubtitle": "Hide the tab bar while scrolling pages",
+  "background": "Background",
+  "backgroundTabBehavior": "Background Tab Behavior",
+  "backgroundTabBehaviorSubtitle": "Choose what happens after a tab opens in the background",
+  "bookmark": "Bookmark",
+  "bookmarkOpenBehavior": "Bookmark Open Behavior",
+  "bookmarkOpenBehaviorSubtitle": "Choose how tapping a bookmark opens it",
+  "bottomSheetTabView": "Bottom Sheet",
+  "bottomSheetTabViewSubtitle": "Show tabs in a bottom sheet",
+  "browsingNavigationSection": "Navigation",
+  "browsingSettings": "Browsing",
+  "browsingSettingsSubtitle": "Tabs, navigation, app links, and Small Web behavior.",
+  "browsingTabsSection": "Tabs",
+  "cloneAsIsolated": "Clone as Isolated",
+  "cloneAsPrivate": "Clone as Private",
+  "cloneAsRegular": "Clone as Regular",
+  "closeButtonsOnAllTabs": "Close Buttons on All Tabs",
+  "closeButtonsOnAllTabsSubtitle": "Show a close button on every tab",
+  "closeFromSameHost": "Close from Same Host",
+  "closeOthers": "Close Others",
+  "compact": "Compact",
+  "compactTabBarSubtitle": "A single compact row of tabs",
+  "containerTabs": "Container Tabs",
+  "containerTabsSubtitle": "Group tabs by container",
+  "contextualToolbarSection": "Contextual Toolbar",
+  "continueIntoNextContainer": "Continue into Next Container",
+  "continueIntoNextContainerSubtitle": "Move to the next container after its last tab",
+  "createChildTabs": "Create Child Tabs",
+  "createChildTabsSubtitle": "Open links from tabs in the same container context",
+  "customTab": "Custom Tab",
+  "customTabsBrowsingSubtitle": "Control how WebLibre handles Android custom tabs",
+  "customizeSwitcherButtons": "Customize Switcher Buttons",
+  "customizeSwitcherButtonsSubtitle": "Choose buttons shown in the quick tab switcher",
+  "customizeToolbarButtons": "Customize Toolbar Buttons",
+  "customizeToolbarButtonsSubtitle": "Choose and arrange contextual toolbar buttons",
+  "decreaseFont": "Decrease Font",
+  "desktopModeSection": "Desktop Mode",
+  "desktopModeSitesSubtitle": "Sites that always load in desktop mode",
+  "disableGestures": "Disable gestures",
+  "doubleBackToCloseTab": "Double Back to Close Tab",
+  "doubleBackToCloseTabSubtitle": "Require double back press before closing the current tab",
+  "duplicateTab": "Duplicate Tab",
+  "enableGestures": "Enable gestures",
+  "extensionsMenu": "Extensions Menu",
+  "externalLinkHandling": "External Link Handling",
+  "externalLinkHandlingSubtitle": "Choose how external links open in WebLibre",
+  "externalLinksSection": "External Links",
+  "hardRefreshBypassCache": "Hard Refresh (bypass cache)",
+  "hideQuickTabSwitcherBar": "Hide Quick Tab Switcher Bar",
+  "hideTabBar": "Hide Tab Bar",
+  "historyMenuForwardPages": "History Menu (Forward pages)",
+  "historyMenuPreviousPages": "History Menu (Previous pages)",
+  "home": "Home",
+  "homeScreenSection": "Home Screen",
+  "increaseFont": "Increase Font",
+  "installSitesAsApps": "Install Sites as Apps",
+  "installSitesAsAppsSubtitle": "Allow websites without a manifest to be installed as apps",
+  "livePreview": "Live Preview",
+  "livePreviewSubtitle": "Preview toolbar and layout changes",
+  "longPressUrlToCopy": "Long Press URL to Copy",
+  "longPressUrlToCopySubtitle": "Copy the current URL by long-pressing the address bar",
+  "loopAround": "Loop Around",
+  "loopAroundSubtitle": "Continue from the other end after the first or last tab",
+  "menu": "Menu",
+  "navigateSequentialTabs": "Navigate Sequential Tabs",
+  "navigateSequentialTabsSubtitle": "Move to the adjacent tab",
+  "never": "Never",
+  "newTabDefault": "New Tab Default",
+  "newTabDefaultSubtitle": "Choose the default type for manually created tabs",
+  "newestFirst": "Newest first",
+  "off": "Off",
+  "offerAppStoreFallback": "Offer App Store Fallback",
+  "offerAppStoreFallbackSubtitle": "Offer to find an app when no installed app can open a link",
+  "oldestFirst": "Oldest first",
+  "openBookmarkCustomTab": "Open the bookmark in a custom tab",
+  "openBookmarkIsolatedTab": "Open the bookmark in an isolated tab",
+  "openBookmarkPrivateTab": "Open the bookmark in a private tab",
+  "openBookmarkRegularTab": "Open the bookmark in a regular tab",
+  "openBookmarks": "Open Bookmarks",
+  "openExternalLinksIsolatedTab": "Open external links in an isolated tab",
+  "openExternalLinksPrivateTab": "Open external links in a private tab",
+  "openExternalLinksRegularTab": "Open external links in a regular tab",
+  "openLinksInApps": "Open Links in Apps",
+  "openLinksInAppsSubtitle": "Choose how external app links open",
+  "openSettings": "Open Settings",
+  "pageDown": "Page Down",
+  "pageUp": "Page Up",
+  "positionBottom": "Bottom",
+  "positionBottomSubtitle": "Place the bar at the bottom",
+  "positionLeft": "Left",
+  "positionRight": "Right",
+  "positionTop": "Top",
+  "positionTopSubtitle": "Place the bar at the top",
+  "previewBank": "Bank",
+  "previewNews": "News",
+  "previewPageContent": "Page content",
+  "prompt": "Prompt",
+  "pullToRefresh": "Pull to Refresh",
+  "pullToRefreshSubtitle": "Swipe down on pages to reload them",
+  "quickSwitcherHierarchyDepth": "Quick Switcher Hierarchy Depth",
+  "quickSwitcherHierarchyDepthSubtitle": "Choose how many tab hierarchy levels to show",
+  "quickSwitcherHierarchyLevelCount": "{count} levels",
+  "@quickSwitcherHierarchyLevelCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quickSwitcherHistoryFallback": "Quick Switcher History Fallback",
+  "quickSwitcherHistoryFallbackSubtitle": "Use recently visited tabs when hierarchy has no match",
+  "quickSwitcherTitleWidth": "Quick Switcher Title Width",
+  "quickSwitcherTitleWidthSubtitle": "Choose how much space tab titles use",
+  "quickTabSwitcherSection": "Quick Tab Switcher",
+  "quit": "Quit",
+  "quitWithoutConfirmation": "Quit without confirmation",
+  "readerMode": "Reader Mode",
+  "recentlyUsedTabs": "Recently Used Tabs",
+  "recentlyUsedTabsSubtitle": "Show recently used tabs in the quick switcher",
+  "rememberedSiteRules": "Remembered Site Rules",
+  "removeBookmark": "Remove Bookmark",
+  "removeRule": "Remove rule",
+  "scrollToBottom": "Scroll to Bottom",
+  "scrollToTop": "Scroll to Top",
+  "searchToolbarLayoutSettings": "Search toolbar and layout settings",
+  "sequentialTabNavigation": "Sequential Tab Navigation",
+  "sequentialTabNavigationSubtitle": "Choose where stepping through tabs in order ends",
+  "showContainerUi": "Show Container UI",
+  "showContainerUiSubtitle": "Show container selectors, menus, and management",
+  "showContextualToolbar": "Show Contextual Toolbar",
+  "showContextualToolbarSubtitle": "Show the contextual toolbar while browsing",
+  "showFaviconsInListView": "Show Favicons in List View",
+  "showFaviconsInListViewSubtitle": "Display site icons beside tabs",
+  "showIsolatedTabUi": "Show Isolated Tab UI",
+  "showIsolatedTabUiSubtitle": "Show isolated-tab creation options in the UI",
+  "showTitlesInQuickTabSwitcher": "Show Titles in Quick Tab Switcher",
+  "showTitlesInQuickTabSwitcherSubtitle": "Display tab titles in the quick switcher",
+  "showTranslationOptions": "Show Translation Options",
+  "smallWebTabDefault": "Small Web Tab Default",
+  "smallWebTabDefaultSubtitle": "Choose the tab type used when entering Small Web",
+  "stayAndOfferToSwitch": "Stay and Offer to Switch",
+  "stayAndOfferToSwitchSubtitle": "Stay on the current tab and offer to switch",
+  "switchImmediately": "Switch Immediately",
+  "switchImmediatelySubtitle": "Switch to the newly opened background tab",
+  "switchToLastUsedTab": "Switch to Last Used Tab",
+  "switchToLastUsedTabSubtitle": "Return to the previously used tab",
+  "tabBarDirection": "Tab Bar Direction",
+  "tabBarDirectionSubtitle": "Choose how tabs are ordered in the tab bar",
+  "tabBarPosition": "Tab Bar Position",
+  "tabBarPositionSubtitle": "Choose where the tab bar appears",
+  "tabBarSection": "Tab Bar",
+  "tabBarStyle": "Tab Bar Style",
+  "tabBarStyleSubtitle": "Choose the tab bar layout",
+  "tabBarSwipeBehavior": "Tab Bar Swipe Behavior",
+  "tabBarSwipeBehaviorSubtitle": "Choose what horizontal swipes on the tab bar do",
+  "tabListDirection": "Tab List Direction",
+  "tabListDirectionSubtitle": "Choose how tabs are ordered in the list view",
+  "tabStacking": "Tab Stacking",
+  "tabStackingSubtitle": "Choose how tabs are grouped and displayed",
+  "tabTypeIsolated": "Isolated",
+  "tabTypePrivate": "Private",
+  "tabTypeRegular": "Regular",
+  "tabViewSection": "Tab View",
+  "tabs": "Tabs",
+  "textSize": "Text Size",
+  "twoRows": "Two Rows",
+  "twoRowsSubtitle": "Show tabs across two rows",
+  "unshortener": "Unshortener",
+  "unshortenerSubtitle": "Short link resolver and API token",
+  "urlCleanerBrowsingSubtitle": "Tracking removal rules and catalog updates",
+  "verticalSideRailSubtitle": "Show tabs in a vertical side rail",
+  "webLibrePreview": "WebLibre Preview",
+  "withTitle": "With Title",
+  "withTitleSubtitle": "Show tab titles in the tab bar",
+  "addExternalFilterList": "Add external filter list",
+  "addExternalList": "Add external list",
+  "ads": "Ads",
+  "adsAnalyticsAndSocialTrackers": "Ads, Analytics, and Social Trackers",
+  "adsAnalyticsAndSocialTrackersSubtitle": "Block advertising, analytics, social, and Mozilla social tracker categories",
+  "advancedFingerprintingProtection": "Advanced Fingerprinting Protection",
+  "advancedSecurity": "Advanced Security",
+  "allCookiesMayBreakSites": "All cookies (may break sites)",
+  "allTabs": "All tabs",
+  "allThirdPartyCookies": "All third-party cookies",
+  "allowlistExceptions": "Allowlist exceptions",
+  "allowlistExceptionsSubtitle": "Compatibility exceptions for major and minor website issues",
+  "alreadyAdded": "Already added",
+  "alwaysAllowed": "Always allowed",
+  "alwaysBlocked": "Always blocked",
+  "annoyances": "Annoyances",
+  "appOpeningProtection": "App-Opening Protection",
+  "appPolicyWithPackage": "{policy} · {packageName}",
+  "@appPolicyWithPackage": {
+    "placeholders": {
+      "policy": {},
+      "packageName": {}
+    }
+  },
+  "apply": "Apply",
+  "applyTo": "Apply to",
+  "applyWebLibreHardenings": "Apply WebLibre Hardenings",
+  "applyWebLibreHardeningsDescription": "This will enable a curated set of additional filter lists and add a legitimate URL shortener list as an external list.",
+  "applyWebLibreHardeningsQuestion": "Apply WebLibre Hardenings?",
+  "applyWebLibreHardeningsSubtitle": "Enable a curated set of additional filter lists.",
+  "autoClearHistory": "Auto-Clear History",
+  "autoClearHistorySummary": "Automatically delete browsing history older than the selected time period",
+  "autoClearUnassignedTabs": "Auto-Clear Unassigned Tabs",
+  "autoClearUnassignedTabsSummary": "Automatically close unassigned tabs older than the selected time period",
+  "autoSelectLanguages": "Auto-select languages",
+  "autoSelectLanguagesSubtitle": "Enable regional filter lists matching your device languages.",
+  "autoSelectedForLanguage": "Auto-selected for your language",
+  "block": "Block",
+  "blockAppsFromOpeningBrowser": "Block apps from opening your browser",
+  "blockAppsFromOpeningBrowserSubtitle": "Ask before opening links that other apps send to WebLibre.",
+  "blockAppsFromOpeningBrowserSummary": "Ask before opening links from other apps",
+  "blockCookies": "Block Cookies",
+  "blockCookiesSubtitle": "Block cookies based on the policy below",
+  "blockInsecureHttpConnections": "Block insecure HTTP connections",
+  "blockInsecureHttpConnectionsSummary": "Require secure HTTPS connections",
+  "blockLocalNetworkRequests": "Block Local Network Requests",
+  "blockLocalNetworkRequestsSubtitle": "Block web page requests to local network addresses",
+  "blockLocalNetworkRequestsSummary": "Block requests to local network addresses",
+  "blockLocalNetworkTrackers": "Block Local Network Trackers",
+  "blockLocalNetworkTrackersSubtitle": "Block trackers from accessing local network resources",
+  "blockLocalNetworkTrackersSummary": "Block trackers accessing local resources",
+  "blockTrackingContent": "Block Tracking Content",
+  "blockTrackingContentSubtitle": "Block tracking scripts and resources embedded in websites",
+  "bounceTrackingProtection": "Bounce Tracking Protection",
+  "bounceTrackingProtectionSubtitle": "Blocks redirect trackers that collect data through intermediate URL redirects between websites",
+  "bounceTrackingProtectionSummary": "Block trackers using intermediate redirects",
+  "cachedImagesAndFiles": "Cached images and files",
+  "cachedImagesAndFilesDescription": "Cached images and files",
+  "chooseLanguagesWebsitesCanSee": "Choose languages websites can see",
+  "chooseTrackingProtectionAggressiveness": "Choose tracking protection aggressiveness",
+  "completeHardening": "Complete Hardening",
+  "completeHardeningSearchTerms": "overview complete hardening apply reset all grouped hardening preferences",
+  "completeHardeningSubtitle": "Apply or reset all grouped hardening preferences",
+  "completeHardeningToggleSubtitle": "Toggle all grouped hardening preferences at once.",
+  "configureBrowserLanguagesSubtitle": "Configure language preferences exposed to websites",
+  "connectionSecurity": "Connection Security",
+  "contentBlockingDatabase": "Content Blocking Database",
+  "contentBlockingDatabaseSubtitle": "Manage the tracker and ad blocking database",
+  "contentBlockingDatabaseSummary": "Tracker and ad blocking database",
+  "cookieBlockingModeAndPolicySelection": "Cookie blocking mode and policy selection",
+  "cookieNotices": "Cookie Notices",
+  "cookiePolicy": "Cookie Policy",
+  "cookiesAndSiteData": "Cookies and site data",
+  "cookiesAndSiteDataDescription": "Cookies and site data",
+  "couldNotLoadPreferenceSettings": "Could not load preference settings",
+  "crossSiteAndSocialMediaTrackers": "Cross-site and social media trackers",
+  "cryptominers": "Cryptominers",
+  "cryptominersSubtitle": "Block scripts that use your device to mine cryptocurrency",
+  "custom": "Custom",
+  "customResolverUrl": "Custom Resolver URL",
+  "customTrackingProtection": "Custom Tracking Protection",
+  "customTrackingProtectionChoiceSubtitle": "Choose which tracking protections to enable",
+  "customTrackingProtectionSubtitle": "Custom cookie, content, tracker, and fingerprinting controls.",
+  "dataManagement": "Data Management",
+  "defaultFilterLists": "Default",
+  "defaultOn": "Default on",
+  "defaultProtection": "Default Protection",
+  "defaultProtectionSubtitle": "DoH used only when default DNS fails",
+  "deleteBrowsingData": "Delete browsing data",
+  "deleteBrowsingDataSummary": "Clear selected browsing data",
+  "descriptionOptional": "Description (optional)",
+  "dohProtectionLevelDescription": "Domain Name System (DNS) over HTTPS sends your request for a domain name through an encrypted connection, providing a secure DNS and making it harder for others to see which website you are about to access.",
+  "dohProvider": "DoH Provider",
+  "dohResolverSettingsSubtitle": "Protection level, provider choice, and custom resolver URL",
+  "dohSettingsSubtitle": "Encrypted DNS protection level and resolver selection.",
+  "durationDays": "{count, plural, =1{{count} day} other{{count} days}}",
+  "@durationDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "durationMonths": "{count, plural, =1{{count} month} other{{count} months}}",
+  "@durationMonths": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "durationWeeks": "{count, plural, =1{{count} week} other{{count} weeks}}",
+  "@durationWeeks": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "edit": "Edit",
+  "editExternalFilterList": "Edit external filter list",
+  "enabled": "Enabled",
+  "encryptDnsLookups": "Encrypt DNS lookups",
+  "extensionsWebApi": "Extensions Web API",
+  "extensionsWebApiSubtitle": "Enable mozAddonManager API exposure for web content and extension pages. Requires app restart.",
+  "extensionsWebApiSummary": "Expose the extensions Web API",
+  "externalListDescriptionHint": "e.g. Annoyances — myAuthor",
+  "externalListUrlHint": "https://example.com/list.txt",
+  "externalLists": "External Lists",
+  "externalListsRawUrlsNote": "Raw URLs are forwarded to uBlock Origin as external lists. Descriptions are only shown here in WebLibre.",
+  "failedToLoadFilterListAssets": "Failed to load filter list assets: {error}",
+  "@failedToLoadFilterListAssets": {
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "filterLists": "Filter Lists",
+  "fingerprintProtection": "Fingerprint Protection",
+  "fingerprintProtectionSubtitle": "Granular control over browser fingerprinting",
+  "fingerprinting": "Fingerprinting",
+  "fissionSiteIsolation": "Fission (Site Isolation)",
+  "fissionSiteIsolationSubtitle": "Isolates each site into a separate OS process for improved security. Requires app restart.",
+  "fissionSiteIsolationSummary": "Isolate sites into separate processes",
+  "fixWebsiteMajorIssues": "Fix website major issues",
+  "fixWebsiteMajorIssuesSubtitle": "Apply exceptions required to avoid major website breakage (recommended)",
+  "fixWebsiteMinorIssues": "Fix website minor issues",
+  "fixWebsiteMinorIssuesSubtitle": "Apply exceptions to fix minor issues and enable convenience features",
+  "globalPrivacyControl": "Global Privacy Control",
+  "globalPrivacyControlSummary": "Tell websites not to sell or share your data",
+  "googleSafeBrowsing": "Google Safe Browsing",
+  "groupControls": "Group Controls",
+  "groupControlsCompleteHardening": "group controls complete hardening",
+  "hardeningGroups": "Hardening Groups",
+  "incognitoMode": "Incognito Mode",
+  "incognitoModeSubtitle": "Use private browsing mode",
+  "incognitoModeSummary": "Private browsing",
+  "increasedProtection": "Increased Protection",
+  "increasedProtectionSubtitle": "DoH preferred, default DNS as fallback",
+  "invalidUrl": "Invalid URL",
+  "knownFingerprinters": "Known Fingerprinters",
+  "knownFingerprintersSubtitle": "Block scripts that collect information to uniquely identify your device",
+  "listUrl": "List URL",
+  "loadDefaults": "Load Defaults",
+  "loadHardenedDefaults": "Load Hardened Defaults",
+  "localNetworkAccess": "Local Network Access",
+  "localNetworkAccessSubtitle": "Enable local network and device access blocking",
+  "localNetworkAccessSummary": "Control access to local network resources",
+  "malware": "Malware",
+  "manageWithWebLibre": "Manage with WebLibre",
+  "manageWithWebLibreSubtitle": "WebLibre controls uBlock Origin's enabled filter lists on next browser start.",
+  "managedApps": "Managed apps",
+  "management": "Management",
+  "managementBaselineNote": "Enabling management starts from uBO's common baseline lists and preserves My filters.",
+  "maxProtection": "Max Protection",
+  "maxProtectionSubtitle": "DoH only, no fallback",
+  "multipurpose": "Multipurpose",
+  "networkProtection": "Network Protection",
+  "noExternalListsConfigured": "No external lists configured.",
+  "noExternalListsMatch": "No external lists match \"{query}\".",
+  "@noExternalListsMatch": {
+    "placeholders": {
+      "query": {}
+    }
+  },
+  "openTabs": "Open tabs",
+  "optional": "Optional",
+  "overrideTargets": "Override Targets",
+  "overview": "Overview",
+  "preferenceSettings": "Preference Settings",
+  "privacy": "Privacy",
+  "privacySecuritySettingsSubtitle": "Tracking protection, network security, and privacy controls.",
+  "privacySignalsAndModes": "Privacy Signals and Modes",
+  "privateModeOnly": "Private mode only",
+  "privateTabsOnly": "Private tabs only",
+  "protectionLevel": "Protection Level",
+  "queryParameterStripping": "Query Parameter Stripping",
+  "queryParameterStrippingSummary": "Removes tracking parameters from URLs to prevent cross-site user tracking",
+  "quickActions": "Quick Actions",
+  "recentSearchesDataDescription": "Recent searches",
+  "redirectTrackers": "Redirect Trackers",
+  "redirectTrackersSubtitle": "Block trackers that collect data through intermediate URL redirects",
+  "regions": "Regions",
+  "resetAllPreferencesDescription": "This will reset all user-defined web engine preferences to their defaults.",
+  "resetAllPreferencesQuestion": "Reset all preferences?",
+  "resetToDefaultsDescription": "This will restore uBlock Origin to its default filter list configuration and remove any external lists you added.",
+  "resetToDefaultsQuestion": "Reset to defaults?",
+  "resetToDefaultsSubtitle": "Restore uBlock Origin's default filter list configuration.",
+  "resistFingerprinting": "Resist Fingerprinting",
+  "resistFingerprintingSubtitle": "Advanced fingerprinting protection hardening",
+  "resolverSettings": "Resolver Settings",
+  "safeBrowsingMalwareProtection": "Safe Browsing Malware Protection",
+  "safeBrowsingMalwareProtectionSubtitle": "Warn about dangerous websites and malicious downloads.",
+  "safeBrowsingMalwareProtectionSummary": "Warn about malware and dangerous downloads",
+  "safeBrowsingPhishingProtection": "Safe Browsing Phishing Protection",
+  "safeBrowsingPhishingProtectionSubtitle": "Warn about deceptive websites and login pages.",
+  "safeBrowsingPhishingProtectionSummary": "Warn about phishing websites",
+  "screenshotProtectionAndroidSubtitle": "Prevent screenshots and screen recording on Android",
+  "screenshotProtectionSummary": "Prevent screenshots and screen recording",
+  "searchFingerprintOverrideTargets": "Search fingerprint override targets",
+  "searchHardeningGroups": "Search hardening groups",
+  "searchHardeningSettings": "Search hardening settings",
+  "searchListsGroupsExternalUrls": "Search lists, groups, and external URLs",
+  "sitePermissions": "Site permissions",
+  "standard": "Standard",
+  "standardTrackingProtectionSubtitle": "Balanced protection for everyday browsing",
+  "strict": "Strict",
+  "strictTrackingProtectionSubtitle": "Stronger protection that may break some sites",
+  "socialWidgets": "Social Widgets",
+  "suspectedFingerprinters": "Suspected Fingerprinters",
+  "suspectedFingerprintersAndTabScope": "Suspected fingerprinters and tab scope",
+  "suspectedFingerprintersSubtitle": "Block additional fingerprinting techniques that may be used to track you",
+  "totalCookieProtectionRecommended": "Total Cookie Protection (Recommended)",
+  "trackers": "Trackers",
+  "trackersSubtitle": "Cryptominers, known fingerprinters, and redirect trackers",
+  "trackingContent": "Tracking Content",
+  "trackingProtectionExceptionsSubtitle": "Manage sites excluded from tracking protection",
+  "trackingScriptsAndScopeForBlocking": "Tracking scripts and scope for blocking",
+  "ublockFilterLists": "uBlock Filter Lists",
+  "ublockFilterListsAndHardenings": "uBlock Filter Lists & Hardenings",
+  "ublockFilterListsAndHardeningsSubtitle": "Manage filter lists and apply WebLibre hardenings",
+  "ublockFilterListsRestartMessage": "Changes to uBlock Origin filter lists require an app restart to take effect. Due to caching, some changes may need a few minutes and an additional restart to fully apply.",
+  "unvisitedSites": "Unvisited sites",
+  "urlMustBeProvided": "URL must be provided",
+  "useDefaultDnsResolver": "Use your default DNS resolver",
+  "visitSupportPage": "Visit support page",
+  "webEngineHardening": "Web Engine Hardening",
+  "webEngineHardeningSummary": "Harden web engine preferences"
 }

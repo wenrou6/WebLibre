@@ -114,7 +114,7 @@ _CategoryGroups _buildCategories(BuildContext context) {
       subtitle: l10n.tabsNavigationExternalLinks,
       icon: MdiIcons.compassOutline,
       keywords: const ['tabs', 'small web', 'url cleaner', 'unshortener'],
-      sections: browsingSettingsSections,
+      sections: buildBrowsingSettingsSections(l10n),
       onTap: (context) => BrowsingSettingsRoute().push(context),
     ),
     _SettingsCategoryDefinition(
@@ -145,7 +145,7 @@ _CategoryGroups _buildCategories(BuildContext context) {
       subtitle: l10n.toolbarAndLayoutSubtitle,
       icon: MdiIcons.viewDashboardOutline,
       keywords: const ['contextual toolbar', 'quick tab switcher'],
-      sections: toolbarLayoutSettingsSections,
+      sections: buildToolbarLayoutSettingsSections(l10n),
       onTap: (context) => ToolbarLayoutSettingsRoute().push(context),
     ),
     _SettingsCategoryDefinition(
@@ -183,7 +183,7 @@ _CategoryGroups _buildCategories(BuildContext context) {
         'safe browsing',
         'network protection',
       ],
-      sections: privacySecuritySettingsSections,
+      sections: buildPrivacySecuritySettingsSections(context),
       onTap: (context) => PrivacySecuritySettingsRoute().push(context),
     ),
     _SettingsCategoryDefinition(
@@ -200,7 +200,7 @@ _CategoryGroups _buildCategories(BuildContext context) {
         'tor',
         'container',
       ],
-      sections: proxySettingsSections,
+      sections: buildProxySettingsSections(context),
       onTap: (context) => const ProxySettingsRoute().push(context),
     ),
   ];
@@ -211,7 +211,7 @@ _CategoryGroups _buildCategories(BuildContext context) {
       subtitle: l10n.installManageExtensionSources,
       icon: MdiIcons.puzzleOutline,
       keywords: const ['addons', 'unsigned extensions'],
-      sections: extensionsSettingsSections,
+      sections: buildExtensionsSettingsSections(context),
       onTap: (context) => ExtensionsSettingsRoute().push(context),
     ),
     _SettingsCategoryDefinition(

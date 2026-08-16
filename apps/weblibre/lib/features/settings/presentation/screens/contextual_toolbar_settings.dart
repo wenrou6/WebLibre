@@ -503,6 +503,8 @@ class _FallbackPicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return DropdownButton<ToolbarFallbackChoice>(
       value: current,
       hint: const Text('No fallback'),
@@ -523,7 +525,7 @@ class _FallbackPicker extends StatelessWidget {
               children: [
                 Icon(opt.icon, size: 16),
                 const SizedBox(width: 8),
-                Text(opt.label),
+                Text(opt.label(l10n)),
               ],
             ),
           ),
