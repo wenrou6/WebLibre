@@ -106,11 +106,18 @@ abstract class AddonPopupBaseFragment : Fragment(), EngineSession.Observer, User
     }
 
     override fun onDestroyView() {
-        engineSession?.close()
+        // Don't close the engine session here — it may need to survive view
+        // recreation (e.g. when the Fragment is backgrounded and restored).
+        // The session is closed in onDestroy instead.
         session?.let {
             components.core.store.dispatch(CustomTabListAction.RemoveCustomTabAction(it.id))
         }
         super.onDestroyView()
+    }
+
+    override fun onDestroy() {
+        engineSession?.close()
+        super.onDestroy()
     }
 
     override fun onPromptRequest(promptRequest: PromptRequest) {

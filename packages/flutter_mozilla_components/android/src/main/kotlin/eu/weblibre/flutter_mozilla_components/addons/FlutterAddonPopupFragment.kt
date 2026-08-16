@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
 import eu.weblibre.flutter_mozilla_components.ProfileContext
-import mozilla.components.browser.state.action.WebExtensionAction
 import mozilla.components.concept.engine.EngineSession
 import mozilla.components.concept.engine.EngineView
 import mozilla.components.lib.state.ext.consumeFrom
@@ -88,9 +87,12 @@ class FlutterAddonPopupFragment : AddonPopupBaseFragment(), EngineSession.Observ
     }
 
     private fun consumePopupSession(extensionId: String) {
-        components.core.store.dispatch(
-            WebExtensionAction.UpdatePopupSessionAction(extensionId, popupSession = null),
-        )
+        // Don't null out the popupSession in the store immediately.
+        // Previously, consuming set popupSession to null, which meant that
+        // when Android destroyed and recreated the Fragment's view (e.g. after
+        // backgrounding), the Fragment could no longer find the session to
+        // restore. Instead, we mark it as consumed so the Fragment knows not
+        // to re-initialize, but the session remains available for recovery.
         sessionConsumed = true
     }
 
