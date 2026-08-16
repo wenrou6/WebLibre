@@ -26,6 +26,7 @@ import 'package:weblibre/extensions/uri.dart';
 import 'package:weblibre/features/settings/presentation/controllers/save_settings.dart';
 import 'package:weblibre/features/user/data/models/engine_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/engine_settings.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/utils/form_validators.dart';
 
 class DohSettingsContent extends HookConsumerWidget {
@@ -33,6 +34,7 @@ class DohSettingsContent extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final formKey = useMemoized(() => GlobalKey<FormState>());
 
     final dohSettings = ref.watch(
@@ -47,12 +49,10 @@ class DohSettingsContent extends HookConsumerWidget {
 
     return Column(
       children: [
-        const ListTile(
-          leading: Icon(MdiIcons.dns),
-          title: Text('Protection Level'),
-          subtitle: Text(
-            'Domain Name System (DNS) over HTTPS sends your request for a domain name through an encrypted connection, providing a secure DNS and making it harder for others to see which web site you\u2019re about to access.',
-          ),
+        ListTile(
+          leading: const Icon(MdiIcons.dns),
+          title: Text(l10n.protectionLevel),
+          subtitle: Text(l10n.dohProtectionLevelDescription),
         ),
         RadioGroup(
           groupValue: dohSettings.dohSettingsMode,
@@ -66,34 +66,34 @@ class DohSettingsContent extends HookConsumerWidget {
                   );
             }
           },
-          child: const Column(
+          child: Column(
             children: [
               RadioListTile.adaptive(
                 value: DohSettingsMode.geckoDefault,
-                title: Text('Default Protection'),
-                subtitle: Text('DoH used only when default DNS fails'),
+                title: Text(l10n.defaultProtection),
+                subtitle: Text(l10n.defaultProtectionSubtitle),
               ),
               RadioListTile.adaptive(
                 value: DohSettingsMode.increased,
-                title: Text('Increased Protection'),
-                subtitle: Text('DoH preferred, default DNS as fallback'),
+                title: Text(l10n.increasedProtection),
+                subtitle: Text(l10n.increasedProtectionSubtitle),
               ),
               RadioListTile.adaptive(
                 value: DohSettingsMode.max,
-                title: Text('Max Protection'),
-                subtitle: Text('DoH only, no fallback'),
+                title: Text(l10n.maxProtection),
+                subtitle: Text(l10n.maxProtectionSubtitle),
               ),
               RadioListTile.adaptive(
                 value: DohSettingsMode.off,
-                title: Text('Off'),
-                subtitle: Text('Use your default DNS resolver'),
+                title: Text(l10n.off),
+                subtitle: Text(l10n.useDefaultDnsResolver),
               ),
             ],
           ),
         ),
-        const ListTile(
-          leading: Icon(MdiIcons.routerNetwork),
-          title: Text('DoH Provider'),
+        ListTile(
+          leading: const Icon(MdiIcons.routerNetwork),
+          title: Text(l10n.dohProvider),
         ),
         RadioGroup(
           groupValue: dohSettings.dohProviderUrl,
@@ -132,17 +132,22 @@ class DohSettingsContent extends HookConsumerWidget {
               child: TextFormField(
                 controller: customProviderController,
                 keyboardType: TextInputType.url,
-                decoration: const InputDecoration(
-                  label: Text('Custom Resolver URL'),
+                decoration: InputDecoration(
+                  label: Text(l10n.customResolverUrl),
                   hintText: 'https://example.com/dns-query',
                   floatingLabelBehavior: FloatingLabelBehavior.always,
                 ),
                 validator: (value) {
-                  return validateUrl(
+                  final error = validateUrl(
                     value,
                     onlyHttpProtocol: true,
                     eagerParsing: false,
                   );
+                  return switch (error) {
+                    'URL must be provided' => l10n.urlMustBeProvided,
+                    'Invalid URL' => l10n.invalidUrl,
+                    _ => error,
+                  };
                 },
                 onSaved: (newProvider) async {
                   if (newProvider != null) {

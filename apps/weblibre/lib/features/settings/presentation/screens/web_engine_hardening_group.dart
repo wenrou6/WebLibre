@@ -25,6 +25,7 @@ import 'package:weblibre/features/geckoview/features/preferences/data/repositori
 import 'package:weblibre/features/geckoview/features/tabs/utils/setting_groups_serializer.dart';
 import 'package:weblibre/features/settings/presentation/widgets/hardening_group_icon.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
 
 class WebEngineHardeningGroupScreen extends HookConsumerWidget {
@@ -34,6 +35,7 @@ class WebEngineHardeningGroupScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final settings = ref.watch(
       preferenceSettingsGroupRepositoryProvider(
         PreferencePartition.user,
@@ -48,7 +50,7 @@ class WebEngineHardeningGroupScreen extends HookConsumerWidget {
     return SettingsCustomScrollScaffold(
       title: groupName,
       searchController: search.controller,
-      searchHintText: 'Search hardening settings',
+      searchHintText: l10n.searchHardeningSettings,
       slivers: [
         SliverPadding(
           padding: const EdgeInsets.fromLTRB(16, 24, 16, 20),
@@ -61,7 +63,7 @@ class WebEngineHardeningGroupScreen extends HookConsumerWidget {
                     matchesSettingsSearch(query, [
                       groupName,
                       if (group.description != null) group.description!,
-                      'group controls complete hardening',
+                      l10n.groupControlsCompleteHardening,
                     ]);
                 final filteredSettings = group.settings.entries.where((
                   setting,
@@ -78,7 +80,7 @@ class WebEngineHardeningGroupScreen extends HookConsumerWidget {
                 final sections = <SettingsSectionDefinition>[
                   if (group.showMasterSwitch && groupControlMatches)
                     SettingsSectionDefinition(
-                      title: 'Group Controls',
+                      title: l10n.groupControls,
                       entries: [
                         SettingsEntryDefinition(
                           title: groupName,
@@ -129,7 +131,7 @@ class WebEngineHardeningGroupScreen extends HookConsumerWidget {
                     ),
                   if (filteredSettings.isNotEmpty)
                     SettingsSectionDefinition(
-                      title: 'Preference Settings',
+                      title: l10n.preferenceSettings,
                       entries: [
                         for (final setting in filteredSettings)
                           SettingsEntryDefinition(
@@ -151,7 +153,7 @@ class WebEngineHardeningGroupScreen extends HookConsumerWidget {
                 );
               },
               error: (error, stackTrace) => FailureWidget(
-                title: 'Could not load preference settings',
+                title: l10n.couldNotLoadPreferenceSettings,
                 exception: error,
                 onRetry: () => ref.refresh(
                   preferenceSettingsGroupRepositoryProvider(
@@ -182,6 +184,7 @@ class _HardeningSettingTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final theme = Theme.of(context);
     var value = settingValue.value.toString();
     if (value.length > 160) {
@@ -220,7 +223,7 @@ class _HardeningSettingTile extends ConsumerWidget {
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Text(
-                            'Optional',
+                            l10n.optional,
                             style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.w500,

@@ -27,6 +27,7 @@ import 'package:weblibre/features/user/data/models/engine_settings.dart';
 import 'package:weblibre/features/user/domain/entities/fingerprint_overrides.dart';
 import 'package:weblibre/features/user/domain/providers.dart';
 import 'package:weblibre/features/user/domain/services/fingerprinting.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
 
 class FingerprintSettingsScreen extends HookConsumerWidget {
@@ -34,14 +35,15 @@ class FingerprintSettingsScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final targetsAsync = ref.watch(fingerprintTargetsProvider);
     final settingsAsync = ref.watch(fingerprintOverrideSettingsProvider);
     final search = useSettingsSearch();
 
     return SettingsCustomScrollScaffold(
-      title: 'Fingerprint Protection',
+      title: l10n.fingerprintProtection,
       searchController: search.controller,
-      searchHintText: 'Search fingerprint override targets',
+      searchHintText: l10n.searchFingerprintOverrideTargets,
       actions: [
         MenuAnchor(
           builder: (context, controller, child) {
@@ -59,7 +61,7 @@ class FingerprintSettingsScreen extends HookConsumerWidget {
           menuChildren: [
             MenuItemButton(
               leadingIcon: const Icon(MdiIcons.restore),
-              child: const Text('Load Defaults'),
+              child: Text(l10n.loadDefaults),
               onPressed: () async {
                 await ref
                     .read(saveEngineSettingsControllerProvider.notifier)
@@ -73,7 +75,7 @@ class FingerprintSettingsScreen extends HookConsumerWidget {
             ),
             MenuItemButton(
               leadingIcon: const Icon(MdiIcons.restore),
-              child: const Text('Load Hardened Defaults'),
+              child: Text(l10n.loadHardenedDefaults),
               onPressed: () async {
                 await ref
                     .read(saveEngineSettingsControllerProvider.notifier)
@@ -113,7 +115,7 @@ class FingerprintSettingsScreen extends HookConsumerWidget {
                               ? const []
                               : [
                                   SettingsSectionDefinition(
-                                    title: 'Override Targets',
+                                    title: l10n.overrideTargets,
                                     entries: [
                                       for (final target in filteredTargets)
                                         SettingsEntryDefinition(

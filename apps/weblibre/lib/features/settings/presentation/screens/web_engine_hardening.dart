@@ -27,6 +27,7 @@ import 'package:weblibre/features/geckoview/features/preferences/data/repositori
 import 'package:weblibre/features/geckoview/features/tabs/utils/setting_groups_serializer.dart';
 import 'package:weblibre/features/settings/presentation/widgets/hardening_group_icon.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
 
 class WebEngineHardeningScreen extends HookConsumerWidget {
@@ -34,6 +35,7 @@ class WebEngineHardeningScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final preferenceGroups = ref.watch(
       unifiedPreferenceSettingsRepositoryProvider(PreferencePartition.user),
     );
@@ -52,31 +54,29 @@ class WebEngineHardeningScreen extends HookConsumerWidget {
     final query = search.normalizedQuery;
 
     return SettingsCustomScrollScaffold(
-      title: 'Web Engine Hardening',
+      title: l10n.webEngineHardening,
       searchController: search.controller,
-      searchHintText: 'Search hardening groups',
+      searchHintText: l10n.searchHardeningGroups,
       actions: [
         MenuAnchor(
           menuChildren: [
             MenuItemButton(
               leadingIcon: const Icon(Icons.restore),
-              child: const Text('Reset all preferences'),
+              child: Text(l10n.resetAllPreferences),
               onPressed: () async {
                 final confirmed = await showDialog<bool>(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: const Text('Reset all preferences?'),
-                    content: const Text(
-                      'This will reset all user-defined web engine preferences to their defaults.',
-                    ),
+                    title: Text(l10n.resetAllPreferencesQuestion),
+                    content: Text(l10n.resetAllPreferencesDescription),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.of(context).pop(false),
-                        child: const Text('Cancel'),
+                        child: Text(l10n.cancel),
                       ),
                       TextButton(
                         onPressed: () => Navigator.of(context).pop(true),
-                        child: const Text('Reset'),
+                        child: Text(l10n.reset),
                       ),
                     ],
                   ),
@@ -115,9 +115,9 @@ class WebEngineHardeningScreen extends HookConsumerWidget {
                 final overviewMatches =
                     query.isEmpty ||
                     matchesSettingsSearch(query, const [
-                      'overview',
-                      'complete hardening',
-                      'apply reset all grouped hardening preferences',
+                      l10n.overview,
+                      l10n.completeHardening,
+                      l10n.completeHardeningSearchTerms,
                     ]);
                 final filteredGroups = data.entries.where((group) {
                   if (query.isEmpty) return true;
@@ -131,12 +131,11 @@ class WebEngineHardeningScreen extends HookConsumerWidget {
                 final sections = <SettingsSectionDefinition>[
                   if (overviewMatches)
                     SettingsSectionDefinition(
-                      title: 'Overview',
+                      title: l10n.overview,
                       entries: [
                         SettingsEntryDefinition(
-                          title: 'Complete Hardening',
-                          subtitle:
-                              'Apply or reset all grouped hardening preferences',
+                          title: l10n.completeHardening,
+                          subtitle: l10n.completeHardeningSubtitle,
                           child: Padding(
                             padding: const EdgeInsets.all(16.0),
                             child: DecoratedBox(
@@ -147,13 +146,13 @@ class WebEngineHardeningScreen extends HookConsumerWidget {
                               child: SwitchListTile.adaptive(
                                 value: allGroupsActive,
                                 title: Text(
-                                  'Complete Hardening',
+                                  l10n.completeHardening,
                                   style: TextStyle(
                                     color: theme.colorScheme.onPrimaryContainer,
                                   ),
                                 ),
                                 subtitle: Text(
-                                  'Toggle all grouped hardening preferences at once.',
+                                  l10n.completeHardeningToggleSubtitle,
                                   style: TextStyle(
                                     color: theme.colorScheme.onPrimaryContainer,
                                   ),
@@ -179,7 +178,7 @@ class WebEngineHardeningScreen extends HookConsumerWidget {
                     ),
                   if (filteredGroups.isNotEmpty)
                     SettingsSectionDefinition(
-                      title: 'Hardening Groups',
+                      title: l10n.hardeningGroups,
                       entries: [
                         for (final group in filteredGroups)
                           SettingsEntryDefinition(
@@ -215,7 +214,7 @@ class WebEngineHardeningScreen extends HookConsumerWidget {
                 );
               },
               error: (error, stackTrace) => FailureWidget(
-                title: 'Could not load preference settings',
+                title: l10n.couldNotLoadPreferenceSettings,
                 exception: error,
                 onRetry: () => ref.refresh(
                   unifiedPreferenceSettingsRepositoryProvider(
