@@ -417,7 +417,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get privateTabsNotification => '隐私标签页已打开';
 
   @override
-  String get closeAllPrivateTabs => '关闭全部隐私标签页';
+  String get closeAllPrivateTabs => '关闭所有隐私标签页';
 
   @override
   String get lockOnStartupOnly => '仅在启动时锁定';
@@ -2611,4 +2611,502 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get webEngineHardeningSummary => '加固 Web 引擎偏好';
+
+  @override
+  String get searchOrEnterUrl => '搜索或输入网址';
+
+  @override
+  String get noPreviousPages => '没有更早的页面';
+
+  @override
+  String get noForwardPages => '没有后续页面';
+
+  @override
+  String get hardRefresh => '强制刷新';
+
+  @override
+  String get closeTabAndDescendants => '关闭标签页及其后代';
+
+  @override
+  String get fetchFeedsOnPage => '获取页面订阅源';
+
+  @override
+  String get addToHomeScreen => '添加到主屏幕';
+
+  @override
+  String get cloneTab => '克隆标签页';
+
+  @override
+  String get regular => '普通';
+
+  @override
+  String get private => '隐私';
+
+  @override
+  String get isolated => '隔离';
+
+  @override
+  String get assignContainer => '分配容器';
+
+  @override
+  String get urlRelation => '网址关联';
+
+  @override
+  String get unassignUrlRelation => '取消网址关联';
+
+  @override
+  String get unassignContainer => '取消分配容器';
+
+  @override
+  String get moveUp => '上移';
+
+  @override
+  String get moveDown => '下移';
+
+  @override
+  String get reorder => '重新排序';
+
+  @override
+  String get export => '导出';
+
+  @override
+  String get desktopMode => '桌面模式';
+
+  @override
+  String get changeParent => '更改父标签页…';
+
+  @override
+  String get detachFromParent => '从父标签页分离';
+
+  @override
+  String get hierarchy => '层级';
+
+  @override
+  String get shareLink => '分享链接';
+
+  @override
+  String get showQrCode => '显示二维码';
+
+  @override
+  String get exportAsPdf => '导出为 PDF';
+
+  @override
+  String get print => '打印';
+
+  @override
+  String get failedToPrintPage => '无法打印页面';
+
+  @override
+  String get shareScreenshot => '分享截图';
+
+  @override
+  String get exportAsPng => '导出为 PNG';
+
+  @override
+  String get copyAddress => '复制地址';
+
+  @override
+  String get openInApp => '在应用中打开';
+
+  @override
+  String openInNamedApp(String appName) {
+    return '在 $appName 中打开';
+  }
+
+  @override
+  String get sendToDevice => '发送到设备';
+
+  @override
+  String get noTargetDevices => '没有目标设备';
+
+  @override
+  String get loadingDevices => '正在加载设备…';
+
+  @override
+  String get failedToLoadDevices => '无法加载设备';
+
+  @override
+  String sentTabToDevice(String deviceName) {
+    return '已将标签页发送到 $deviceName';
+  }
+
+  @override
+  String get failedToSendTab => '无法发送标签页';
+
+  @override
+  String get searchInsideTabs => '在标签页中搜索';
+
+  @override
+  String get tabType => '标签页类型';
+
+  @override
+  String get sortPinnedFirst => '置顶标签页优先';
+
+  @override
+  String get sort => '排序';
+
+  @override
+  String get hierarchicalView => '层级视图';
+
+  @override
+  String get filterDate => '按日期筛选';
+
+  @override
+  String get quickInterval => '快捷时间范围';
+
+  @override
+  String get resetFilter => '重置筛选条件';
+
+  @override
+  String get filterAndSort => '筛选与排序';
+
+  @override
+  String get changeViewMode => '更改视图模式';
+
+  @override
+  String get listView => '列表';
+
+  @override
+  String get gridView => '网格';
+
+  @override
+  String get treeView => '树状';
+
+  @override
+  String get privateTabs => '隐私标签页';
+
+  @override
+  String get isolatedTabs => '隔离标签页';
+
+  @override
+  String get filteredTabs => '筛选出的标签页';
+
+  @override
+  String get closeTabs => '关闭标签页';
+
+  @override
+  String get bookmarkAll => '全部添加书签';
+
+  @override
+  String get bookmarkAllTabs => '为所有标签页添加书签';
+
+  @override
+  String get fast => '快速';
+
+  @override
+  String get automaticallyAddTabsToFolder => '自动将所有标签页添加到所选文件夹';
+
+  @override
+  String get detailed => '详细';
+
+  @override
+  String get reviewEachBookmark => '逐个检查并编辑每个书签';
+
+  @override
+  String bookmarksAdded(int count) {
+    return '已添加 $count 个书签';
+  }
+
+  @override
+  String get closeAllTabs => '关闭所有标签页';
+
+  @override
+  String get closeAllDisplayedTabsQuestion => '确定要关闭所有显示的标签页吗？';
+
+  @override
+  String get closeAllPrivateTabsQuestion => '确定要关闭所有隐私标签页吗？';
+
+  @override
+  String get tabActions => '标签页操作';
+
+  @override
+  String get clearContainerData => '清除容器数据';
+
+  @override
+  String get containerDataCleared => '容器数据已成功清除';
+
+  @override
+  String containerDataClearedTabsClosed(int count) {
+    return '容器数据已清除，已关闭 $count 个标签页。';
+  }
+
+  @override
+  String errorClearingData(String error) {
+    return '清除数据时出错：$error';
+  }
+
+  @override
+  String downloadingAiModels(int progress) {
+    return '正在下载 AI 模型（$progress%）';
+  }
+
+  @override
+  String get enableAiTabSuggestions => '启用 AI 标签页建议';
+
+  @override
+  String get disableAiTabSuggestions => '禁用 AI 标签页建议';
+
+  @override
+  String get disableReorderingMode => '禁用重新排序模式';
+
+  @override
+  String get enableReorderingMode => '启用重新排序模式';
+
+  @override
+  String get reorderingRequiresManualMode => '重新排序需要使用默认手动模式';
+
+  @override
+  String get dragTabsToReorder => '拖放标签页以重新排序';
+
+  @override
+  String get noSyncedTabsAvailable => '没有可用的同步标签页';
+
+  @override
+  String failedToLoadSyncedTabs(String error) {
+    return '无法加载同步标签页：$error';
+  }
+
+  @override
+  String get undo => '撤销';
+
+  @override
+  String get extensionSettings => '扩展设置';
+
+  @override
+  String get more => '更多';
+
+  @override
+  String get connection => '连接';
+
+  @override
+  String get bangs => 'Bang 快捷指令';
+
+  @override
+  String get feeds => '订阅源';
+
+  @override
+  String get smallWeb => '小型网络';
+
+  @override
+  String get syncNow => '立即同步';
+
+  @override
+  String get pinnedToShortcuts => '已固定到快捷方式';
+
+  @override
+  String get unpinnedFromShortcuts => '已从快捷方式取消固定';
+
+  @override
+  String get failedToUpdateShortcuts => '无法更新快捷方式';
+
+  @override
+  String get urlCleaned => '网址已清理';
+
+  @override
+  String get urlPreviewApplied => '已应用网址预览';
+
+  @override
+  String get selectAtLeastOneDataType => '请至少选择一种数据类型';
+
+  @override
+  String get siteDataCleared => '网站数据已清除';
+
+  @override
+  String failedToClearSiteData(String error) {
+    return '无法清除网站数据：$error';
+  }
+
+  @override
+  String get failedToLoadTrackingProtection => '无法加载跟踪保护';
+
+  @override
+  String failedToToggleTrackingProtection(String error) {
+    return '无法切换跟踪保护：$error';
+  }
+
+  @override
+  String errorLoadingPermissions(String error) {
+    return '加载权限时出错：$error';
+  }
+
+  @override
+  String get ask => '询问';
+
+  @override
+  String get select => '选择';
+
+  @override
+  String get keepTabQuestion => '保留标签页？';
+
+  @override
+  String get keepTabPrompt => '要保留此标签页还是将其丢弃？';
+
+  @override
+  String get discard => '丢弃';
+
+  @override
+  String get keep => '保留';
+
+  @override
+  String get extractedContent => '提取的内容';
+
+  @override
+  String get fullContent => '完整内容';
+
+  @override
+  String get reader => '阅读';
+
+  @override
+  String get noWebFeedsFound => '未找到网页订阅源';
+
+  @override
+  String get availableWebFeeds => '可用的网页订阅源';
+
+  @override
+  String get fetchingWebFeeds => '正在获取网页订阅源…';
+
+  @override
+  String get enableAiTabSuggestionsTitle => '启用 AI 标签页建议';
+
+  @override
+  String get resetToHundredPercent => '重置为 100%';
+
+  @override
+  String get clearSiteDataTitle => '清除网站数据';
+
+  @override
+  String get selectDataTypesToClear => '选择要清除的数据类型';
+
+  @override
+  String get cookiesCacheAndSiteData => 'Cookie、缓存和网站数据';
+
+  @override
+  String get authSessions => '身份验证会话';
+
+  @override
+  String get savedLoginsActiveSessions => '已保存的登录信息、活动会话';
+
+  @override
+  String get offlineStorageDatabasesLocalFiles => '离线存储、数据库、本地文件';
+
+  @override
+  String get loginTokensPreferencesTrackingData => '登录令牌、偏好设置、跟踪数据';
+
+  @override
+  String get imagesScriptsStylesheets => '图片、脚本、样式表';
+
+  @override
+  String get closeTabAfterClearing => '清除后关闭标签页';
+
+  @override
+  String get closeThisTabOnceDataCleared => '数据清除后关闭此标签页';
+
+  @override
+  String get clearingEllipsis => '正在清除…';
+
+  @override
+  String get clearNow => '立即清除';
+
+  @override
+  String get cachedFilesLowercase => '缓存文件';
+
+  @override
+  String get siteDataLowercase => '网站数据';
+
+  @override
+  String get authSessionsLowercase => '身份验证会话';
+
+  @override
+  String get dropTabOntoTab => '将标签页拖放到另一个标签页上';
+
+  @override
+  String get chooseTabRelationship => '选择这些标签页之间的关系。';
+
+  @override
+  String get createContainer => '创建容器';
+
+  @override
+  String get createContainerWithBothTabs => '创建一个包含这两个标签页的新容器。';
+
+  @override
+  String get assignNewParent => '分配新的父标签页';
+
+  @override
+  String get makeDroppedOnTabParent => '将接收拖放的标签页设为父标签页。';
+
+  @override
+  String errorWithDetails(String error) {
+    return '错误：$error';
+  }
+
+  @override
+  String get tabNoLongerExists => '标签页已不存在';
+
+  @override
+  String get makeStandalone => '设为独立标签页';
+
+  @override
+  String get detachFromCurrentParent => '从当前父标签页分离';
+
+  @override
+  String get clearAllContainerDataPrompt => '这将清除此容器的所有数据：';
+
+  @override
+  String get cache => '缓存';
+
+  @override
+  String get permissions => '权限';
+
+  @override
+  String get recreateTabsAfterClearing => '清除后重新创建标签页';
+
+  @override
+  String get clearDataAction => '清除数据';
+
+  @override
+  String get autoplay => '自动播放';
+
+  @override
+  String get allowAll => '全部允许';
+
+  @override
+  String get blockAudible => '阻止有声媒体';
+
+  @override
+  String get blockAll => '全部阻止';
+
+  @override
+  String get alwaysUseDesktopSite => '始终使用桌面版网站';
+
+  @override
+  String get openLinksForThisSite => '打开此网站的链接';
+
+  @override
+  String get followsDefault => '遵循默认设置';
+
+  @override
+  String get followDefault => '遵循默认设置';
+
+  @override
+  String get openInAppLowercase => '在应用中打开';
+
+  @override
+  String get keepInBrowser => '留在浏览器中';
+
+  @override
+  String get removeTracking => '移除跟踪参数';
+
+  @override
+  String get sandboxedCapture => '沙盒捕获';
+
+  @override
+  String get connectionIsSecure => '连接安全';
+
+  @override
+  String verifiedBy(String issuer) {
+    return '验证者：$issuer';
+  }
+
+  @override
+  String get selectXpiFile => '选择 XPI 文件';
 }

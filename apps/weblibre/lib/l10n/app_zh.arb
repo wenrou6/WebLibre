@@ -134,7 +134,7 @@
   "openInContainer": "在容器中打开",
   "screenshotProtection": "截屏保护",
   "privateTabsNotification": "隐私标签页已打开",
-  "closeAllPrivateTabs": "关闭全部隐私标签页",
+  "closeAllPrivateTabs": "关闭所有隐私标签页",
   "lockOnStartupOnly": "仅在启动时锁定",
   "trackingProtection": "跟踪保护",
   "enhancedTrackingProtection": "增强跟踪保护",
@@ -1613,5 +1613,709 @@
   "useDefaultDnsResolver": "使用默认 DNS 解析器",
   "visitSupportPage": "访问支持页面",
   "webEngineHardening": "Web 引擎加固",
-  "webEngineHardeningSummary": "加固 Web 引擎偏好"
+  "webEngineHardeningSummary": "加固 Web 引擎偏好",
+  "searchOrEnterUrl": "搜索或输入网址",
+  "@searchOrEnterUrl": {
+    "description": "Prompt in the browser address and search field"
+  },
+  "noPreviousPages": "没有更早的页面",
+  "@noPreviousPages": {
+    "description": "Empty state in the back history menu"
+  },
+  "noForwardPages": "没有后续页面",
+  "@noForwardPages": {
+    "description": "Empty state in the forward history menu"
+  },
+  "hardRefresh": "强制刷新",
+  "@hardRefresh": {
+    "description": "Reload action that bypasses the cache"
+  },
+  "closeTabAndDescendants": "关闭标签页及其后代",
+  "@closeTabAndDescendants": {
+    "description": "Action to close a tab tree"
+  },
+  "fetchFeedsOnPage": "获取页面订阅源",
+  "@fetchFeedsOnPage": {
+    "description": "Action to discover feeds on the current page"
+  },
+  "addToHomeScreen": "添加到主屏幕",
+  "@addToHomeScreen": {
+    "description": "Action to add the current page to the device home screen"
+  },
+  "cloneTab": "克隆标签页",
+  "@cloneTab": {
+    "description": "Browser action to duplicate a tab"
+  },
+  "regular": "普通",
+  "@regular": {
+    "description": "Regular tab type label"
+  },
+  "private": "隐私",
+  "@private": {
+    "description": "Private tab type label"
+  },
+  "isolated": "隔离",
+  "@isolated": {
+    "description": "Isolated tab type label"
+  },
+  "assignContainer": "分配容器",
+  "@assignContainer": {
+    "description": "Action to assign a tab to a container"
+  },
+  "urlRelation": "网址关联",
+  "@urlRelation": {
+    "description": "Container URL relation action"
+  },
+  "unassignUrlRelation": "取消网址关联",
+  "@unassignUrlRelation": {
+    "description": "Action to remove a container URL relation"
+  },
+  "unassignContainer": "取消分配容器",
+  "@unassignContainer": {
+    "description": "Action to remove a tab from its container"
+  },
+  "moveUp": "上移",
+  "@moveUp": {
+    "description": "Move tab upward action"
+  },
+  "moveDown": "下移",
+  "@moveDown": {
+    "description": "Move tab downward action"
+  },
+  "reorder": "重新排序",
+  "@reorder": {
+    "description": "Tab reorder submenu title"
+  },
+  "export": "导出",
+  "@export": {
+    "description": "Export submenu title"
+  },
+  "desktopMode": "桌面模式",
+  "@desktopMode": {
+    "description": "Desktop site mode action"
+  },
+  "changeParent": "更改父标签页…",
+  "@changeParent": {
+    "description": "Action to change a tab parent"
+  },
+  "detachFromParent": "从父标签页分离",
+  "@detachFromParent": {
+    "description": "Action to detach a child tab"
+  },
+  "hierarchy": "层级",
+  "@hierarchy": {
+    "description": "Tab hierarchy submenu title"
+  },
+  "shareLink": "分享链接",
+  "@shareLink": {
+    "description": "Action to share the current page link"
+  },
+  "showQrCode": "显示二维码",
+  "@showQrCode": {
+    "description": "Action to show a QR code for the current address"
+  },
+  "exportAsPdf": "导出为 PDF",
+  "@exportAsPdf": {
+    "description": "Action to export the current page as PDF"
+  },
+  "print": "打印",
+  "@print": {
+    "description": "Action to print the current page"
+  },
+  "failedToPrintPage": "无法打印页面",
+  "@failedToPrintPage": {
+    "description": "Error shown when printing a page fails"
+  },
+  "shareScreenshot": "分享截图",
+  "@shareScreenshot": {
+    "description": "Action to share a page screenshot"
+  },
+  "exportAsPng": "导出为 PNG",
+  "@exportAsPng": {
+    "description": "Action to export a page screenshot as PNG"
+  },
+  "copyAddress": "复制地址",
+  "@copyAddress": {
+    "description": "Action to copy the current page address"
+  },
+  "openInApp": "在应用中打开",
+  "@openInApp": {
+    "description": "Action to open a page in another app"
+  },
+  "openInNamedApp": "在 {appName} 中打开",
+  "@openInNamedApp": {
+    "description": "Action to open a page in a named app",
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "sendToDevice": "发送到设备",
+  "@sendToDevice": {
+    "description": "Action to send the current tab to a synced device"
+  },
+  "noTargetDevices": "没有目标设备",
+  "@noTargetDevices": {
+    "description": "Empty state when no synced device can receive a tab"
+  },
+  "loadingDevices": "正在加载设备…",
+  "@loadingDevices": {
+    "description": "Progress message while loading synced devices"
+  },
+  "failedToLoadDevices": "无法加载设备",
+  "@failedToLoadDevices": {
+    "description": "Error shown when synced devices cannot be loaded"
+  },
+  "sentTabToDevice": "已将标签页发送到 {deviceName}",
+  "@sentTabToDevice": {
+    "description": "Success message after sending a tab to a device",
+    "placeholders": {
+      "deviceName": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSendTab": "无法发送标签页",
+  "@failedToSendTab": {
+    "description": "Error shown when sending a tab to a device fails"
+  },
+  "@copyAsMarkdown": {
+    "description": "Action to copy page content as Markdown"
+  },
+  "@exportAsMarkdown": {
+    "description": "Action to export page content as Markdown"
+  },
+  "searchInsideTabs": "在标签页中搜索",
+  "@searchInsideTabs": {
+    "description": "Tooltip for searching open tabs"
+  },
+  "tabType": "标签页类型",
+  "@tabType": {
+    "description": "Tab type filter submenu"
+  },
+  "sortPinnedFirst": "置顶标签页优先",
+  "@sortPinnedFirst": {
+    "description": "Option to sort pinned tabs first"
+  },
+  "sort": "排序",
+  "@sort": {
+    "description": "Tab sorting submenu"
+  },
+  "hierarchicalView": "层级视图",
+  "@hierarchicalView": {
+    "description": "Option to show tabs as a hierarchy"
+  },
+  "filterDate": "按日期筛选",
+  "@filterDate": {
+    "description": "Tab date filter action"
+  },
+  "quickInterval": "快捷时间范围",
+  "@quickInterval": {
+    "description": "Tab quick date interval submenu"
+  },
+  "resetFilter": "重置筛选条件",
+  "@resetFilter": {
+    "description": "Action to clear tab filters"
+  },
+  "filterAndSort": "筛选与排序",
+  "@filterAndSort": {
+    "description": "Tooltip for tab filter and sort menu"
+  },
+  "changeViewMode": "更改视图模式",
+  "@changeViewMode": {
+    "description": "Tooltip for changing the tab view mode"
+  },
+  "listView": "列表",
+  "@listView": {
+    "description": "List tab view mode"
+  },
+  "gridView": "网格",
+  "@gridView": {
+    "description": "Grid tab view mode"
+  },
+  "treeView": "树状",
+  "@treeView": {
+    "description": "Tree tab view mode"
+  },
+  "privateTabs": "隐私标签页",
+  "@privateTabs": {
+    "description": "Private tabs filter or close action"
+  },
+  "isolatedTabs": "隔离标签页",
+  "@isolatedTabs": {
+    "description": "Isolated tabs filter or close action"
+  },
+  "filteredTabs": "筛选出的标签页",
+  "@filteredTabs": {
+    "description": "Filtered tabs close action"
+  },
+  "closeTabs": "关闭标签页",
+  "@closeTabs": {
+    "description": "Bulk close tabs submenu"
+  },
+  "bookmarkAll": "全部添加书签",
+  "@bookmarkAll": {
+    "description": "Action to bookmark all displayed tabs"
+  },
+  "bookmarkAllTabs": "为所有标签页添加书签",
+  "@bookmarkAllTabs": {
+    "description": "Title of the bookmark-all dialog"
+  },
+  "fast": "快速",
+  "@fast": {
+    "description": "Fast bookmark-all option"
+  },
+  "automaticallyAddTabsToFolder": "自动将所有标签页添加到所选文件夹",
+  "@automaticallyAddTabsToFolder": {
+    "description": "Description of fast bookmark-all mode"
+  },
+  "detailed": "详细",
+  "@detailed": {
+    "description": "Detailed bookmark-all option"
+  },
+  "reviewEachBookmark": "逐个检查并编辑每个书签",
+  "@reviewEachBookmark": {
+    "description": "Description of detailed bookmark-all mode"
+  },
+  "bookmarksAdded": "已添加 {count} 个书签",
+  "@bookmarksAdded": {
+    "description": "Success message after bookmarking multiple tabs",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "closeAllTabs": "关闭所有标签页",
+  "@closeAllTabs": {
+    "description": "Title of the close-all-tabs dialog"
+  },
+  "closeAllDisplayedTabsQuestion": "确定要关闭所有显示的标签页吗？",
+  "@closeAllDisplayedTabsQuestion": {
+    "description": "Confirmation message for closing displayed tabs"
+  },
+  "closeAllPrivateTabsQuestion": "确定要关闭所有隐私标签页吗？",
+  "@closeAllPrivateTabsQuestion": {
+    "description": "Confirmation message for closing private tabs"
+  },
+  "tabActions": "标签页操作",
+  "@tabActions": {
+    "description": "Tooltip for the tab actions menu"
+  },
+  "clearContainerData": "清除容器数据",
+  "@clearContainerData": {
+    "description": "Action to clear data for a container"
+  },
+  "containerDataCleared": "容器数据已成功清除",
+  "@containerDataCleared": {
+    "description": "Success message after clearing container data"
+  },
+  "containerDataClearedTabsClosed": "容器数据已清除，已关闭 {count} 个标签页。",
+  "@containerDataClearedTabsClosed": {
+    "description": "Success message after clearing container data and closing tabs",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errorClearingData": "清除数据时出错：{error}",
+  "@errorClearingData": {
+    "description": "Error shown when container data cannot be cleared",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "downloadingAiModels": "正在下载 AI 模型（{progress}%）",
+  "@downloadingAiModels": {
+    "description": "AI model download progress tooltip",
+    "placeholders": {
+      "progress": {
+        "type": "int"
+      }
+    }
+  },
+  "enableAiTabSuggestions": "启用 AI 标签页建议",
+  "@enableAiTabSuggestions": {
+    "description": "Action to enable AI tab suggestions"
+  },
+  "disableAiTabSuggestions": "禁用 AI 标签页建议",
+  "@disableAiTabSuggestions": {
+    "description": "Action to disable AI tab suggestions"
+  },
+  "disableReorderingMode": "禁用重新排序模式",
+  "@disableReorderingMode": {
+    "description": "Tooltip to disable manual tab reordering"
+  },
+  "enableReorderingMode": "启用重新排序模式",
+  "@enableReorderingMode": {
+    "description": "Tooltip to enable manual tab reordering"
+  },
+  "reorderingRequiresManualMode": "重新排序需要使用默认手动模式",
+  "@reorderingRequiresManualMode": {
+    "description": "Tooltip explaining why tab reordering is unavailable"
+  },
+  "dragTabsToReorder": "拖放标签页以重新排序",
+  "@dragTabsToReorder": {
+    "description": "Hint shown after enabling tab reordering"
+  },
+  "noSyncedTabsAvailable": "没有可用的同步标签页",
+  "@noSyncedTabsAvailable": {
+    "description": "Empty state for synced tabs"
+  },
+  "failedToLoadSyncedTabs": "无法加载同步标签页：{error}",
+  "@failedToLoadSyncedTabs": {
+    "description": "Error shown when synced tabs cannot be loaded",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "undo": "撤销",
+  "@undo": {
+    "description": "Undo action"
+  },
+  "extensionSettings": "扩展设置",
+  "@extensionSettings": {
+    "description": "Tooltip for extension settings"
+  },
+  "more": "更多",
+  "@more": {
+    "description": "More browser actions label"
+  },
+  "connection": "连接",
+  "@connection": {
+    "description": "Browser connection section title"
+  },
+  "bangs": "Bang 快捷指令",
+  "@bangs": {
+    "description": "Bangs quick-link label"
+  },
+  "feeds": "订阅源",
+  "@feeds": {
+    "description": "Feeds quick-link label"
+  },
+  "smallWeb": "小型网络",
+  "@smallWeb": {
+    "description": "Small Web quick-link label"
+  },
+  "syncNow": "立即同步",
+  "@syncNow": {
+    "description": "Action to start synchronization"
+  },
+  "pinnedToShortcuts": "已固定到快捷方式",
+  "@pinnedToShortcuts": {
+    "description": "Success after pinning the current page"
+  },
+  "unpinnedFromShortcuts": "已从快捷方式取消固定",
+  "@unpinnedFromShortcuts": {
+    "description": "Success after unpinning the current page"
+  },
+  "failedToUpdateShortcuts": "无法更新快捷方式",
+  "@failedToUpdateShortcuts": {
+    "description": "Error shown when shortcut pinning fails"
+  },
+  "urlCleaned": "网址已清理",
+  "@urlCleaned": {
+    "description": "Success after removing tracking parameters from a URL"
+  },
+  "urlPreviewApplied": "已应用网址预览",
+  "@urlPreviewApplied": {
+    "description": "Success after applying a cleaned URL preview"
+  },
+  "selectAtLeastOneDataType": "请至少选择一种数据类型",
+  "@selectAtLeastOneDataType": {
+    "description": "Validation error in clear site data UI"
+  },
+  "siteDataCleared": "网站数据已清除",
+  "@siteDataCleared": {
+    "description": "Success after clearing site data"
+  },
+  "failedToClearSiteData": "无法清除网站数据：{error}",
+  "@failedToClearSiteData": {
+    "description": "Error shown when site data cannot be cleared",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToLoadTrackingProtection": "无法加载跟踪保护",
+  "@failedToLoadTrackingProtection": {
+    "description": "Error shown when tracking protection status cannot be loaded"
+  },
+  "failedToToggleTrackingProtection": "无法切换跟踪保护：{error}",
+  "@failedToToggleTrackingProtection": {
+    "description": "Error shown when changing tracking protection fails",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "errorLoadingPermissions": "加载权限时出错：{error}",
+  "@errorLoadingPermissions": {
+    "description": "Error shown when site permissions cannot be loaded",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "ask": "询问",
+  "@ask": {
+    "description": "Ask site permission option"
+  },
+  "select": "选择",
+  "@select": {
+    "description": "Select action"
+  },
+  "keepTabQuestion": "保留标签页？",
+  "@keepTabQuestion": {
+    "description": "Title of the keep-or-discard tab dialog"
+  },
+  "keepTabPrompt": "要保留此标签页还是将其丢弃？",
+  "@keepTabPrompt": {
+    "description": "Prompt asking whether to keep a tab"
+  },
+  "discard": "丢弃",
+  "@discard": {
+    "description": "Discard tab action"
+  },
+  "keep": "保留",
+  "@keep": {
+    "description": "Keep tab action"
+  },
+  "extractedContent": "提取的内容",
+  "@extractedContent": {
+    "description": "Extracted page content option"
+  },
+  "fullContent": "完整内容",
+  "@fullContent": {
+    "description": "Full page content option"
+  },
+  "@desktop": {
+    "description": "Compact desktop mode label"
+  },
+  "reader": "阅读",
+  "@reader": {
+    "description": "Compact reader mode label"
+  },
+  "noWebFeedsFound": "未找到网页订阅源",
+  "@noWebFeedsFound": {
+    "description": "Empty state when no feeds are found"
+  },
+  "availableWebFeeds": "可用的网页订阅源",
+  "@availableWebFeeds": {
+    "description": "Title above discovered web feeds"
+  },
+  "fetchingWebFeeds": "正在获取网页订阅源…",
+  "@fetchingWebFeeds": {
+    "description": "Progress while discovering feeds"
+  },
+  "@closeAllPrivateTabs": {
+    "description": "Title of close-all-private-tabs dialog"
+  },
+  "enableAiTabSuggestionsTitle": "启用 AI 标签页建议",
+  "@enableAiTabSuggestionsTitle": {
+    "description": "Title of AI tab suggestions opt-in dialog"
+  },
+  "resetToHundredPercent": "重置为 100%",
+  "@resetToHundredPercent": {
+    "description": "Reset page font size action"
+  },
+  "clearSiteDataTitle": "清除网站数据",
+  "@clearSiteDataTitle": {
+    "description": "Title or action for clearing site data"
+  },
+  "selectDataTypesToClear": "选择要清除的数据类型",
+  "@selectDataTypesToClear": {
+    "description": "Expanded clear site data subtitle"
+  },
+  "cookiesCacheAndSiteData": "Cookie、缓存和网站数据",
+  "@cookiesCacheAndSiteData": {
+    "description": "Collapsed clear site data subtitle"
+  },
+  "authSessions": "身份验证会话",
+  "@authSessions": {
+    "description": "Site authentication sessions data type"
+  },
+  "savedLoginsActiveSessions": "已保存的登录信息、活动会话",
+  "@savedLoginsActiveSessions": {
+    "description": "Authentication sessions data description"
+  },
+  "offlineStorageDatabasesLocalFiles": "离线存储、数据库、本地文件",
+  "@offlineStorageDatabasesLocalFiles": {
+    "description": "Site data description"
+  },
+  "loginTokensPreferencesTrackingData": "登录令牌、偏好设置、跟踪数据",
+  "@loginTokensPreferencesTrackingData": {
+    "description": "Cookies data description"
+  },
+  "imagesScriptsStylesheets": "图片、脚本、样式表",
+  "@imagesScriptsStylesheets": {
+    "description": "Cached files description"
+  },
+  "closeTabAfterClearing": "清除后关闭标签页",
+  "@closeTabAfterClearing": {
+    "description": "Option to close current tab after clearing data"
+  },
+  "closeThisTabOnceDataCleared": "数据清除后关闭此标签页",
+  "@closeThisTabOnceDataCleared": {
+    "description": "Description of close-tab-after-clearing option"
+  },
+  "clearingEllipsis": "正在清除…",
+  "@clearingEllipsis": {
+    "description": "Progress label while clearing site data"
+  },
+  "clearNow": "立即清除",
+  "@clearNow": {
+    "description": "Immediate clear data action"
+  },
+  "cachedFilesLowercase": "缓存文件",
+  "@cachedFilesLowercase": {
+    "description": "Cached files name used in a sentence"
+  },
+  "siteDataLowercase": "网站数据",
+  "@siteDataLowercase": {
+    "description": "Site data name used in a sentence"
+  },
+  "authSessionsLowercase": "身份验证会话",
+  "@authSessionsLowercase": {
+    "description": "Authentication sessions name used in a sentence"
+  },
+  "dropTabOntoTab": "将标签页拖放到另一个标签页上",
+  "@dropTabOntoTab": {
+    "description": "Title of dialog shown after dropping one tab onto another"
+  },
+  "chooseTabRelationship": "选择这些标签页之间的关系。",
+  "@chooseTabRelationship": {
+    "description": "Prompt for choosing a relationship between tabs"
+  },
+  "createContainer": "创建容器",
+  "@createContainer": {
+    "description": "Action to create a container from dropped tabs"
+  },
+  "createContainerWithBothTabs": "创建一个包含这两个标签页的新容器。",
+  "@createContainerWithBothTabs": {
+    "description": "Description of create-container tab drop action"
+  },
+  "assignNewParent": "分配新的父标签页",
+  "@assignNewParent": {
+    "description": "Action to assign a new parent tab"
+  },
+  "makeDroppedOnTabParent": "将接收拖放的标签页设为父标签页。",
+  "@makeDroppedOnTabParent": {
+    "description": "Description of assign-new-parent action"
+  },
+  "errorWithDetails": "错误：{error}",
+  "@errorWithDetails": {
+    "description": "Generic error message with details",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "tabNoLongerExists": "标签页已不存在",
+  "@tabNoLongerExists": {
+    "description": "Error shown when a selected tab no longer exists"
+  },
+  "makeStandalone": "设为独立标签页",
+  "@makeStandalone": {
+    "description": "Action to detach a tab from its parent"
+  },
+  "detachFromCurrentParent": "从当前父标签页分离",
+  "@detachFromCurrentParent": {
+    "description": "Description of make-standalone action"
+  },
+  "clearAllContainerDataPrompt": "这将清除此容器的所有数据：",
+  "@clearAllContainerDataPrompt": {
+    "description": "Introduction to container data clearing list"
+  },
+  "cache": "缓存",
+  "@cache": {
+    "description": "Cache data type label"
+  },
+  "permissions": "权限",
+  "@permissions": {
+    "description": "Permissions data type label"
+  },
+  "recreateTabsAfterClearing": "清除后重新创建标签页",
+  "@recreateTabsAfterClearing": {
+    "description": "Option to reopen container tabs after clearing data"
+  },
+  "clearDataAction": "清除数据",
+  "@clearDataAction": {
+    "description": "Action to confirm clearing selected data"
+  },
+  "autoplay": "自动播放",
+  "@autoplay": {
+    "description": "Autoplay site permission label"
+  },
+  "allowAll": "全部允许",
+  "@allowAll": {
+    "description": "Allow all autoplay option"
+  },
+  "blockAudible": "阻止有声媒体",
+  "@blockAudible": {
+    "description": "Block audible autoplay option"
+  },
+  "blockAll": "全部阻止",
+  "@blockAll": {
+    "description": "Block all autoplay option"
+  },
+  "alwaysUseDesktopSite": "始终使用桌面版网站",
+  "@alwaysUseDesktopSite": {
+    "description": "Per-site desktop mode rule"
+  },
+  "openLinksForThisSite": "打开此网站的链接",
+  "@openLinksForThisSite": {
+    "description": "Per-site app-link behavior title"
+  },
+  "followsDefault": "遵循默认设置",
+  "@followsDefault": {
+    "description": "Current app-link behavior follows default"
+  },
+  "followDefault": "遵循默认设置",
+  "@followDefault": {
+    "description": "App-link behavior option to follow default"
+  },
+  "openInAppLowercase": "在应用中打开",
+  "@openInAppLowercase": {
+    "description": "App-link behavior option"
+  },
+  "keepInBrowser": "留在浏览器中",
+  "@keepInBrowser": {
+    "description": "App-link behavior option"
+  },
+  "removeTracking": "移除跟踪参数",
+  "@removeTracking": {
+    "description": "Tooltip to remove URL tracking parameters"
+  },
+  "sandboxedCapture": "沙盒捕获",
+  "@sandboxedCapture": {
+    "description": "Security label for sandboxed page capture"
+  },
+  "connectionIsSecure": "连接安全",
+  "@connectionIsSecure": {
+    "description": "Secure connection status"
+  },
+  "verifiedBy": "验证者：{issuer}",
+  "@verifiedBy": {
+    "description": "Certificate issuer label",
+    "placeholders": {
+      "issuer": {
+        "type": "String"
+      }
+    }
+  },
+  "selectXpiFile": "选择 XPI 文件",
+  "@selectXpiFile": {
+    "description": "Action to choose a local extension package"
+  }
 }

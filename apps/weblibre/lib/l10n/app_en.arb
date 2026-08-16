@@ -517,11 +517,11 @@
   },
   "exportAsMarkdown": "Export as Markdown",
   "@exportAsMarkdown": {
-    "description": "Export page as markdown action"
+    "description": "Action to export page content as Markdown"
   },
   "copyAsMarkdown": "Copy as Markdown",
   "@copyAsMarkdown": {
-    "description": "Copy page as markdown action"
+    "description": "Action to copy page content as Markdown"
   },
   "copyImage": "Copy Image",
   "@copyImage": {
@@ -553,7 +553,7 @@
   },
   "closeAllPrivateTabs": "Close All Private Tabs",
   "@closeAllPrivateTabs": {
-    "description": "Close all private tabs action"
+    "description": "Title of close-all-private-tabs dialog"
   },
   "lockOnStartupOnly": "Lock on Startup Only",
   "@lockOnStartupOnly": {
@@ -706,7 +706,7 @@
   },
   "desktop": "Desktop",
   "@desktop": {
-    "description": "Desktop platform label"
+    "description": "Compact desktop mode label"
   },
   "failedToLoadExtensions": "Failed to load extensions",
   "@failedToLoadExtensions": {
@@ -2274,5 +2274,697 @@
   "useDefaultDnsResolver": "Use your default DNS resolver",
   "visitSupportPage": "Visit support page",
   "webEngineHardening": "Web Engine Hardening",
-  "webEngineHardeningSummary": "Harden web engine preferences"
+  "webEngineHardeningSummary": "Harden web engine preferences",
+  "searchOrEnterUrl": "Search or enter URL",
+  "@searchOrEnterUrl": {
+    "description": "Prompt in the browser address and search field"
+  },
+  "noPreviousPages": "No previous pages",
+  "@noPreviousPages": {
+    "description": "Empty state in the back history menu"
+  },
+  "noForwardPages": "No forward pages",
+  "@noForwardPages": {
+    "description": "Empty state in the forward history menu"
+  },
+  "hardRefresh": "Hard Refresh",
+  "@hardRefresh": {
+    "description": "Reload action that bypasses the cache"
+  },
+  "closeTabAndDescendants": "Close Tab and Descendants",
+  "@closeTabAndDescendants": {
+    "description": "Action to close a tab tree"
+  },
+  "fetchFeedsOnPage": "Fetch Feeds on Page",
+  "@fetchFeedsOnPage": {
+    "description": "Action to discover feeds on the current page"
+  },
+  "addToHomeScreen": "Add to Home Screen",
+  "@addToHomeScreen": {
+    "description": "Action to add the current page to the device home screen"
+  },
+  "cloneTab": "Clone Tab",
+  "@cloneTab": {
+    "description": "Browser action to duplicate a tab"
+  },
+  "regular": "Regular",
+  "@regular": {
+    "description": "Regular tab type label"
+  },
+  "private": "Private",
+  "@private": {
+    "description": "Private tab type label"
+  },
+  "isolated": "Isolated",
+  "@isolated": {
+    "description": "Isolated tab type label"
+  },
+  "assignContainer": "Assign Container",
+  "@assignContainer": {
+    "description": "Action to assign a tab to a container"
+  },
+  "urlRelation": "URL relation",
+  "@urlRelation": {
+    "description": "Container URL relation action"
+  },
+  "unassignUrlRelation": "Unassign URL relation",
+  "@unassignUrlRelation": {
+    "description": "Action to remove a container URL relation"
+  },
+  "unassignContainer": "Unassign Container",
+  "@unassignContainer": {
+    "description": "Action to remove a tab from its container"
+  },
+  "moveUp": "Move up",
+  "@moveUp": {
+    "description": "Move tab upward action"
+  },
+  "moveDown": "Move down",
+  "@moveDown": {
+    "description": "Move tab downward action"
+  },
+  "reorder": "Reorder",
+  "@reorder": {
+    "description": "Tab reorder submenu title"
+  },
+  "export": "Export",
+  "@export": {
+    "description": "Export submenu title"
+  },
+  "desktopMode": "Desktop Mode",
+  "@desktopMode": {
+    "description": "Desktop site mode action"
+  },
+  "changeParent": "Change parent…",
+  "@changeParent": {
+    "description": "Action to change a tab parent"
+  },
+  "detachFromParent": "Detach from parent",
+  "@detachFromParent": {
+    "description": "Action to detach a child tab"
+  },
+  "hierarchy": "Hierarchy",
+  "@hierarchy": {
+    "description": "Tab hierarchy submenu title"
+  },
+  "shareLink": "Share Link",
+  "@shareLink": {
+    "description": "Action to share the current page link"
+  },
+  "showQrCode": "Show QR Code",
+  "@showQrCode": {
+    "description": "Action to show a QR code for the current address"
+  },
+  "exportAsPdf": "Export as PDF",
+  "@exportAsPdf": {
+    "description": "Action to export the current page as PDF"
+  },
+  "print": "Print",
+  "@print": {
+    "description": "Action to print the current page"
+  },
+  "failedToPrintPage": "Failed to print page",
+  "@failedToPrintPage": {
+    "description": "Error shown when printing a page fails"
+  },
+  "shareScreenshot": "Share Screenshot",
+  "@shareScreenshot": {
+    "description": "Action to share a page screenshot"
+  },
+  "exportAsPng": "Export as PNG",
+  "@exportAsPng": {
+    "description": "Action to export a page screenshot as PNG"
+  },
+  "copyAddress": "Copy Address",
+  "@copyAddress": {
+    "description": "Action to copy the current page address"
+  },
+  "openInApp": "Open in App",
+  "@openInApp": {
+    "description": "Action to open a page in another app"
+  },
+  "openInNamedApp": "Open in {appName}",
+  "@openInNamedApp": {
+    "description": "Action to open a page in a named app",
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "sendToDevice": "Send To Device",
+  "@sendToDevice": {
+    "description": "Action to send the current tab to a synced device"
+  },
+  "noTargetDevices": "No target devices",
+  "@noTargetDevices": {
+    "description": "Empty state when no synced device can receive a tab"
+  },
+  "loadingDevices": "Loading devices…",
+  "@loadingDevices": {
+    "description": "Progress message while loading synced devices"
+  },
+  "failedToLoadDevices": "Failed to load devices",
+  "@failedToLoadDevices": {
+    "description": "Error shown when synced devices cannot be loaded"
+  },
+  "sentTabToDevice": "Sent tab to {deviceName}",
+  "@sentTabToDevice": {
+    "description": "Success message after sending a tab to a device",
+    "placeholders": {
+      "deviceName": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSendTab": "Failed to send tab",
+  "@failedToSendTab": {
+    "description": "Error shown when sending a tab to a device fails"
+  },
+  "searchInsideTabs": "Search inside tabs",
+  "@searchInsideTabs": {
+    "description": "Tooltip for searching open tabs"
+  },
+  "tabType": "Tab Type",
+  "@tabType": {
+    "description": "Tab type filter submenu"
+  },
+  "sortPinnedFirst": "Sort Pinned First",
+  "@sortPinnedFirst": {
+    "description": "Option to sort pinned tabs first"
+  },
+  "sort": "Sort",
+  "@sort": {
+    "description": "Tab sorting submenu"
+  },
+  "hierarchicalView": "Hierarchical View",
+  "@hierarchicalView": {
+    "description": "Option to show tabs as a hierarchy"
+  },
+  "filterDate": "Filter Date",
+  "@filterDate": {
+    "description": "Tab date filter action"
+  },
+  "quickInterval": "Quick Interval",
+  "@quickInterval": {
+    "description": "Tab quick date interval submenu"
+  },
+  "resetFilter": "Reset Filter",
+  "@resetFilter": {
+    "description": "Action to clear tab filters"
+  },
+  "filterAndSort": "Filter & Sort",
+  "@filterAndSort": {
+    "description": "Tooltip for tab filter and sort menu"
+  },
+  "changeViewMode": "Change view mode",
+  "@changeViewMode": {
+    "description": "Tooltip for changing the tab view mode"
+  },
+  "listView": "List",
+  "@listView": {
+    "description": "List tab view mode"
+  },
+  "gridView": "Grid",
+  "@gridView": {
+    "description": "Grid tab view mode"
+  },
+  "treeView": "Tree",
+  "@treeView": {
+    "description": "Tree tab view mode"
+  },
+  "privateTabs": "Private Tabs",
+  "@privateTabs": {
+    "description": "Private tabs filter or close action"
+  },
+  "isolatedTabs": "Isolated Tabs",
+  "@isolatedTabs": {
+    "description": "Isolated tabs filter or close action"
+  },
+  "filteredTabs": "Filtered Tabs",
+  "@filteredTabs": {
+    "description": "Filtered tabs close action"
+  },
+  "closeTabs": "Close Tabs",
+  "@closeTabs": {
+    "description": "Bulk close tabs submenu"
+  },
+  "bookmarkAll": "Bookmark all",
+  "@bookmarkAll": {
+    "description": "Action to bookmark all displayed tabs"
+  },
+  "bookmarkAllTabs": "Bookmark All Tabs",
+  "@bookmarkAllTabs": {
+    "description": "Title of the bookmark-all dialog"
+  },
+  "fast": "Fast",
+  "@fast": {
+    "description": "Fast bookmark-all option"
+  },
+  "automaticallyAddTabsToFolder": "Automatically add all tabs to a selected folder",
+  "@automaticallyAddTabsToFolder": {
+    "description": "Description of fast bookmark-all mode"
+  },
+  "detailed": "Detailed",
+  "@detailed": {
+    "description": "Detailed bookmark-all option"
+  },
+  "reviewEachBookmark": "Review and edit each bookmark individually",
+  "@reviewEachBookmark": {
+    "description": "Description of detailed bookmark-all mode"
+  },
+  "bookmarksAdded": "{count} bookmark(s) added",
+  "@bookmarksAdded": {
+    "description": "Success message after bookmarking multiple tabs",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "closeAllTabs": "Close All Tabs",
+  "@closeAllTabs": {
+    "description": "Title of the close-all-tabs dialog"
+  },
+  "closeAllDisplayedTabsQuestion": "Are you sure you want to close all displayed tabs?",
+  "@closeAllDisplayedTabsQuestion": {
+    "description": "Confirmation message for closing displayed tabs"
+  },
+  "closeAllPrivateTabsQuestion": "Are you sure you want to close all private tabs?",
+  "@closeAllPrivateTabsQuestion": {
+    "description": "Confirmation message for closing private tabs"
+  },
+  "tabActions": "Tab actions",
+  "@tabActions": {
+    "description": "Tooltip for the tab actions menu"
+  },
+  "clearContainerData": "Clear Container Data",
+  "@clearContainerData": {
+    "description": "Action to clear data for a container"
+  },
+  "containerDataCleared": "Container data cleared successfully",
+  "@containerDataCleared": {
+    "description": "Success message after clearing container data"
+  },
+  "containerDataClearedTabsClosed": "Container data cleared. {count} tab(s) closed.",
+  "@containerDataClearedTabsClosed": {
+    "description": "Success message after clearing container data and closing tabs",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errorClearingData": "Error clearing data: {error}",
+  "@errorClearingData": {
+    "description": "Error shown when container data cannot be cleared",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "downloadingAiModels": "Downloading AI models ({progress}%)",
+  "@downloadingAiModels": {
+    "description": "AI model download progress tooltip",
+    "placeholders": {
+      "progress": {
+        "type": "int"
+      }
+    }
+  },
+  "enableAiTabSuggestions": "Enable AI tab suggestions",
+  "@enableAiTabSuggestions": {
+    "description": "Action to enable AI tab suggestions"
+  },
+  "disableAiTabSuggestions": "Disable AI tab suggestions",
+  "@disableAiTabSuggestions": {
+    "description": "Action to disable AI tab suggestions"
+  },
+  "disableReorderingMode": "Disable reordering mode",
+  "@disableReorderingMode": {
+    "description": "Tooltip to disable manual tab reordering"
+  },
+  "enableReorderingMode": "Enable reordering mode",
+  "@enableReorderingMode": {
+    "description": "Tooltip to enable manual tab reordering"
+  },
+  "reorderingRequiresManualMode": "Reordering requires default manual mode",
+  "@reorderingRequiresManualMode": {
+    "description": "Tooltip explaining why tab reordering is unavailable"
+  },
+  "dragTabsToReorder": "Drag and drop tabs to reorder them",
+  "@dragTabsToReorder": {
+    "description": "Hint shown after enabling tab reordering"
+  },
+  "noSyncedTabsAvailable": "No synced tabs available",
+  "@noSyncedTabsAvailable": {
+    "description": "Empty state for synced tabs"
+  },
+  "failedToLoadSyncedTabs": "Failed to load synced tabs: {error}",
+  "@failedToLoadSyncedTabs": {
+    "description": "Error shown when synced tabs cannot be loaded",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "undo": "Undo",
+  "@undo": {
+    "description": "Undo action"
+  },
+  "extensionSettings": "Extension settings",
+  "@extensionSettings": {
+    "description": "Tooltip for extension settings"
+  },
+  "more": "More",
+  "@more": {
+    "description": "More browser actions label"
+  },
+  "connection": "Connection",
+  "@connection": {
+    "description": "Browser connection section title"
+  },
+  "bangs": "Bangs",
+  "@bangs": {
+    "description": "Bangs quick-link label"
+  },
+  "feeds": "Feeds",
+  "@feeds": {
+    "description": "Feeds quick-link label"
+  },
+  "smallWeb": "Small Web",
+  "@smallWeb": {
+    "description": "Small Web quick-link label"
+  },
+  "syncNow": "Sync Now",
+  "@syncNow": {
+    "description": "Action to start synchronization"
+  },
+  "pinnedToShortcuts": "Pinned to Shortcuts",
+  "@pinnedToShortcuts": {
+    "description": "Success after pinning the current page"
+  },
+  "unpinnedFromShortcuts": "Unpinned from Shortcuts",
+  "@unpinnedFromShortcuts": {
+    "description": "Success after unpinning the current page"
+  },
+  "failedToUpdateShortcuts": "Failed to update Shortcuts",
+  "@failedToUpdateShortcuts": {
+    "description": "Error shown when shortcut pinning fails"
+  },
+  "urlCleaned": "URL cleaned",
+  "@urlCleaned": {
+    "description": "Success after removing tracking parameters from a URL"
+  },
+  "urlPreviewApplied": "URL preview applied",
+  "@urlPreviewApplied": {
+    "description": "Success after applying a cleaned URL preview"
+  },
+  "selectAtLeastOneDataType": "Select at least one data type",
+  "@selectAtLeastOneDataType": {
+    "description": "Validation error in clear site data UI"
+  },
+  "siteDataCleared": "Site data cleared",
+  "@siteDataCleared": {
+    "description": "Success after clearing site data"
+  },
+  "failedToClearSiteData": "Failed to clear site data: {error}",
+  "@failedToClearSiteData": {
+    "description": "Error shown when site data cannot be cleared",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToLoadTrackingProtection": "Failed to load tracking protection",
+  "@failedToLoadTrackingProtection": {
+    "description": "Error shown when tracking protection status cannot be loaded"
+  },
+  "failedToToggleTrackingProtection": "Failed to toggle tracking protection: {error}",
+  "@failedToToggleTrackingProtection": {
+    "description": "Error shown when changing tracking protection fails",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "errorLoadingPermissions": "Error loading permissions: {error}",
+  "@errorLoadingPermissions": {
+    "description": "Error shown when site permissions cannot be loaded",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "ask": "Ask",
+  "@ask": {
+    "description": "Ask site permission option"
+  },
+  "select": "Select",
+  "@select": {
+    "description": "Select action"
+  },
+  "keepTabQuestion": "Keep tab?",
+  "@keepTabQuestion": {
+    "description": "Title of the keep-or-discard tab dialog"
+  },
+  "keepTabPrompt": "Do you want to keep this tab or discard it?",
+  "@keepTabPrompt": {
+    "description": "Prompt asking whether to keep a tab"
+  },
+  "discard": "Discard",
+  "@discard": {
+    "description": "Discard tab action"
+  },
+  "keep": "Keep",
+  "@keep": {
+    "description": "Keep tab action"
+  },
+  "extractedContent": "Extracted Content",
+  "@extractedContent": {
+    "description": "Extracted page content option"
+  },
+  "fullContent": "Full Content",
+  "@fullContent": {
+    "description": "Full page content option"
+  },
+  "reader": "Reader",
+  "@reader": {
+    "description": "Compact reader mode label"
+  },
+  "noWebFeedsFound": "No Web Feeds Found",
+  "@noWebFeedsFound": {
+    "description": "Empty state when no feeds are found"
+  },
+  "availableWebFeeds": "Available Web Feeds",
+  "@availableWebFeeds": {
+    "description": "Title above discovered web feeds"
+  },
+  "fetchingWebFeeds": "Fetching Web Feeds…",
+  "@fetchingWebFeeds": {
+    "description": "Progress while discovering feeds"
+  },
+  "enableAiTabSuggestionsTitle": "Enable AI Tab Suggestions",
+  "@enableAiTabSuggestionsTitle": {
+    "description": "Title of AI tab suggestions opt-in dialog"
+  },
+  "resetToHundredPercent": "Reset to 100%",
+  "@resetToHundredPercent": {
+    "description": "Reset page font size action"
+  },
+  "clearSiteDataTitle": "Clear Site Data",
+  "@clearSiteDataTitle": {
+    "description": "Title or action for clearing site data"
+  },
+  "selectDataTypesToClear": "Select data types to clear",
+  "@selectDataTypesToClear": {
+    "description": "Expanded clear site data subtitle"
+  },
+  "cookiesCacheAndSiteData": "Cookies, cache, and site data",
+  "@cookiesCacheAndSiteData": {
+    "description": "Collapsed clear site data subtitle"
+  },
+  "authSessions": "Auth Sessions",
+  "@authSessions": {
+    "description": "Site authentication sessions data type"
+  },
+  "savedLoginsActiveSessions": "Saved logins, active sessions",
+  "@savedLoginsActiveSessions": {
+    "description": "Authentication sessions data description"
+  },
+  "offlineStorageDatabasesLocalFiles": "Offline storage, databases, local files",
+  "@offlineStorageDatabasesLocalFiles": {
+    "description": "Site data description"
+  },
+  "loginTokensPreferencesTrackingData": "Login tokens, preferences, tracking data",
+  "@loginTokensPreferencesTrackingData": {
+    "description": "Cookies data description"
+  },
+  "imagesScriptsStylesheets": "Images, scripts, stylesheets",
+  "@imagesScriptsStylesheets": {
+    "description": "Cached files description"
+  },
+  "closeTabAfterClearing": "Close tab after clearing",
+  "@closeTabAfterClearing": {
+    "description": "Option to close current tab after clearing data"
+  },
+  "closeThisTabOnceDataCleared": "Close this tab once data is cleared",
+  "@closeThisTabOnceDataCleared": {
+    "description": "Description of close-tab-after-clearing option"
+  },
+  "clearingEllipsis": "Clearing…",
+  "@clearingEllipsis": {
+    "description": "Progress label while clearing site data"
+  },
+  "clearNow": "Clear Now",
+  "@clearNow": {
+    "description": "Immediate clear data action"
+  },
+  "cachedFilesLowercase": "cached files",
+  "@cachedFilesLowercase": {
+    "description": "Cached files name used in a sentence"
+  },
+  "siteDataLowercase": "site data",
+  "@siteDataLowercase": {
+    "description": "Site data name used in a sentence"
+  },
+  "authSessionsLowercase": "auth sessions",
+  "@authSessionsLowercase": {
+    "description": "Authentication sessions name used in a sentence"
+  },
+  "dropTabOntoTab": "Drop tab onto tab",
+  "@dropTabOntoTab": {
+    "description": "Title of dialog shown after dropping one tab onto another"
+  },
+  "chooseTabRelationship": "Choose how these tabs should be related.",
+  "@chooseTabRelationship": {
+    "description": "Prompt for choosing a relationship between tabs"
+  },
+  "createContainer": "Create container",
+  "@createContainer": {
+    "description": "Action to create a container from dropped tabs"
+  },
+  "createContainerWithBothTabs": "Create a new container with both tabs.",
+  "@createContainerWithBothTabs": {
+    "description": "Description of create-container tab drop action"
+  },
+  "assignNewParent": "Assign new parent",
+  "@assignNewParent": {
+    "description": "Action to assign a new parent tab"
+  },
+  "makeDroppedOnTabParent": "Make the dropped-on tab the parent.",
+  "@makeDroppedOnTabParent": {
+    "description": "Description of assign-new-parent action"
+  },
+  "errorWithDetails": "Error: {error}",
+  "@errorWithDetails": {
+    "description": "Generic error message with details",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "tabNoLongerExists": "Tab no longer exists",
+  "@tabNoLongerExists": {
+    "description": "Error shown when a selected tab no longer exists"
+  },
+  "makeStandalone": "Make standalone",
+  "@makeStandalone": {
+    "description": "Action to detach a tab from its parent"
+  },
+  "detachFromCurrentParent": "Detach from current parent",
+  "@detachFromCurrentParent": {
+    "description": "Description of make-standalone action"
+  },
+  "clearAllContainerDataPrompt": "This will clear all data for this container:",
+  "@clearAllContainerDataPrompt": {
+    "description": "Introduction to container data clearing list"
+  },
+  "cache": "Cache",
+  "@cache": {
+    "description": "Cache data type label"
+  },
+  "permissions": "Permissions",
+  "@permissions": {
+    "description": "Permissions data type label"
+  },
+  "recreateTabsAfterClearing": "Recreate tabs after clearing",
+  "@recreateTabsAfterClearing": {
+    "description": "Option to reopen container tabs after clearing data"
+  },
+  "clearDataAction": "Clear Data",
+  "@clearDataAction": {
+    "description": "Action to confirm clearing selected data"
+  },
+  "autoplay": "Autoplay",
+  "@autoplay": {
+    "description": "Autoplay site permission label"
+  },
+  "allowAll": "Allow All",
+  "@allowAll": {
+    "description": "Allow all autoplay option"
+  },
+  "blockAudible": "Block Audible",
+  "@blockAudible": {
+    "description": "Block audible autoplay option"
+  },
+  "blockAll": "Block All",
+  "@blockAll": {
+    "description": "Block all autoplay option"
+  },
+  "alwaysUseDesktopSite": "Always use desktop site",
+  "@alwaysUseDesktopSite": {
+    "description": "Per-site desktop mode rule"
+  },
+  "openLinksForThisSite": "Open links for this site",
+  "@openLinksForThisSite": {
+    "description": "Per-site app-link behavior title"
+  },
+  "followsDefault": "Follows the default",
+  "@followsDefault": {
+    "description": "Current app-link behavior follows default"
+  },
+  "followDefault": "Follow default",
+  "@followDefault": {
+    "description": "App-link behavior option to follow default"
+  },
+  "openInAppLowercase": "Open in app",
+  "@openInAppLowercase": {
+    "description": "App-link behavior option"
+  },
+  "keepInBrowser": "Keep in browser",
+  "@keepInBrowser": {
+    "description": "App-link behavior option"
+  },
+  "removeTracking": "Remove tracking",
+  "@removeTracking": {
+    "description": "Tooltip to remove URL tracking parameters"
+  },
+  "sandboxedCapture": "Sandboxed capture",
+  "@sandboxedCapture": {
+    "description": "Security label for sandboxed page capture"
+  },
+  "connectionIsSecure": "Connection is secure",
+  "@connectionIsSecure": {
+    "description": "Secure connection status"
+  },
+  "verifiedBy": "Verified By: {issuer}",
+  "@verifiedBy": {
+    "description": "Certificate issuer label",
+    "placeholders": {
+      "issuer": {
+        "type": "String"
+      }
+    }
+  },
+  "selectXpiFile": "Select XPI File",
+  "@selectXpiFile": {
+    "description": "Action to choose a local extension package"
+  }
 }

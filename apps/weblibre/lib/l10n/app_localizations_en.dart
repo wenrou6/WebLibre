@@ -2788,4 +2788,513 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get webEngineHardeningSummary => 'Harden web engine preferences';
+
+  @override
+  String get searchOrEnterUrl => 'Search or enter URL';
+
+  @override
+  String get noPreviousPages => 'No previous pages';
+
+  @override
+  String get noForwardPages => 'No forward pages';
+
+  @override
+  String get hardRefresh => 'Hard Refresh';
+
+  @override
+  String get closeTabAndDescendants => 'Close Tab and Descendants';
+
+  @override
+  String get fetchFeedsOnPage => 'Fetch Feeds on Page';
+
+  @override
+  String get addToHomeScreen => 'Add to Home Screen';
+
+  @override
+  String get cloneTab => 'Clone Tab';
+
+  @override
+  String get regular => 'Regular';
+
+  @override
+  String get private => 'Private';
+
+  @override
+  String get isolated => 'Isolated';
+
+  @override
+  String get assignContainer => 'Assign Container';
+
+  @override
+  String get urlRelation => 'URL relation';
+
+  @override
+  String get unassignUrlRelation => 'Unassign URL relation';
+
+  @override
+  String get unassignContainer => 'Unassign Container';
+
+  @override
+  String get moveUp => 'Move up';
+
+  @override
+  String get moveDown => 'Move down';
+
+  @override
+  String get reorder => 'Reorder';
+
+  @override
+  String get export => 'Export';
+
+  @override
+  String get desktopMode => 'Desktop Mode';
+
+  @override
+  String get changeParent => 'Change parent…';
+
+  @override
+  String get detachFromParent => 'Detach from parent';
+
+  @override
+  String get hierarchy => 'Hierarchy';
+
+  @override
+  String get shareLink => 'Share Link';
+
+  @override
+  String get showQrCode => 'Show QR Code';
+
+  @override
+  String get exportAsPdf => 'Export as PDF';
+
+  @override
+  String get print => 'Print';
+
+  @override
+  String get failedToPrintPage => 'Failed to print page';
+
+  @override
+  String get shareScreenshot => 'Share Screenshot';
+
+  @override
+  String get exportAsPng => 'Export as PNG';
+
+  @override
+  String get copyAddress => 'Copy Address';
+
+  @override
+  String get openInApp => 'Open in App';
+
+  @override
+  String openInNamedApp(String appName) {
+    return 'Open in $appName';
+  }
+
+  @override
+  String get sendToDevice => 'Send To Device';
+
+  @override
+  String get noTargetDevices => 'No target devices';
+
+  @override
+  String get loadingDevices => 'Loading devices…';
+
+  @override
+  String get failedToLoadDevices => 'Failed to load devices';
+
+  @override
+  String sentTabToDevice(String deviceName) {
+    return 'Sent tab to $deviceName';
+  }
+
+  @override
+  String get failedToSendTab => 'Failed to send tab';
+
+  @override
+  String get searchInsideTabs => 'Search inside tabs';
+
+  @override
+  String get tabType => 'Tab Type';
+
+  @override
+  String get sortPinnedFirst => 'Sort Pinned First';
+
+  @override
+  String get sort => 'Sort';
+
+  @override
+  String get hierarchicalView => 'Hierarchical View';
+
+  @override
+  String get filterDate => 'Filter Date';
+
+  @override
+  String get quickInterval => 'Quick Interval';
+
+  @override
+  String get resetFilter => 'Reset Filter';
+
+  @override
+  String get filterAndSort => 'Filter & Sort';
+
+  @override
+  String get changeViewMode => 'Change view mode';
+
+  @override
+  String get listView => 'List';
+
+  @override
+  String get gridView => 'Grid';
+
+  @override
+  String get treeView => 'Tree';
+
+  @override
+  String get privateTabs => 'Private Tabs';
+
+  @override
+  String get isolatedTabs => 'Isolated Tabs';
+
+  @override
+  String get filteredTabs => 'Filtered Tabs';
+
+  @override
+  String get closeTabs => 'Close Tabs';
+
+  @override
+  String get bookmarkAll => 'Bookmark all';
+
+  @override
+  String get bookmarkAllTabs => 'Bookmark All Tabs';
+
+  @override
+  String get fast => 'Fast';
+
+  @override
+  String get automaticallyAddTabsToFolder =>
+      'Automatically add all tabs to a selected folder';
+
+  @override
+  String get detailed => 'Detailed';
+
+  @override
+  String get reviewEachBookmark => 'Review and edit each bookmark individually';
+
+  @override
+  String bookmarksAdded(int count) {
+    return '$count bookmark(s) added';
+  }
+
+  @override
+  String get closeAllTabs => 'Close All Tabs';
+
+  @override
+  String get closeAllDisplayedTabsQuestion =>
+      'Are you sure you want to close all displayed tabs?';
+
+  @override
+  String get closeAllPrivateTabsQuestion =>
+      'Are you sure you want to close all private tabs?';
+
+  @override
+  String get tabActions => 'Tab actions';
+
+  @override
+  String get clearContainerData => 'Clear Container Data';
+
+  @override
+  String get containerDataCleared => 'Container data cleared successfully';
+
+  @override
+  String containerDataClearedTabsClosed(int count) {
+    return 'Container data cleared. $count tab(s) closed.';
+  }
+
+  @override
+  String errorClearingData(String error) {
+    return 'Error clearing data: $error';
+  }
+
+  @override
+  String downloadingAiModels(int progress) {
+    return 'Downloading AI models ($progress%)';
+  }
+
+  @override
+  String get enableAiTabSuggestions => 'Enable AI tab suggestions';
+
+  @override
+  String get disableAiTabSuggestions => 'Disable AI tab suggestions';
+
+  @override
+  String get disableReorderingMode => 'Disable reordering mode';
+
+  @override
+  String get enableReorderingMode => 'Enable reordering mode';
+
+  @override
+  String get reorderingRequiresManualMode =>
+      'Reordering requires default manual mode';
+
+  @override
+  String get dragTabsToReorder => 'Drag and drop tabs to reorder them';
+
+  @override
+  String get noSyncedTabsAvailable => 'No synced tabs available';
+
+  @override
+  String failedToLoadSyncedTabs(String error) {
+    return 'Failed to load synced tabs: $error';
+  }
+
+  @override
+  String get undo => 'Undo';
+
+  @override
+  String get extensionSettings => 'Extension settings';
+
+  @override
+  String get more => 'More';
+
+  @override
+  String get connection => 'Connection';
+
+  @override
+  String get bangs => 'Bangs';
+
+  @override
+  String get feeds => 'Feeds';
+
+  @override
+  String get smallWeb => 'Small Web';
+
+  @override
+  String get syncNow => 'Sync Now';
+
+  @override
+  String get pinnedToShortcuts => 'Pinned to Shortcuts';
+
+  @override
+  String get unpinnedFromShortcuts => 'Unpinned from Shortcuts';
+
+  @override
+  String get failedToUpdateShortcuts => 'Failed to update Shortcuts';
+
+  @override
+  String get urlCleaned => 'URL cleaned';
+
+  @override
+  String get urlPreviewApplied => 'URL preview applied';
+
+  @override
+  String get selectAtLeastOneDataType => 'Select at least one data type';
+
+  @override
+  String get siteDataCleared => 'Site data cleared';
+
+  @override
+  String failedToClearSiteData(String error) {
+    return 'Failed to clear site data: $error';
+  }
+
+  @override
+  String get failedToLoadTrackingProtection =>
+      'Failed to load tracking protection';
+
+  @override
+  String failedToToggleTrackingProtection(String error) {
+    return 'Failed to toggle tracking protection: $error';
+  }
+
+  @override
+  String errorLoadingPermissions(String error) {
+    return 'Error loading permissions: $error';
+  }
+
+  @override
+  String get ask => 'Ask';
+
+  @override
+  String get select => 'Select';
+
+  @override
+  String get keepTabQuestion => 'Keep tab?';
+
+  @override
+  String get keepTabPrompt => 'Do you want to keep this tab or discard it?';
+
+  @override
+  String get discard => 'Discard';
+
+  @override
+  String get keep => 'Keep';
+
+  @override
+  String get extractedContent => 'Extracted Content';
+
+  @override
+  String get fullContent => 'Full Content';
+
+  @override
+  String get reader => 'Reader';
+
+  @override
+  String get noWebFeedsFound => 'No Web Feeds Found';
+
+  @override
+  String get availableWebFeeds => 'Available Web Feeds';
+
+  @override
+  String get fetchingWebFeeds => 'Fetching Web Feeds…';
+
+  @override
+  String get enableAiTabSuggestionsTitle => 'Enable AI Tab Suggestions';
+
+  @override
+  String get resetToHundredPercent => 'Reset to 100%';
+
+  @override
+  String get clearSiteDataTitle => 'Clear Site Data';
+
+  @override
+  String get selectDataTypesToClear => 'Select data types to clear';
+
+  @override
+  String get cookiesCacheAndSiteData => 'Cookies, cache, and site data';
+
+  @override
+  String get authSessions => 'Auth Sessions';
+
+  @override
+  String get savedLoginsActiveSessions => 'Saved logins, active sessions';
+
+  @override
+  String get offlineStorageDatabasesLocalFiles =>
+      'Offline storage, databases, local files';
+
+  @override
+  String get loginTokensPreferencesTrackingData =>
+      'Login tokens, preferences, tracking data';
+
+  @override
+  String get imagesScriptsStylesheets => 'Images, scripts, stylesheets';
+
+  @override
+  String get closeTabAfterClearing => 'Close tab after clearing';
+
+  @override
+  String get closeThisTabOnceDataCleared =>
+      'Close this tab once data is cleared';
+
+  @override
+  String get clearingEllipsis => 'Clearing…';
+
+  @override
+  String get clearNow => 'Clear Now';
+
+  @override
+  String get cachedFilesLowercase => 'cached files';
+
+  @override
+  String get siteDataLowercase => 'site data';
+
+  @override
+  String get authSessionsLowercase => 'auth sessions';
+
+  @override
+  String get dropTabOntoTab => 'Drop tab onto tab';
+
+  @override
+  String get chooseTabRelationship =>
+      'Choose how these tabs should be related.';
+
+  @override
+  String get createContainer => 'Create container';
+
+  @override
+  String get createContainerWithBothTabs =>
+      'Create a new container with both tabs.';
+
+  @override
+  String get assignNewParent => 'Assign new parent';
+
+  @override
+  String get makeDroppedOnTabParent => 'Make the dropped-on tab the parent.';
+
+  @override
+  String errorWithDetails(String error) {
+    return 'Error: $error';
+  }
+
+  @override
+  String get tabNoLongerExists => 'Tab no longer exists';
+
+  @override
+  String get makeStandalone => 'Make standalone';
+
+  @override
+  String get detachFromCurrentParent => 'Detach from current parent';
+
+  @override
+  String get clearAllContainerDataPrompt =>
+      'This will clear all data for this container:';
+
+  @override
+  String get cache => 'Cache';
+
+  @override
+  String get permissions => 'Permissions';
+
+  @override
+  String get recreateTabsAfterClearing => 'Recreate tabs after clearing';
+
+  @override
+  String get clearDataAction => 'Clear Data';
+
+  @override
+  String get autoplay => 'Autoplay';
+
+  @override
+  String get allowAll => 'Allow All';
+
+  @override
+  String get blockAudible => 'Block Audible';
+
+  @override
+  String get blockAll => 'Block All';
+
+  @override
+  String get alwaysUseDesktopSite => 'Always use desktop site';
+
+  @override
+  String get openLinksForThisSite => 'Open links for this site';
+
+  @override
+  String get followsDefault => 'Follows the default';
+
+  @override
+  String get followDefault => 'Follow default';
+
+  @override
+  String get openInAppLowercase => 'Open in app';
+
+  @override
+  String get keepInBrowser => 'Keep in browser';
+
+  @override
+  String get removeTracking => 'Remove tracking';
+
+  @override
+  String get sandboxedCapture => 'Sandboxed capture';
+
+  @override
+  String get connectionIsSecure => 'Connection is secure';
+
+  @override
+  String verifiedBy(String issuer) {
+    return 'Verified By: $issuer';
+  }
+
+  @override
+  String get selectXpiFile => 'Select XPI File';
 }

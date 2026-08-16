@@ -848,13 +848,13 @@ abstract class AppLocalizations {
   /// **'Save as Image'**
   String get exportAsImage;
 
-  /// Export page as markdown action
+  /// Action to export page content as Markdown
   ///
   /// In en, this message translates to:
   /// **'Export as Markdown'**
   String get exportAsMarkdown;
 
-  /// Copy page as markdown action
+  /// Action to copy page content as Markdown
   ///
   /// In en, this message translates to:
   /// **'Copy as Markdown'**
@@ -902,7 +902,7 @@ abstract class AppLocalizations {
   /// **'Private tabs are open'**
   String get privateTabsNotification;
 
-  /// Close all private tabs action
+  /// Title of close-all-private-tabs dialog
   ///
   /// In en, this message translates to:
   /// **'Close All Private Tabs'**
@@ -1124,7 +1124,7 @@ abstract class AppLocalizations {
   /// **'Android'**
   String get android;
 
-  /// Desktop platform label
+  /// Compact desktop mode label
   ///
   /// In en, this message translates to:
   /// **'Desktop'**
@@ -5149,6 +5149,954 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Harden web engine preferences'**
   String get webEngineHardeningSummary;
+
+  /// Prompt in the browser address and search field
+  ///
+  /// In en, this message translates to:
+  /// **'Search or enter URL'**
+  String get searchOrEnterUrl;
+
+  /// Empty state in the back history menu
+  ///
+  /// In en, this message translates to:
+  /// **'No previous pages'**
+  String get noPreviousPages;
+
+  /// Empty state in the forward history menu
+  ///
+  /// In en, this message translates to:
+  /// **'No forward pages'**
+  String get noForwardPages;
+
+  /// Reload action that bypasses the cache
+  ///
+  /// In en, this message translates to:
+  /// **'Hard Refresh'**
+  String get hardRefresh;
+
+  /// Action to close a tab tree
+  ///
+  /// In en, this message translates to:
+  /// **'Close Tab and Descendants'**
+  String get closeTabAndDescendants;
+
+  /// Action to discover feeds on the current page
+  ///
+  /// In en, this message translates to:
+  /// **'Fetch Feeds on Page'**
+  String get fetchFeedsOnPage;
+
+  /// Action to add the current page to the device home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Home Screen'**
+  String get addToHomeScreen;
+
+  /// Browser action to duplicate a tab
+  ///
+  /// In en, this message translates to:
+  /// **'Clone Tab'**
+  String get cloneTab;
+
+  /// Regular tab type label
+  ///
+  /// In en, this message translates to:
+  /// **'Regular'**
+  String get regular;
+
+  /// Private tab type label
+  ///
+  /// In en, this message translates to:
+  /// **'Private'**
+  String get private;
+
+  /// Isolated tab type label
+  ///
+  /// In en, this message translates to:
+  /// **'Isolated'**
+  String get isolated;
+
+  /// Action to assign a tab to a container
+  ///
+  /// In en, this message translates to:
+  /// **'Assign Container'**
+  String get assignContainer;
+
+  /// Container URL relation action
+  ///
+  /// In en, this message translates to:
+  /// **'URL relation'**
+  String get urlRelation;
+
+  /// Action to remove a container URL relation
+  ///
+  /// In en, this message translates to:
+  /// **'Unassign URL relation'**
+  String get unassignUrlRelation;
+
+  /// Action to remove a tab from its container
+  ///
+  /// In en, this message translates to:
+  /// **'Unassign Container'**
+  String get unassignContainer;
+
+  /// Move tab upward action
+  ///
+  /// In en, this message translates to:
+  /// **'Move up'**
+  String get moveUp;
+
+  /// Move tab downward action
+  ///
+  /// In en, this message translates to:
+  /// **'Move down'**
+  String get moveDown;
+
+  /// Tab reorder submenu title
+  ///
+  /// In en, this message translates to:
+  /// **'Reorder'**
+  String get reorder;
+
+  /// Export submenu title
+  ///
+  /// In en, this message translates to:
+  /// **'Export'**
+  String get export;
+
+  /// Desktop site mode action
+  ///
+  /// In en, this message translates to:
+  /// **'Desktop Mode'**
+  String get desktopMode;
+
+  /// Action to change a tab parent
+  ///
+  /// In en, this message translates to:
+  /// **'Change parent…'**
+  String get changeParent;
+
+  /// Action to detach a child tab
+  ///
+  /// In en, this message translates to:
+  /// **'Detach from parent'**
+  String get detachFromParent;
+
+  /// Tab hierarchy submenu title
+  ///
+  /// In en, this message translates to:
+  /// **'Hierarchy'**
+  String get hierarchy;
+
+  /// Action to share the current page link
+  ///
+  /// In en, this message translates to:
+  /// **'Share Link'**
+  String get shareLink;
+
+  /// Action to show a QR code for the current address
+  ///
+  /// In en, this message translates to:
+  /// **'Show QR Code'**
+  String get showQrCode;
+
+  /// Action to export the current page as PDF
+  ///
+  /// In en, this message translates to:
+  /// **'Export as PDF'**
+  String get exportAsPdf;
+
+  /// Action to print the current page
+  ///
+  /// In en, this message translates to:
+  /// **'Print'**
+  String get print;
+
+  /// Error shown when printing a page fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to print page'**
+  String get failedToPrintPage;
+
+  /// Action to share a page screenshot
+  ///
+  /// In en, this message translates to:
+  /// **'Share Screenshot'**
+  String get shareScreenshot;
+
+  /// Action to export a page screenshot as PNG
+  ///
+  /// In en, this message translates to:
+  /// **'Export as PNG'**
+  String get exportAsPng;
+
+  /// Action to copy the current page address
+  ///
+  /// In en, this message translates to:
+  /// **'Copy Address'**
+  String get copyAddress;
+
+  /// Action to open a page in another app
+  ///
+  /// In en, this message translates to:
+  /// **'Open in App'**
+  String get openInApp;
+
+  /// Action to open a page in a named app
+  ///
+  /// In en, this message translates to:
+  /// **'Open in {appName}'**
+  String openInNamedApp(String appName);
+
+  /// Action to send the current tab to a synced device
+  ///
+  /// In en, this message translates to:
+  /// **'Send To Device'**
+  String get sendToDevice;
+
+  /// Empty state when no synced device can receive a tab
+  ///
+  /// In en, this message translates to:
+  /// **'No target devices'**
+  String get noTargetDevices;
+
+  /// Progress message while loading synced devices
+  ///
+  /// In en, this message translates to:
+  /// **'Loading devices…'**
+  String get loadingDevices;
+
+  /// Error shown when synced devices cannot be loaded
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load devices'**
+  String get failedToLoadDevices;
+
+  /// Success message after sending a tab to a device
+  ///
+  /// In en, this message translates to:
+  /// **'Sent tab to {deviceName}'**
+  String sentTabToDevice(String deviceName);
+
+  /// Error shown when sending a tab to a device fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to send tab'**
+  String get failedToSendTab;
+
+  /// Tooltip for searching open tabs
+  ///
+  /// In en, this message translates to:
+  /// **'Search inside tabs'**
+  String get searchInsideTabs;
+
+  /// Tab type filter submenu
+  ///
+  /// In en, this message translates to:
+  /// **'Tab Type'**
+  String get tabType;
+
+  /// Option to sort pinned tabs first
+  ///
+  /// In en, this message translates to:
+  /// **'Sort Pinned First'**
+  String get sortPinnedFirst;
+
+  /// Tab sorting submenu
+  ///
+  /// In en, this message translates to:
+  /// **'Sort'**
+  String get sort;
+
+  /// Option to show tabs as a hierarchy
+  ///
+  /// In en, this message translates to:
+  /// **'Hierarchical View'**
+  String get hierarchicalView;
+
+  /// Tab date filter action
+  ///
+  /// In en, this message translates to:
+  /// **'Filter Date'**
+  String get filterDate;
+
+  /// Tab quick date interval submenu
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Interval'**
+  String get quickInterval;
+
+  /// Action to clear tab filters
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Filter'**
+  String get resetFilter;
+
+  /// Tooltip for tab filter and sort menu
+  ///
+  /// In en, this message translates to:
+  /// **'Filter & Sort'**
+  String get filterAndSort;
+
+  /// Tooltip for changing the tab view mode
+  ///
+  /// In en, this message translates to:
+  /// **'Change view mode'**
+  String get changeViewMode;
+
+  /// List tab view mode
+  ///
+  /// In en, this message translates to:
+  /// **'List'**
+  String get listView;
+
+  /// Grid tab view mode
+  ///
+  /// In en, this message translates to:
+  /// **'Grid'**
+  String get gridView;
+
+  /// Tree tab view mode
+  ///
+  /// In en, this message translates to:
+  /// **'Tree'**
+  String get treeView;
+
+  /// Private tabs filter or close action
+  ///
+  /// In en, this message translates to:
+  /// **'Private Tabs'**
+  String get privateTabs;
+
+  /// Isolated tabs filter or close action
+  ///
+  /// In en, this message translates to:
+  /// **'Isolated Tabs'**
+  String get isolatedTabs;
+
+  /// Filtered tabs close action
+  ///
+  /// In en, this message translates to:
+  /// **'Filtered Tabs'**
+  String get filteredTabs;
+
+  /// Bulk close tabs submenu
+  ///
+  /// In en, this message translates to:
+  /// **'Close Tabs'**
+  String get closeTabs;
+
+  /// Action to bookmark all displayed tabs
+  ///
+  /// In en, this message translates to:
+  /// **'Bookmark all'**
+  String get bookmarkAll;
+
+  /// Title of the bookmark-all dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Bookmark All Tabs'**
+  String get bookmarkAllTabs;
+
+  /// Fast bookmark-all option
+  ///
+  /// In en, this message translates to:
+  /// **'Fast'**
+  String get fast;
+
+  /// Description of fast bookmark-all mode
+  ///
+  /// In en, this message translates to:
+  /// **'Automatically add all tabs to a selected folder'**
+  String get automaticallyAddTabsToFolder;
+
+  /// Detailed bookmark-all option
+  ///
+  /// In en, this message translates to:
+  /// **'Detailed'**
+  String get detailed;
+
+  /// Description of detailed bookmark-all mode
+  ///
+  /// In en, this message translates to:
+  /// **'Review and edit each bookmark individually'**
+  String get reviewEachBookmark;
+
+  /// Success message after bookmarking multiple tabs
+  ///
+  /// In en, this message translates to:
+  /// **'{count} bookmark(s) added'**
+  String bookmarksAdded(int count);
+
+  /// Title of the close-all-tabs dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Close All Tabs'**
+  String get closeAllTabs;
+
+  /// Confirmation message for closing displayed tabs
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to close all displayed tabs?'**
+  String get closeAllDisplayedTabsQuestion;
+
+  /// Confirmation message for closing private tabs
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to close all private tabs?'**
+  String get closeAllPrivateTabsQuestion;
+
+  /// Tooltip for the tab actions menu
+  ///
+  /// In en, this message translates to:
+  /// **'Tab actions'**
+  String get tabActions;
+
+  /// Action to clear data for a container
+  ///
+  /// In en, this message translates to:
+  /// **'Clear Container Data'**
+  String get clearContainerData;
+
+  /// Success message after clearing container data
+  ///
+  /// In en, this message translates to:
+  /// **'Container data cleared successfully'**
+  String get containerDataCleared;
+
+  /// Success message after clearing container data and closing tabs
+  ///
+  /// In en, this message translates to:
+  /// **'Container data cleared. {count} tab(s) closed.'**
+  String containerDataClearedTabsClosed(int count);
+
+  /// Error shown when container data cannot be cleared
+  ///
+  /// In en, this message translates to:
+  /// **'Error clearing data: {error}'**
+  String errorClearingData(String error);
+
+  /// AI model download progress tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading AI models ({progress}%)'**
+  String downloadingAiModels(int progress);
+
+  /// Action to enable AI tab suggestions
+  ///
+  /// In en, this message translates to:
+  /// **'Enable AI tab suggestions'**
+  String get enableAiTabSuggestions;
+
+  /// Action to disable AI tab suggestions
+  ///
+  /// In en, this message translates to:
+  /// **'Disable AI tab suggestions'**
+  String get disableAiTabSuggestions;
+
+  /// Tooltip to disable manual tab reordering
+  ///
+  /// In en, this message translates to:
+  /// **'Disable reordering mode'**
+  String get disableReorderingMode;
+
+  /// Tooltip to enable manual tab reordering
+  ///
+  /// In en, this message translates to:
+  /// **'Enable reordering mode'**
+  String get enableReorderingMode;
+
+  /// Tooltip explaining why tab reordering is unavailable
+  ///
+  /// In en, this message translates to:
+  /// **'Reordering requires default manual mode'**
+  String get reorderingRequiresManualMode;
+
+  /// Hint shown after enabling tab reordering
+  ///
+  /// In en, this message translates to:
+  /// **'Drag and drop tabs to reorder them'**
+  String get dragTabsToReorder;
+
+  /// Empty state for synced tabs
+  ///
+  /// In en, this message translates to:
+  /// **'No synced tabs available'**
+  String get noSyncedTabsAvailable;
+
+  /// Error shown when synced tabs cannot be loaded
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load synced tabs: {error}'**
+  String failedToLoadSyncedTabs(String error);
+
+  /// Undo action
+  ///
+  /// In en, this message translates to:
+  /// **'Undo'**
+  String get undo;
+
+  /// Tooltip for extension settings
+  ///
+  /// In en, this message translates to:
+  /// **'Extension settings'**
+  String get extensionSettings;
+
+  /// More browser actions label
+  ///
+  /// In en, this message translates to:
+  /// **'More'**
+  String get more;
+
+  /// Browser connection section title
+  ///
+  /// In en, this message translates to:
+  /// **'Connection'**
+  String get connection;
+
+  /// Bangs quick-link label
+  ///
+  /// In en, this message translates to:
+  /// **'Bangs'**
+  String get bangs;
+
+  /// Feeds quick-link label
+  ///
+  /// In en, this message translates to:
+  /// **'Feeds'**
+  String get feeds;
+
+  /// Small Web quick-link label
+  ///
+  /// In en, this message translates to:
+  /// **'Small Web'**
+  String get smallWeb;
+
+  /// Action to start synchronization
+  ///
+  /// In en, this message translates to:
+  /// **'Sync Now'**
+  String get syncNow;
+
+  /// Success after pinning the current page
+  ///
+  /// In en, this message translates to:
+  /// **'Pinned to Shortcuts'**
+  String get pinnedToShortcuts;
+
+  /// Success after unpinning the current page
+  ///
+  /// In en, this message translates to:
+  /// **'Unpinned from Shortcuts'**
+  String get unpinnedFromShortcuts;
+
+  /// Error shown when shortcut pinning fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to update Shortcuts'**
+  String get failedToUpdateShortcuts;
+
+  /// Success after removing tracking parameters from a URL
+  ///
+  /// In en, this message translates to:
+  /// **'URL cleaned'**
+  String get urlCleaned;
+
+  /// Success after applying a cleaned URL preview
+  ///
+  /// In en, this message translates to:
+  /// **'URL preview applied'**
+  String get urlPreviewApplied;
+
+  /// Validation error in clear site data UI
+  ///
+  /// In en, this message translates to:
+  /// **'Select at least one data type'**
+  String get selectAtLeastOneDataType;
+
+  /// Success after clearing site data
+  ///
+  /// In en, this message translates to:
+  /// **'Site data cleared'**
+  String get siteDataCleared;
+
+  /// Error shown when site data cannot be cleared
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to clear site data: {error}'**
+  String failedToClearSiteData(String error);
+
+  /// Error shown when tracking protection status cannot be loaded
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load tracking protection'**
+  String get failedToLoadTrackingProtection;
+
+  /// Error shown when changing tracking protection fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to toggle tracking protection: {error}'**
+  String failedToToggleTrackingProtection(String error);
+
+  /// Error shown when site permissions cannot be loaded
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading permissions: {error}'**
+  String errorLoadingPermissions(String error);
+
+  /// Ask site permission option
+  ///
+  /// In en, this message translates to:
+  /// **'Ask'**
+  String get ask;
+
+  /// Select action
+  ///
+  /// In en, this message translates to:
+  /// **'Select'**
+  String get select;
+
+  /// Title of the keep-or-discard tab dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Keep tab?'**
+  String get keepTabQuestion;
+
+  /// Prompt asking whether to keep a tab
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to keep this tab or discard it?'**
+  String get keepTabPrompt;
+
+  /// Discard tab action
+  ///
+  /// In en, this message translates to:
+  /// **'Discard'**
+  String get discard;
+
+  /// Keep tab action
+  ///
+  /// In en, this message translates to:
+  /// **'Keep'**
+  String get keep;
+
+  /// Extracted page content option
+  ///
+  /// In en, this message translates to:
+  /// **'Extracted Content'**
+  String get extractedContent;
+
+  /// Full page content option
+  ///
+  /// In en, this message translates to:
+  /// **'Full Content'**
+  String get fullContent;
+
+  /// Compact reader mode label
+  ///
+  /// In en, this message translates to:
+  /// **'Reader'**
+  String get reader;
+
+  /// Empty state when no feeds are found
+  ///
+  /// In en, this message translates to:
+  /// **'No Web Feeds Found'**
+  String get noWebFeedsFound;
+
+  /// Title above discovered web feeds
+  ///
+  /// In en, this message translates to:
+  /// **'Available Web Feeds'**
+  String get availableWebFeeds;
+
+  /// Progress while discovering feeds
+  ///
+  /// In en, this message translates to:
+  /// **'Fetching Web Feeds…'**
+  String get fetchingWebFeeds;
+
+  /// Title of AI tab suggestions opt-in dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Enable AI Tab Suggestions'**
+  String get enableAiTabSuggestionsTitle;
+
+  /// Reset page font size action
+  ///
+  /// In en, this message translates to:
+  /// **'Reset to 100%'**
+  String get resetToHundredPercent;
+
+  /// Title or action for clearing site data
+  ///
+  /// In en, this message translates to:
+  /// **'Clear Site Data'**
+  String get clearSiteDataTitle;
+
+  /// Expanded clear site data subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Select data types to clear'**
+  String get selectDataTypesToClear;
+
+  /// Collapsed clear site data subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Cookies, cache, and site data'**
+  String get cookiesCacheAndSiteData;
+
+  /// Site authentication sessions data type
+  ///
+  /// In en, this message translates to:
+  /// **'Auth Sessions'**
+  String get authSessions;
+
+  /// Authentication sessions data description
+  ///
+  /// In en, this message translates to:
+  /// **'Saved logins, active sessions'**
+  String get savedLoginsActiveSessions;
+
+  /// Site data description
+  ///
+  /// In en, this message translates to:
+  /// **'Offline storage, databases, local files'**
+  String get offlineStorageDatabasesLocalFiles;
+
+  /// Cookies data description
+  ///
+  /// In en, this message translates to:
+  /// **'Login tokens, preferences, tracking data'**
+  String get loginTokensPreferencesTrackingData;
+
+  /// Cached files description
+  ///
+  /// In en, this message translates to:
+  /// **'Images, scripts, stylesheets'**
+  String get imagesScriptsStylesheets;
+
+  /// Option to close current tab after clearing data
+  ///
+  /// In en, this message translates to:
+  /// **'Close tab after clearing'**
+  String get closeTabAfterClearing;
+
+  /// Description of close-tab-after-clearing option
+  ///
+  /// In en, this message translates to:
+  /// **'Close this tab once data is cleared'**
+  String get closeThisTabOnceDataCleared;
+
+  /// Progress label while clearing site data
+  ///
+  /// In en, this message translates to:
+  /// **'Clearing…'**
+  String get clearingEllipsis;
+
+  /// Immediate clear data action
+  ///
+  /// In en, this message translates to:
+  /// **'Clear Now'**
+  String get clearNow;
+
+  /// Cached files name used in a sentence
+  ///
+  /// In en, this message translates to:
+  /// **'cached files'**
+  String get cachedFilesLowercase;
+
+  /// Site data name used in a sentence
+  ///
+  /// In en, this message translates to:
+  /// **'site data'**
+  String get siteDataLowercase;
+
+  /// Authentication sessions name used in a sentence
+  ///
+  /// In en, this message translates to:
+  /// **'auth sessions'**
+  String get authSessionsLowercase;
+
+  /// Title of dialog shown after dropping one tab onto another
+  ///
+  /// In en, this message translates to:
+  /// **'Drop tab onto tab'**
+  String get dropTabOntoTab;
+
+  /// Prompt for choosing a relationship between tabs
+  ///
+  /// In en, this message translates to:
+  /// **'Choose how these tabs should be related.'**
+  String get chooseTabRelationship;
+
+  /// Action to create a container from dropped tabs
+  ///
+  /// In en, this message translates to:
+  /// **'Create container'**
+  String get createContainer;
+
+  /// Description of create-container tab drop action
+  ///
+  /// In en, this message translates to:
+  /// **'Create a new container with both tabs.'**
+  String get createContainerWithBothTabs;
+
+  /// Action to assign a new parent tab
+  ///
+  /// In en, this message translates to:
+  /// **'Assign new parent'**
+  String get assignNewParent;
+
+  /// Description of assign-new-parent action
+  ///
+  /// In en, this message translates to:
+  /// **'Make the dropped-on tab the parent.'**
+  String get makeDroppedOnTabParent;
+
+  /// Generic error message with details
+  ///
+  /// In en, this message translates to:
+  /// **'Error: {error}'**
+  String errorWithDetails(String error);
+
+  /// Error shown when a selected tab no longer exists
+  ///
+  /// In en, this message translates to:
+  /// **'Tab no longer exists'**
+  String get tabNoLongerExists;
+
+  /// Action to detach a tab from its parent
+  ///
+  /// In en, this message translates to:
+  /// **'Make standalone'**
+  String get makeStandalone;
+
+  /// Description of make-standalone action
+  ///
+  /// In en, this message translates to:
+  /// **'Detach from current parent'**
+  String get detachFromCurrentParent;
+
+  /// Introduction to container data clearing list
+  ///
+  /// In en, this message translates to:
+  /// **'This will clear all data for this container:'**
+  String get clearAllContainerDataPrompt;
+
+  /// Cache data type label
+  ///
+  /// In en, this message translates to:
+  /// **'Cache'**
+  String get cache;
+
+  /// Permissions data type label
+  ///
+  /// In en, this message translates to:
+  /// **'Permissions'**
+  String get permissions;
+
+  /// Option to reopen container tabs after clearing data
+  ///
+  /// In en, this message translates to:
+  /// **'Recreate tabs after clearing'**
+  String get recreateTabsAfterClearing;
+
+  /// Action to confirm clearing selected data
+  ///
+  /// In en, this message translates to:
+  /// **'Clear Data'**
+  String get clearDataAction;
+
+  /// Autoplay site permission label
+  ///
+  /// In en, this message translates to:
+  /// **'Autoplay'**
+  String get autoplay;
+
+  /// Allow all autoplay option
+  ///
+  /// In en, this message translates to:
+  /// **'Allow All'**
+  String get allowAll;
+
+  /// Block audible autoplay option
+  ///
+  /// In en, this message translates to:
+  /// **'Block Audible'**
+  String get blockAudible;
+
+  /// Block all autoplay option
+  ///
+  /// In en, this message translates to:
+  /// **'Block All'**
+  String get blockAll;
+
+  /// Per-site desktop mode rule
+  ///
+  /// In en, this message translates to:
+  /// **'Always use desktop site'**
+  String get alwaysUseDesktopSite;
+
+  /// Per-site app-link behavior title
+  ///
+  /// In en, this message translates to:
+  /// **'Open links for this site'**
+  String get openLinksForThisSite;
+
+  /// Current app-link behavior follows default
+  ///
+  /// In en, this message translates to:
+  /// **'Follows the default'**
+  String get followsDefault;
+
+  /// App-link behavior option to follow default
+  ///
+  /// In en, this message translates to:
+  /// **'Follow default'**
+  String get followDefault;
+
+  /// App-link behavior option
+  ///
+  /// In en, this message translates to:
+  /// **'Open in app'**
+  String get openInAppLowercase;
+
+  /// App-link behavior option
+  ///
+  /// In en, this message translates to:
+  /// **'Keep in browser'**
+  String get keepInBrowser;
+
+  /// Tooltip to remove URL tracking parameters
+  ///
+  /// In en, this message translates to:
+  /// **'Remove tracking'**
+  String get removeTracking;
+
+  /// Security label for sandboxed page capture
+  ///
+  /// In en, this message translates to:
+  /// **'Sandboxed capture'**
+  String get sandboxedCapture;
+
+  /// Secure connection status
+  ///
+  /// In en, this message translates to:
+  /// **'Connection is secure'**
+  String get connectionIsSecure;
+
+  /// Certificate issuer label
+  ///
+  /// In en, this message translates to:
+  /// **'Verified By: {issuer}'**
+  String verifiedBy(String issuer);
+
+  /// Action to choose a local extension package
+  ///
+  /// In en, this message translates to:
+  /// **'Select XPI File'**
+  String get selectXpiFile;
 }
 
 class _AppLocalizationsDelegate
