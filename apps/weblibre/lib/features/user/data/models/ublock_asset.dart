@@ -18,6 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:json_annotation/json_annotation.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 part 'ublock_asset.g.dart';
 
@@ -37,14 +38,14 @@ enum UBlockAssetGroup {
   @JsonValue('regions')
   regions;
 
-  String get label => switch (this) {
-    $default => 'Default',
-    ads => 'Ads',
-    privacy => 'Privacy',
-    malware => 'Malware',
-    annoyances => 'Annoyances',
-    multipurpose => 'Multipurpose',
-    regions => 'Regions',
+  String label(AppLocalizations l10n) => switch (this) {
+    $default => l10n.uBlockAssetGroupDefaultLabel,
+    ads => l10n.uBlockAssetGroupAdsLabel,
+    privacy => l10n.uBlockAssetGroupPrivacyLabel,
+    malware => l10n.uBlockAssetGroupMalwareLabel,
+    annoyances => l10n.uBlockAssetGroupAnnoyancesLabel,
+    multipurpose => l10n.uBlockAssetGroupMultipurposeLabel,
+    regions => l10n.uBlockAssetGroupRegionsLabel,
   };
 
   static const displayOrder = UBlockAssetGroup.values;
@@ -56,10 +57,25 @@ enum UBlockAssetSubGroup {
   @JsonValue('social')
   social;
 
-  String get label => switch (this) {
+  String get parentKey => switch (this) {
     cookies => 'Cookie Notices',
     social => 'Social Widgets',
   };
+
+  String label(AppLocalizations l10n) => switch (this) {
+    cookies => l10n.uBlockAssetSubGroupCookiesLabel,
+    social => l10n.uBlockAssetSubGroupSocialLabel,
+  };
+
+  static String labelForParentKey(
+    String parentKey,
+    AppLocalizations l10n,
+  ) {
+    for (final subGroup in values) {
+      if (subGroup.parentKey == parentKey) return subGroup.label(l10n);
+    }
+    return parentKey;
+  }
 }
 
 List<String> _contentUrlFromJson(dynamic value) {

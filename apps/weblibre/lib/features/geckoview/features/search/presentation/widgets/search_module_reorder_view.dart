@@ -21,6 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/geckoview/features/search/domain/providers/search_module_order.dart';
 import 'package:weblibre/features/geckoview/features/search/domain/providers/search_modules_view.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class SearchModuleReorderView extends ConsumerWidget {
   final ModuleSurface surface;
@@ -29,6 +30,7 @@ class SearchModuleReorderView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final entries = ref.watch(searchModuleOrderProvider(surface));
     final colorScheme = Theme.of(context).colorScheme;
 
@@ -80,7 +82,7 @@ class SearchModuleReorderView extends ConsumerWidget {
                       .toggleVisibility(entry.type),
                 ),
                 title: Text(
-                  entry.type.label.toUpperCase(),
+                  entry.type.label(l10n).toUpperCase(),
                   style: Theme.of(context).textTheme.labelSmall?.copyWith(
                     color: entry.visible
                         ? null

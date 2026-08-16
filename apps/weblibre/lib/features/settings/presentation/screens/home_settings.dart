@@ -148,8 +148,8 @@ class _HomeTargetTile extends HookConsumerWidget {
               for (final target in HomeTarget.values)
                 RadioListTile<HomeTarget>(
                   value: target,
-                  title: Text(_homeTargetLabel(target, l10n)),
-                  subtitle: Text(_homeTargetDescription(target, l10n)),
+                  title: Text(target.label(l10n)),
+                  subtitle: Text(target.description(l10n)),
                 ),
             ],
           ),
@@ -247,18 +247,3 @@ class _CustomizeNewTabSectionsTile extends ConsumerWidget {
   }
 }
 
-String _homeTargetLabel(HomeTarget target, AppLocalizations l10n) {
-  return switch (target) {
-    HomeTarget.home => l10n.homePage,
-    HomeTarget.resumeLastTab => l10n.lastOpenedTab,
-    HomeTarget.customUrl => l10n.customAddress,
-  };
-}
-
-String _homeTargetDescription(HomeTarget target, AppLocalizations l10n) {
-  return switch (target) {
-    HomeTarget.home => l10n.showChosenHomeSections,
-    HomeTarget.resumeLastTab => l10n.pickUpWhereLeftOff,
-    HomeTarget.customUrl => l10n.openSpecificPage,
-  };
-}

@@ -17,6 +17,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// What the browser lands on when there is no tab to show.
 enum HomeTarget {
@@ -29,15 +30,15 @@ enum HomeTarget {
   /// Open a configured address.
   customUrl;
 
-  String get label => switch (this) {
-    home => 'Home page',
-    resumeLastTab => 'Last opened tab',
-    customUrl => 'Custom address',
+  String label(AppLocalizations l10n) => switch (this) {
+    home => l10n.homeTargetHomeLabel,
+    resumeLastTab => l10n.homeTargetResumeLastTabLabel,
+    customUrl => l10n.homeTargetCustomUrlLabel,
   };
 
-  String get description => switch (this) {
-    home => 'Show shortcuts and the sections you have chosen',
-    resumeLastTab => 'Pick up where you left off',
-    customUrl => 'Open a specific page',
+  String description(AppLocalizations l10n) => switch (this) {
+    home => l10n.homeTargetHomeDescription,
+    resumeLastTab => l10n.homeTargetResumeLastTabDescription,
+    customUrl => l10n.homeTargetCustomUrlDescription,
   };
 }

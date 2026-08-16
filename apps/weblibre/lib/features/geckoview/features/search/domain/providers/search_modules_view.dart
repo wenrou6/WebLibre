@@ -18,6 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 part 'search_modules_view.g.dart';
 
@@ -73,26 +74,26 @@ enum SearchModuleType {
   /// on the new-tab page "New tab" is the page you are already looking at.
   quickActions;
 
-  String get label => switch (this) {
-    recentSearches => 'Recent Searches',
-    searchProviders => 'Search Providers',
-    searchSuggestions => 'Suggestions',
-    tabs => 'Tabs',
-    articles => 'Articles',
-    bookmarks => 'Bookmarks',
-    history => 'History (engine)',
-    localHistory => 'Local content',
-    combinedHistory => 'History',
-    popularSites => 'Popular Sites',
-    historyHighlights => 'History Highlights',
-    topSites => 'Shortcuts',
-    recentHistory => 'Recent History',
-    recentArticles => 'Recent Articles',
-    recentTabs => 'Recent Tabs',
-    containers => 'Containers',
-    frequentBangs => 'Frequent Bangs',
-    quote => 'Quote',
-    quickActions => 'Quick Actions',
+  String label(AppLocalizations l10n) => switch (this) {
+    recentSearches => l10n.searchModuleRecentSearchesLabel,
+    searchProviders => l10n.searchModuleSearchProvidersLabel,
+    searchSuggestions => l10n.searchModuleSearchSuggestionsLabel,
+    tabs => l10n.searchModuleTabsLabel,
+    articles => l10n.searchModuleArticlesLabel,
+    bookmarks => l10n.searchModuleBookmarksLabel,
+    history => l10n.searchModuleHistoryLabel,
+    localHistory => l10n.searchModuleLocalHistoryLabel,
+    combinedHistory => l10n.searchModuleCombinedHistoryLabel,
+    popularSites => l10n.searchModulePopularSitesLabel,
+    historyHighlights => l10n.searchModuleHistoryHighlightsLabel,
+    topSites => l10n.searchModuleTopSitesLabel,
+    recentHistory => l10n.searchModuleRecentHistoryLabel,
+    recentArticles => l10n.searchModuleRecentArticlesLabel,
+    recentTabs => l10n.searchModuleRecentTabsLabel,
+    containers => l10n.searchModuleContainersLabel,
+    frequentBangs => l10n.searchModuleFrequentBangsLabel,
+    quote => l10n.searchModuleQuoteLabel,
+    quickActions => l10n.searchModuleQuickActionsLabel,
   };
 }
 

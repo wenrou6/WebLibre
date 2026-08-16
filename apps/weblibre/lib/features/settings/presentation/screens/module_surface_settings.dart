@@ -24,30 +24,6 @@ import 'package:weblibre/features/geckoview/features/search/domain/providers/sea
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/l10n/app_localizations.dart';
 
-String _moduleLabel(AppLocalizations l10n, SearchModuleType type) {
-  return switch (type) {
-    SearchModuleType.recentSearches => l10n.recentSearches,
-    SearchModuleType.searchProviders => l10n.moduleSearchProviders,
-    SearchModuleType.searchSuggestions => l10n.moduleSuggestions,
-    SearchModuleType.tabs => l10n.moduleTabs,
-    SearchModuleType.articles => l10n.moduleArticles,
-    SearchModuleType.bookmarks => l10n.bookmarks,
-    SearchModuleType.history => l10n.moduleHistoryEngine,
-    SearchModuleType.localHistory => l10n.moduleLocalContent,
-    SearchModuleType.combinedHistory => l10n.history,
-    SearchModuleType.popularSites => l10n.modulePopularSites,
-    SearchModuleType.historyHighlights => l10n.moduleHistoryHighlights,
-    SearchModuleType.topSites => l10n.moduleShortcuts,
-    SearchModuleType.recentHistory => l10n.moduleRecentHistory,
-    SearchModuleType.recentArticles => l10n.moduleRecentArticles,
-    SearchModuleType.recentTabs => l10n.moduleRecentTabs,
-    SearchModuleType.containers => l10n.containers,
-    SearchModuleType.frequentBangs => l10n.moduleFrequentBangs,
-    SearchModuleType.quote => l10n.moduleQuote,
-    SearchModuleType.quickActions => l10n.moduleQuickActions,
-  };
-}
-
 /// Reorders and toggles the sections of one [ModuleSurface].
 ///
 /// One screen serves every surface — the surface only decides which saved list
@@ -122,7 +98,7 @@ class ModuleSurfaceSettingsScreen extends HookConsumerWidget {
               color: Colors.transparent,
               child: ListTile(
                 title: Text(
-                  _moduleLabel(l10n, entry.type),
+                  entry.type.label(l10n),
                   style: TextStyle(
                     color: entry.visible ? null : colorScheme.onSurfaceVariant,
                   ),

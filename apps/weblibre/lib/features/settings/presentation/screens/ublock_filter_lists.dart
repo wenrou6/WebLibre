@@ -39,24 +39,6 @@ typedef _SettingsMutator =
       mutator,
     );
 
-String _uBlockGroupLabel(AppLocalizations l10n, UBlockAssetGroup group) =>
-    switch (group) {
-      UBlockAssetGroup.$default => l10n.defaultFilterLists,
-      UBlockAssetGroup.ads => l10n.ads,
-      UBlockAssetGroup.privacy => l10n.privacy,
-      UBlockAssetGroup.malware => l10n.malware,
-      UBlockAssetGroup.annoyances => l10n.annoyances,
-      UBlockAssetGroup.multipurpose => l10n.multipurpose,
-      UBlockAssetGroup.regions => l10n.regions,
-    };
-
-String _uBlockParentLabel(AppLocalizations l10n, String value) =>
-    switch (value) {
-      'Cookie Notices' => l10n.cookieNotices,
-      'Social Widgets' => l10n.socialWidgets,
-      _ => value,
-    };
-
 class UBlockFilterListsScreen extends HookConsumerWidget {
   const UBlockFilterListsScreen({super.key});
 
@@ -597,7 +579,7 @@ class _GroupCard extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     // Callers pass `search.normalizedQuery` so trimming/lowercasing already happened.
     final groupMatches =
-        query.isEmpty || group.label.toLowerCase().contains(query);
+        query.isEmpty || group.label(l10n).toLowerCase().contains(query);
     final filteredParentTree = <String?, List<String>>{};
 
     for (final entry in parentTree.entries) {
@@ -639,7 +621,7 @@ class _GroupCard extends StatelessWidget {
           initiallyExpanded: group == UBlockAssetGroup.$default,
           tilePadding: const EdgeInsets.symmetric(horizontal: 16),
           title: Text(
-            _uBlockGroupLabel(l10n, group),
+            group.label(l10n),
             style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
           ),
           trailing: _CountPill(
@@ -655,7 +637,10 @@ class _GroupCard extends StatelessWidget {
                   for (final entry in filteredParentTree.entries)
                     if (entry.key != null)
                       _SubGroupTile(
-                        parentTitle: _uBlockParentLabel(l10n, entry.key!),
+                        parentTitle: UBlockAssetSubGroup.labelForParentKey(
+                          entry.key!,
+                          l10n,
+                        ),
                         tokenKeys: entry.value,
                         registry: registry,
                         enabledTokens: enabledTokens,
