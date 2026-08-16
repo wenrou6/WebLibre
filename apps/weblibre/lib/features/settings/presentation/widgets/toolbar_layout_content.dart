@@ -25,61 +25,64 @@ import 'package:weblibre/features/settings/presentation/controllers/save_setting
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/features/user/data/models/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/presentation/hooks/keyed_state.dart';
 
-const List<SettingsSectionDefinition> toolbarLayoutSettingsSections = [
+List<SettingsSectionDefinition> buildToolbarLayoutSettingsSections(
+  AppLocalizations l10n,
+) => [
   SettingsSectionDefinition(
-    title: 'Tab Bar',
+    title: l10n.tabBarSection,
     entries: [
       SettingsEntryDefinition(
-        title: 'Tab Bar Position',
-        subtitle: 'Choose whether the tab bar stays at the top or bottom',
+        title: l10n.tabBarPosition,
+        subtitle: l10n.tabBarPositionSubtitle,
         keywords: ['top', 'bottom'],
         child: _TabBarPositionSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Tab Bar Style',
-        subtitle: 'Choose between title and compact layouts',
+        title: l10n.tabBarStyle,
+        subtitle: l10n.tabBarStyleSubtitle,
         keywords: ['layout', 'compact'],
         child: _TabBarLayoutModeSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Auto Hide Tab Bar',
-        subtitle: 'Hide the tab bar when scrolling',
+        title: l10n.autoHideTabBar,
+        subtitle: l10n.autoHideTabBarSubtitle,
         keywords: ['scroll'],
         child: _AutoHideTabBarTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Long Press URL to Copy',
-        subtitle: 'Copy the current URL from the tab bar',
+        title: l10n.longPressUrlToCopy,
+        subtitle: l10n.longPressUrlToCopySubtitle,
         keywords: ['copy url'],
         child: _TabBarLongPressUrlCopyTile(),
       ),
     ],
   ),
   SettingsSectionDefinition(
-    title: 'Contextual Toolbar',
+    title: l10n.contextualToolbarSection,
     entries: [
       SettingsEntryDefinition(
-        title: 'Show Contextual Toolbar',
-        subtitle: 'Show an additional toolbar for navigation and actions',
+        title: l10n.showContextualToolbar,
+        subtitle: l10n.showContextualToolbarSubtitle,
         keywords: ['bottom toolbar'],
         child: _ShowContextualTabBarTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Customize Toolbar Buttons',
-        subtitle: 'Choose which actions appear in the contextual toolbar',
+        title: l10n.customizeToolbarButtons,
+        subtitle: l10n.customizeToolbarButtonsSubtitle,
         keywords: ['buttons'],
         child: _CustomizeToolbarButtonsTile(),
       ),
     ],
   ),
   SettingsSectionDefinition(
-    title: 'Quick Tab Switcher',
+    title: l10n.quickTabSwitcherSection,
     entries: [
       SettingsEntryDefinition(
-        title: 'Tab Stacking',
-        subtitle: 'Choose how the quick tab switcher bar arranges tabs',
+        title: l10n.tabStacking,
+        subtitle: l10n.tabStackingSubtitle,
         keywords: [
           'recent tabs',
           'recently used',
@@ -93,55 +96,55 @@ const List<SettingsSectionDefinition> toolbarLayoutSettingsSections = [
         child: _TabBarStackingModeSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Customize Switcher Buttons',
-        subtitle: 'Choose which action buttons appear at the end of the bar',
+        title: l10n.customizeSwitcherButtons,
+        subtitle: l10n.customizeSwitcherButtonsSubtitle,
         keywords: ['buttons', 'new tab', 'actions', 'trailing'],
         child: _CustomizeQuickSwitcherButtonsTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Close Buttons on All Tabs',
-        subtitle: 'Show a close button on every switcher chip',
+        title: l10n.closeButtonsOnAllTabs,
+        subtitle: l10n.closeButtonsOnAllTabsSubtitle,
         keywords: ['close', 'x button'],
         child: _QuickTabSwitcherCloseButtonsTile(),
       ),
       SettingsEntryDefinition(
-        title: 'History Fallback in Quick Tab Switcher',
-        subtitle: 'Use history suggestions when there are no matching tabs',
+        title: l10n.quickSwitcherHistoryFallback,
+        subtitle: l10n.quickSwitcherHistoryFallbackSubtitle,
         keywords: ['suggestions'],
         child: _QuickTabSwitcherHistorySuggestionsTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Show Titles in Quick Tab Switcher',
-        subtitle: 'Display page titles in the switcher list',
+        title: l10n.showTitlesInQuickTabSwitcher,
+        subtitle: l10n.showTitlesInQuickTabSwitcherSubtitle,
         keywords: ['page titles'],
         child: _QuickTabSwitcherShowTitlesTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Title Width in Quick Tab Switcher',
-        subtitle: 'Maximum width of tab titles on switcher chips',
+        title: l10n.quickSwitcherTitleWidth,
+        subtitle: l10n.quickSwitcherTitleWidthSubtitle,
         keywords: ['width', 'title', 'chip', 'length'],
         child: _QuickTabSwitcherTitleWidthTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Hierarchy Depth in Quick Tab Switcher',
-        subtitle: 'How many nesting chevrons to show on switcher chips',
+        title: l10n.quickSwitcherHierarchyDepth,
+        subtitle: l10n.quickSwitcherHierarchyDepthSubtitle,
         keywords: ['hierarchy', 'nesting', 'depth', 'tree', 'chevrons'],
         child: _QuickTabSwitcherHierarchyGlyphsTile(),
       ),
     ],
   ),
   SettingsSectionDefinition(
-    title: 'Tab View',
+    title: l10n.tabViewSection,
     entries: [
       SettingsEntryDefinition(
-        title: 'Bottom Sheet Tab View',
-        subtitle: 'Open the tab switcher as a bottom sheet',
+        title: l10n.bottomSheetTabView,
+        subtitle: l10n.bottomSheetTabViewSubtitle,
         keywords: ['sheet'],
         child: _BottomSheetTabViewTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Show Favicons in List View',
-        subtitle: 'Display site icons in the tab list',
+        title: l10n.showFaviconsInListView,
+        subtitle: l10n.showFaviconsInListViewSubtitle,
         keywords: ['icons'],
         child: _TabListShowFaviconsTile(),
       ),
@@ -156,8 +159,9 @@ class ToolbarLayoutContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final filteredSections = filterSettingsSections(
-      sections: toolbarLayoutSettingsSections,
+      sections: buildToolbarLayoutSettingsSections(l10n),
       query: query,
     );
 
@@ -173,6 +177,7 @@ class _TabBarPositionSection extends HookConsumerWidget {
     final tabBarPosition = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.tabBarPosition),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -180,9 +185,9 @@ class _TabBarPositionSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Tab Bar Position'),
-            leading: Icon(MdiIcons.dockWindow),
+          ListTile(
+            title: Text(l10n.tabBarPosition),
+            leading: const Icon(MdiIcons.dockWindow),
             contentPadding: EdgeInsets.zero,
           ),
           RadioGroup(
@@ -197,27 +202,27 @@ class _TabBarPositionSection extends HookConsumerWidget {
                     );
               }
             },
-            child: const Column(
+            child: Column(
               children: [
                 RadioListTile.adaptive(
                   value: TabBarPosition.top,
-                  title: Text('Top'),
-                  subtitle: Text('Persistent tab bar without auto-hide'),
+                  title: Text(l10n.positionTop),
+                  subtitle: Text(l10n.positionTopSubtitle),
                 ),
                 RadioListTile.adaptive(
                   value: TabBarPosition.bottom,
-                  title: Text('Bottom'),
-                  subtitle: Text('Tab bar with auto-hide support'),
+                  title: Text(l10n.positionBottom),
+                  subtitle: Text(l10n.positionBottomSubtitle),
                 ),
                 RadioListTile.adaptive(
                   value: TabBarPosition.left,
-                  title: Text('Left'),
-                  subtitle: Text('Vertical side rail, swipe to hide'),
+                  title: Text(l10n.positionLeft),
+                  subtitle: Text(l10n.verticalSideRailSubtitle),
                 ),
                 RadioListTile.adaptive(
                   value: TabBarPosition.right,
-                  title: Text('Right'),
-                  subtitle: Text('Vertical side rail, swipe to hide'),
+                  title: Text(l10n.positionRight),
+                  subtitle: Text(l10n.verticalSideRailSubtitle),
                 ),
               ],
             ),
@@ -236,6 +241,7 @@ class _TabBarLayoutModeSection extends HookConsumerWidget {
     final tabBarLayout = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.tabBarLayout),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -243,9 +249,9 @@ class _TabBarLayoutModeSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Tab Bar Style'),
-            leading: Icon(MdiIcons.tabUnselected),
+          ListTile(
+            title: Text(l10n.tabBarStyle),
+            leading: const Icon(MdiIcons.tabUnselected),
             contentPadding: EdgeInsets.zero,
           ),
           RadioGroup(
@@ -260,17 +266,17 @@ class _TabBarLayoutModeSection extends HookConsumerWidget {
                     );
               }
             },
-            child: const Column(
+            child: Column(
               children: [
                 RadioListTile.adaptive(
                   value: TabBarLayout.withTitle,
-                  title: Text('With Title'),
-                  subtitle: Text('Shows page title and URL breadcrumb'),
+                  title: Text(l10n.withTitle),
+                  subtitle: Text(l10n.withTitleSubtitle),
                 ),
                 RadioListTile.adaptive(
                   value: TabBarLayout.compact,
-                  title: Text('Compact'),
-                  subtitle: Text('Centered URL pill without page title'),
+                  title: Text(l10n.compact),
+                  subtitle: Text(l10n.compactTabBarSubtitle),
                 ),
               ],
             ),
@@ -291,12 +297,11 @@ class _ShowContextualTabBarTile extends HookConsumerWidget {
         (s) => s.tabBarShowContextualBar,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Show Contextual Toolbar'),
-      subtitle: const Text(
-        'Show additional bottom toolbar for navigation and actions',
-      ),
+      title: Text(l10n.showContextualToolbar),
+      subtitle: Text(l10n.showContextualToolbarSubtitle),
       secondary: const Icon(MdiIcons.dockBottom),
       value: tabBarShowContextualBar,
       onChanged: (value) async {
@@ -321,10 +326,11 @@ class _CustomizeToolbarButtonsTile extends HookConsumerWidget {
         (s) => s.tabBarShowContextualBar,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return ListTile(
       leading: const Icon(Icons.tune),
-      title: const Text('Customize Toolbar Buttons'),
+      title: Text(l10n.customizeToolbarButtons),
       trailing: const Icon(Icons.chevron_right),
       enabled: tabBarShowContextualBar,
       onTap: () async {
@@ -344,14 +350,12 @@ class _CustomizeQuickSwitcherButtonsTile extends HookConsumerWidget {
         (s) => s.effectiveTabBarStackingMode() != TabBarStackingMode.disabled,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return ListTile(
       leading: const Icon(Icons.tune),
-      title: const Text('Customize Switcher Buttons'),
-      subtitle: const Text(
-        'Action buttons pinned at the end of the switcher bar (independent of '
-        'the contextual toolbar)',
-      ),
+      title: Text(l10n.customizeSwitcherButtons),
+      subtitle: Text(l10n.customizeSwitcherButtonsSubtitle),
       trailing: const Icon(Icons.chevron_right),
       enabled: switcherEnabled,
       onTap: () async {
@@ -368,6 +372,7 @@ class _TabBarStackingModeSection extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(generalSettingsWithDefaultsProvider);
     final stackingMode = settings.effectiveTabBarStackingMode();
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -375,10 +380,10 @@ class _TabBarStackingModeSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Tab Stacking'),
-            subtitle: Text('How the quick tab switcher bar arranges its tabs'),
-            leading: Icon(MdiIcons.folderSettings),
+          ListTile(
+            title: Text(l10n.tabStacking),
+            subtitle: Text(l10n.tabStackingSubtitle),
+            leading: const Icon(MdiIcons.folderSettings),
             contentPadding: EdgeInsets.zero,
           ),
           RadioGroup(
@@ -395,42 +400,36 @@ class _TabBarStackingModeSection extends HookConsumerWidget {
             },
             child: Column(
               children: [
-                const RadioListTile.adaptive(
+                RadioListTile.adaptive(
                   value: TabBarStackingMode.lastUsedTabs,
-                  title: Text('Recently Used Tabs'),
-                  subtitle: Text('Recently used tabs across all containers'),
+                  title: Text(l10n.recentlyUsedTabs),
+                  subtitle: Text(l10n.recentlyUsedTabsSubtitle),
                 ),
                 if (settings.showContainerUi) ...[
-                  const RadioListTile.adaptive(
+                  RadioListTile.adaptive(
                     value: TabBarStackingMode.containerTabs,
-                    title: Text('Container Tabs'),
-                    subtitle: Text('Ordered tabs of the selected container'),
+                    title: Text(l10n.containerTabs),
+                    subtitle: Text(l10n.containerTabsSubtitle),
                   ),
-                  const RadioListTile.adaptive(
+                  RadioListTile.adaptive(
                     value: TabBarStackingMode.accordion,
-                    title: Text('Accordion'),
-                    subtitle: Text(
-                      "All containers as chips, with the selected "
-                      "container's tabs expanded inline",
-                    ),
+                    title: Text(l10n.accordion),
+                    subtitle: Text(l10n.accordionSubtitle),
                   ),
                   // Two stacked rows don't fit the narrow vertical side rail,
                   // where the mode degrades to Container Tabs; hide the option
                   // for left/right positions to avoid a no-op choice.
                   if (!settings.tabBarPosition.isVertical)
-                    const RadioListTile.adaptive(
+                    RadioListTile.adaptive(
                       value: TabBarStackingMode.twoLevel,
-                      title: Text('Two Rows'),
-                      subtitle: Text(
-                        'Tabs of the selected container on top, recently used '
-                        'tabs below',
-                      ),
+                      title: Text(l10n.twoRows),
+                      subtitle: Text(l10n.twoRowsSubtitle),
                     ),
                 ],
-                const RadioListTile.adaptive(
+                RadioListTile.adaptive(
                   value: TabBarStackingMode.disabled,
-                  title: Text('Disabled'),
-                  subtitle: Text('Hide the quick tab switcher bar'),
+                  title: Text(l10n.disabled),
+                  subtitle: Text(l10n.hideQuickTabSwitcherBar),
                 ),
               ],
             ),
@@ -456,13 +455,11 @@ class _QuickTabSwitcherCloseButtonsTile extends HookConsumerWidget {
         (s) => s.effectiveTabBarStackingMode() != TabBarStackingMode.disabled,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Close Buttons on All Tabs'),
-      subtitle: const Text(
-        "Show a close button on every switcher chip; the active tab's chip "
-        "always has one",
-      ),
+      title: Text(l10n.closeButtonsOnAllTabs),
+      subtitle: Text(l10n.closeButtonsOnAllTabsSubtitle),
       secondary: const Icon(MdiIcons.closeCircleOutline),
       value: showCloseButtonOnAllTabs,
       onChanged: switcherEnabled
@@ -506,6 +503,7 @@ class _QuickTabSwitcherTitleWidthTile extends HookConsumerWidget {
         (s) => s.effectiveTabBarStackingMode() != TabBarStackingMode.disabled,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     final sliderValue = useKeyedState(titleWidth, [titleWidth]);
 
@@ -518,10 +516,8 @@ class _QuickTabSwitcherTitleWidthTile extends HookConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ListTile(
-            title: const Text('Title Width in Quick Tab Switcher'),
-            subtitle: const Text(
-              'Maximum width of tab titles on switcher chips',
-            ),
+            title: Text(l10n.quickSwitcherTitleWidth),
+            subtitle: Text(l10n.quickSwitcherTitleWidthSubtitle),
             leading: const Icon(MdiIcons.arrowExpandHorizontal),
             contentPadding: EdgeInsets.zero,
             enabled: enabled,
@@ -588,12 +584,11 @@ class _QuickTabSwitcherHistorySuggestionsTile extends HookConsumerWidget {
         (s) => s.effectiveTabBarStackingMode() != TabBarStackingMode.disabled,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('History Fallback in Quick Tab Switcher'),
-      subtitle: const Text(
-        'Use browsing history suggestions when no tab chips are available',
-      ),
+      title: Text(l10n.quickSwitcherHistoryFallback),
+      subtitle: Text(l10n.quickSwitcherHistoryFallbackSubtitle),
       secondary: const Icon(MdiIcons.history),
       value: showHistorySuggestions,
       onChanged: switcherEnabled
@@ -625,12 +620,11 @@ class _QuickTabSwitcherShowTitlesTile extends HookConsumerWidget {
         (s) => s.effectiveTabBarStackingMode() != TabBarStackingMode.disabled,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Show Titles in Quick Tab Switcher'),
-      subtitle: const Text(
-        'Display tab titles alongside icons in the quick tab switcher bar',
-      ),
+      title: Text(l10n.showTitlesInQuickTabSwitcher),
+      subtitle: Text(l10n.showTitlesInQuickTabSwitcherSubtitle),
       secondary: const Icon(MdiIcons.textRecognition),
       value: quickTabSwitcherShowTitles,
       onChanged: switcherEnabled
@@ -650,12 +644,6 @@ class _QuickTabSwitcherShowTitlesTile extends HookConsumerWidget {
 class _QuickTabSwitcherHierarchyGlyphsTile extends HookConsumerWidget {
   const _QuickTabSwitcherHierarchyGlyphsTile();
 
-  static String _label(int glyphs) => switch (glyphs) {
-    0 => 'Off',
-    1 => '1 level',
-    _ => '$glyphs levels',
-  };
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final hierarchyGlyphs = ref.watch(
@@ -668,6 +656,9 @@ class _QuickTabSwitcherHierarchyGlyphsTile extends HookConsumerWidget {
         (s) => s.effectiveTabBarStackingMode() != TabBarStackingMode.disabled,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
+    String label(int glyphs) =>
+        glyphs == 0 ? l10n.off : l10n.quickSwitcherHierarchyLevelCount(glyphs);
 
     final sliderValue = useKeyedState(hierarchyGlyphs.toDouble(), [
       hierarchyGlyphs,
@@ -683,11 +674,8 @@ class _QuickTabSwitcherHierarchyGlyphsTile extends HookConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ListTile(
-            title: const Text('Hierarchy Depth in Quick Tab Switcher'),
-            subtitle: const Text(
-              'How many nesting chevrons to show on switcher chips before '
-              'collapsing into a count badge (0 hides the indicator)',
-            ),
+            title: Text(l10n.quickSwitcherHierarchyDepth),
+            subtitle: Text(l10n.quickSwitcherHierarchyDepthSubtitle),
             leading: const Icon(MdiIcons.fileTree),
             contentPadding: EdgeInsets.zero,
             enabled: enabled,
@@ -701,7 +689,7 @@ class _QuickTabSwitcherHierarchyGlyphsTile extends HookConsumerWidget {
                   divisions:
                       maxQuickTabSwitcherHierarchyGlyphs -
                       minQuickTabSwitcherHierarchyGlyphs,
-                  label: _label(currentGlyphs),
+                  label: label(currentGlyphs),
                   value: sliderValue.value.clamp(
                     minQuickTabSwitcherHierarchyGlyphs.toDouble(),
                     maxQuickTabSwitcherHierarchyGlyphs.toDouble(),
@@ -730,7 +718,7 @@ class _QuickTabSwitcherHierarchyGlyphsTile extends HookConsumerWidget {
                 ),
               ),
               Text(
-                _label(currentGlyphs),
+                label(currentGlyphs),
                 style: Theme.of(context).textTheme.titleMedium,
               ),
             ],
@@ -749,10 +737,11 @@ class _AutoHideTabBarTile extends HookConsumerWidget {
     final autoHideTabBar = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.autoHideTabBar),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Auto Hide Tab Bar'),
-      subtitle: const Text('Hide tab bar when scrolling'),
+      title: Text(l10n.autoHideTabBar),
+      subtitle: Text(l10n.autoHideTabBarSubtitle),
       secondary: const Icon(MdiIcons.folderHidden),
       value: autoHideTabBar,
       onChanged: (value) async {
@@ -775,12 +764,11 @@ class _BottomSheetTabViewTile extends HookConsumerWidget {
     final tabViewBottomSheet = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.tabViewBottomSheet),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Bottom Sheet Tab View'),
-      subtitle: const Text(
-        'Display tabs in a bottom sheet instead of fullscreen',
-      ),
+      title: Text(l10n.bottomSheetTabView),
+      subtitle: Text(l10n.bottomSheetTabViewSubtitle),
       secondary: const Icon(MdiIcons.dockBottom),
       value: tabViewBottomSheet,
       onChanged: (value) async {
@@ -805,12 +793,11 @@ class _TabBarLongPressUrlCopyTile extends HookConsumerWidget {
         (s) => s.tabBarLongPressUrlCopy,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Long Press URL to Copy'),
-      subtitle: const Text(
-        'Copy the page URL to clipboard when long pressing the address bar',
-      ),
+      title: Text(l10n.longPressUrlToCopy),
+      subtitle: Text(l10n.longPressUrlToCopySubtitle),
       secondary: const Icon(MdiIcons.contentCopy),
       value: tabBarLongPressUrlCopy,
       onChanged: (value) async {
@@ -833,12 +820,11 @@ class _TabListShowFaviconsTile extends HookConsumerWidget {
     final tabListShowFavicons = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.tabListShowFavicons),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Show Favicons in List View'),
-      subtitle: const Text(
-        'Display website icons instead of page thumbnails in tab list view',
-      ),
+      title: Text(l10n.showFaviconsInListView),
+      subtitle: Text(l10n.showFaviconsInListViewSubtitle),
       secondary: const Icon(MdiIcons.web),
       value: tabListShowFavicons,
       onChanged: (value) async {

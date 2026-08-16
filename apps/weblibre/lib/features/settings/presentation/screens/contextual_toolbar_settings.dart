@@ -32,6 +32,7 @@ import 'package:weblibre/features/geckoview/features/browser/features/contextual
 import 'package:weblibre/features/geckoview/features/browser/presentation/widgets/browser_modules/bottom_app_bar.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/features/user/data/database/definitions.drift.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class ContextualToolbarSettingsScreen extends HookConsumerWidget {
   const ContextualToolbarSettingsScreen({
@@ -52,14 +53,15 @@ class ContextualToolbarSettingsScreen extends HookConsumerWidget {
     final repository = ref.watch(toolbarConfigRepositoryProvider(location));
     final search = useSettingsSearch();
     final query = search.normalizedQuery;
+    final l10n = AppLocalizations.of(context)!;
 
     bool matchesQuery(ToolbarButtonConfig config) {
       if (query.isEmpty) return true;
       final def = toolbarButtonRegistryById[config.buttonId];
       if (def == null) return false;
       return matchesSettingsSearch(query, [
-        def.label,
-        ...def.longPressActions,
+        def.label(l10n),
+        ...def.longPressActions.map((action) => action(l10n)),
         config.buttonId,
       ]);
     }
@@ -319,13 +321,17 @@ class _ToolbarButtonConfigTile extends HookConsumerWidget {
         )
         .toList();
 
-    final longPressActions = def.longPressActions;
+    final l10n = AppLocalizations.of(context)!;
+    final label = def.label(l10n);
+    final longPressActions = def.longPressActions
+        .map((action) => action(l10n))
+        .toList(growable: false);
 
     return Material(
       color: Colors.transparent,
       child: ListTile(
         leading: Icon(def.icon),
-        title: Text(def.label),
+        title: Text(label),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
@@ -341,7 +347,7 @@ class _ToolbarButtonConfigTile extends HookConsumerWidget {
               ),
             if (longPressActions.isNotEmpty)
               _LongPressHint(
-                buttonLabel: def.label,
+                buttonLabel: label,
                 icon: def.icon,
                 actions: longPressActions,
               ),

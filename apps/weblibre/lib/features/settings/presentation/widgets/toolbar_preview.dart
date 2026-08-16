@@ -32,6 +32,7 @@ import 'package:weblibre/features/geckoview/features/browser/presentation/widget
 import 'package:weblibre/features/geckoview/features/tabs/data/entities/tab_mode.dart';
 import 'package:weblibre/features/geckoview/features/tabs/utils/container_colors.dart';
 import 'package:weblibre/features/user/data/models/general_settings.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class TabBarPreviewHeaderDelegate extends SliverPersistentHeaderDelegate {
   const TabBarPreviewHeaderDelegate({
@@ -123,13 +124,14 @@ class TabBarPreviewCard extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context)!;
     final quickTabsController = useScrollController();
     final quickTabsSecondRowController = useScrollController();
     final showMainToolbarActionButtons = !settings.tabBarShowContextualBar;
 
     final previewTabState = TabState.$default('preview-tab').copyWith(
       url: Uri.parse('https://weblibre.eu/docs'),
-      title: 'WebLibre Preview',
+      title: l10n.webLibrePreview,
       securityInfoState: SecurityState(
         secure: true,
         host: 'weblibre.eu',
@@ -141,7 +143,7 @@ class TabBarPreviewCard extends HookWidget {
       QuickTabSwitcherItem(
         id: 'regular-preview-tab',
         isActive: true,
-        title: 'News',
+        title: l10n.previewNews,
         tabMode: TabMode.regular,
         isHistory: false,
         isPinned:
@@ -154,7 +156,7 @@ class TabBarPreviewCard extends HookWidget {
       QuickTabSwitcherItem(
         id: 'private-preview-tab',
         isActive: false,
-        title: 'Private',
+        title: l10n.tabTypePrivate,
         tabMode: TabMode.private,
         isHistory: false,
         isPinned: false,
@@ -167,7 +169,7 @@ class TabBarPreviewCard extends HookWidget {
         QuickTabSwitcherItem(
           id: 'isolated-preview-tab',
           isActive: false,
-          title: 'Bank',
+          title: l10n.previewBank,
           tabMode: TabMode.isolated('preview-isolated-context'),
           isHistory: false,
           isPinned: false,
@@ -180,7 +182,7 @@ class TabBarPreviewCard extends HookWidget {
         QuickTabSwitcherItem(
           id: 'history-preview-tab',
           isActive: false,
-          title: 'Search',
+          title: l10n.search,
           tabMode: TabMode.regular,
           isHistory: true,
           isPinned: false,
@@ -354,7 +356,7 @@ class TabBarPreviewCard extends HookWidget {
         ),
       ),
       child: Text(
-        'Page Content',
+        l10n.previewPageContent,
         style: Theme.of(context).textTheme.labelMedium,
       ),
     );
@@ -417,13 +419,11 @@ class TabBarPreviewCard extends HookWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const ListTile(
-              title: Text('Live Preview'),
-              subtitle: Text(
-                'Reflects your current toolbar and layout settings',
-              ),
-              leading: Icon(MdiIcons.televisionGuide),
-              contentPadding: EdgeInsets.symmetric(horizontal: 8.0),
+            ListTile(
+              title: Text(l10n.livePreview),
+              subtitle: Text(l10n.livePreviewSubtitle),
+              leading: const Icon(MdiIcons.televisionGuide),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 8.0),
             ),
             previewContent,
           ],

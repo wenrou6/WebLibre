@@ -29,85 +29,88 @@ import 'package:weblibre/features/settings/presentation/controllers/save_setting
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/features/user/data/models/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
-const List<SettingsSectionDefinition> browsingSettingsSections = [
+List<SettingsSectionDefinition> buildBrowsingSettingsSections(
+  AppLocalizations l10n,
+) => [
   SettingsSectionDefinition(
-    title: 'Tabs',
+    title: l10n.browsingTabsSection,
     entries: [
       SettingsEntryDefinition(
-        title: 'New Tab Default',
-        subtitle: 'Choose the default type for manually created tabs',
+        title: l10n.newTabDefault,
+        subtitle: l10n.newTabDefaultSubtitle,
         keywords: ['regular', 'private', 'isolated'],
         child: _NewTabDefaultSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Small Web Tab Default',
-        subtitle: 'Choose the tab type used when entering Small Web',
+        title: l10n.smallWebTabDefault,
+        subtitle: l10n.smallWebTabDefaultSubtitle,
         keywords: ['regular', 'private', 'isolated'],
         child: _SmallWebTabDefaultSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Tab List Direction',
-        subtitle: 'Choose how tabs are ordered in the list view',
+        title: l10n.tabListDirection,
+        subtitle: l10n.tabListDirectionSubtitle,
         keywords: ['sorting', 'order'],
         child: _TabListDirectionSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Tab Bar Direction',
-        subtitle: 'Choose how tabs are ordered in the tab bar',
+        title: l10n.tabBarDirection,
+        subtitle: l10n.tabBarDirectionSubtitle,
         keywords: ['sorting', 'order'],
         child: _TabBarDirectionSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Show Container UI',
-        subtitle: 'Show container selectors, menus, and management',
+        title: l10n.showContainerUi,
+        subtitle: l10n.showContainerUiSubtitle,
         keywords: ['containers'],
         child: _ShowContainerUiTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Show Isolated Tab UI',
-        subtitle: 'Show isolated-tab creation options in the UI',
+        title: l10n.showIsolatedTabUi,
+        subtitle: l10n.showIsolatedTabUiSubtitle,
         keywords: ['isolated tabs'],
         child: _ShowIsolatedTabUiTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Create Child Tabs',
-        subtitle: 'Open links from tabs in the same container context',
+        title: l10n.createChildTabs,
+        subtitle: l10n.createChildTabsSubtitle,
         keywords: ['child tabs'],
         child: _CreateChildTabsTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Background Tab Behavior',
-        subtitle: 'Choose what happens after a tab opens in the background',
+        title: l10n.backgroundTabBehavior,
+        subtitle: l10n.backgroundTabBehaviorSubtitle,
         keywords: ['switch', 'background', 'new tab', 'snackbar', 'prompt'],
         child: _BackgroundTabOpenSection(),
       ),
     ],
   ),
   SettingsSectionDefinition(
-    title: 'Navigation',
+    title: l10n.browsingNavigationSection,
     entries: [
       SettingsEntryDefinition(
-        title: 'Pull to Refresh',
-        subtitle: 'Swipe down on pages to reload them',
+        title: l10n.pullToRefresh,
+        subtitle: l10n.pullToRefreshSubtitle,
         keywords: ['reload'],
         child: _PullToRefreshTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Double Back to Close Tab',
-        subtitle: 'Require double back press before closing the current tab',
+        title: l10n.doubleBackToCloseTab,
+        subtitle: l10n.doubleBackToCloseTabSubtitle,
         keywords: ['back button'],
         child: _DoubleBackCloseTabTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Tab Bar Swipe Behavior',
-        subtitle: 'Choose what horizontal swipes on the tab bar do',
+        title: l10n.tabBarSwipeBehavior,
+        subtitle: l10n.tabBarSwipeBehaviorSubtitle,
         keywords: ['gestures', 'swipe'],
         child: _TabBarSwipeBehaviorSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Sequential Tab Navigation',
-        subtitle: 'Choose where stepping through tabs in order ends',
+        title: l10n.sequentialTabNavigation,
+        subtitle: l10n.sequentialTabNavigationSubtitle,
         keywords: [
           'gestures',
           'swipe',
@@ -120,55 +123,53 @@ const List<SettingsSectionDefinition> browsingSettingsSections = [
         child: _SequentialTabNavigationSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Open Links in Apps',
-        subtitle: 'Choose how external app links open',
+        title: l10n.openLinksInApps,
+        subtitle: l10n.openLinksInAppsSubtitle,
         keywords: ['app links', 'external apps'],
         child: _AppLinksModeSection(),
       ),
     ],
   ),
   SettingsSectionDefinition(
-    title: 'Desktop Mode',
+    title: l10n.desktopModeSection,
     entries: [
       SettingsEntryDefinition(
-        title: 'Always Request Desktop Site',
-        subtitle: 'Open new tabs in desktop mode by default',
+        title: l10n.alwaysRequestDesktopSite,
+        subtitle: l10n.alwaysRequestDesktopSiteSubtitle,
         keywords: ['desktop mode', 'user agent', 'mobile site', 'tablet'],
         child: _GlobalDesktopModeTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Desktop Mode Sites',
-        subtitle: 'Sites that always load in desktop mode',
+        title: l10n.desktopModeSites,
+        subtitle: l10n.desktopModeSitesSubtitle,
         keywords: ['desktop mode', 'per-site', 'user agent', 'exceptions'],
         child: _DesktopModeSitesTile(),
       ),
     ],
   ),
   SettingsSectionDefinition(
-    title: 'Home Screen',
+    title: l10n.homeScreenSection,
     entries: [
       SettingsEntryDefinition(
-        title: 'Install Sites as Apps',
-        subtitle: 'Allow websites without a manifest to be installed as apps',
+        title: l10n.installSitesAsApps,
+        subtitle: l10n.installSitesAsAppsSubtitle,
         keywords: ['pwa', 'web apps'],
         child: _AllowNonManifestPwaInstallTile(),
       ),
     ],
   ),
   SettingsSectionDefinition(
-    title: 'External Links',
+    title: l10n.externalLinksSection,
     entries: [
       SettingsEntryDefinition(
-        title: 'External Link Handling',
-        subtitle: 'Choose how external links open in WebLibre',
+        title: l10n.externalLinkHandling,
+        subtitle: l10n.externalLinkHandlingSubtitle,
         keywords: ['intents'],
         child: _ExternalLinkHandlingSection(),
       ),
       SettingsEntryDefinition(
-        title: 'Custom Tabs',
-        subtitle:
-            'Let other apps open links in a lightweight in-app tab, instead '
-            'of the main browser',
+        title: l10n.customTabs,
+        subtitle: l10n.customTabsBrowsingSubtitle,
         keywords: [
           'custom tabs',
           'in-app browser',
@@ -179,25 +180,25 @@ const List<SettingsSectionDefinition> browsingSettingsSections = [
         child: _CustomTabsTile(),
       ),
       SettingsEntryDefinition(
-        title: 'URL Cleaner',
-        subtitle: 'Tracking removal rules and catalog updates',
+        title: l10n.urlCleaner,
+        subtitle: l10n.urlCleanerBrowsingSubtitle,
         keywords: ['utm', 'tracking parameters'],
         child: _UrlCleanerSettingsTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Unshortener',
-        subtitle: 'Short link resolver and API token',
+        title: l10n.unshortener,
+        subtitle: l10n.unshortenerSubtitle,
         keywords: ['short links', 'redirects'],
         child: _UnshortenerSettingsTile(),
       ),
     ],
   ),
   SettingsSectionDefinition(
-    title: 'Bookmarks',
+    title: l10n.bookmarks,
     entries: [
       SettingsEntryDefinition(
-        title: 'Bookmark Open Behavior',
-        subtitle: 'Choose how tapping a bookmark opens it',
+        title: l10n.bookmarkOpenBehavior,
+        subtitle: l10n.bookmarkOpenBehaviorSubtitle,
         keywords: ['bookmarks', 'open', 'custom tab', 'isolated'],
         child: _BookmarkOpenBehaviorSection(),
       ),
@@ -210,11 +211,12 @@ class BrowsingSettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SettingsDetailScaffold(
-      title: 'Browsing',
-      subtitle: 'Tabs, navigation, app links, and Small Web behavior.',
+    final l10n = AppLocalizations.of(context)!;
+    return SettingsDetailScaffold(
+      title: l10n.browsingSettings,
+      subtitle: l10n.browsingSettingsSubtitle,
       icon: MdiIcons.compassOutline,
-      sections: browsingSettingsSections,
+      sections: buildBrowsingSettingsSections(l10n),
     );
   }
 }
@@ -225,6 +227,7 @@ class _NewTabDefaultSection extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final appColors = AppColors.of(context);
+    final l10n = AppLocalizations.of(context)!;
     final settings = ref.watch(generalSettingsWithDefaultsProvider);
     final defaultCreateTabType = settings.effectiveDefaultCreateTabType;
 
@@ -234,24 +237,24 @@ class _NewTabDefaultSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('New Tab Default'),
-            subtitle: Text('Choose the default type for manually created tabs'),
-            leading: Icon(MdiIcons.tab),
+          ListTile(
+            title: Text(l10n.newTabDefault),
+            subtitle: Text(l10n.newTabDefaultSubtitle),
+            leading: const Icon(MdiIcons.tab),
             contentPadding: EdgeInsets.zero,
           ),
           Center(
             child: SegmentedButton(
               showSelectedIcon: false,
               segments: [
-                const ButtonSegment(
+                ButtonSegment(
                   value: TabType.regular,
-                  label: Text('Regular'),
-                  icon: Icon(MdiIcons.tab),
+                  label: Text(l10n.tabTypeRegular),
+                  icon: const Icon(MdiIcons.tab),
                 ),
                 ButtonSegment(
                   value: TabType.private,
-                  label: const Text('Private'),
+                  label: Text(l10n.tabTypePrivate),
                   icon: Icon(
                     MdiIcons.dominoMask,
                     color: defaultCreateTabType == TabType.private
@@ -262,7 +265,7 @@ class _NewTabDefaultSection extends HookConsumerWidget {
                 if (settings.showIsolatedTabUi)
                   ButtonSegment(
                     value: TabType.isolated,
-                    label: const Text('Isolated'),
+                    label: Text(l10n.tabTypeIsolated),
                     icon: Icon(
                       MdiIcons.snowflake,
                       color: defaultCreateTabType == TabType.isolated
@@ -304,6 +307,7 @@ class _SmallWebTabDefaultSection extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final appColors = AppColors.of(context);
+    final l10n = AppLocalizations.of(context)!;
     final settings = ref.watch(generalSettingsWithDefaultsProvider);
     final smallWebTabType = settings.effectiveSmallWebTabType;
 
@@ -313,24 +317,24 @@ class _SmallWebTabDefaultSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Small Web Tab Default'),
-            subtitle: Text('Choose the tab type used when entering Small Web'),
-            leading: Icon(Icons.explore),
+          ListTile(
+            title: Text(l10n.smallWebTabDefault),
+            subtitle: Text(l10n.smallWebTabDefaultSubtitle),
+            leading: const Icon(Icons.explore),
             contentPadding: EdgeInsets.zero,
           ),
           Center(
             child: SegmentedButton(
               showSelectedIcon: false,
               segments: [
-                const ButtonSegment(
+                ButtonSegment(
                   value: TabType.regular,
-                  label: Text('Regular'),
-                  icon: Icon(MdiIcons.tab),
+                  label: Text(l10n.tabTypeRegular),
+                  icon: const Icon(MdiIcons.tab),
                 ),
                 ButtonSegment(
                   value: TabType.private,
-                  label: const Text('Private'),
+                  label: Text(l10n.tabTypePrivate),
                   icon: Icon(
                     MdiIcons.dominoMask,
                     color: smallWebTabType == TabType.private
@@ -341,7 +345,7 @@ class _SmallWebTabDefaultSection extends HookConsumerWidget {
                 if (settings.showIsolatedTabUi)
                   ButtonSegment(
                     value: TabType.isolated,
-                    label: const Text('Isolated'),
+                    label: Text(l10n.tabTypeIsolated),
                     icon: Icon(
                       MdiIcons.snowflake,
                       color: smallWebTabType == TabType.isolated
@@ -384,6 +388,7 @@ class _ExternalLinkHandlingSection extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(generalSettingsWithDefaultsProvider);
     final tabIntentOpenSetting = settings.tabIntentOpenSetting;
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -391,10 +396,10 @@ class _ExternalLinkHandlingSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('External Link Handling'),
-            subtitle: Text('Choose how external links open in WebLibre'),
-            leading: Icon(MdiIcons.tabPlus),
+          ListTile(
+            title: Text(l10n.externalLinkHandling),
+            subtitle: Text(l10n.externalLinkHandlingSubtitle),
+            leading: const Icon(MdiIcons.tabPlus),
             contentPadding: EdgeInsets.zero,
           ),
           RadioGroup(
@@ -411,22 +416,22 @@ class _ExternalLinkHandlingSection extends HookConsumerWidget {
             },
             child: Column(
               children: [
-                const RadioListTile.adaptive(
+                RadioListTile.adaptive(
                   value: TabIntentOpenSetting.ask,
-                  title: Text('Prompt'),
-                  subtitle: Text('Ask how external links should open'),
-                  secondary: Icon(MdiIcons.messageQuestion),
+                  title: Text(l10n.prompt),
+                  subtitle: Text(l10n.askHowExternalLinksOpen),
+                  secondary: const Icon(MdiIcons.messageQuestion),
                 ),
-                const RadioListTile.adaptive(
+                RadioListTile.adaptive(
                   value: TabIntentOpenSetting.regular,
-                  title: Text('Regular'),
-                  subtitle: Text('Open external links in a regular tab'),
-                  secondary: Icon(MdiIcons.tab),
+                  title: Text(l10n.tabTypeRegular),
+                  subtitle: Text(l10n.openExternalLinksRegularTab),
+                  secondary: const Icon(MdiIcons.tab),
                 ),
                 RadioListTile.adaptive(
                   value: TabIntentOpenSetting.private,
-                  title: const Text('Private'),
-                  subtitle: const Text('Open external links in a private tab'),
+                  title: Text(l10n.tabTypePrivate),
+                  subtitle: Text(l10n.openExternalLinksPrivateTab),
                   secondary: Icon(
                     MdiIcons.dominoMask,
                     color: AppColors.of(context).privateTabPurple,
@@ -435,10 +440,8 @@ class _ExternalLinkHandlingSection extends HookConsumerWidget {
                 if (settings.showIsolatedTabUi)
                   RadioListTile.adaptive(
                     value: TabIntentOpenSetting.isolated,
-                    title: const Text('Isolated'),
-                    subtitle: const Text(
-                      'Open external links in an isolated tab',
-                    ),
+                    title: Text(l10n.tabTypeIsolated),
+                    subtitle: Text(l10n.openExternalLinksIsolatedTab),
                     secondary: Icon(
                       MdiIcons.snowflake,
                       color: AppColors.of(context).isolatedTabTeal,
@@ -460,6 +463,7 @@ class _BookmarkOpenBehaviorSection extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(generalSettingsWithDefaultsProvider);
     final bookmarkOpenSetting = settings.effectiveBookmarkOpenSetting;
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -467,10 +471,10 @@ class _BookmarkOpenBehaviorSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Bookmark Open Behavior'),
-            subtitle: Text('Choose how tapping a bookmark opens it'),
-            leading: Icon(MdiIcons.bookmarkMultiple),
+          ListTile(
+            title: Text(l10n.bookmarkOpenBehavior),
+            subtitle: Text(l10n.bookmarkOpenBehaviorSubtitle),
+            leading: const Icon(MdiIcons.bookmarkMultiple),
             contentPadding: EdgeInsets.zero,
           ),
           RadioGroup(
@@ -487,42 +491,38 @@ class _BookmarkOpenBehaviorSection extends HookConsumerWidget {
             },
             child: Column(
               children: [
-                const RadioListTile.adaptive(
+                RadioListTile.adaptive(
                   value: BookmarkOpenSetting.ask,
-                  title: Text('Prompt'),
-                  subtitle: Text('Ask how the bookmark should open'),
-                  secondary: Icon(MdiIcons.messageQuestion),
+                  title: Text(l10n.prompt),
+                  subtitle: Text(l10n.askHowBookmarkOpens),
+                  secondary: const Icon(MdiIcons.messageQuestion),
                 ),
-                const RadioListTile.adaptive(
+                RadioListTile.adaptive(
                   value: BookmarkOpenSetting.regular,
-                  title: Text('Regular'),
-                  subtitle: Text('Open the bookmark in a regular tab'),
-                  secondary: Icon(MdiIcons.tab),
+                  title: Text(l10n.tabTypeRegular),
+                  subtitle: Text(l10n.openBookmarkRegularTab),
+                  secondary: const Icon(MdiIcons.tab),
                 ),
                 RadioListTile.adaptive(
                   value: BookmarkOpenSetting.private,
-                  title: const Text('Private'),
-                  subtitle: const Text('Open the bookmark in a private tab'),
+                  title: Text(l10n.tabTypePrivate),
+                  subtitle: Text(l10n.openBookmarkPrivateTab),
                   secondary: Icon(
                     MdiIcons.dominoMask,
                     color: AppColors.of(context).privateTabPurple,
                   ),
                 ),
-                const RadioListTile.adaptive(
+                RadioListTile.adaptive(
                   value: BookmarkOpenSetting.customTab,
-                  title: Text('Custom Tab'),
-                  subtitle: Text(
-                    'Open the bookmark in a lightweight custom tab',
-                  ),
-                  secondary: Icon(MdiIcons.applicationOutline),
+                  title: Text(l10n.customTab),
+                  subtitle: Text(l10n.openBookmarkCustomTab),
+                  secondary: const Icon(MdiIcons.applicationOutline),
                 ),
                 if (settings.showIsolatedTabUi)
                   RadioListTile.adaptive(
                     value: BookmarkOpenSetting.isolated,
-                    title: const Text('Isolated'),
-                    subtitle: const Text(
-                      'Open the bookmark in an isolated tab',
-                    ),
+                    title: Text(l10n.tabTypeIsolated),
+                    subtitle: Text(l10n.openBookmarkIsolatedTab),
                     secondary: Icon(
                       MdiIcons.snowflake,
                       color: AppColors.of(context).isolatedTabTeal,
@@ -545,6 +545,7 @@ class _TabListDirectionSection extends HookConsumerWidget {
     final direction = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.tabListDirection),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -552,27 +553,25 @@ class _TabListDirectionSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Tab List Direction'),
-            subtitle: Text(
-              'Choose whether the newest tab appears at the top or bottom of the tab list',
-            ),
-            leading: Icon(MdiIcons.formatListBulleted),
+          ListTile(
+            title: Text(l10n.tabListDirection),
+            subtitle: Text(l10n.tabListDirectionSubtitle),
+            leading: const Icon(MdiIcons.formatListBulleted),
             contentPadding: EdgeInsets.zero,
           ),
           Center(
             child: SegmentedButton(
               showSelectedIcon: false,
-              segments: const [
+              segments: [
                 ButtonSegment(
                   value: TabDirection.newestFirst,
-                  label: Text('Newest first'),
-                  icon: Icon(MdiIcons.arrowCollapseUp),
+                  label: Text(l10n.newestFirst),
+                  icon: const Icon(MdiIcons.arrowCollapseUp),
                 ),
                 ButtonSegment(
                   value: TabDirection.oldestFirst,
-                  label: Text('Oldest first'),
-                  icon: Icon(MdiIcons.arrowCollapseDown),
+                  label: Text(l10n.oldestFirst),
+                  icon: const Icon(MdiIcons.arrowCollapseDown),
                 ),
               ],
               selected: {direction},
@@ -600,6 +599,7 @@ class _TabBarDirectionSection extends HookConsumerWidget {
     final direction = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.tabBarDirection),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -607,27 +607,25 @@ class _TabBarDirectionSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Tab Bar Direction'),
-            subtitle: Text(
-              'Choose whether the newest tab appears on the left or right of the quick switcher',
-            ),
-            leading: Icon(MdiIcons.reorderHorizontal),
+          ListTile(
+            title: Text(l10n.tabBarDirection),
+            subtitle: Text(l10n.tabBarDirectionSubtitle),
+            leading: const Icon(MdiIcons.reorderHorizontal),
             contentPadding: EdgeInsets.zero,
           ),
           Center(
             child: SegmentedButton(
               showSelectedIcon: false,
-              segments: const [
+              segments: [
                 ButtonSegment(
                   value: TabDirection.newestFirst,
-                  label: Text('Newest first'),
-                  icon: Icon(MdiIcons.arrowCollapseLeft),
+                  label: Text(l10n.newestFirst),
+                  icon: const Icon(MdiIcons.arrowCollapseLeft),
                 ),
                 ButtonSegment(
                   value: TabDirection.oldestFirst,
-                  label: Text('Oldest first'),
-                  icon: Icon(MdiIcons.arrowCollapseRight),
+                  label: Text(l10n.oldestFirst),
+                  icon: const Icon(MdiIcons.arrowCollapseRight),
                 ),
               ],
               selected: {direction},
@@ -657,12 +655,11 @@ class _CreateChildTabsTile extends HookConsumerWidget {
         (s) => s.createChildTabsOption,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Create Child Tabs'),
-      subtitle: const Text(
-        'Display a button to create a child tab under the current tab (tree view only)',
-      ),
+      title: Text(l10n.createChildTabs),
+      subtitle: Text(l10n.createChildTabsSubtitle),
       secondary: const Icon(MdiIcons.fileTree),
       value: createChildTabsOption,
       onChanged: (value) async {
@@ -685,10 +682,11 @@ class _ShowContainerUiTile extends HookConsumerWidget {
     final showContainerUi = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.showContainerUi),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Show Container UI'),
-      subtitle: const Text('Show container selectors, menus, and management'),
+      title: Text(l10n.showContainerUi),
+      subtitle: Text(l10n.showContainerUiSubtitle),
       secondary: const Icon(MdiIcons.folder),
       value: showContainerUi,
       onChanged: (value) async {
@@ -725,10 +723,11 @@ class _ShowIsolatedTabUiTile extends HookConsumerWidget {
     final showIsolatedTabUi = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.showIsolatedTabUi),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Show Isolated Tab UI'),
-      subtitle: const Text('Show isolated-tab creation options in the UI'),
+      title: Text(l10n.showIsolatedTabUi),
+      subtitle: Text(l10n.showIsolatedTabUiSubtitle),
       secondary: Icon(
         MdiIcons.snowflake,
         color: AppColors.of(context).isolatedTabTeal,
@@ -777,6 +776,7 @@ class _BackgroundTabOpenSection extends HookConsumerWidget {
         (s) => s.backgroundTabOpenAction,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -784,13 +784,10 @@ class _BackgroundTabOpenSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Background Tab Behavior'),
-            subtitle: Text(
-              'Applies when an action opens a new tab in the background, e.g. '
-              '"Open in new tab" or cloning a tab',
-            ),
-            leading: Icon(MdiIcons.tabPlus),
+          ListTile(
+            title: Text(l10n.backgroundTabBehavior),
+            subtitle: Text(l10n.backgroundTabBehaviorSubtitle),
+            leading: const Icon(MdiIcons.tabPlus),
             contentPadding: EdgeInsets.zero,
           ),
           RadioGroup(
@@ -805,20 +802,17 @@ class _BackgroundTabOpenSection extends HookConsumerWidget {
                     );
               }
             },
-            child: const Column(
+            child: Column(
               children: [
                 RadioListTile.adaptive(
                   value: BackgroundTabOpenAction.prompt,
-                  title: Text('Stay and Offer to Switch'),
-                  subtitle: Text(
-                    'Keep the current tab and show a notice with a Switch '
-                    'action',
-                  ),
+                  title: Text(l10n.stayAndOfferToSwitch),
+                  subtitle: Text(l10n.stayAndOfferToSwitchSubtitle),
                 ),
                 RadioListTile.adaptive(
                   value: BackgroundTabOpenAction.switchImmediately,
-                  title: Text('Switch Immediately'),
-                  subtitle: Text('Jump straight to the newly opened tab'),
+                  title: Text(l10n.switchImmediately),
+                  subtitle: Text(l10n.switchImmediatelySubtitle),
                 ),
               ],
             ),
@@ -837,6 +831,7 @@ class _TabBarSwipeBehaviorSection extends HookConsumerWidget {
     final tabBarSwipeAction = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.tabBarSwipeAction),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -844,9 +839,9 @@ class _TabBarSwipeBehaviorSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Tab Bar Swipe Behavior'),
-            leading: Icon(MdiIcons.gestureSwipeHorizontal),
+          ListTile(
+            title: Text(l10n.tabBarSwipeBehavior),
+            leading: const Icon(MdiIcons.gestureSwipeHorizontal),
             contentPadding: EdgeInsets.zero,
           ),
           RadioGroup(
@@ -861,21 +856,17 @@ class _TabBarSwipeBehaviorSection extends HookConsumerWidget {
                     );
               }
             },
-            child: const Column(
+            child: Column(
               children: [
                 RadioListTile.adaptive(
                   value: TabBarSwipeAction.switchLastOpened,
-                  title: Text('Switch to Last Used Tab'),
-                  subtitle: Text(
-                    'Swipe to toggle between current and previously opened tab',
-                  ),
+                  title: Text(l10n.switchToLastUsedTab),
+                  subtitle: Text(l10n.switchToLastUsedTabSubtitle),
                 ),
                 RadioListTile.adaptive(
                   value: TabBarSwipeAction.navigateOrderedTabs,
-                  title: Text('Navigate Sequential Tabs'),
-                  subtitle: Text(
-                    'Swipe left/right to move through tabs in order',
-                  ),
+                  title: Text(l10n.navigateSequentialTabs),
+                  subtitle: Text(l10n.navigateSequentialTabsSubtitle),
                 ),
               ],
             ),
@@ -904,6 +895,7 @@ class _SequentialTabNavigationSection extends HookConsumerWidget {
     final showContainerUi = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.showContainerUi),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -911,22 +903,16 @@ class _SequentialTabNavigationSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Sequential Tab Navigation'),
-            subtitle: Text(
-              'Applies to the tab bar swipe and the next/previous tab gestures',
-            ),
-            leading: Icon(MdiIcons.swapHorizontal),
+          ListTile(
+            title: Text(l10n.sequentialTabNavigation),
+            subtitle: Text(l10n.sequentialTabNavigationSubtitle),
+            leading: const Icon(MdiIcons.swapHorizontal),
             contentPadding: EdgeInsets.zero,
           ),
           if (showContainerUi)
             SwitchListTile.adaptive(
-              title: const Text('Continue Into Next Container'),
-              subtitle: const Text(
-                'Stepping past the first or last tab of a container moves into '
-                'the neighbouring one. When off, navigation stays inside the '
-                'current container.',
-              ),
+              title: Text(l10n.continueIntoNextContainer),
+              subtitle: Text(l10n.continueIntoNextContainerSubtitle),
               secondary: const Icon(MdiIcons.folderMultipleOutline),
               contentPadding: EdgeInsets.zero,
               value: crossContainers,
@@ -940,11 +926,8 @@ class _SequentialTabNavigationSection extends HookConsumerWidget {
               },
             ),
           SwitchListTile.adaptive(
-            title: const Text('Loop Around'),
-            subtitle: const Text(
-              'Stepping past the last tab continues at the first one, and the '
-              'other way round.',
-            ),
+            title: Text(l10n.loopAround),
+            subtitle: Text(l10n.loopAroundSubtitle),
             secondary: const Icon(MdiIcons.repeat),
             contentPadding: EdgeInsets.zero,
             value: loop,
@@ -984,6 +967,7 @@ class _AppLinksModeSection extends HookConsumerWidget {
     final rules = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.appLinkRules),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -991,12 +975,10 @@ class _AppLinksModeSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Open Links in Apps'),
-            subtitle: Text(
-              'Choose how links that can be opened in other apps are handled',
-            ),
-            leading: Icon(MdiIcons.openInApp),
+          ListTile(
+            title: Text(l10n.openLinksInApps),
+            subtitle: Text(l10n.openLinksInAppsSubtitle),
+            leading: const Icon(MdiIcons.openInApp),
             contentPadding: EdgeInsets.zero,
           ),
           RadioGroup(
@@ -1008,37 +990,30 @@ class _AppLinksModeSection extends HookConsumerWidget {
                     .save((current) => current.copyWith.appLinksMode(value));
               }
             },
-            child: const Column(
+            child: Column(
               children: [
                 RadioListTile.adaptive(
                   value: AppLinksMode.always,
-                  title: Text('Always'),
-                  subtitle: Text(
-                    'Always open links in their native apps without asking',
-                  ),
+                  title: Text(l10n.always),
+                  subtitle: Text(l10n.alwaysOpenLinksInNativeApps),
                 ),
                 RadioListTile.adaptive(
                   value: AppLinksMode.ask,
-                  title: Text('Ask before opening'),
-                  subtitle: Text('Show a prompt before opening links in apps'),
+                  title: Text(l10n.askBeforeOpening),
+                  subtitle: Text(l10n.askBeforeOpeningLinksInAppsSubtitle),
                 ),
                 RadioListTile.adaptive(
                   value: AppLinksMode.never,
-                  title: Text('Never'),
-                  subtitle: Text(
-                    'Always open links in the browser instead of apps',
-                  ),
+                  title: Text(l10n.never),
+                  subtitle: Text(l10n.alwaysOpenLinksInBrowser),
                 ),
               ],
             ),
           ),
           SwitchListTile.adaptive(
             contentPadding: EdgeInsets.zero,
-            title: const Text('Offer app store fallback'),
-            subtitle: const Text(
-              "When a link points to an app you don't have installed and there "
-              'is no web fallback, offer to open the app store',
-            ),
+            title: Text(l10n.offerAppStoreFallback),
+            subtitle: Text(l10n.offerAppStoreFallbackSubtitle),
             value: marketplaceFallback,
             onChanged: appLinksMode == AppLinksMode.never
                 ? null
@@ -1053,11 +1028,8 @@ class _AppLinksModeSection extends HookConsumerWidget {
           ),
           SwitchListTile.adaptive(
             contentPadding: EdgeInsets.zero,
-            title: const Text('Allow login app callbacks'),
-            subtitle: const Text(
-              'Let apps that opened a Custom Tab receive their login callback, '
-              'even when links are set to never open in apps',
-            ),
+            title: Text(l10n.allowLoginAppCallbacks),
+            subtitle: Text(l10n.allowLoginAppCallbacksSubtitle),
             value: authExceptionsEnabled,
             onChanged: (value) async {
               await ref
@@ -1093,6 +1065,7 @@ class _AppLinkRulesSubsection extends ConsumerWidget {
     if (rules.isEmpty) {
       return const SizedBox.shrink();
     }
+    final l10n = AppLocalizations.of(context)!;
 
     final entries = rules.entries.toList()
       ..sort((a, b) => a.key.compareTo(b.key));
@@ -1101,9 +1074,9 @@ class _AppLinkRulesSubsection extends ConsumerWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.only(top: 16, bottom: 4),
-          child: Text('Remembered site rules'),
+        Padding(
+          padding: const EdgeInsets.only(top: 16, bottom: 4),
+          child: Text(l10n.rememberedSiteRules),
         ),
         for (final MapEntry(:key, :value) in entries)
           ListTile(
@@ -1117,12 +1090,12 @@ class _AppLinkRulesSubsection extends ConsumerWidget {
             title: Text(_displayScope(key)),
             subtitle: Text(
               value.decision == AppLinkRuleDecision.alwaysOpen
-                  ? 'Always open in the app'
-                  : 'Always keep in the browser',
+                  ? l10n.alwaysOpenInApp
+                  : l10n.alwaysKeepInBrowser,
             ),
             trailing: IconButton(
               icon: const Icon(Icons.delete_outline),
-              tooltip: 'Remove rule',
+              tooltip: l10n.removeRule,
               onPressed: () async {
                 await ref
                     .read(saveGeneralSettingsControllerProvider.notifier)
@@ -1147,13 +1120,11 @@ class _GlobalDesktopModeTile extends HookConsumerWidget {
     final globalDesktopMode = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.globalDesktopMode),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Always Request Desktop Site'),
-      subtitle: const Text(
-        'Open new tabs in desktop mode by default. You can still toggle desktop '
-        'mode per tab from the page menu.',
-      ),
+      title: Text(l10n.alwaysRequestDesktopSite),
+      subtitle: Text(l10n.alwaysRequestDesktopSiteSubtitle),
       secondary: const Icon(MdiIcons.monitor),
       value: globalDesktopMode,
       onChanged: (value) async {
@@ -1173,10 +1144,11 @@ class _DesktopModeSitesTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return ListTile(
       leading: const Icon(Icons.desktop_windows),
-      title: const Text('Desktop Mode Sites'),
-      subtitle: const Text('Sites that always load in desktop mode'),
+      title: Text(l10n.desktopModeSites),
+      subtitle: Text(l10n.desktopModeSitesSubtitle),
       trailing: const Icon(Icons.chevron_right),
       onTap: () async {
         await const DesktopModeSitesRoute().push(context);
@@ -1193,10 +1165,11 @@ class _PullToRefreshTile extends HookConsumerWidget {
     final pullToRefreshEnabled = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.pullToRefreshEnabled),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Pull to Refresh'),
-      subtitle: const Text('Swipe down on pages to reload them'),
+      title: Text(l10n.pullToRefresh),
+      subtitle: Text(l10n.pullToRefreshSubtitle),
       secondary: const Icon(MdiIcons.gestureSwipeDown),
       value: pullToRefreshEnabled,
       onChanged: (value) async {
@@ -1219,13 +1192,11 @@ class _CustomTabsTile extends HookConsumerWidget {
     final customTabsEnabled = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.customTabsEnabled),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Custom Tabs'),
-      subtitle: const Text(
-        'Let other apps open links in a lightweight in-app tab. When off, '
-        'these links and shared URLs open as normal tabs in the main browser.',
-      ),
+      title: Text(l10n.customTabs),
+      subtitle: Text(l10n.customTabsBrowsingSubtitle),
       secondary: const Icon(Icons.web_asset),
       value: customTabsEnabled,
       onChanged: (value) async {
@@ -1248,12 +1219,11 @@ class _DoubleBackCloseTabTile extends HookConsumerWidget {
     final doubleBackCloseTab = ref.watch(
       generalSettingsWithDefaultsProvider.select((s) => s.doubleBackCloseTab),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Double Back to Close Tab'),
-      subtitle: const Text(
-        'When enabled, press back twice to close the tab. When disabled, back button only navigates page history.',
-      ),
+      title: Text(l10n.doubleBackToCloseTab),
+      subtitle: Text(l10n.doubleBackToCloseTabSubtitle),
       secondary: const Icon(MdiIcons.gestureDoubleTap),
       value: doubleBackCloseTab,
       onChanged: (value) async {
@@ -1278,12 +1248,11 @@ class _AllowNonManifestPwaInstallTile extends HookConsumerWidget {
         (s) => s.allowNonManifestPwaInstall,
       ),
     );
+    final l10n = AppLocalizations.of(context)!;
 
     return SwitchListTile.adaptive(
-      title: const Text('Install Sites as Apps'),
-      subtitle: const Text(
-        'Allow installing websites without a PWA manifest as standalone apps',
-      ),
+      title: Text(l10n.installSitesAsApps),
+      subtitle: Text(l10n.installSitesAsAppsSubtitle),
       secondary: const Icon(Icons.add_to_home_screen),
       value: allowNonManifestPwaInstall,
       onChanged: (value) async {
@@ -1303,10 +1272,11 @@ class _UrlCleanerSettingsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return ListTile(
       leading: const Icon(MdiIcons.broom),
-      title: const Text('URL Cleaner'),
-      subtitle: const Text('Tracking removal rules and catalog updates'),
+      title: Text(l10n.urlCleaner),
+      subtitle: Text(l10n.urlCleanerBrowsingSubtitle),
       trailing: const Icon(Icons.chevron_right),
       onTap: () async {
         await UrlCleanerSettingsRoute().push(context);
@@ -1320,10 +1290,11 @@ class _UnshortenerSettingsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return ListTile(
       leading: const Icon(MdiIcons.linkVariant),
-      title: const Text('Unshortener'),
-      subtitle: const Text('Short link resolver and API token'),
+      title: Text(l10n.unshortener),
+      subtitle: Text(l10n.unshortenerSubtitle),
       trailing: const Icon(Icons.chevron_right),
       onTap: () async {
         await UnshortenerSettingsRoute().push(context);

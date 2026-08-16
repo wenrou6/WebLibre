@@ -60,13 +60,14 @@ import 'package:weblibre/features/user/domain/presentation/dialogs/quit_browser_
 import 'package:weblibre/features/user/domain/repositories/engine_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/features/web_search/domain/controllers/sandbox_capture_controller.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/utils/exit_app.dart';
 import 'package:weblibre/utils/move_to_background.dart';
 import 'package:weblibre/utils/ui_helper.dart' as ui_helper;
 
 class ToolbarButtonDefinition {
   final ToolbarButtonSpec spec;
-  final String label;
+  final String Function(AppLocalizations l10n) label;
   final IconData icon;
   final bool Function(ContextualToolbarScope scope, WidgetRef ref)?
   isPrimaryAvailable;
@@ -76,7 +77,7 @@ class ToolbarButtonDefinition {
     WidgetRef ref,
   )
   builder;
-  final List<String> longPressActions;
+  final List<String Function(AppLocalizations l10n)> longPressActions;
 
   const ToolbarButtonDefinition({
     required this.spec,
@@ -104,7 +105,7 @@ bool _isReloadButtonVisible(WidgetRef ref, ToolbarConfigLocation location) {
 final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ToolbarButtonDefinition(
     spec: backToolbarButtonSpec,
-    label: 'Back',
+    label: (l10n) => l10n.back,
     icon: Icons.arrow_back,
     isPrimaryAvailable: (scope, ref) {
       final canGoBack = scope.historyState.canGoBack;
@@ -114,7 +115,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
       return canGoBack ||
           (isLoading && !_isReloadButtonVisible(ref, scope.location));
     },
-    longPressActions: ['History Menu (Previous pages)'],
+    longPressActions: [(l10n) => l10n.historyMenuPreviousPages],
     builder: (scope, context, ref) {
       if (scope.isPreview) {
         return NavigateBackButtonView(
@@ -133,10 +134,10 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: forwardToolbarButtonSpec,
-    label: 'Forward',
+    label: (l10n) => l10n.forward,
     icon: Icons.arrow_forward,
     isPrimaryAvailable: (scope, ref) => scope.historyState.canGoForward,
-    longPressActions: ['History Menu (Forward pages)'],
+    longPressActions: [(l10n) => l10n.historyMenuForwardPages],
     builder: (scope, context, ref) {
       if (scope.isPreview) {
         return NavigateForwardButtonView(
@@ -150,11 +151,11 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: homeToolbarButtonSpec,
-    label: 'Home',
+    label: (l10n) => l10n.home,
     icon: Icons.home_outlined,
     builder: (scope, context, ref) {
       return IconButton(
-        tooltip: 'Home',
+        tooltip: AppLocalizations.of(context)!.home,
         onPressed: scope.isPreview
             ? () {}
             : () {
@@ -166,7 +167,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: historyToolbarButtonSpec,
-    label: 'History',
+    label: (l10n) => l10n.history,
     icon: Icons.history,
     builder: (scope, context, ref) {
       return IconButton(
@@ -181,22 +182,25 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: bookmarksToolbarButtonSpec,
-    label: 'Bookmarks',
+    label: (l10n) => l10n.bookmarks,
     icon: MdiIcons.bookmarkMultiple,
-    longPressActions: ['Add Bookmark', 'Remove Bookmark'],
+    longPressActions: [
+      (l10n) => l10n.addBookmark,
+      (l10n) => l10n.removeBookmark,
+    ],
     builder: (scope, context, ref) => _BookmarkToolbarButton(scope: scope),
   ),
   ToolbarButtonDefinition(
     spec: bookmarkToggleToolbarButtonSpec,
-    label: 'Bookmark',
+    label: (l10n) => l10n.bookmark,
     icon: Icons.bookmark_border,
-    longPressActions: ['Open Bookmarks'],
+    longPressActions: [(l10n) => l10n.openBookmarks],
     builder: (scope, context, ref) =>
         _BookmarkToggleToolbarButton(scope: scope),
   ),
   ToolbarButtonDefinition(
     spec: shareToolbarButtonSpec,
-    label: 'Share',
+    label: (l10n) => l10n.share,
     icon: Icons.share,
     isPrimaryAvailable: (scope, ref) => scope.selectedTabId != null,
     builder: (scope, context, ref) => scope.isPreview
@@ -205,13 +209,13 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: addTabToolbarButtonSpec,
-    label: 'New Tab',
+    label: (l10n) => l10n.newTab,
     icon: MdiIcons.tabPlus,
     longPressActions: [
-      'Add Regular Tab',
-      'Add Child Tab',
-      'Add Private Tab',
-      'Add Isolated Tab',
+      (l10n) => l10n.addRegularTab,
+      (l10n) => l10n.addChildTab,
+      (l10n) => l10n.addPrivateTab,
+      (l10n) => l10n.addIsolatedTab,
     ],
     builder: (scope, context, ref) => scope.isPreview
         ? AddTabButtonView(onPressed: () {}, onLongPress: () {})
@@ -219,13 +223,13 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: tabsCountToolbarButtonSpec,
-    label: 'Tabs',
+    label: (l10n) => l10n.tabs,
     icon: MdiIcons.tab,
     longPressActions: [
-      'Add Regular Tab',
-      'Add Child Tab',
-      'Add Private Tab',
-      'Add Isolated Tab',
+      (l10n) => l10n.addRegularTab,
+      (l10n) => l10n.addChildTab,
+      (l10n) => l10n.addPrivateTab,
+      (l10n) => l10n.addIsolatedTab,
     ],
     builder: (scope, context, ref) => scope.isPreview
         ? TabsCountButtonView(
@@ -249,24 +253,24 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: navigationMenuToolbarButtonSpec,
-    label: 'Menu',
+    label: (l10n) => l10n.menu,
     icon: Icons.more_vert,
-    longPressActions: ['Open Settings'],
+    longPressActions: [(l10n) => l10n.openSettings],
     builder: (scope, context, ref) => scope.isPreview
         ? NavigationMenuButtonView(onTap: () {})
         : NavigationMenuButton(selectedTabId: scope.selectedTabId),
   ),
   ToolbarButtonDefinition(
     spec: reloadToolbarButtonSpec,
-    label: 'Reload',
+    label: (l10n) => l10n.reload,
     icon: Icons.refresh,
-    longPressActions: ['Hard Refresh (bypass cache)'],
+    longPressActions: [(l10n) => l10n.hardRefreshBypassCache],
     isPrimaryAvailable: (scope, ref) => scope.selectedTabId != null,
     builder: (scope, context, ref) => _ReloadToolbarButton(scope: scope),
   ),
   ToolbarButtonDefinition(
     spec: readerModeToolbarButtonSpec,
-    label: 'Reader Mode',
+    label: (l10n) => l10n.readerMode,
     icon: MdiIcons.bookOpenOutline,
     isPrimaryAvailable: (scope, ref) {
       final readerableState =
@@ -297,7 +301,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: desktopToolbarButtonSpec,
-    label: 'Desktop Site',
+    label: (l10n) => l10n.desktopSite,
     icon: Icons.desktop_windows,
     isPrimaryAvailable: (scope, ref) => scope.selectedTabId != null,
     builder: (scope, context, ref) {
@@ -312,9 +316,9 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: translationToolbarButtonSpec,
-    label: 'Translate',
+    label: (l10n) => l10n.translate,
     icon: Icons.translate,
-    longPressActions: ['Show Translation Options'],
+    longPressActions: [(l10n) => l10n.showTranslationOptions],
     isPrimaryAvailable: (scope, ref) {
       if (scope.selectedTabId == null) {
         return false;
@@ -333,7 +337,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: findInPageToolbarButtonSpec,
-    label: 'Find in Page',
+    label: (l10n) => l10n.findInPage,
     icon: Icons.search,
     isPrimaryAvailable: (scope, ref) => scope.selectedTabId != null,
     builder: (scope, context, ref) {
@@ -352,15 +356,18 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: closeTabToolbarButtonSpec,
-    label: 'Close Tab',
+    label: (l10n) => l10n.closeTab,
     icon: MdiIcons.tabMinus,
-    longPressActions: ['Close Others', 'Close from Same Host'],
+    longPressActions: [
+      (l10n) => l10n.closeOthers,
+      (l10n) => l10n.closeFromSameHost,
+    ],
     isPrimaryAvailable: (scope, ref) => scope.selectedTabId != null,
     builder: (scope, context, ref) => _CloseTabToolbarButton(scope: scope),
   ),
   ToolbarButtonDefinition(
     spec: inputUrlToolbarButtonSpec,
-    label: 'Address Bar',
+    label: (l10n) => l10n.addressBar,
     icon: Icons.edit,
     builder: (scope, context, ref) {
       return IconButton(
@@ -389,12 +396,12 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: duplicateTabToolbarButtonSpec,
-    label: 'Duplicate Tab',
+    label: (l10n) => l10n.duplicateTab,
     icon: MdiIcons.contentDuplicate,
     longPressActions: [
-      'Clone as Regular',
-      'Clone as Private',
-      'Clone as Isolated',
+      (l10n) => l10n.cloneAsRegular,
+      (l10n) => l10n.cloneAsPrivate,
+      (l10n) => l10n.cloneAsIsolated,
     ],
     isPrimaryAvailable: (scope, ref) => scope.selectedTabId != null,
     builder: (scope, context, ref) {
@@ -405,7 +412,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: increaseFontToolbarButtonSpec,
-    label: 'Increase Font',
+    label: (l10n) => l10n.increaseFont,
     icon: MdiIcons.formatFontSizeIncrease,
     builder: (scope, context, ref) {
       return IconButton(
@@ -418,7 +425,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: decreaseFontToolbarButtonSpec,
-    label: 'Decrease Font',
+    label: (l10n) => l10n.decreaseFont,
     icon: MdiIcons.formatFontSizeDecrease,
     builder: (scope, context, ref) {
       return IconButton(
@@ -431,7 +438,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: moveToBackgroundToolbarButtonSpec,
-    label: 'Background',
+    label: (l10n) => l10n.background,
     icon: MdiIcons.arrowCollapseDown,
     builder: (scope, context, ref) {
       return IconButton(
@@ -442,7 +449,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: toggleGesturesToolbarButtonSpec,
-    label: 'Gestures',
+    label: (l10n) => l10n.gestures,
     icon: MdiIcons.gestureSwipe,
     builder: (scope, context, ref) {
       final on = ref.watch(
@@ -450,7 +457,9 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
       );
       return IconButton(
         isSelected: on,
-        tooltip: on ? 'Disable gestures' : 'Enable gestures',
+        tooltip: on
+            ? AppLocalizations.of(context)!.disableGestures
+            : AppLocalizations.of(context)!.enableGestures,
         onPressed: scope.isPreview
             ? () {}
             : () async {
@@ -470,11 +479,11 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: hideTabBarToolbarButtonSpec,
-    label: 'Hide Tab Bar',
+    label: (l10n) => l10n.hideTabBar,
     icon: MdiIcons.dockBottom,
     builder: (scope, context, ref) {
       return IconButton(
-        tooltip: 'Hide tab bar',
+        tooltip: AppLocalizations.of(context)!.hideTabBar,
         // Same dismissal the swipe on the bar performs; the dock FAB brings it
         // back afterwards, since this button goes away with the bar.
         onPressed: scope.isPreview
@@ -494,9 +503,9 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: pageUpToolbarButtonSpec,
-    label: 'Page Up',
+    label: (l10n) => l10n.pageUp,
     icon: MdiIcons.chevronDoubleUp,
-    longPressActions: ['Scroll to Top'],
+    longPressActions: [(l10n) => l10n.scrollToTop],
     isPrimaryAvailable: (scope, ref) => scope.selectedTabId != null,
     builder: (scope, context, ref) {
       return IconButton(
@@ -526,9 +535,9 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: pageDownToolbarButtonSpec,
-    label: 'Page Down',
+    label: (l10n) => l10n.pageDown,
     icon: MdiIcons.chevronDoubleDown,
-    longPressActions: ['Scroll to Bottom'],
+    longPressActions: [(l10n) => l10n.scrollToBottom],
     isPrimaryAvailable: (scope, ref) => scope.selectedTabId != null,
     builder: (scope, context, ref) {
       return IconButton(
@@ -558,7 +567,7 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: fontToolbarButtonSpec,
-    label: 'Text Size',
+    label: (l10n) => l10n.textSize,
     icon: MdiIcons.formatSize,
     builder: (scope, context, ref) {
       if (scope.isPreview) {
@@ -572,9 +581,9 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: extensionShortcutToolbarButtonSpec,
-    label: 'Extensions',
+    label: (l10n) => l10n.extensions,
     icon: MdiIcons.puzzle,
-    longPressActions: ['Extensions Menu'],
+    longPressActions: [(l10n) => l10n.extensionsMenu],
     isPrimaryAvailable: (scope, ref) => ref.read(
       webExtensionsStateProvider(
         WebExtensionActionType.browser,
@@ -589,9 +598,9 @@ final List<ToolbarButtonDefinition> toolbarButtonRegistry = [
   ),
   ToolbarButtonDefinition(
     spec: quitToolbarButtonSpec,
-    label: 'Quit',
+    label: (l10n) => l10n.quit,
     icon: MdiIcons.power,
-    longPressActions: ['Quit without confirmation'],
+    longPressActions: [(l10n) => l10n.quitWithoutConfirmation],
     builder: (scope, context, ref) {
       return IconButton(
         onPressed: scope.isPreview
