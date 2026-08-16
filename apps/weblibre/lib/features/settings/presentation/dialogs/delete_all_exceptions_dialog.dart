@@ -18,26 +18,26 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Shows a confirmation dialog for deleting all tracking protection exceptions.
 ///
 /// Returns true if the user confirms deletion, false otherwise.
 Future<bool?> showDeleteAllExceptionsDialog(BuildContext context) {
+  final l10n = AppLocalizations.of(context)!;
   return showDialog<bool>(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Delete All Exceptions?'),
-      content: const Text(
-        'This will re-enable tracking protection for all exception sites.',
-      ),
+      title: Text(l10n.deleteAllExceptionsQuestion),
+      content: Text(l10n.reenableTrackingProtectionAllExceptionSites),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context, false),
-          child: const Text('Cancel'),
+          child: Text(l10n.cancel),
         ),
         TextButton(
           onPressed: () => Navigator.pop(context, true),
-          child: const Text('Delete'),
+          child: Text(l10n.delete),
         ),
       ],
     ),

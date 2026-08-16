@@ -25,6 +25,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/features/user/data/models/engine_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/engine_settings.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/utils/exit_app.dart';
 import 'package:weblibre/utils/form_validators.dart';
 
@@ -35,6 +36,7 @@ class AddonCollectionScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final formKey = useMemoized(() => GlobalKey<FormState>());
 
     final addonCollectionSetting = ref.watch(
@@ -59,7 +61,7 @@ class AddonCollectionScreen extends HookConsumerWidget {
     );
 
     return SettingsCustomScrollScaffold(
-      title: 'Custom Extension Collection',
+      title: l10n.customExtensionCollection,
       actions: [
         if (addonCollectionSetting != null)
           IconButton(
@@ -74,6 +76,7 @@ class AddonCollectionScreen extends HookConsumerWidget {
               await exitApp(ref.container);
             },
             icon: const Icon(Icons.delete),
+            tooltip: l10n.delete,
           ),
       ],
       slivers: [
@@ -85,12 +88,11 @@ class AddonCollectionScreen extends HookConsumerWidget {
               child: SettingsSectionList(
                 sections: [
                   SettingsSectionDefinition(
-                    title: 'Collection Source',
+                    title: l10n.collectionSource,
                     entries: [
                       SettingsEntryDefinition(
-                        title: 'Collection configuration',
-                        subtitle:
-                            'Mozilla server, collection owner, and collection name',
+                        title: l10n.collectionConfiguration,
+                        subtitle: l10n.collectionConfigurationSubtitle,
                         keywords: const ['addons', 'collection'],
                         child: Padding(
                           padding: const EdgeInsets.all(16.0),
@@ -98,8 +100,8 @@ class AddonCollectionScreen extends HookConsumerWidget {
                             children: [
                               TextFormField(
                                 controller: serverURLController,
-                                decoration: const InputDecoration(
-                                  label: Text('Server URL'),
+                                decoration: InputDecoration(
+                                  label: Text(l10n.serverUrl),
                                   hintText: _defaultServerUrl,
                                   floatingLabelBehavior:
                                       FloatingLabelBehavior.always,
@@ -116,8 +118,8 @@ class AddonCollectionScreen extends HookConsumerWidget {
                               const SizedBox(height: 8),
                               TextFormField(
                                 controller: collectionUserController,
-                                decoration: const InputDecoration(
-                                  label: Text('Collection User'),
+                                decoration: InputDecoration(
+                                  label: Text(l10n.collectionUser),
                                   floatingLabelBehavior:
                                       FloatingLabelBehavior.always,
                                 ),
@@ -126,8 +128,8 @@ class AddonCollectionScreen extends HookConsumerWidget {
                               const SizedBox(height: 8),
                               TextFormField(
                                 controller: collectionNameController,
-                                decoration: const InputDecoration(
-                                  label: Text('Collection Name'),
+                                decoration: InputDecoration(
+                                  label: Text(l10n.collectionName),
                                   floatingLabelBehavior:
                                       FloatingLabelBehavior.always,
                                 ),
@@ -140,12 +142,11 @@ class AddonCollectionScreen extends HookConsumerWidget {
                     ],
                   ),
                   SettingsSectionDefinition(
-                    title: 'Actions',
+                    title: l10n.actions,
                     entries: [
                       SettingsEntryDefinition(
-                        title: 'Save & Restart Browser',
-                        subtitle:
-                            'Apply the custom collection and restart the browser',
+                        title: l10n.saveAndRestartBrowser,
+                        subtitle: l10n.applyCustomCollectionAndRestartBrowser,
                         keywords: const ['restart'],
                         child: Padding(
                           padding: const EdgeInsets.all(16.0),
@@ -179,7 +180,7 @@ class AddonCollectionScreen extends HookConsumerWidget {
                                   await exitApp(ref.container);
                                 }
                               },
-                              child: const Text('Save & Restart Browser'),
+                              child: Text(l10n.saveAndRestartBrowser),
                             ),
                           ),
                         ),

@@ -21,47 +21,54 @@ import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
-const List<SettingsSectionDefinition> proxySettingsSections = [
-  SettingsSectionDefinition(
-    title: 'Proxy',
-    entries: [
-      SettingsEntryDefinition(
-        title: 'Proxy Connections',
-        subtitle: 'Manage proxy profiles and connections',
-        keywords: [
-          'sing-box',
-          'socks',
-          'vpn',
-          'wireguard',
-          'tor',
-          'onion',
-          'bridges',
-          'obfs4',
-          'snowflake',
-        ],
-        child: _ProxyConnectionsTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Proxy Routing',
-        subtitle: 'Choose which proxy carries regular and private tabs',
-        keywords: ['routing', 'container'],
-        child: _ProxyRoutingTile(),
-      ),
-    ],
-  ),
-];
+List<SettingsSectionDefinition> buildProxySettingsSections(
+  BuildContext context,
+) {
+  final l10n = AppLocalizations.of(context)!;
+  return [
+    SettingsSectionDefinition(
+      title: l10n.proxy,
+      entries: [
+        SettingsEntryDefinition(
+          title: l10n.proxyConnections,
+          subtitle: l10n.manageProxyProfilesAndConnections,
+          keywords: const [
+            'sing-box',
+            'socks',
+            'vpn',
+            'wireguard',
+            'tor',
+            'onion',
+            'bridges',
+            'obfs4',
+            'snowflake',
+          ],
+          child: _ProxyConnectionsTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.proxyRouting,
+          subtitle: l10n.chooseProxyForRegularAndPrivateTabs,
+          keywords: const ['routing', 'container'],
+          child: _ProxyRoutingTile(),
+        ),
+      ],
+    ),
+  ];
+}
 
 class ProxySettingsScreen extends StatelessWidget {
   const ProxySettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SettingsDetailScaffold(
-      title: 'Proxy',
-      subtitle: 'Manage proxy connections and choose which tabs use them.',
+    final l10n = AppLocalizations.of(context)!;
+    return SettingsDetailScaffold(
+      title: l10n.proxy,
+      subtitle: l10n.proxySettingsSubtitle,
       icon: MdiIcons.lanConnect,
-      sections: proxySettingsSections,
+      sections: buildProxySettingsSections(context),
     );
   }
 }
@@ -71,10 +78,11 @@ class _ProxyConnectionsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return ListTile(
       leading: const Icon(MdiIcons.lanConnect),
-      title: const Text('Proxy Connections'),
-      subtitle: const Text('Manage proxy profiles and connections'),
+      title: Text(l10n.proxyConnections),
+      subtitle: Text(l10n.manageProxyProfilesAndConnections),
       trailing: const Icon(Icons.chevron_right),
       contentPadding: const EdgeInsets.symmetric(
         vertical: 8.0,
@@ -92,12 +100,11 @@ class _ProxyRoutingTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return ListTile(
       leading: const Icon(Icons.route_outlined),
-      title: const Text('Proxy Routing'),
-      subtitle: const Text(
-        'Choose which proxy carries regular and private tabs',
-      ),
+      title: Text(l10n.proxyRouting),
+      subtitle: Text(l10n.chooseProxyForRegularAndPrivateTabs),
       trailing: const Icon(Icons.chevron_right),
       contentPadding: const EdgeInsets.symmetric(
         vertical: 8.0,

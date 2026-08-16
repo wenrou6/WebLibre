@@ -22,6 +22,31 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/geckoview/features/search/domain/providers/search_module_order.dart';
 import 'package:weblibre/features/geckoview/features/search/domain/providers/search_modules_view.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+
+String _moduleLabel(AppLocalizations l10n, SearchModuleType type) {
+  return switch (type) {
+    SearchModuleType.recentSearches => l10n.recentSearches,
+    SearchModuleType.searchProviders => l10n.moduleSearchProviders,
+    SearchModuleType.searchSuggestions => l10n.moduleSuggestions,
+    SearchModuleType.tabs => l10n.moduleTabs,
+    SearchModuleType.articles => l10n.moduleArticles,
+    SearchModuleType.bookmarks => l10n.bookmarks,
+    SearchModuleType.history => l10n.moduleHistoryEngine,
+    SearchModuleType.localHistory => l10n.moduleLocalContent,
+    SearchModuleType.combinedHistory => l10n.history,
+    SearchModuleType.popularSites => l10n.modulePopularSites,
+    SearchModuleType.historyHighlights => l10n.moduleHistoryHighlights,
+    SearchModuleType.topSites => l10n.moduleShortcuts,
+    SearchModuleType.recentHistory => l10n.moduleRecentHistory,
+    SearchModuleType.recentArticles => l10n.moduleRecentArticles,
+    SearchModuleType.recentTabs => l10n.moduleRecentTabs,
+    SearchModuleType.containers => l10n.containers,
+    SearchModuleType.frequentBangs => l10n.moduleFrequentBangs,
+    SearchModuleType.quote => l10n.moduleQuote,
+    SearchModuleType.quickActions => l10n.moduleQuickActions,
+  };
+}
 
 /// Reorders and toggles the sections of one [ModuleSurface].
 ///
@@ -40,18 +65,31 @@ class ModuleSurfaceSettingsScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final entries = ref.watch(searchModuleOrderProvider(surface));
     final notifier = ref.read(searchModuleOrderProvider(surface).notifier);
     final colorScheme = Theme.of(context).colorScheme;
 
+    final localizedDefaultTitle = switch (surface) {
+      ModuleSurface.home => l10n.customizeHome,
+      ModuleSurface.newTab => l10n.customizeNewTab,
+      ModuleSurface.search => l10n.customizeSearch,
+    };
+    final screenTitle = switch (title) {
+      'Customize Home' ||
+      'Customize New Tab' ||
+      'Customize Search' => localizedDefaultTitle,
+      _ => title,
+    };
+
     return SettingsCustomScrollScaffold(
-      title: title,
+      title: screenTitle,
       actions: [
         MenuAnchor(
           menuChildren: [
             MenuItemButton(
               onPressed: notifier.resetToDefaults,
-              child: const Text('Reset to Defaults'),
+              child: Text(l10n.resetToDefaults),
             ),
           ],
           builder: (context, controller, child) => IconButton(
@@ -66,8 +104,7 @@ class ModuleSurfaceSettingsScreen extends HookConsumerWidget {
           child: Padding(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
             child: Text(
-              'Drag to reorder. Switch a section off to hide it here without '
-              'affecting the other page.',
+              l10n.moduleSurfaceReorderDescription,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 color: colorScheme.onSurfaceVariant,
               ),
@@ -85,7 +122,7 @@ class ModuleSurfaceSettingsScreen extends HookConsumerWidget {
               color: Colors.transparent,
               child: ListTile(
                 title: Text(
-                  entry.type.label,
+                  _moduleLabel(l10n, entry.type),
                   style: TextStyle(
                     color: entry.visible ? null : colorScheme.onSurfaceVariant,
                   ),

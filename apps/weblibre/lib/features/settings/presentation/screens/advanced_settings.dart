@@ -39,99 +39,106 @@ import 'package:weblibre/features/user/domain/providers.dart';
 import 'package:weblibre/features/user/domain/repositories/cache.dart';
 import 'package:weblibre/features/user/domain/repositories/engine_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/utils/exit_app.dart';
 import 'package:weblibre/utils/ui_helper.dart';
 
-const List<SettingsSectionDefinition> advancedSettingsSections = [
-  SettingsSectionDefinition(
-    title: 'Content & Identity',
-    keywords: ['engine'],
-    entries: [
-      SettingsEntryDefinition(
-        title: 'Enable JavaScript',
-        subtitle: 'Turn website scripting on or off',
-        keywords: ['javascript'],
-        child: _JavaScriptTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Custom User Agent',
-        subtitle: 'Override the browser user agent string',
-        keywords: ['ua'],
-        child: _UserAgentTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Use third party CA certificates',
-        subtitle: 'Allow Android CA store certificates',
-        keywords: ['certificates', 'enterprise roots', 'ca'],
-        child: _EnterpriseRootsTile(),
-      ),
-    ],
-  ),
-  SettingsSectionDefinition(
-    title: 'Experimental',
-    entries: [
-      SettingsEntryDefinition(
-        title: 'Experimental Features',
-        subtitle: 'Low-level runtime features and startup behavior',
-        keywords: ['runtime', 'startup'],
-        child: _ExperimentalSettingsTile(),
-      ),
-    ],
-  ),
-  SettingsSectionDefinition(
-    title: 'Developer Tools',
-    keywords: ['debug'],
-    entries: [
-      SettingsEntryDefinition(
-        title: 'Unmount Engine Off-Screen',
-        subtitle: 'Free the web engine when an overlay is on top',
-        keywords: ['geckoview', 'memory', 'performance', 'suspend'],
-        child: _UnmountGeckoViewOffRouteTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Icon Cache',
-        subtitle: 'Stored favicons',
-        keywords: ['favicons', 'cache'],
-        child: _IconCacheTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'ML Downloads',
-        subtitle: 'Downloaded AI models and runtime files',
-        keywords: ['ai', 'ml', 'models', 'onnx', 'cache'],
-        child: _MlCacheTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Error Logs',
-        subtitle: 'View and copy logs for issue reporting',
-        keywords: ['logs'],
-        child: _ErrorLogsTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Dart VM',
-        subtitle: 'Copy Dart VM service URL',
-        keywords: ['service url'],
-        child: _DartVmTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Reset UI',
-        subtitle: 'Rebuild the entire browser UI',
-        keywords: ['refresh ui'],
-        child: _ResetUITile(),
-      ),
-    ],
-  ),
-];
+List<SettingsSectionDefinition> buildAdvancedSettingsSections(
+  BuildContext context,
+) {
+  final l10n = AppLocalizations.of(context)!;
+  return [
+    SettingsSectionDefinition(
+      title: l10n.contentAndIdentity,
+      keywords: const ['engine'],
+      entries: [
+        SettingsEntryDefinition(
+          title: l10n.enableJavaScript,
+          subtitle: l10n.turnWebsiteScriptingOnOff,
+          keywords: const ['javascript'],
+          child: const _JavaScriptTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.customUserAgent,
+          subtitle: l10n.overrideBrowserUserAgent,
+          keywords: const ['ua'],
+          child: const _UserAgentTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.useThirdPartyCaCertificates,
+          subtitle: l10n.allowAndroidCaStoreCertificates,
+          keywords: const ['certificates', 'enterprise roots', 'ca'],
+          child: const _EnterpriseRootsTile(),
+        ),
+      ],
+    ),
+    SettingsSectionDefinition(
+      title: l10n.experimental,
+      entries: [
+        SettingsEntryDefinition(
+          title: l10n.experimentalFeatures,
+          subtitle: l10n.experimentalFeaturesSubtitle,
+          keywords: const ['runtime', 'startup'],
+          child: const _ExperimentalSettingsTile(),
+        ),
+      ],
+    ),
+    SettingsSectionDefinition(
+      title: l10n.developerTools,
+      keywords: const ['debug'],
+      entries: [
+        SettingsEntryDefinition(
+          title: l10n.unmountEngineOffScreen,
+          subtitle: l10n.freeEngineUnderOverlay,
+          keywords: const ['geckoview', 'memory', 'performance', 'suspend'],
+          child: const _UnmountGeckoViewOffRouteTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.iconCache,
+          subtitle: l10n.storedFavicons,
+          keywords: const ['favicons', 'cache'],
+          child: const _IconCacheTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.mlDownloads,
+          subtitle: l10n.downloadedAiModelsRuntimeFiles,
+          keywords: const ['ai', 'ml', 'models', 'onnx', 'cache'],
+          child: const _MlCacheTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.errorLogs,
+          subtitle: l10n.viewCopyLogsIssueReporting,
+          keywords: const ['logs'],
+          child: const _ErrorLogsTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.dartVm,
+          subtitle: l10n.copyDartVmServiceUrl,
+          keywords: const ['service url'],
+          child: const _DartVmTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.resetUi,
+          subtitle: l10n.rebuildEntireBrowserUi,
+          keywords: const ['refresh ui'],
+          child: const _ResetUITile(),
+        ),
+      ],
+    ),
+  ];
+}
 
 class AdvancedSettingsScreen extends StatelessWidget {
   const AdvancedSettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SettingsDetailScaffold(
-      title: 'Advanced',
-      subtitle: 'Engine behavior, runtime overrides, and developer tools.',
+    final l10n = AppLocalizations.of(context)!;
+    return SettingsDetailScaffold(
+      title: l10n.advanced,
+      subtitle: l10n.advancedSettingsSubtitle,
       icon: MdiIcons.tuneVertical,
-      sections: advancedSettingsSections,
+      sections: buildAdvancedSettingsSections(context),
     );
   }
 }
@@ -141,15 +148,14 @@ class _JavaScriptTile extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final javascriptEnabled = ref.watch(
       engineSettingsWithDefaultsProvider.select((s) => s.javascriptEnabled),
     );
 
     return SwitchListTile.adaptive(
-      title: const Text('Enable JavaScript'),
-      subtitle: const Text(
-        'While turning off JavaScript can boost security, privacy, and speed, it may cause some sites to not work as intended.',
-      ),
+      title: Text(l10n.enableJavaScript),
+      subtitle: Text(l10n.javascriptDisabledWarning),
       // ignore: deprecated_member_use use this icon for now
       secondary: const Icon(MdiIcons.languageJavascript),
       value: javascriptEnabled,
@@ -170,6 +176,7 @@ class _UserAgentTile extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final userAgent = ref.watch(
       engineSettingsWithDefaultsProvider.select((s) => s.userAgent),
     );
@@ -183,8 +190,8 @@ class _UserAgentTile extends HookConsumerWidget {
       leading: const Icon(MdiIcons.cardAccountDetails),
       title: TextField(
         controller: userAgentTextController,
-        decoration: const InputDecoration(
-          labelText: 'Custom User Agent',
+        decoration: InputDecoration(
+          labelText: l10n.customUserAgent,
           floatingLabelBehavior: FloatingLabelBehavior.always,
           hintText: 'Mozilla/5.0 …',
         ),
@@ -213,6 +220,7 @@ class _EnterpriseRootsTile extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final enterpriseRootsEnabled = ref.watch(
       engineSettingsWithDefaultsProvider.select(
         (s) => s.enterpriseRootsEnabled,
@@ -220,10 +228,8 @@ class _EnterpriseRootsTile extends HookConsumerWidget {
     );
 
     return SwitchListTile.adaptive(
-      title: const Text('Use third party CA certificates'),
-      subtitle: const Text(
-        'Allows the use of third party certificates from the Android CA store',
-      ),
+      title: Text(l10n.useThirdPartyCaCertificates),
+      subtitle: Text(l10n.thirdPartyCertificatesAndroidCaStore),
       secondary: const Icon(MdiIcons.certificate),
       value: enterpriseRootsEnabled,
       onChanged: (value) async {
@@ -243,9 +249,10 @@ class _ExperimentalSettingsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return ListTile(
-      title: const Text('Experimental Features'),
-      subtitle: const Text('Low-level runtime features and startup behavior'),
+      title: Text(l10n.experimentalFeatures),
+      subtitle: Text(l10n.experimentalFeaturesSubtitle),
       contentPadding: const EdgeInsets.symmetric(
         vertical: 8.0,
         horizontal: 16.0,
@@ -264,6 +271,7 @@ class _UnmountGeckoViewOffRouteTile extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final unmountGeckoViewOffRoute = ref.watch(
       generalSettingsWithDefaultsProvider.select(
         (s) => s.unmountGeckoViewOffRoute,
@@ -271,13 +279,8 @@ class _UnmountGeckoViewOffRouteTile extends HookConsumerWidget {
     );
 
     return SwitchListTile.adaptive(
-      title: const Text('Unmount Engine Off-Screen'),
-      subtitle: const Text(
-        'Unmount the web engine while a full-screen overlay (settings, tabs, '
-        'search) is on top, freeing its resources. On Android 12 and lower '
-        'this is always done; enabling it applies the same behavior on '
-        'Android 13+, which may cause the page to reload when returning.',
-      ),
+      title: Text(l10n.unmountEngineOffScreen),
+      subtitle: Text(l10n.unmountEngineOffScreenDescription),
       secondary: const Icon(Icons.memory),
       value: unmountGeckoViewOffRoute,
       onChanged: (value) async {
@@ -297,13 +300,14 @@ class _IconCacheTile extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final size = ref.watch(
       iconCacheSizeMegabytesProvider.select((value) => value.value),
     );
 
     return CustomListTile(
-      title: 'Icon Cache',
-      subtitle: 'Stored favicons',
+      title: l10n.iconCache,
+      subtitle: l10n.storedFavicons,
       prefix: Padding(
         padding: const EdgeInsets.only(right: 16.0),
         child: Icon(
@@ -323,7 +327,7 @@ class _IconCacheTile extends HookConsumerWidget {
             children: [
               TableRow(
                 children: [
-                  const Text('Size'),
+                  Text(l10n.size),
                   Text('${size?.toStringAsFixed(2) ?? 0} MB'),
                 ],
               ),
@@ -336,7 +340,7 @@ class _IconCacheTile extends HookConsumerWidget {
           await ref.read(cacheRepositoryProvider.notifier).clearCache();
         },
         icon: const Icon(Icons.delete),
-        label: const Text('Clear'),
+        label: Text(l10n.clear),
       ),
     );
   }
@@ -346,22 +350,20 @@ class _MlCacheTile extends HookWidget {
   const _MlCacheTile();
 
   Future<bool> _confirmClear(BuildContext context) async {
+    final l10n = AppLocalizations.of(context)!;
     final result = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Clear ML downloads?'),
-        content: const Text(
-          'This clears downloaded AI models and ONNX runtime files for this profile. '
-          'They will be downloaded again when needed. Restart WebLibre before retrying ML features.',
-        ),
+        title: Text(l10n.clearMlDownloadsQuestion),
+        content: Text(l10n.clearMlDownloadsDescription),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
           FilledButton(
             onPressed: () => Navigator.of(context).pop(true),
-            child: const Text('Clear'),
+            child: Text(l10n.clear),
           ),
         ],
       ),
@@ -372,11 +374,12 @@ class _MlCacheTile extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final isClearing = useState(false);
 
     return CustomListTile(
-      title: 'ML Downloads',
-      subtitle: 'Downloaded AI models and runtime files',
+      title: l10n.mlDownloads,
+      subtitle: l10n.downloadedAiModelsRuntimeFiles,
       prefix: Padding(
         padding: const EdgeInsets.only(right: 16.0),
         child: Icon(
@@ -398,16 +401,13 @@ class _MlCacheTile extends HookWidget {
                   await GeckoMlService().clearMlCache();
 
                   if (context.mounted) {
-                    showInfoMessage(
-                      context,
-                      'ML downloads cleared. Restart WebLibre before retrying.',
-                    );
+                    showInfoMessage(context, l10n.mlDownloadsCleared);
                   }
                 } catch (e) {
                   if (context.mounted) {
                     showErrorMessage(
                       context,
-                      'Failed to clear ML downloads: $e',
+                      l10n.failedToClearMlDownloads(e.toString()),
                     );
                   }
                 } finally {
@@ -422,7 +422,7 @@ class _MlCacheTile extends HookWidget {
                 child: CircularProgressIndicator(strokeWidth: 2),
               )
             : const Icon(Icons.delete),
-        label: Text(isClearing.value ? 'Clearing' : 'Clear'),
+        label: Text(isClearing.value ? l10n.clearing : l10n.clear),
       ),
     );
   }
@@ -433,13 +433,14 @@ class _ErrorLogsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return ListTile(
       leading: Icon(
         Icons.bug_report,
         color: Theme.of(context).colorScheme.onSurfaceVariant,
       ),
-      title: const Text('Error Logs'),
-      subtitle: const Text('View and copy logs for issue reporting'),
+      title: Text(l10n.errorLogs),
+      subtitle: Text(l10n.viewCopyLogsIssueReporting),
       trailing: const Icon(Icons.chevron_right),
       onTap: () async {
         await ErrorLogsRoute().push(context);
@@ -454,10 +455,11 @@ class _DartVmTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (!kDebugMode) return const SizedBox.shrink();
+    final l10n = AppLocalizations.of(context)!;
 
     return CustomListTile(
-      title: 'Dart VM',
-      subtitle: 'Copy Dart VM service URL',
+      title: l10n.dartVm,
+      subtitle: l10n.copyDartVmServiceUrl,
       prefix: Padding(
         padding: const EdgeInsets.only(right: 16.0),
         child: Icon(
@@ -477,11 +479,11 @@ class _DartVmTile extends StatelessWidget {
           );
 
           if (context.mounted) {
-            showInfoMessage(context, 'Service URL copied');
+            showInfoMessage(context, l10n.serviceUrlCopied);
           }
         },
         icon: const Icon(Icons.copy),
-        label: const Text('Copy'),
+        label: Text(l10n.copy),
       ),
     );
   }
@@ -492,9 +494,10 @@ class _ResetUITile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     return CustomListTile(
-      title: 'Reset UI',
-      subtitle: 'Rebuild the entire browser UI',
+      title: l10n.resetUi,
+      subtitle: l10n.rebuildEntireBrowserUi,
       prefix: Padding(
         padding: const EdgeInsets.only(right: 16.0),
         child: Icon(
@@ -508,7 +511,7 @@ class _ResetUITile extends ConsumerWidget {
           ref.read(appStateKeyProvider.notifier).reset();
         },
         icon: const Icon(Icons.restore),
-        label: const Text('Reset'),
+        label: Text(l10n.reset),
       ),
     );
   }

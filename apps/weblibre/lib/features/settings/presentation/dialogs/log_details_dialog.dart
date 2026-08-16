@@ -26,6 +26,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:logger/logger.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/utils/ui_helper.dart';
 
 IconData _levelIcon(Level level) {
@@ -60,6 +61,22 @@ Color _levelColor(Level level) {
   };
 }
 
+String _levelLabel(AppLocalizations l10n, Level level) {
+  return switch (level) {
+    Level.trace => l10n.trace,
+    Level.debug => l10n.debug,
+    Level.info => l10n.info,
+    Level.warning => l10n.warning,
+    Level.error => l10n.error,
+    Level.fatal => l10n.logLevelFatal,
+    Level.all => l10n.logLevelAll,
+    Level.verbose => l10n.logLevelVerbose,
+    Level.wtf => l10n.logLevelUnexpected,
+    Level.nothing => l10n.logLevelNothing,
+    Level.off => l10n.logLevelOff,
+  };
+}
+
 class LogDetailsDialog extends StatelessWidget {
   const LogDetailsDialog({
     required this.level,
@@ -81,28 +98,30 @@ class LogDetailsDialog extends StatelessWidget {
   }
 
   Future<void> _copyEntryToClipboard(BuildContext context) async {
+    final l10n = AppLocalizations.of(context)!;
     final text = StringBuffer();
 
     text.writeln(
-      '[${_formatTime(time)}] ${level.name.toUpperCase()}: $message',
+      '[${_formatTime(time)}] ${_levelLabel(l10n, level)}: $message',
     );
     if (error != null) {
-      text.writeln('Error: $error');
+      text.writeln('${l10n.errorLabel} $error');
     }
     if (stackTrace != null) {
-      text.writeln('Stack Trace:');
+      text.writeln(l10n.stackTraceLabel);
       text.writeln(stackTrace);
     }
 
     await Clipboard.setData(ClipboardData(text: text.toString()));
 
     if (context.mounted) {
-      showInfoMessage(context, 'Entry copied');
+      showInfoMessage(context, l10n.entryCopied);
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return AlertDialog(
       title: Row(
         children: [
@@ -112,7 +131,7 @@ class LogDetailsDialog extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(level.name.toUpperCase()),
+              Text(_levelLabel(l10n, level)),
               Text(
                 _formatTime(time),
                 style: Theme.of(context).textTheme.bodySmall,
@@ -134,7 +153,7 @@ class LogDetailsDialog extends StatelessWidget {
                 children: [
                   if (message.isNotEmpty) ...[
                     Text(
-                      'Message:',
+                      l10n.messageLabel,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.primary,
@@ -149,7 +168,7 @@ class LogDetailsDialog extends StatelessWidget {
                   ],
                   if (error != null) ...[
                     Text(
-                      'Error:',
+                      l10n.errorLabel,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: _levelColor(level),
@@ -164,7 +183,7 @@ class LogDetailsDialog extends StatelessWidget {
                   ],
                   if (stackTrace != null) ...[
                     Text(
-                      'Stack Trace:',
+                      l10n.stackTraceLabel,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.primary,
@@ -185,12 +204,12 @@ class LogDetailsDialog extends StatelessWidget {
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(),
-          child: const Text('Close'),
+          child: Text(l10n.close),
         ),
         TextButton.icon(
           onPressed: () => _copyEntryToClipboard(context),
           icon: const Icon(Icons.copy),
-          label: const Text('Copy'),
+          label: Text(l10n.copy),
         ),
       ],
     );

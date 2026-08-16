@@ -22,6 +22,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/settings/domain/providers/pending_settings_highlight.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Default total-entry count at or below which [SettingsDetailScaffold] hides
 /// its search field — searching three toggles is just visual noise.
@@ -87,7 +88,7 @@ class SettingsDetailScaffold extends HookWidget {
   final IconData icon;
   final List<SettingsSectionDefinition> sections;
   final List<Widget> actions;
-  final String searchHintText;
+  final String? searchHintText;
   final int searchEntryThreshold;
 
   const SettingsDetailScaffold({
@@ -97,12 +98,13 @@ class SettingsDetailScaffold extends HookWidget {
     required this.icon,
     required this.sections,
     this.actions = const [],
-    this.searchHintText = 'Search settings',
+    this.searchHintText,
     this.searchEntryThreshold = kDefaultSettingsSearchEntryThreshold,
   });
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final totalEntries = sections.fold<int>(
       0,
       (sum, section) => sum + section.entries.length,
@@ -134,7 +136,7 @@ class SettingsDetailScaffold extends HookWidget {
                     sliver: SliverToBoxAdapter(
                       child: SettingsSearchField(
                         controller: search.controller,
-                        hintText: searchHintText,
+                        hintText: searchHintText ?? l10n.searchSettingsHint,
                       ),
                     ),
                   ),
@@ -165,7 +167,7 @@ class SettingsCustomScrollScaffold extends StatelessWidget {
   final String title;
   final List<Widget> actions;
   final TextEditingController? searchController;
-  final String searchHintText;
+  final String? searchHintText;
   final List<Widget> slivers;
   final Widget? floatingActionButton;
 
@@ -175,12 +177,13 @@ class SettingsCustomScrollScaffold extends StatelessWidget {
     required this.slivers,
     this.actions = const [],
     this.searchController,
-    this.searchHintText = 'Search settings',
+    this.searchHintText,
     this.floatingActionButton,
   });
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       floatingActionButton: floatingActionButton,
       body: SafeArea(
@@ -201,7 +204,7 @@ class SettingsCustomScrollScaffold extends StatelessWidget {
                     sliver: SliverToBoxAdapter(
                       child: SettingsSearchField(
                         controller: searchController!,
-                        hintText: searchHintText,
+                        hintText: searchHintText ?? l10n.searchSettingsHint,
                       ),
                     ),
                   ),
@@ -217,22 +220,23 @@ class SettingsCustomScrollScaffold extends StatelessWidget {
 
 class SettingsSearchField extends StatelessWidget {
   final TextEditingController controller;
-  final String hintText;
+  final String? hintText;
 
   const SettingsSearchField({
     super.key,
     required this.controller,
-    this.hintText = 'Search settings',
+    this.hintText,
   });
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final colorScheme = Theme.of(context).colorScheme;
 
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        hintText: hintText,
+        hintText: hintText ?? l10n.searchSettingsHint,
         prefixIcon: const Icon(Icons.search),
         suffixIcon: controller.text.isEmpty
             ? null
@@ -263,14 +267,15 @@ class SettingsSectionList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     if (sections.isEmpty) {
       return Padding(
         padding: const EdgeInsets.symmetric(vertical: 32.0, horizontal: 8.0),
         child: Center(
           child: Text(
             query.trim().isEmpty
-                ? 'No settings available.'
-                : 'No settings match "$query".',
+                ? l10n.noSettingsAvailable
+                : l10n.noSettingsMatch(query),
             style: Theme.of(context).textTheme.bodyLarge,
             textAlign: TextAlign.center,
           ),

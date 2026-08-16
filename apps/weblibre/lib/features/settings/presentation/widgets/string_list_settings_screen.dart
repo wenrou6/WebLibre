@@ -45,7 +45,7 @@ class StringListSettingsScreen extends StatelessWidget {
   final IconData itemIcon;
 
   /// Message shown when the list is empty.
-  final String emptyLabel;
+  final String? emptyLabel;
 
   const StringListSettingsScreen({
     required this.title,
@@ -55,7 +55,7 @@ class StringListSettingsScreen extends StatelessWidget {
     required this.normalize,
     this.description,
     this.itemIcon = Icons.link,
-    this.emptyLabel = 'Nothing added yet.',
+    this.emptyLabel,
     super.key,
   });
 
