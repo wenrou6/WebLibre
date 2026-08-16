@@ -70,6 +70,16 @@ class VisitContainerRecorder extends _$VisitContainerRecorder {
     // happened before it. Absent key = tab unknown, null value = uncontained.
     var tabContainerIds = ref.read(tabContainerIdsProvider);
 
+    /// Tabs whose container has `excludeFromHistory` enabled. A visit from
+    /// one of these must not be recorded as a `visit_container` row, even
+    /// if it slips through native Places exclusion (e.g. during the window
+    /// between a container reassignment and the next snapshot push).
+    var excludedTabIds = ref
+            .read(watchHistoryExclusionSnapshotProvider)
+            .value
+            ?.excludedTabIds ??
+        const <String>[];
+
     // Tabs the retry budget already gave up on. A custom tab is never in the tab
     // table, yet reports a visit on every page load, so without this each of
     // those loads would re-run the full budget: 4 queries spread over 450 ms.
@@ -80,6 +90,11 @@ class VisitContainerRecorder extends _$VisitContainerRecorder {
     ref.listen(tabContainerIdsProvider, (_, next) {
       tabContainerIds = next;
       unresolvedTabIds.removeWhere(next.containsKey);
+    });
+
+    ref.listen(watchHistoryExclusionSnapshotProvider, (_, next) {
+      excludedTabIds =
+          next.value?.excludedTabIds ?? const <String>[];
     });
 
     /// Waits for the tab's row to appear. Distinguishes "no row yet" from "row
@@ -123,6 +138,13 @@ class VisitContainerRecorder extends _$VisitContainerRecorder {
       // Uncontained tab, or one WebLibre has no row for → nothing to tag.
       if (containerId == null) return;
       if (!ref.mounted) return;
+
+      // Skip recording for tabs whose container has excludeFromHistory.
+      // This catches visits that slip through native Places exclusion during
+      // the window between a container reassignment / close fallback and
+      // the next snapshot push — e.g. when closing the last tab selects a
+      // background tab from an excluded container.
+      if (excludedTabIds.contains(tabId)) return;
 
       await ref
           .read(tabDatabaseProvider)

@@ -2,6 +2,7 @@ package eu.weblibre.gecko
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -36,13 +37,42 @@ class SearchBarGlanceWidget : GlanceAppWidget() {
     }
 }
 
+///Checks whether the system is currently in dark mode.
+private fun isSystemInDarkMode(context: Context): Boolean {
+    val nightModeFlags = context.resources.configuration.uiMode and
+        Configuration.UI_MODE_NIGHT_MASK
+    return nightModeFlags == Configuration.UI_MODE_NIGHT_YES
+}
+
 @Composable
 private fun SearchBarContent(context: Context) {
+    val isDark = isSystemInDarkMode(context)
+
+    //Theme-aware resources: use night-qualified drawables when available.
+    val searchFieldDrawable = if (isDark) {
+        R.drawable.search_text_field_dark
+    } else {
+        R.drawable.search_text_field
+    }
+
+    val microphoneDrawable = if (isDark) {
+        R.drawable.mdi_icon_microphone_tint_dark
+    } else {
+        R.drawable.mdi_icon_microphone_tint
+    }
+
+    //Text colour: grey on dark background, darker grey on light background.
+    val textColor = if (isDark) {
+        Color(0xFFBDBDBD)
+    } else {
+        Color(0xFF5F5F5F)
+    }
+
     Row(
         modifier = GlanceModifier
             .fillMaxWidth()
             .wrapContentHeight()
-            .background(ImageProvider(R.drawable.search_text_field))
+            .background(ImageProvider(searchFieldDrawable))
             .padding(12.dp)
             .clickable(onClick = actionStartSearch(context)),
         verticalAlignment = Alignment.CenterVertically
@@ -58,7 +88,7 @@ private fun SearchBarContent(context: Context) {
         Text(
             text = "Search with WebLibre...",
             style = TextStyle(
-                color = ColorProvider(Color(0xFF848388)),
+                color = ColorProvider(textColor),
                 fontSize = 16.sp
             ),
             maxLines = 1,
@@ -67,7 +97,7 @@ private fun SearchBarContent(context: Context) {
 
         // End icon (microphone)
         Image(
-            provider = ImageProvider(R.drawable.mdi_icon_microphone_tint),
+            provider = ImageProvider(microphoneDrawable),
             contentDescription = "Microphone icon",
             modifier = GlanceModifier.padding(start = 8.dp)
         )

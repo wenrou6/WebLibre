@@ -60,12 +60,33 @@ class EngineBoundIntentStream extends _$EngineBoundIntentStream {
     // Create a broadcast stream controller to buffer events
     final controller = StreamController<SharedContent>.broadcast();
 
+    // Deduplicate rapid-fire duplicate intents (e.g. PDF with
+    // Content-Disposition: attachment triggering repeated onLoadRequest).
+    // If the same content arrives within this window, only the first
+    // is forwarded; subsequent duplicates are dropped.
+    const dedupWindow = Duration(seconds: 2);
+    SharedContent? lastContent;
+    DateTime? lastContentTime;
+
     final subscription =
         MergeStream([
           sharingItentStream.transform(_contentParserTransformer),
           appWidgetLaunchStream.transform(_contentParserTransformer),
         ]).listen(
-          controller.add,
+          (content) {
+            final now = DateTime.now();
+            if (lastContent != null &&
+                lastContentTime != null &&
+                now.difference(lastContentTime!) < dedupWindow &&
+                _contentEquals(lastContent!, content)) {
+              // Duplicate within the dedup window — drop it.
+              logger.d('Dropping duplicate intent within dedup window');
+              return;
+            }
+            lastContent = content;
+            lastContentTime = now;
+            controller.add(content);
+          },
           onError: (Object error, StackTrace stackTrace) {
             logger.e(
               'Intent stream error',
@@ -83,6 +104,17 @@ class EngineBoundIntentStream extends _$EngineBoundIntentStream {
     });
 
     return controller.stream;
+  }
+
+  /// Compares two [SharedContent] values for deduplication purposes.
+  static bool _contentEquals(SharedContent a, SharedContent b) {
+    if (a is SharedUrl && b is SharedUrl) {
+      return a.url == b.url;
+    }
+    if (a is SharedText && b is SharedText) {
+      return a.text == b.text;
+    }
+    return false;
   }
 
   @override

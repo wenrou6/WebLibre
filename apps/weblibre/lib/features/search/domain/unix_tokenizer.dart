@@ -24,7 +24,7 @@ typedef _Phrase = List<Bareword>;
 sealed class UnixTokenizer {
   ///Matching quoted strings like "xda bda" (group 1), as well as strings delimetered by
   ///a whitespace (group 2)
-  static final _tokenizePattern = RegExp('"([^"]+)"|([^ ]+)');
+  static final _tokenizePattern = RegExp('"([^"]+)"|(\\S+)');
 
   late final _Phrase _tokens;
 
@@ -37,9 +37,15 @@ sealed class UnixTokenizer {
     for (var i = 0; i < barewords.length; i++) {
       final bareword = barewords[i];
 
-      if (i != 0) {
-        if (bareword.word.length < minTokenLength) {
+      if (bareword.word.length < minTokenLength) {
+        if (i > 0) {
           barewords[i] = barewords[i - 1].join(bareword);
+        } else if (i + 1 < barewords.length) {
+          // Leading short token: no predecessor to merge into.
+          // Instead, merge it forward with the next token so it is
+          // preserved as part of a joined phrase rather than silently
+          // dropped by the minTokenLength filter.
+          barewords[i + 1] = bareword.join(barewords[i + 1]);
         }
       }
     }
