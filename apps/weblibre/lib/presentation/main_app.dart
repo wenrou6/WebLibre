@@ -18,6 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -62,6 +63,8 @@ class MainApp extends HookConsumerWidget {
             themeAnimationStyle: disableAnimations
                 ? AnimationStyle.noAnimation
                 : null,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
             builder: (context, child) {
               return _AppMediaQueryOverrides(
                 uiScaleFactor: uiScaleFactor,
@@ -95,6 +98,8 @@ class MainApp extends HookConsumerWidget {
           themeAnimationStyle: disableAnimations
               ? AnimationStyle.noAnimation
               : null,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           routerConfig: router.value,
           builder: (context, child) {
             return _AppMediaQueryOverrides(
@@ -122,6 +127,8 @@ class MainApp extends HookConsumerWidget {
           themeAnimationStyle: disableAnimations
               ? AnimationStyle.noAnimation
               : null,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           builder: (context, child) {
             return _AppMediaQueryOverrides(
               uiScaleFactor: uiScaleFactor,
@@ -130,10 +137,10 @@ class MainApp extends HookConsumerWidget {
             );
           },
           home: Scaffold(
-            appBar: AppBar(title: const Text('Initiallization Error')),
+            appBar: AppBar(title: Text(AppLocalizations.of(context)!.initializationError)),
             body: Center(
               child: FailureWidget(
-                title: 'Could not initialize App',
+                title: AppLocalizations.of(context)!.couldNotInitializeApp,
                 exception: errorMessage.toString(),
                 onRetry: () async {
                   await ref
@@ -167,10 +174,10 @@ class _DownloadStoppedListener extends HookConsumerWidget {
           case DownloadStatus.completed:
             ui_helper.showInfoMessage(
               context,
-              'Download completed',
+              AppLocalizations.of(context)!.downloadCompleted,
               duration: const Duration(seconds: 6),
               action: SnackBarAction(
-                label: 'Open',
+                label: AppLocalizations.of(context)!.open,
                 onPressed: () async {
                   final opened = await GeckoDownloadsService()
                       .openDownloadedFile(
@@ -182,7 +189,7 @@ class _DownloadStoppedListener extends HookConsumerWidget {
                   if (!opened && context.mounted) {
                     ui_helper.showErrorMessage(
                       context,
-                      'Could not open downloaded file',
+                      AppLocalizations.of(context)!.couldNotOpenDownloadedFile,
                     );
                   }
                 },
@@ -191,7 +198,7 @@ class _DownloadStoppedListener extends HookConsumerWidget {
           case DownloadStatus.failed:
             ui_helper.showErrorMessage(
               context,
-              'Download failed: ${download.fileName ?? download.url}',
+              AppLocalizations.of(context)!.downloadFailed(download.fileName ?? download.url),
               persist: true,
             );
           case DownloadStatus.initiated:
@@ -231,11 +238,12 @@ class _StrictContainerBlockListener extends HookConsumerWidget {
         }
 
         final host = Uri.tryParse(event.url)?.host;
+        final l10n = AppLocalizations.of(context)!;
         ui_helper.showInfoMessage(
           context,
           host != null && host.isNotEmpty
-              ? '$host is not assigned to this container'
-              : 'This site is not assigned to this container',
+              ? l10n.hostNotAssignedToContainer(host)
+              : l10n.siteNotAssignedToContainer,
         );
       },
     );

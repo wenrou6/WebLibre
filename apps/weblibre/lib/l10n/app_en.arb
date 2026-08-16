@@ -4,6 +4,19 @@
   "@appTitle": {
     "description": "Application title"
   },
+  "hostNotAssignedToContainer": "{host} is not assigned to this container",
+  "@hostNotAssignedToContainer": {
+    "description": "Snackbar when a host is blocked by strict container mode",
+    "placeholders": {
+      "host": {
+        "type": "String"
+      }
+    }
+  },
+  "siteNotAssignedToContainer": "This site is not assigned to this container",
+  "@siteNotAssignedToContainer": {
+    "description": "Snackbar when a site without a host is blocked by strict container mode"
+  },
   "initializationError": "Initialization Error",
   "@initializationError": {
     "description": "Title shown when app fails to initialize"
@@ -565,5 +578,163 @@
   "customDns": "Custom DNS",
   "@customDns": {
     "description": "Custom DNS setting"
+  },
+  "editProfile": "Edit Profile",
+  "@editProfile": {
+    "description": "Edit proxy profile title"
+  },
+  "startAutomatically": "Start Automatically",
+  "@startAutomatically": {
+    "description": "Auto-start proxy setting"
+  },
+  "addProfile": "Add Profile",
+  "@addProfile": {
+    "description": "Add proxy profile button"
+  },
+  "proxyConnections": "Proxy Connections",
+  "@proxyConnections": {
+    "description": "Proxy connections list title"
+  },
+  "proxyLogs": "Proxy Logs",
+  "@proxyLogs": {
+    "description": "Proxy logs screen title"
+  },
+  "allLevels": "All levels",
+  "@allLevels": {
+    "description": "Log level filter: all"
+  },
+  "error2": "Error",
+  "@error2": {
+    "description": "Log level filter: error"
+  },
+  "warning2": "Warning",
+  "@warning2": {
+    "description": "Log level filter: warning"
+  },
+  "info": "Info",
+  "@info": {
+    "description": "Log level filter: info"
+  },
+  "debug": "Debug",
+  "@debug": {
+    "description": "Log level filter: debug"
+  },
+  "trace": "Trace",
+  "@trace": {
+    "description": "Log level filter: trace"
+  },
+  "containerBasedRouting": "Container-Based Routing",
+  "@containerBasedRouting": {
+    "description": "Container-based proxy routing title"
+  },
+  "globalRouting": "Global Routing",
+  "@globalRouting": {
+    "description": "Global proxy routing title"
+  },
+  "notUsedInContainerRouting": "Not used in container-based routing",
+  "@notUsedInContainerRouting": {
+    "description": "Proxy not used in container routing"
+  },
+  "none": "None",
+  "@none": {
+    "description": "No proxy selected"
+  },
+  "useNormalConnection": "Use the normal browser connection",
+  "@useNormalConnection": {
+    "description": "Subtitle for no proxy selected"
+  },
+  "unknownProxy": "Unknown proxy",
+  "@unknownProxy": {
+    "description": "Selected proxy no longer exists"
+  },
+  "proxyNoLongerExists": "The selected proxy no longer exists.",
+  "@proxyNoLongerExists": {
+    "description": "Subtitle for unknown proxy"
+  },
+  "importSubscription": "Import Subscription",
+  "@importSubscription": {
+    "description": "Import subscription screen title"
+  },
+  "fetch": "Fetch",
+  "@fetch": {
+    "description": "Fetch button"
+  },
+  "selectAll": "Select all",
+  "@selectAll": {
+    "description": "Select all button"
+  },
+  "importNProfiles": "Import {count} profile(s)",
+  "@importNProfiles": {
+    "description": "Import N profiles button",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noSettingsPage": "This extension does not expose a settings page.",
+  "@noSettingsPage": {
+    "description": "No extension settings available"
+  },
+  "android": "Android",
+  "@android": {
+    "description": "Android platform label"
+  },
+  "desktop": "Desktop",
+  "@desktop": {
+    "description": "Desktop platform label"
+  },
+  "failedToLoadExtensions": "Failed to load extensions",
+  "@failedToLoadExtensions": {
+    "description": "Failed to load extensions message"
+  },
+  "noExtensionsFound": "No extensions found.",
+  "@noExtensionsFound": {
+    "description": "No extensions found message"
+  },
+  "checkForUpdates": "Check for updates",
+  "@checkForUpdates": {
+    "description": "Check for extension updates button"
+  },
+  "installFromFile": "Install from file",
+  "@installFromFile": {
+    "description": "Install extension from file button"
+  },
+  "privateBrowsing": "Private Browsing",
+  "@privateBrowsing": {
+    "description": "Private browsing chip label"
+  },
+  "extensionNotFound": "This extension could not be found.",
+  "@extensionNotFound": {
+    "description": "Extension not found message"
+  },
+  "noSpecialPermissions": "No special permissions listed",
+  "@noSpecialPermissions": {
+    "description": "No special permissions message"
+  },
+  "learnMore": "Learn More",
+  "@learnMore": {
+    "description": "Learn more link"
+  },
+  "recommended": "Recommended",
+  "@recommended": {
+    "description": "Recommended badge"
+  },
+  "byAuthor": "by {name}",
+  "@byAuthor": {
+    "description": "Extension author attribution",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "installed": "Installed",
+  "@installed": {
+    "description": "Installed badge"
+  },
+  "extension": "Extension",
+  "@extension": {
+    "description": "Extension details screen title"
   }
 }
