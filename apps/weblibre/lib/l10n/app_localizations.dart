@@ -6097,6 +6097,210 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Select XPI File'**
   String get selectXpiFile;
+
+  /// Label for the home-page startup target
+  ///
+  /// In en, this message translates to:
+  /// **'Home page'**
+  String get homeTargetHomeLabel;
+
+  /// Label for the resume-last-tab startup target
+  ///
+  /// In en, this message translates to:
+  /// **'Last opened tab'**
+  String get homeTargetResumeLastTabLabel;
+
+  /// Label for the custom-address startup target
+  ///
+  /// In en, this message translates to:
+  /// **'Custom address'**
+  String get homeTargetCustomUrlLabel;
+
+  /// Description for the home-page startup target
+  ///
+  /// In en, this message translates to:
+  /// **'Show shortcuts and the sections you have chosen'**
+  String get homeTargetHomeDescription;
+
+  /// Description for the resume-last-tab startup target
+  ///
+  /// In en, this message translates to:
+  /// **'Pick up where you left off'**
+  String get homeTargetResumeLastTabDescription;
+
+  /// Description for the custom-address startup target
+  ///
+  /// In en, this message translates to:
+  /// **'Open a specific page'**
+  String get homeTargetCustomUrlDescription;
+
+  /// Label for the recent searches module
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Searches'**
+  String get searchModuleRecentSearchesLabel;
+
+  /// Label for the search providers module
+  ///
+  /// In en, this message translates to:
+  /// **'Search Providers'**
+  String get searchModuleSearchProvidersLabel;
+
+  /// Label for the search suggestions module
+  ///
+  /// In en, this message translates to:
+  /// **'Suggestions'**
+  String get searchModuleSearchSuggestionsLabel;
+
+  /// Label for the tabs search module
+  ///
+  /// In en, this message translates to:
+  /// **'Tabs'**
+  String get searchModuleTabsLabel;
+
+  /// Label for the articles search module
+  ///
+  /// In en, this message translates to:
+  /// **'Articles'**
+  String get searchModuleArticlesLabel;
+
+  /// Label for the bookmarks search module
+  ///
+  /// In en, this message translates to:
+  /// **'Bookmarks'**
+  String get searchModuleBookmarksLabel;
+
+  /// Label for the engine history search module
+  ///
+  /// In en, this message translates to:
+  /// **'History (engine)'**
+  String get searchModuleHistoryLabel;
+
+  /// Label for the local history content module
+  ///
+  /// In en, this message translates to:
+  /// **'Local content'**
+  String get searchModuleLocalHistoryLabel;
+
+  /// Label for the combined history module
+  ///
+  /// In en, this message translates to:
+  /// **'History'**
+  String get searchModuleCombinedHistoryLabel;
+
+  /// Label for the popular sites module
+  ///
+  /// In en, this message translates to:
+  /// **'Popular Sites'**
+  String get searchModulePopularSitesLabel;
+
+  /// Label for the history highlights module
+  ///
+  /// In en, this message translates to:
+  /// **'History Highlights'**
+  String get searchModuleHistoryHighlightsLabel;
+
+  /// Label for the top sites shortcuts module
+  ///
+  /// In en, this message translates to:
+  /// **'Shortcuts'**
+  String get searchModuleTopSitesLabel;
+
+  /// Label for the recent history module
+  ///
+  /// In en, this message translates to:
+  /// **'Recent History'**
+  String get searchModuleRecentHistoryLabel;
+
+  /// Label for the recent articles module
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Articles'**
+  String get searchModuleRecentArticlesLabel;
+
+  /// Label for the recent tabs module
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Tabs'**
+  String get searchModuleRecentTabsLabel;
+
+  /// Label for the containers module
+  ///
+  /// In en, this message translates to:
+  /// **'Containers'**
+  String get searchModuleContainersLabel;
+
+  /// Label for the frequent bangs module
+  ///
+  /// In en, this message translates to:
+  /// **'Frequent Bangs'**
+  String get searchModuleFrequentBangsLabel;
+
+  /// Label for the quote module
+  ///
+  /// In en, this message translates to:
+  /// **'Quote'**
+  String get searchModuleQuoteLabel;
+
+  /// Label for the quick actions module
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Actions'**
+  String get searchModuleQuickActionsLabel;
+
+  /// Label for the default uBlock filter-list group
+  ///
+  /// In en, this message translates to:
+  /// **'Default'**
+  String get uBlockAssetGroupDefaultLabel;
+
+  /// Label for the ads uBlock filter-list group
+  ///
+  /// In en, this message translates to:
+  /// **'Ads'**
+  String get uBlockAssetGroupAdsLabel;
+
+  /// Label for the privacy uBlock filter-list group
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy'**
+  String get uBlockAssetGroupPrivacyLabel;
+
+  /// Label for the malware uBlock filter-list group
+  ///
+  /// In en, this message translates to:
+  /// **'Malware'**
+  String get uBlockAssetGroupMalwareLabel;
+
+  /// Label for the annoyances uBlock filter-list group
+  ///
+  /// In en, this message translates to:
+  /// **'Annoyances'**
+  String get uBlockAssetGroupAnnoyancesLabel;
+
+  /// Label for the multipurpose uBlock filter-list group
+  ///
+  /// In en, this message translates to:
+  /// **'Multipurpose'**
+  String get uBlockAssetGroupMultipurposeLabel;
+
+  /// Label for the regional uBlock filter-list group
+  ///
+  /// In en, this message translates to:
+  /// **'Regions'**
+  String get uBlockAssetGroupRegionsLabel;
+
+  /// Label for the cookie notices uBlock filter-list subgroup
+  ///
+  /// In en, this message translates to:
+  /// **'Cookie Notices'**
+  String get uBlockAssetSubGroupCookiesLabel;
+
+  /// Label for the social widgets uBlock filter-list subgroup
+  ///
+  /// In en, this message translates to:
+  /// **'Social Widgets'**
+  String get uBlockAssetSubGroupSocialLabel;
 }
 
 class _AppLocalizationsDelegate

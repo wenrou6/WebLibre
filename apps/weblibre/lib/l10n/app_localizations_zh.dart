@@ -3109,4 +3109,106 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get selectXpiFile => '选择 XPI 文件';
+
+  @override
+  String get homeTargetHomeLabel => '主页';
+
+  @override
+  String get homeTargetResumeLastTabLabel => '上次打开的标签页';
+
+  @override
+  String get homeTargetCustomUrlLabel => '自定义地址';
+
+  @override
+  String get homeTargetHomeDescription => '显示快捷方式和你选择的版块';
+
+  @override
+  String get homeTargetResumeLastTabDescription => '从上次离开的地方继续';
+
+  @override
+  String get homeTargetCustomUrlDescription => '打开指定页面';
+
+  @override
+  String get searchModuleRecentSearchesLabel => '最近搜索';
+
+  @override
+  String get searchModuleSearchProvidersLabel => '搜索提供商';
+
+  @override
+  String get searchModuleSearchSuggestionsLabel => '建议';
+
+  @override
+  String get searchModuleTabsLabel => '标签页';
+
+  @override
+  String get searchModuleArticlesLabel => '文章';
+
+  @override
+  String get searchModuleBookmarksLabel => '书签';
+
+  @override
+  String get searchModuleHistoryLabel => '历史记录（引擎）';
+
+  @override
+  String get searchModuleLocalHistoryLabel => '本地内容';
+
+  @override
+  String get searchModuleCombinedHistoryLabel => '历史记录';
+
+  @override
+  String get searchModulePopularSitesLabel => '热门网站';
+
+  @override
+  String get searchModuleHistoryHighlightsLabel => '历史记录精选';
+
+  @override
+  String get searchModuleTopSitesLabel => '快捷方式';
+
+  @override
+  String get searchModuleRecentHistoryLabel => '最近历史记录';
+
+  @override
+  String get searchModuleRecentArticlesLabel => '最近文章';
+
+  @override
+  String get searchModuleRecentTabsLabel => '最近标签页';
+
+  @override
+  String get searchModuleContainersLabel => '容器';
+
+  @override
+  String get searchModuleFrequentBangsLabel => '常用 Bang';
+
+  @override
+  String get searchModuleQuoteLabel => '名言';
+
+  @override
+  String get searchModuleQuickActionsLabel => '快速操作';
+
+  @override
+  String get uBlockAssetGroupDefaultLabel => '默认';
+
+  @override
+  String get uBlockAssetGroupAdsLabel => '广告';
+
+  @override
+  String get uBlockAssetGroupPrivacyLabel => '隐私';
+
+  @override
+  String get uBlockAssetGroupMalwareLabel => '恶意软件';
+
+  @override
+  String get uBlockAssetGroupAnnoyancesLabel => '烦扰内容';
+
+  @override
+  String get uBlockAssetGroupMultipurposeLabel => '多用途';
+
+  @override
+  String get uBlockAssetGroupRegionsLabel => '区域';
+
+  @override
+  String get uBlockAssetSubGroupCookiesLabel => 'Cookie 提示';
+
+  @override
+  String get uBlockAssetSubGroupSocialLabel => '社交组件';
 }

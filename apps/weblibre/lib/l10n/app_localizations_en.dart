@@ -3297,4 +3297,107 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get selectXpiFile => 'Select XPI File';
+
+  @override
+  String get homeTargetHomeLabel => 'Home page';
+
+  @override
+  String get homeTargetResumeLastTabLabel => 'Last opened tab';
+
+  @override
+  String get homeTargetCustomUrlLabel => 'Custom address';
+
+  @override
+  String get homeTargetHomeDescription =>
+      'Show shortcuts and the sections you have chosen';
+
+  @override
+  String get homeTargetResumeLastTabDescription => 'Pick up where you left off';
+
+  @override
+  String get homeTargetCustomUrlDescription => 'Open a specific page';
+
+  @override
+  String get searchModuleRecentSearchesLabel => 'Recent Searches';
+
+  @override
+  String get searchModuleSearchProvidersLabel => 'Search Providers';
+
+  @override
+  String get searchModuleSearchSuggestionsLabel => 'Suggestions';
+
+  @override
+  String get searchModuleTabsLabel => 'Tabs';
+
+  @override
+  String get searchModuleArticlesLabel => 'Articles';
+
+  @override
+  String get searchModuleBookmarksLabel => 'Bookmarks';
+
+  @override
+  String get searchModuleHistoryLabel => 'History (engine)';
+
+  @override
+  String get searchModuleLocalHistoryLabel => 'Local content';
+
+  @override
+  String get searchModuleCombinedHistoryLabel => 'History';
+
+  @override
+  String get searchModulePopularSitesLabel => 'Popular Sites';
+
+  @override
+  String get searchModuleHistoryHighlightsLabel => 'History Highlights';
+
+  @override
+  String get searchModuleTopSitesLabel => 'Shortcuts';
+
+  @override
+  String get searchModuleRecentHistoryLabel => 'Recent History';
+
+  @override
+  String get searchModuleRecentArticlesLabel => 'Recent Articles';
+
+  @override
+  String get searchModuleRecentTabsLabel => 'Recent Tabs';
+
+  @override
+  String get searchModuleContainersLabel => 'Containers';
+
+  @override
+  String get searchModuleFrequentBangsLabel => 'Frequent Bangs';
+
+  @override
+  String get searchModuleQuoteLabel => 'Quote';
+
+  @override
+  String get searchModuleQuickActionsLabel => 'Quick Actions';
+
+  @override
+  String get uBlockAssetGroupDefaultLabel => 'Default';
+
+  @override
+  String get uBlockAssetGroupAdsLabel => 'Ads';
+
+  @override
+  String get uBlockAssetGroupPrivacyLabel => 'Privacy';
+
+  @override
+  String get uBlockAssetGroupMalwareLabel => 'Malware';
+
+  @override
+  String get uBlockAssetGroupAnnoyancesLabel => 'Annoyances';
+
+  @override
+  String get uBlockAssetGroupMultipurposeLabel => 'Multipurpose';
+
+  @override
+  String get uBlockAssetGroupRegionsLabel => 'Regions';
+
+  @override
+  String get uBlockAssetSubGroupCookiesLabel => 'Cookie Notices';
+
+  @override
+  String get uBlockAssetSubGroupSocialLabel => 'Social Widgets';
 }

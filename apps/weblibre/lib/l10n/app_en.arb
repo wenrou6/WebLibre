@@ -2966,5 +2966,141 @@
   "selectXpiFile": "Select XPI File",
   "@selectXpiFile": {
     "description": "Action to choose a local extension package"
+  },
+  "homeTargetHomeLabel": "Home page",
+  "@homeTargetHomeLabel": {
+    "description": "Label for the home-page startup target"
+  },
+  "homeTargetResumeLastTabLabel": "Last opened tab",
+  "@homeTargetResumeLastTabLabel": {
+    "description": "Label for the resume-last-tab startup target"
+  },
+  "homeTargetCustomUrlLabel": "Custom address",
+  "@homeTargetCustomUrlLabel": {
+    "description": "Label for the custom-address startup target"
+  },
+  "homeTargetHomeDescription": "Show shortcuts and the sections you have chosen",
+  "@homeTargetHomeDescription": {
+    "description": "Description for the home-page startup target"
+  },
+  "homeTargetResumeLastTabDescription": "Pick up where you left off",
+  "@homeTargetResumeLastTabDescription": {
+    "description": "Description for the resume-last-tab startup target"
+  },
+  "homeTargetCustomUrlDescription": "Open a specific page",
+  "@homeTargetCustomUrlDescription": {
+    "description": "Description for the custom-address startup target"
+  },
+  "searchModuleRecentSearchesLabel": "Recent Searches",
+  "@searchModuleRecentSearchesLabel": {
+    "description": "Label for the recent searches module"
+  },
+  "searchModuleSearchProvidersLabel": "Search Providers",
+  "@searchModuleSearchProvidersLabel": {
+    "description": "Label for the search providers module"
+  },
+  "searchModuleSearchSuggestionsLabel": "Suggestions",
+  "@searchModuleSearchSuggestionsLabel": {
+    "description": "Label for the search suggestions module"
+  },
+  "searchModuleTabsLabel": "Tabs",
+  "@searchModuleTabsLabel": {
+    "description": "Label for the tabs search module"
+  },
+  "searchModuleArticlesLabel": "Articles",
+  "@searchModuleArticlesLabel": {
+    "description": "Label for the articles search module"
+  },
+  "searchModuleBookmarksLabel": "Bookmarks",
+  "@searchModuleBookmarksLabel": {
+    "description": "Label for the bookmarks search module"
+  },
+  "searchModuleHistoryLabel": "History (engine)",
+  "@searchModuleHistoryLabel": {
+    "description": "Label for the engine history search module"
+  },
+  "searchModuleLocalHistoryLabel": "Local content",
+  "@searchModuleLocalHistoryLabel": {
+    "description": "Label for the local history content module"
+  },
+  "searchModuleCombinedHistoryLabel": "History",
+  "@searchModuleCombinedHistoryLabel": {
+    "description": "Label for the combined history module"
+  },
+  "searchModulePopularSitesLabel": "Popular Sites",
+  "@searchModulePopularSitesLabel": {
+    "description": "Label for the popular sites module"
+  },
+  "searchModuleHistoryHighlightsLabel": "History Highlights",
+  "@searchModuleHistoryHighlightsLabel": {
+    "description": "Label for the history highlights module"
+  },
+  "searchModuleTopSitesLabel": "Shortcuts",
+  "@searchModuleTopSitesLabel": {
+    "description": "Label for the top sites shortcuts module"
+  },
+  "searchModuleRecentHistoryLabel": "Recent History",
+  "@searchModuleRecentHistoryLabel": {
+    "description": "Label for the recent history module"
+  },
+  "searchModuleRecentArticlesLabel": "Recent Articles",
+  "@searchModuleRecentArticlesLabel": {
+    "description": "Label for the recent articles module"
+  },
+  "searchModuleRecentTabsLabel": "Recent Tabs",
+  "@searchModuleRecentTabsLabel": {
+    "description": "Label for the recent tabs module"
+  },
+  "searchModuleContainersLabel": "Containers",
+  "@searchModuleContainersLabel": {
+    "description": "Label for the containers module"
+  },
+  "searchModuleFrequentBangsLabel": "Frequent Bangs",
+  "@searchModuleFrequentBangsLabel": {
+    "description": "Label for the frequent bangs module"
+  },
+  "searchModuleQuoteLabel": "Quote",
+  "@searchModuleQuoteLabel": {
+    "description": "Label for the quote module"
+  },
+  "searchModuleQuickActionsLabel": "Quick Actions",
+  "@searchModuleQuickActionsLabel": {
+    "description": "Label for the quick actions module"
+  },
+  "uBlockAssetGroupDefaultLabel": "Default",
+  "@uBlockAssetGroupDefaultLabel": {
+    "description": "Label for the default uBlock filter-list group"
+  },
+  "uBlockAssetGroupAdsLabel": "Ads",
+  "@uBlockAssetGroupAdsLabel": {
+    "description": "Label for the ads uBlock filter-list group"
+  },
+  "uBlockAssetGroupPrivacyLabel": "Privacy",
+  "@uBlockAssetGroupPrivacyLabel": {
+    "description": "Label for the privacy uBlock filter-list group"
+  },
+  "uBlockAssetGroupMalwareLabel": "Malware",
+  "@uBlockAssetGroupMalwareLabel": {
+    "description": "Label for the malware uBlock filter-list group"
+  },
+  "uBlockAssetGroupAnnoyancesLabel": "Annoyances",
+  "@uBlockAssetGroupAnnoyancesLabel": {
+    "description": "Label for the annoyances uBlock filter-list group"
+  },
+  "uBlockAssetGroupMultipurposeLabel": "Multipurpose",
+  "@uBlockAssetGroupMultipurposeLabel": {
+    "description": "Label for the multipurpose uBlock filter-list group"
+  },
+  "uBlockAssetGroupRegionsLabel": "Regions",
+  "@uBlockAssetGroupRegionsLabel": {
+    "description": "Label for the regional uBlock filter-list group"
+  },
+  "uBlockAssetSubGroupCookiesLabel": "Cookie Notices",
+  "@uBlockAssetSubGroupCookiesLabel": {
+    "description": "Label for the cookie notices uBlock filter-list subgroup"
+  },
+  "uBlockAssetSubGroupSocialLabel": "Social Widgets",
+  "@uBlockAssetSubGroupSocialLabel": {
+    "description": "Label for the social widgets uBlock filter-list subgroup"
   }
 }
