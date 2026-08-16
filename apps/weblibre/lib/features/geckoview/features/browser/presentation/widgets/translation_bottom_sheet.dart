@@ -21,6 +21,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -146,7 +147,7 @@ class TranslationBottomSheet extends HookConsumerWidget {
                 Icon(Icons.translate, color: colorScheme.primary),
                 const SizedBox(width: 8),
                 Text(
-                  'Translate Page',
+                  AppLocalizations.of(context)!.translatePage,
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
                 const Spacer(),
@@ -162,7 +163,7 @@ class TranslationBottomSheet extends HookConsumerWidget {
 
             // From language dropdown
             _LanguageDropdown(
-              label: 'From',
+              label: AppLocalizations.of(context)!.from,
               languages: fromLanguages,
               selectedCode: selectedFrom.value,
               onChanged: effectiveProcessing
@@ -173,7 +174,7 @@ class TranslationBottomSheet extends HookConsumerWidget {
 
             // To language dropdown
             _LanguageDropdown(
-              label: 'To',
+              label: AppLocalizations.of(context)!.to,
               languages: toLanguages,
               selectedCode: selectedTo.value,
               onChanged: effectiveProcessing
@@ -193,7 +194,7 @@ class TranslationBottomSheet extends HookConsumerWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    'Translation error: $errorName',
+                    AppLocalizations.of(context)!.translationError(errorName),
                     style: TextStyle(color: colorScheme.onErrorContainer),
                   ),
                 ),
@@ -220,13 +221,13 @@ class TranslationBottomSheet extends HookConsumerWidget {
                                 if (context.mounted) {
                                   ui_helper.showErrorMessage(
                                     context,
-                                    'Failed to restore page',
+                                    AppLocalizations.of(context)!.failedToRestorePage,
                                   );
                                 }
                               }
                               if (context.mounted) Navigator.pop(context);
                             },
-                      child: const Text('Show Original'),
+                      child: Text(AppLocalizations.of(context)!.showOriginal),
                     ),
                   ),
                 if (isTranslated) const SizedBox(width: 12),
@@ -251,13 +252,13 @@ class TranslationBottomSheet extends HookConsumerWidget {
                               if (context.mounted) {
                                 ui_helper.showErrorMessage(
                                   context,
-                                  'Failed to translate page',
+                                  AppLocalizations.of(context)!.failedToTranslatePage,
                                 );
                               }
                             }
                           }
                         : null,
-                    child: Text(isTranslated ? 'Retranslate' : 'Translate'),
+                    child: Text(isTranslated ? AppLocalizations.of(context)!.retranslate : AppLocalizations.of(context)!.translate),
                   ),
                 ),
               ],

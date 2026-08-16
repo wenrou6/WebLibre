@@ -29,114 +29,117 @@ import 'package:weblibre/features/user/data/models/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/presentation/hooks/cached_future.dart';
 import 'package:weblibre/presentation/hooks/keyed_state.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-const List<SettingsSectionDefinition> generalSettingsSections = [
-  SettingsSectionDefinition(
-    title: 'Default Browser',
-    keywords: ['browser defaults'],
-    entries: [
-      SettingsEntryDefinition(
-        title: 'Default Browser',
-        subtitle: 'Set WebLibre as your default browser',
-        keywords: ['system browser'],
-        child: _DefaultBrowserTile(),
-      ),
-    ],
-  ),
-  SettingsSectionDefinition(
-    title: 'Appearance',
-    entries: [
-      SettingsEntryDefinition(
-        title: 'Theme',
-        subtitle: 'Choose system, light, or dark mode',
-        keywords: ['light', 'dark', 'theme mode'],
-        child: _ThemeSection(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Pure Black (OLED)',
-        subtitle:
-            'Use true-black surfaces in dark mode to save power on OLED '
-            'screens',
-        keywords: ['oled', 'amoled', 'high contrast', 'black', 'dark'],
-        child: _PureBlackTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'User Interface Zoom',
-        subtitle: 'Make the user interface smaller or larger',
-        keywords: ['ui scale', 'zoom'],
-        child: _UiZoomSection(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Refresh Rate',
-        subtitle: 'Request a high or low display refresh rate (Android)',
-        keywords: [
-          'fps',
-          'hz',
-          'hertz',
-          'frame rate',
-          'framerate',
-          '60hz',
-          '90hz',
-          '120hz',
-          'smooth',
-          'high refresh',
-          'display mode',
-        ],
-        child: _RefreshRateSection(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Disable Animations',
-        subtitle: 'Reduce motion and turn off app animations',
-        keywords: ['motion'],
-        child: _DisableAnimationsTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Show Modal Barrier',
-        subtitle: 'Dim the background behind dialogs and bottom sheets',
-        keywords: ['dialogs', 'bottom sheets', 'overlay'],
-        child: _ShowModalBarrierTile(),
-      ),
-      SettingsEntryDefinition(
-        title: 'Show Close Button',
-        subtitle:
-            'Add a button to dismiss the search / new-tab page without '
-            'a back gesture',
-        keywords: [
-          'back',
-          'close',
-          'dismiss',
-          'e-ink',
-          'eink',
-          'accessibility',
-          'new tab',
-        ],
-        child: _ShowSearchCloseButtonTile(),
-      ),
-    ],
-  ),
-  SettingsSectionDefinition(
-    title: 'Downloads',
-    entries: [
-      SettingsEntryDefinition(
-        title: 'Use external download manager',
-        subtitle: 'Manage downloads with another app',
-        keywords: ['downloads'],
-        child: _ExternalDownloadManagerTile(),
-      ),
-    ],
-  ),
-];
+List<SettingsSectionDefinition> buildGeneralSettingsSections(
+  BuildContext context,
+) {
+  final l10n = AppLocalizations.of(context)!;
+  return [
+    SettingsSectionDefinition(
+      title: l10n.defaultBrowser,
+      keywords: ['browser defaults'],
+      entries: [
+        SettingsEntryDefinition(
+          title: l10n.defaultBrowser,
+          subtitle: l10n.setAsDefaultBrowser,
+          keywords: ['system browser'],
+          child: _DefaultBrowserTile(),
+        ),
+      ],
+    ),
+    SettingsSectionDefinition(
+      title: l10n.appearance,
+      entries: [
+        SettingsEntryDefinition(
+          title: l10n.theme,
+          subtitle: l10n.chooseSystemLightOrDark,
+          keywords: ['light', 'dark', 'theme mode'],
+          child: _ThemeSection(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.pureBlack,
+          subtitle: l10n.useTrueBlackOledSubtitle,
+          keywords: ['oled', 'amoled', 'high contrast', 'black', 'dark'],
+          child: _PureBlackTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.userInterfaceZoom,
+          subtitle: l10n.makeUiSmallerOrLarger,
+          keywords: ['ui scale', 'zoom'],
+          child: _UiZoomSection(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.refreshRate,
+          subtitle: l10n.requestHighOrLowRefreshRate,
+          keywords: [
+            'fps',
+            'hz',
+            'hertz',
+            'frame rate',
+            'framerate',
+            '60hz',
+            '90hz',
+            '120hz',
+            'smooth',
+            'high refresh',
+            'display mode',
+          ],
+          child: _RefreshRateSection(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.disableAnimations,
+          subtitle: l10n.reduceMotionAndDisableAnimations,
+          keywords: ['motion'],
+          child: _DisableAnimationsTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.showModalBarrier,
+          subtitle: l10n.dimBackgroundBehindDialogs,
+          keywords: ['dialogs', 'bottom sheets', 'overlay'],
+          child: _ShowModalBarrierTile(),
+        ),
+        SettingsEntryDefinition(
+          title: l10n.showCloseButton,
+          subtitle: l10n.addCloseButtonSubtitle,
+          keywords: [
+            'back',
+            'close',
+            'dismiss',
+            'e-ink',
+            'eink',
+            'accessibility',
+            'new tab',
+          ],
+          child: _ShowSearchCloseButtonTile(),
+        ),
+      ],
+    ),
+    SettingsSectionDefinition(
+      title: l10n.downloads,
+      entries: [
+        SettingsEntryDefinition(
+          title: l10n.useExternalDownloadManager,
+          subtitle: l10n.manageDownloadsWithAnotherApp,
+          keywords: ['downloads'],
+          child: _ExternalDownloadManagerTile(),
+        ),
+      ],
+    ),
+  ];
+}
 
 class GeneralSettingsScreen extends StatelessWidget {
   const GeneralSettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SettingsDetailScaffold(
-      title: 'General',
-      subtitle: 'Appearance, downloads, and browser defaults.',
+    final l10n = AppLocalizations.of(context)!;
+    return SettingsDetailScaffold(
+      title: l10n.generalSettings,
+      subtitle: l10n.generalSettingsSubtitle,
       icon: Icons.tune,
-      sections: generalSettingsSections,
+      sections: buildGeneralSettingsSections(context),
     );
   }
 }
@@ -160,12 +163,13 @@ class _DefaultBrowserTile extends HookConsumerWidget {
     );
 
     final isCurrentDefaultBrowser = isDefault.data == true;
+    final l10n = AppLocalizations.of(context)!;
 
     return CustomListTile(
-      title: 'Default Browser',
+      title: l10n.defaultBrowser,
       subtitle: isCurrentDefaultBrowser
-          ? 'WebLibre is your default browser'
-          : 'Set WebLibre as your default browser',
+          ? l10n.webLibreIsDefaultBrowser
+          : l10n.setAsDefaultBrowser,
       prefix: Padding(
         padding: const EdgeInsets.only(right: 16.0),
         child: Icon(
@@ -182,7 +186,7 @@ class _DefaultBrowserTile extends HookConsumerWidget {
                 defaultBrowserRefreshKey.value++;
               },
         icon: Icon(isCurrentDefaultBrowser ? Icons.check : Icons.open_in_new),
-        label: Text(isCurrentDefaultBrowser ? 'Default' : 'Set'),
+        label: Text(isCurrentDefaultBrowser ? l10n.defaultButton : l10n.setButton),
       ),
     );
   }
@@ -202,6 +206,7 @@ class _UiZoomSection extends HookConsumerWidget {
     final sliderValue = useKeyedState(uiScaleFactor, [uiScaleFactor]);
 
     final sliderLabel = '${(sliderValue.value * 100).round()}%';
+    final l10n = AppLocalizations.of(context)!;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
@@ -209,9 +214,9 @@ class _UiZoomSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('User Interface Zoom'),
-            subtitle: Text('Make the user interface smaller or larger'),
+          ListTile(
+            title: Text(l10n.userInterfaceZoom),
+            subtitle: Text(l10n.makeUiSmallerOrLarger),
             leading: Icon(Icons.zoom_in),
             contentPadding: EdgeInsets.zero,
           ),
