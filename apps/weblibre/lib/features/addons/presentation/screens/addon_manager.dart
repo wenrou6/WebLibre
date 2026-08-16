@@ -21,6 +21,7 @@ import 'package:fading_scroll/fading_scroll.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/addons/extensions/addon_info.dart';
@@ -42,7 +43,7 @@ class AddonManagerScreen extends ConsumerWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Extensions'),
+          title: Text(AppLocalizations.of(context)!.extensionsSettings),
           bottom: const TabBar(
             tabs: [
               Tab(text: 'Installed'),
@@ -122,14 +123,14 @@ class _AddonManagerOverflowMenu extends ConsumerWidget {
                   );
                 }
               : null,
-          child: const Text('Check for updates'),
+          child: Text(AppLocalizations.of(context)!.checkForUpdates),
         ),
         MenuItemButton(
           leadingIcon: const Icon(Icons.file_open),
           onPressed: () async {
             await showInstallLocalAddonDialog(context);
           },
-          child: const Text('Install from file'),
+          child: Text(AppLocalizations.of(context)!.installFromFile),
         ),
       ],
     );
@@ -278,7 +279,7 @@ class _AddonCard extends ConsumerWidget {
                           spacing: 8,
                           children: [
                             if (addon.isAllowedInPrivateBrowsing)
-                              const Chip(label: Text('Private Browsing')),
+                              Chip(label: Text(AppLocalizations.of(context)!.privateBrowsing)),
                             if (addon.ratingAverage != null)
                               Chip(
                                 avatar: const Icon(Icons.star, size: 16),
@@ -323,11 +324,11 @@ class _AddonLoadError extends StatelessWidget {
           children: [
             const Icon(Icons.error_outline, size: 40),
             const SizedBox(height: 12),
-            const Text('Failed to load extensions'),
+            Text(AppLocalizations.of(context)!.failedToLoadExtensions),
             const SizedBox(height: 8),
             Text(error.toString(), textAlign: TextAlign.center),
             const SizedBox(height: 16),
-            FilledButton(onPressed: onRetry, child: const Text('Retry')),
+            FilledButton(onPressed: onRetry, child: Text(AppLocalizations.of(context)!.retry)),
           ],
         ),
       ),

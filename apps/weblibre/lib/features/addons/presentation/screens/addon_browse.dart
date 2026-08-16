@@ -24,6 +24,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/addons/presentation/widgets/addon_listing_card.dart';
@@ -64,16 +65,16 @@ class AddonBrowseView extends HookConsumerWidget {
           child: SizedBox(
             width: double.infinity,
             child: SegmentedButton<AddonStoreApp>(
-              segments: const [
+              segments: [
                 ButtonSegment(
                   value: AddonStoreApp.android,
                   icon: Icon(Icons.phone_android),
-                  label: Text('Android'),
+                  label: Text(AppLocalizations.of(context)!.android),
                 ),
                 ButtonSegment(
                   value: AddonStoreApp.firefox,
                   icon: Icon(Icons.desktop_windows),
-                  label: Text('Desktop'),
+                  label: Text(AppLocalizations.of(context)!.desktop),
                 ),
               ],
               selected: {app},
@@ -130,7 +131,7 @@ class AddonBrowseView extends HookConsumerWidget {
                   children: [
                     const Icon(Icons.error_outline, size: 40),
                     const SizedBox(height: 12),
-                    const Text('Failed to load extensions'),
+                    Text(AppLocalizations.of(context)!.failedToLoadExtensions),
                     const SizedBox(height: 8),
                     Text(error.toString(), textAlign: TextAlign.center),
                   ],
@@ -188,7 +189,7 @@ class _ListingList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (listings.isEmpty) {
-      return const Center(child: Text('No extensions found.'));
+      return Center(child: Text(AppLocalizations.of(context)!.noExtensionsFound));
     }
 
     return FadingScroll(

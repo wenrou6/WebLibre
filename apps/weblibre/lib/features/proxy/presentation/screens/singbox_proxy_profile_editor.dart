@@ -24,6 +24,7 @@ import 'package:flutter_material_design_icons/flutter_material_design_icons.dart
 import 'package:flutter_singbox_proxy/flutter_singbox_proxy.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:weblibre/core/branding/proxy_brands.dart';
 import 'package:weblibre/features/proxy/data/forms/singbox_form_specs.dart';
 import 'package:weblibre/features/proxy/data/models/proxy_profile_seed.dart';
@@ -52,14 +53,14 @@ class SingboxProxyProfileEditorScreen extends ConsumerWidget {
 
     if (draft.isLoading) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Edit Profile')),
+        appBar: AppBar(title: Text(AppLocalizations.of(context)!.editProfile)),
         body: const Center(child: CircularProgressIndicator()),
       );
     }
 
     if (draft.loadError != null) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Edit Profile')),
+        appBar: AppBar(title: Text(AppLocalizations.of(context)!.editProfile)),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -124,7 +125,7 @@ class _Editor extends ConsumerWidget {
               slivers: [
                 SliverAppBar.large(
                   centerTitle: false,
-                  title: Text(draft.isEditing ? 'Edit Profile' : 'New Profile'),
+                  title: Text(draft.isEditing ? AppLocalizations.of(context)!.editProfile : 'New Profile'),
                 ),
                 SliverPadding(
                   padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
@@ -264,7 +265,7 @@ class _GeneralSection extends HookConsumerWidget {
         SwitchListTile.adaptive(
           contentPadding: EdgeInsets.zero,
           secondary: const Icon(MdiIcons.rocketLaunchOutline),
-          title: const Text('Start Automatically'),
+          title: Text(AppLocalizations.of(context)!.startAutomatically),
           subtitle: const Text(
             'Connect this profile when WebLibre starts, so tabs using it are '
             'ready without a prompt',

@@ -24,6 +24,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_singbox_proxy/flutter_singbox_proxy.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:weblibre/core/logger.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/proxy/data/proxy_connection.dart';
@@ -68,7 +69,7 @@ class SingboxProxyProfilesScreen extends HookConsumerWidget {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => unawaited(_showAddSheet(context)),
         icon: const Icon(Icons.add),
-        label: const Text('Add Profile'),
+        label: Text(AppLocalizations.of(context)!.addProfile),
       ),
       body: SafeArea(
         child: FadingScroll(
@@ -79,7 +80,7 @@ class SingboxProxyProfilesScreen extends HookConsumerWidget {
               slivers: [
                 SliverAppBar.large(
                   centerTitle: false,
-                  title: const Text('Proxy Connections'),
+                  title: Text(AppLocalizations.of(context)!.proxyConnections),
                   actions: [
                     IconButton(
                       tooltip: 'View logs',

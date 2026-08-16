@@ -20,6 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 
 const _permissionsLearnMoreUrl =
@@ -65,7 +66,7 @@ class AddonPermissionsScreen extends ConsumerWidget {
           ),
         ),
         _ when addon == null => const Center(
-          child: Text('This extension could not be found.'),
+          child: Text(AppLocalizations.of(context)!.extensionNotFound),
         ),
         _ => ListView(
           padding: const EdgeInsets.all(16),
@@ -75,7 +76,7 @@ class AddonPermissionsScreen extends ConsumerWidget {
                 color: Theme.of(context).colorScheme.surfaceContainerHigh,
                 child: const ListTile(
                   leading: Icon(Icons.verified_user_outlined),
-                  title: Text('No special permissions listed'),
+                  title: Text(AppLocalizations.of(context)!.noSpecialPermissions),
                   subtitle: Text(
                     'This extension does not currently expose any translated permission details.',
                   ),
@@ -126,7 +127,7 @@ class AddonPermissionsScreen extends ConsumerWidget {
                 await launchUrl(Uri.parse(_permissionsLearnMoreUrl));
               },
               icon: const Icon(Icons.open_in_new),
-              label: const Text('Learn More'),
+              label: Text(AppLocalizations.of(context)!.learnMore),
             ),
           ],
         ),

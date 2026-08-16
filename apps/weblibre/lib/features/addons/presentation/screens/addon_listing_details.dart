@@ -24,6 +24,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/addons/presentation/widgets/addon_listing_card.dart';
 import 'package:weblibre/features/addons/utils/permissions.dart';
@@ -91,9 +92,9 @@ class AddonListingDetailsScreen extends ConsumerWidget {
                   spacing: 8,
                   children: [
                     if (listing.promoted == AddonStorePromoted.recommended)
-                      const Chip(
-                        avatar: Icon(Icons.verified, size: 16),
-                        label: Text('Recommended'),
+                      Chip(
+                        avatar: const Icon(Icons.verified, size: 16),
+                        label: Text(AppLocalizations.of(context)!.recommended),
                       ),
                     if (listing.ratingAverage != null)
                       Chip(
@@ -170,11 +171,11 @@ class _AuthorLink extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style = Theme.of(context).textTheme.bodyMedium;
-    if (url == null) return Text('by $name', style: style);
+    if (url == null) return Text(AppLocalizations.of(context)!.byAuthor(name), style: style);
     return InkWell(
       onTap: () => launchUrl(Uri.parse(url!)),
       child: Text(
-        'by $name',
+        AppLocalizations.of(context)!.byAuthor(name),
         style: style?.copyWith(
           color: Theme.of(context).colorScheme.primary,
           decoration: TextDecoration.underline,
@@ -198,7 +199,7 @@ class _InstallButton extends ConsumerWidget {
       return FilledButton.icon(
         onPressed: null,
         icon: const Icon(Icons.check),
-        label: const Text('Installed'),
+        label: Text(AppLocalizations.of(context)!.installed),
       );
     }
 
@@ -229,7 +230,7 @@ class _InstallButton extends ConsumerWidget {
               child: CircularProgressIndicator(strokeWidth: 2),
             )
           : const Icon(Icons.download_outlined),
-      label: const Text('Install'),
+      label: Text(AppLocalizations.of(context)!.installExtension),
     );
   }
 }

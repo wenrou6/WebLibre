@@ -19,6 +19,7 @@
  */
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:weblibre/features/proxy/data/proxy_connection.dart';
 import 'package:weblibre/features/proxy/domain/providers/proxy_connection_options.dart';
 import 'package:weblibre/features/proxy/domain/repositories/singbox_proxy_profiles.dart';
@@ -91,18 +92,18 @@ class _RegularTabsModeSection extends ConsumerWidget {
               );
         }
       },
-      child: const Column(
+      child: Column(
         children: [
           RadioListTile<ProxyRegularTabRoutingMode>.adaptive(
             value: ProxyRegularTabRoutingMode.container,
-            title: Text('Container-Based Routing'),
+            title: Text(AppLocalizations.of(context)!.containerBasedRouting),
             subtitle: Text(
               'Only tabs in containers with a proxy assigned are routed.',
             ),
           ),
           RadioListTile<ProxyRegularTabRoutingMode>.adaptive(
             value: ProxyRegularTabRoutingMode.all,
-            title: Text('Global Routing'),
+            title: Text(AppLocalizations.of(context)!.globalRouting),
             subtitle: Text(
               'Route regular tabs through the selected proxy unless a container bypasses it.',
             ),
@@ -120,9 +121,9 @@ class _GlobalRoutingProxySection extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(proxyRoutingSettingsWithDefaultsProvider);
     if (settings.regularTabsMode != ProxyRegularTabRoutingMode.all) {
-      return const ListTile(
+      return ListTile(
         leading: Icon(Icons.info_outline),
-        title: Text('Not used in container-based routing'),
+        title: Text(AppLocalizations.of(context)!.notUsedInContainerRouting),
         subtitle: Text(
           'Switch to global routing above to pick the proxy that carries every regular tab.',
         ),
@@ -190,10 +191,10 @@ class _ProxyConnectionPicker extends StatelessWidget {
       onChanged: onChanged,
       child: Column(
         children: [
-          const RadioListTile<ProxyConnectionId?>.adaptive(
+          RadioListTile<ProxyConnectionId?>.adaptive(
             value: null,
-            title: Text('None'),
-            subtitle: Text('Use the normal browser connection'),
+            title: Text(AppLocalizations.of(context)!.none),
+            subtitle: Text(AppLocalizations.of(context)!.useNormalConnection),
             secondary: Icon(Icons.public),
           ),
           if (hasUnknownSelection)
@@ -202,11 +203,11 @@ class _ProxyConnectionPicker extends StatelessWidget {
                 Icons.warning_amber_outlined,
                 color: Theme.of(context).colorScheme.error,
               ),
-              title: const Text('Unknown proxy'),
-              subtitle: const Text('The selected proxy no longer exists.'),
+              title: Text(AppLocalizations.of(context)!.unknownProxy),
+              subtitle: Text(AppLocalizations.of(context)!.proxyNoLongerExists),
               trailing: TextButton(
                 onPressed: () => onChanged(null),
-                child: const Text('Clear'),
+                child: Text(AppLocalizations.of(context)!.clear),
               ),
             ),
           for (final option in options)

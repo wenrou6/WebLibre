@@ -20,6 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:weblibre/core/logger.dart';
 import 'package:weblibre/features/proxy/data/forms/singbox_form_specs.dart';
 import 'package:weblibre/features/proxy/domain/repositories/singbox_proxy_profiles.dart';
@@ -113,7 +114,7 @@ class SubscriptionImportScreen extends HookConsumerWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Import Subscription')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.importSubscription)),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -140,7 +141,7 @@ class SubscriptionImportScreen extends HookConsumerWidget {
             icon: fetching.value
                 ? const ButtonSpinner()
                 : const Icon(Icons.cloud_download_outlined),
-            label: const Text('Fetch'),
+            label: Text(AppLocalizations.of(context)!.fetch),
           ),
           if (fetchError.value != null) ...[
             const SizedBox(height: 12),
@@ -216,11 +217,11 @@ class _ResultsSection extends StatelessWidget {
             ),
             TextButton(
               onPressed: successCount == 0 ? null : selectAll,
-              child: const Text('Select all'),
+              child: Text(AppLocalizations.of(context)!.selectAll),
             ),
             TextButton(
               onPressed: () => onSelectionChanged(const {}),
-              child: const Text('Clear'),
+              child: Text(AppLocalizations.of(context)!.clear),
             ),
           ],
         ),
@@ -239,7 +240,7 @@ class _ResultsSection extends StatelessWidget {
           icon: isImporting
               ? const ButtonSpinner()
               : const Icon(Icons.download_done),
-          label: Text('Import ${selectedIndices.length} profile(s)'),
+          label: Text(AppLocalizations.of(context)!.importNProfiles(selectedIndices.length)),
         ),
       ],
     );
