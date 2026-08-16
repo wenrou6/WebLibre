@@ -590,6 +590,42 @@ abstract class AppLocalizations {
   /// **'Custom Locale'**
   String get customLocale;
 
+  /// Search hint for browser locale settings
+  ///
+  /// In en, this message translates to:
+  /// **'Search locales by tag'**
+  String get searchLocalesByTag;
+
+  /// Subtitle for a browser language preference
+  ///
+  /// In en, this message translates to:
+  /// **'Browser language preference'**
+  String get browserLanguagePreference;
+
+  /// Action to add a custom browser locale
+  ///
+  /// In en, this message translates to:
+  /// **'Add custom locale'**
+  String get addCustomLocale;
+
+  /// Description of the custom locale input
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a locale tag such as en-US'**
+  String get enterLocaleTag;
+
+  /// Example BCP 47 locale tag
+  ///
+  /// In en, this message translates to:
+  /// **'en-US'**
+  String get localeTagExample;
+
+  /// Validation error for a malformed locale identifier
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid locale identifier'**
+  String get invalidLocaleIdentifier;
+
   /// Pure black OLED setting
   ///
   /// In en, this message translates to:
@@ -1190,6 +1226,36 @@ abstract class AppLocalizations {
   /// **'Appearance'**
   String get appearance;
 
+  /// Language used by WebLibre's own interface
+  ///
+  /// In en, this message translates to:
+  /// **'App Language'**
+  String get appLanguage;
+
+  /// Subtitle for the app language setting
+  ///
+  /// In en, this message translates to:
+  /// **'Choose the language used by WebLibre'**
+  String get appLanguageSubtitle;
+
+  /// Use the operating system language
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get languageSystem;
+
+  /// English app language option
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get languageEnglish;
+
+  /// Simplified Chinese app language option
+  ///
+  /// In en, this message translates to:
+  /// **'简体中文'**
+  String get languageChineseSimplified;
+
   /// Theme
   ///
   /// In en, this message translates to:
@@ -1201,6 +1267,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Choose between system, light, or dark theme'**
   String get chooseSystemLightOrDark;
+
+  /// Light theme option
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get themeLight;
+
+  /// Dark theme option
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get themeDark;
 
   /// Use true black for OLED displays
   ///
@@ -1225,6 +1303,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Request a high or low refresh rate'**
   String get requestHighOrLowRefreshRate;
+
+  /// Description of the refresh rate setting
+  ///
+  /// In en, this message translates to:
+  /// **'Choose High for smoother scrolling or Low to save battery'**
+  String get refreshRateSubtitle;
 
   /// Reduce motion and turn off app animations
   ///

@@ -261,6 +261,24 @@ class AppLocalizationsZh extends AppLocalizations {
   String get customLocale => '自定义区域';
 
   @override
+  String get searchLocalesByTag => '按区域标记搜索';
+
+  @override
+  String get browserLanguagePreference => '浏览器语言偏好';
+
+  @override
+  String get addCustomLocale => '添加自定义区域';
+
+  @override
+  String get enterLocaleTag => '输入区域标记，例如 en-US';
+
+  @override
+  String get localeTagExample => 'en-US';
+
+  @override
+  String get invalidLocaleIdentifier => '区域标识符无效';
+
+  @override
   String get pureBlack => '纯黑（OLED）';
 
   @override
@@ -565,10 +583,31 @@ class AppLocalizationsZh extends AppLocalizations {
   String get appearance => '外观';
 
   @override
+  String get appLanguage => '应用语言';
+
+  @override
+  String get appLanguageSubtitle => '选择 WebLibre 使用的界面语言';
+
+  @override
+  String get languageSystem => '跟随系统';
+
+  @override
+  String get languageEnglish => 'English';
+
+  @override
+  String get languageChineseSimplified => '简体中文';
+
+  @override
   String get theme => '主题';
 
   @override
   String get chooseSystemLightOrDark => '选择系统、浅色或深色主题';
+
+  @override
+  String get themeLight => '浅色';
+
+  @override
+  String get themeDark => '深色';
 
   @override
   String get useTrueBlackOledSubtitle => '为 OLED 屏幕使用纯黑色';
@@ -581,6 +620,9 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get requestHighOrLowRefreshRate => '请求高或低刷新率';
+
+  @override
+  String get refreshRateSubtitle => '选择高刷新率获得更流畅的滚动，或选择低刷新率以节省电量';
 
   @override
   String get reduceMotionAndDisableAnimations => '减少动效并关闭应用动画';

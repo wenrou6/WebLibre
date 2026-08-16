@@ -18,7 +18,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
-import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -28,6 +27,7 @@ import 'package:weblibre/features/geckoview/domain/providers.dart';
 import 'package:weblibre/features/sync/domain/entities/sync_repository_state.dart';
 import 'package:weblibre/features/sync/domain/repositories/sync.dart';
 import 'package:weblibre/features/web_search/domain/controllers/sandbox_capture_controller.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
 import 'package:weblibre/utils/ui_helper.dart' as ui_helper;
 
@@ -35,6 +35,7 @@ class MainApp extends HookConsumerWidget {
   final ThemeData? theme;
   final ThemeData? darkTheme;
   final ThemeMode? themeMode;
+  final Locale? locale;
   final double uiScaleFactor;
   final bool disableAnimations;
 
@@ -42,6 +43,7 @@ class MainApp extends HookConsumerWidget {
     required this.theme,
     required this.darkTheme,
     required this.themeMode,
+    required this.locale,
     required this.uiScaleFactor,
     required this.disableAnimations,
     super.key,
@@ -60,6 +62,7 @@ class MainApp extends HookConsumerWidget {
             theme: theme,
             darkTheme: darkTheme,
             themeMode: themeMode,
+            locale: locale,
             themeAnimationStyle: disableAnimations
                 ? AnimationStyle.noAnimation
                 : null,
@@ -95,6 +98,7 @@ class MainApp extends HookConsumerWidget {
           theme: theme,
           darkTheme: darkTheme,
           themeMode: themeMode,
+          locale: locale,
           themeAnimationStyle: disableAnimations
               ? AnimationStyle.noAnimation
               : null,
@@ -124,6 +128,7 @@ class MainApp extends HookConsumerWidget {
           theme: theme,
           darkTheme: darkTheme,
           themeMode: themeMode,
+          locale: locale,
           themeAnimationStyle: disableAnimations
               ? AnimationStyle.noAnimation
               : null,

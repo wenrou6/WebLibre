@@ -45,6 +45,7 @@ typedef UpdateGeneralSettingsFunc =
 /// guards this.
 @visibleForTesting
 const generalSettingColumnTypes = <String, DriftSqlType>{
+  'appLanguage': DriftSqlType.string,
   'themeMode': DriftSqlType.string,
   'uiScaleFactor': DriftSqlType.double,
   'disableAnimations': DriftSqlType.bool,

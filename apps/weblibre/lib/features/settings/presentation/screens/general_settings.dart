@@ -27,9 +27,9 @@ import 'package:weblibre/features/settings/presentation/widgets/custom_list_tile
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/features/user/data/models/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/presentation/hooks/cached_future.dart';
 import 'package:weblibre/presentation/hooks/keyed_state.dart';
-import 'package:weblibre/l10n/app_localizations.dart';
 
 List<SettingsSectionDefinition> buildGeneralSettingsSections(
   BuildContext context,
@@ -51,6 +51,18 @@ List<SettingsSectionDefinition> buildGeneralSettingsSections(
     SettingsSectionDefinition(
       title: l10n.appearance,
       entries: [
+        SettingsEntryDefinition(
+          title: l10n.appLanguage,
+          subtitle: l10n.appLanguageSubtitle,
+          keywords: [
+            'language',
+            'locale',
+            'translation',
+            'simplified chinese',
+            'english',
+          ],
+          child: const _AppLanguageSection(),
+        ),
         SettingsEntryDefinition(
           title: l10n.theme,
           subtitle: l10n.chooseSystemLightOrDark,
@@ -258,6 +270,69 @@ class _UiZoomSection extends HookConsumerWidget {
   }
 }
 
+class _AppLanguageSection extends HookConsumerWidget {
+  const _AppLanguageSection();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final appLanguage = ref.watch(
+      generalSettingsWithDefaultsProvider.select((s) => s.appLanguage),
+    );
+    final l10n = AppLocalizations.of(context)!;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ListTile(
+            title: Text(l10n.appLanguage),
+            subtitle: Text(l10n.appLanguageSubtitle),
+            leading: const Icon(Icons.language),
+            contentPadding: EdgeInsets.zero,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 40),
+            child: DropdownMenu<AppLanguage>(
+              key: ValueKey(appLanguage),
+              initialSelection: appLanguage,
+              width: double.infinity,
+              dropdownMenuEntries: [
+                DropdownMenuEntry(
+                  value: AppLanguage.system,
+                  label: l10n.languageSystem,
+                  leadingIcon: const Icon(Icons.smartphone),
+                ),
+                DropdownMenuEntry(
+                  value: AppLanguage.english,
+                  label: l10n.languageEnglish,
+                  leadingIcon: const Icon(Icons.translate),
+                ),
+                DropdownMenuEntry(
+                  value: AppLanguage.chinese,
+                  label: l10n.languageChineseSimplified,
+                  leadingIcon: const Icon(Icons.translate),
+                ),
+              ],
+              onSelected: (value) async {
+                if (value != null) {
+                  await ref
+                      .read(saveGeneralSettingsControllerProvider.notifier)
+                      .save(
+                        (currentSettings) =>
+                            currentSettings.copyWith.appLanguage(value),
+                      );
+                }
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 double _normalizeUiScale(double value) {
   final clampedValue = value.clamp(minUiScaleFactor, maxUiScaleFactor);
   final stepIndex = ((clampedValue - minUiScaleFactor) / uiScaleFactorStep)
@@ -276,8 +351,10 @@ class _DisableAnimationsTile extends HookConsumerWidget {
     );
 
     return SwitchListTile.adaptive(
-      title: const Text('Disable Animations'),
-      subtitle: const Text('Reduce motion and turn off app animations'),
+      title: Text(AppLocalizations.of(context)!.disableAnimations),
+      subtitle: Text(
+        AppLocalizations.of(context)!.reduceMotionAndDisableAnimations,
+      ),
       secondary: const Icon(Icons.animation),
       value: disableAnimations,
       onChanged: (value) async {
@@ -302,10 +379,8 @@ class _ShowModalBarrierTile extends HookConsumerWidget {
     );
 
     return SwitchListTile.adaptive(
-      title: const Text('Show Modal Barrier'),
-      subtitle: const Text(
-        'Dim the background behind dialogs and bottom sheets',
-      ),
+      title: Text(AppLocalizations.of(context)!.showModalBarrier),
+      subtitle: Text(AppLocalizations.of(context)!.dimBackgroundBehindDialogs),
       secondary: const Icon(Icons.layers),
       value: showModalBarrier,
       onChanged: (value) async {
@@ -332,11 +407,8 @@ class _ShowSearchCloseButtonTile extends HookConsumerWidget {
     );
 
     return SwitchListTile.adaptive(
-      title: const Text('Show Close Button'),
-      subtitle: const Text(
-        'Add a button to dismiss the search / new-tab page without a back '
-        'gesture, useful on devices without a back button',
-      ),
+      title: Text(AppLocalizations.of(context)!.showCloseButton),
+      subtitle: Text(AppLocalizations.of(context)!.addCloseButtonSubtitle),
       secondary: const Icon(Icons.close),
       value: showSearchCloseButton,
       onChanged: (value) async {
@@ -368,10 +440,8 @@ class _PureBlackTile extends HookConsumerWidget {
     final enabled = themeMode != ThemeMode.light;
 
     return SwitchListTile.adaptive(
-      title: const Text('Pure Black (OLED)'),
-      subtitle: const Text(
-        'Use true-black surfaces in dark mode to save power on OLED screens',
-      ),
+      title: Text(AppLocalizations.of(context)!.pureBlack),
+      subtitle: Text(AppLocalizations.of(context)!.useTrueBlackOledSubtitle),
       secondary: const Icon(Icons.contrast),
       value: pureBlack,
       onChanged: enabled
@@ -403,28 +473,31 @@ class _ThemeSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Theme'),
-            leading: Icon(Icons.palette),
+          ListTile(
+            title: Text(AppLocalizations.of(context)!.theme),
+            subtitle: Text(
+              AppLocalizations.of(context)!.chooseSystemLightOrDark,
+            ),
+            leading: const Icon(Icons.palette),
             contentPadding: EdgeInsets.zero,
           ),
           Center(
             child: SegmentedButton<ThemeMode>(
-              segments: const [
+              segments: [
                 ButtonSegment(
                   value: ThemeMode.system,
-                  icon: Icon(Icons.brightness_auto),
-                  label: Text('System'),
+                  icon: const Icon(Icons.brightness_auto),
+                  label: Text(AppLocalizations.of(context)!.languageSystem),
                 ),
                 ButtonSegment(
                   value: ThemeMode.light,
-                  icon: Icon(Icons.light_mode),
-                  label: Text('Light'),
+                  icon: const Icon(Icons.light_mode),
+                  label: Text(AppLocalizations.of(context)!.themeLight),
                 ),
                 ButtonSegment(
                   value: ThemeMode.dark,
-                  icon: Icon(Icons.dark_mode),
-                  label: Text('Dark'),
+                  icon: const Icon(Icons.dark_mode),
+                  label: Text(AppLocalizations.of(context)!.themeDark),
                 ),
               ],
               selected: {themeMode},
@@ -459,32 +532,29 @@ class _RefreshRateSection extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            title: Text('Refresh Rate'),
-            subtitle: Text(
-              'Choose "High" for the smoothest scrolling and animations on '
-              '90/120Hz screens, or "Low" to save battery.',
-            ),
-            leading: Icon(Icons.speed),
+          ListTile(
+            title: Text(AppLocalizations.of(context)!.refreshRate),
+            subtitle: Text(AppLocalizations.of(context)!.refreshRateSubtitle),
+            leading: const Icon(Icons.speed),
             contentPadding: EdgeInsets.zero,
           ),
           Center(
             child: SegmentedButton<RefreshRateMode>(
-              segments: const [
+              segments: [
                 ButtonSegment(
                   value: RefreshRateMode.system,
-                  icon: Icon(Icons.smartphone),
-                  label: Text('System'),
+                  icon: const Icon(Icons.smartphone),
+                  label: Text(AppLocalizations.of(context)!.languageSystem),
                 ),
                 ButtonSegment(
                   value: RefreshRateMode.high,
-                  icon: Icon(Icons.bolt),
-                  label: Text('High'),
+                  icon: const Icon(Icons.bolt),
+                  label: Text(AppLocalizations.of(context)!.high),
                 ),
                 ButtonSegment(
                   value: RefreshRateMode.low,
-                  icon: Icon(Icons.battery_saver),
-                  label: Text('Low'),
+                  icon: const Icon(Icons.battery_saver),
+                  label: Text(AppLocalizations.of(context)!.low),
                 ),
               ],
               selected: {refreshRateMode},
@@ -516,8 +586,10 @@ class _ExternalDownloadManagerTile extends HookConsumerWidget {
     );
 
     return SwitchListTile.adaptive(
-      title: const Text('Use external download manager'),
-      subtitle: const Text('Manage downloads with another app'),
+      title: Text(AppLocalizations.of(context)!.useExternalDownloadManager),
+      subtitle: Text(
+        AppLocalizations.of(context)!.manageDownloadsWithAnotherApp,
+      ),
       secondary: const Icon(Icons.download),
       value: useExternalDownloadManager,
       onChanged: (value) async {

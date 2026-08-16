@@ -68,6 +68,12 @@ const quickTabSwitcherTitleWidthStep = 8.0;
 /// place. Android-only; ignored on other platforms.
 enum RefreshRateMode { system, high, low }
 
+/// Language used by WebLibre's own interface.
+///
+/// This is intentionally separate from [EngineSettings.locales], which
+/// controls the browser's HTTP `Accept-Language` preferences.
+enum AppLanguage { system, english, chinese }
+
 enum TabBarSwipeAction { switchLastOpened, navigateOrderedTabs }
 
 /// Row kind rendered inside the quick tab switcher bar. [TabBarStackingMode]
@@ -146,6 +152,7 @@ enum DeleteBrowsingDataType {
 @CopyWith()
 @JsonSerializable(includeIfNull: true, constructor: 'withDefaults')
 class GeneralSettings with FastEquatable {
+  final AppLanguage appLanguage;
   final ThemeMode themeMode;
   final double uiScaleFactor;
   final bool disableAnimations;
@@ -324,6 +331,7 @@ class GeneralSettings with FastEquatable {
   final bool unmountGeckoViewOffRoute;
 
   GeneralSettings({
+    required this.appLanguage,
     required this.themeMode,
     required this.uiScaleFactor,
     required this.disableAnimations,
@@ -405,6 +413,7 @@ class GeneralSettings with FastEquatable {
   });
 
   GeneralSettings.withDefaults({
+    AppLanguage? appLanguage,
     ThemeMode? themeMode,
     double? uiScaleFactor,
     bool? disableAnimations,
@@ -483,7 +492,8 @@ class GeneralSettings with FastEquatable {
     bool? globalDesktopMode,
     List<String>? desktopModeSites,
     bool? unmountGeckoViewOffRoute,
-  }) : themeMode = themeMode ?? ThemeMode.dark,
+  }) : appLanguage = appLanguage ?? AppLanguage.system,
+       themeMode = themeMode ?? ThemeMode.dark,
        uiScaleFactor = uiScaleFactor ?? defaultUiScaleFactor,
        disableAnimations = disableAnimations ?? false,
        refreshRateMode = refreshRateMode ?? RefreshRateMode.high,
@@ -680,6 +690,7 @@ class GeneralSettings with FastEquatable {
 
   @override
   List<Object?> get hashParameters => [
+    appLanguage,
     themeMode,
     uiScaleFactor,
     disableAnimations,

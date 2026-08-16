@@ -262,6 +262,24 @@ class AppLocalizationsEn extends AppLocalizations {
   String get customLocale => 'Custom Locale';
 
   @override
+  String get searchLocalesByTag => 'Search locales by tag';
+
+  @override
+  String get browserLanguagePreference => 'Browser language preference';
+
+  @override
+  String get addCustomLocale => 'Add custom locale';
+
+  @override
+  String get enterLocaleTag => 'Enter a locale tag such as en-US';
+
+  @override
+  String get localeTagExample => 'en-US';
+
+  @override
+  String get invalidLocaleIdentifier => 'Invalid locale identifier';
+
+  @override
   String get pureBlack => 'Pure Black (OLED)';
 
   @override
@@ -567,11 +585,32 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appearance => 'Appearance';
 
   @override
+  String get appLanguage => 'App Language';
+
+  @override
+  String get appLanguageSubtitle => 'Choose the language used by WebLibre';
+
+  @override
+  String get languageSystem => 'System';
+
+  @override
+  String get languageEnglish => 'English';
+
+  @override
+  String get languageChineseSimplified => '简体中文';
+
+  @override
   String get theme => 'Theme';
 
   @override
   String get chooseSystemLightOrDark =>
       'Choose between system, light, or dark theme';
+
+  @override
+  String get themeLight => 'Light';
+
+  @override
+  String get themeDark => 'Dark';
 
   @override
   String get useTrueBlackOledSubtitle => 'Use true black for OLED displays';
@@ -586,6 +625,10 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get requestHighOrLowRefreshRate =>
       'Request a high or low refresh rate';
+
+  @override
+  String get refreshRateSubtitle =>
+      'Choose High for smoother scrolling or Low to save battery';
 
   @override
   String get reduceMotionAndDisableAnimations =>

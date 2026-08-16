@@ -7,6 +7,8 @@ part of 'general_settings.dart';
 // **************************************************************************
 
 abstract class _$GeneralSettingsCWProxy {
+  GeneralSettings appLanguage(AppLanguage appLanguage);
+
   GeneralSettings themeMode(ThemeMode themeMode);
 
   GeneralSettings uiScaleFactor(double uiScaleFactor);
@@ -201,6 +203,7 @@ abstract class _$GeneralSettingsCWProxy {
   /// GeneralSettings(...).copyWith(id: 12, name: "My name")
   /// ```
   GeneralSettings call({
+    AppLanguage appLanguage,
     ThemeMode themeMode,
     double uiScaleFactor,
     bool disableAnimations,
@@ -288,6 +291,10 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
   const _$GeneralSettingsCWProxyImpl(this._value);
 
   final GeneralSettings _value;
+
+  @override
+  GeneralSettings appLanguage(AppLanguage appLanguage) =>
+      call(appLanguage: appLanguage);
 
   @override
   GeneralSettings themeMode(ThemeMode themeMode) => call(themeMode: themeMode);
@@ -638,6 +645,7 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
   /// GeneralSettings(...).copyWith(id: 12, name: "My name")
   /// ```
   GeneralSettings call({
+    Object? appLanguage = const $CopyWithPlaceholder(),
     Object? themeMode = const $CopyWithPlaceholder(),
     Object? uiScaleFactor = const $CopyWithPlaceholder(),
     Object? disableAnimations = const $CopyWithPlaceholder(),
@@ -721,6 +729,11 @@ class _$GeneralSettingsCWProxyImpl implements _$GeneralSettingsCWProxy {
     Object? unmountGeckoViewOffRoute = const $CopyWithPlaceholder(),
   }) {
     return GeneralSettings(
+      appLanguage:
+          appLanguage == const $CopyWithPlaceholder() || appLanguage == null
+          ? _value.appLanguage
+          // ignore: cast_nullable_to_non_nullable
+          : appLanguage as AppLanguage,
       themeMode: themeMode == const $CopyWithPlaceholder() || themeMode == null
           ? _value.themeMode
           // ignore: cast_nullable_to_non_nullable
@@ -1196,6 +1209,7 @@ extension $GeneralSettingsCopyWith on GeneralSettings {
 GeneralSettings _$GeneralSettingsFromJson(
   Map<String, dynamic> json,
 ) => GeneralSettings.withDefaults(
+  appLanguage: $enumDecodeNullable(_$AppLanguageEnumMap, json['appLanguage']),
   themeMode: $enumDecodeNullable(_$ThemeModeEnumMap, json['themeMode']),
   uiScaleFactor: (json['uiScaleFactor'] as num?)?.toDouble(),
   disableAnimations: json['disableAnimations'] as bool?,
@@ -1352,6 +1366,7 @@ GeneralSettings _$GeneralSettingsFromJson(
 Map<String, dynamic> _$GeneralSettingsToJson(
   GeneralSettings instance,
 ) => <String, dynamic>{
+  'appLanguage': _$AppLanguageEnumMap[instance.appLanguage]!,
   'themeMode': _$ThemeModeEnumMap[instance.themeMode]!,
   'uiScaleFactor': instance.uiScaleFactor,
   'disableAnimations': instance.disableAnimations,
@@ -1449,6 +1464,12 @@ Map<String, dynamic> _$GeneralSettingsToJson(
   'globalDesktopMode': instance.globalDesktopMode,
   'desktopModeSites': instance.desktopModeSites,
   'unmountGeckoViewOffRoute': instance.unmountGeckoViewOffRoute,
+};
+
+const _$AppLanguageEnumMap = {
+  AppLanguage.system: 'system',
+  AppLanguage.english: 'english',
+  AppLanguage.chinese: 'chinese',
 };
 
 const _$ThemeModeEnumMap = {

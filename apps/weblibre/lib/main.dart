@@ -61,6 +61,7 @@ import 'package:weblibre/features/geckoview/features/tabs/domain/services/local_
 import 'package:weblibre/features/geckoview/features/tabs/domain/services/local_index_settings_sync.dart';
 import 'package:weblibre/features/proxy/domain/repositories/singbox_proxy_logs.dart';
 import 'package:weblibre/features/proxy/domain/services/proxy_autostart.dart';
+import 'package:weblibre/features/user/data/models/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/engine_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/features/web_feed/presentation/controllers/fetch_articles.dart';
@@ -206,6 +207,14 @@ class _MainWidget extends HookConsumerWidget {
     final themeMode = ref.watch(
       generalSettingsWithDefaultsProvider.select((value) => value.themeMode),
     );
+    final appLanguage = ref.watch(
+      generalSettingsWithDefaultsProvider.select((value) => value.appLanguage),
+    );
+    final appLocale = switch (appLanguage) {
+      AppLanguage.system => null,
+      AppLanguage.english => const Locale('en'),
+      AppLanguage.chinese => const Locale('zh'),
+    };
     final uiScaleFactor = ref.watch(
       generalSettingsWithDefaultsProvider.select(
         (value) => value.uiScaleFactor,
@@ -496,6 +505,7 @@ class _MainWidget extends HookConsumerWidget {
             ],
           ),
           themeMode: themeMode,
+          locale: appLocale,
           uiScaleFactor: uiScaleFactor,
           disableAnimations: disableAnimations,
         );

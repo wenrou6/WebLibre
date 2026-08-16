@@ -343,6 +343,30 @@
   "@customLocale": {
     "description": "Custom locale setting"
   },
+  "searchLocalesByTag": "Search locales by tag",
+  "@searchLocalesByTag": {
+    "description": "Search hint for browser locale settings"
+  },
+  "browserLanguagePreference": "Browser language preference",
+  "@browserLanguagePreference": {
+    "description": "Subtitle for a browser language preference"
+  },
+  "addCustomLocale": "Add custom locale",
+  "@addCustomLocale": {
+    "description": "Action to add a custom browser locale"
+  },
+  "enterLocaleTag": "Enter a locale tag such as en-US",
+  "@enterLocaleTag": {
+    "description": "Description of the custom locale input"
+  },
+  "localeTagExample": "en-US",
+  "@localeTagExample": {
+    "description": "Example BCP 47 locale tag"
+  },
+  "invalidLocaleIdentifier": "Invalid locale identifier",
+  "@invalidLocaleIdentifier": {
+    "description": "Validation error for a malformed locale identifier"
+  },
   "pureBlack": "Pure Black (OLED)",
   "@pureBlack": {
     "description": "Pure black OLED setting"
@@ -753,6 +777,26 @@
   "@appearance": {
     "description": "Appearance"
   },
+  "appLanguage": "App Language",
+  "@appLanguage": {
+    "description": "Language used by WebLibre's own interface"
+  },
+  "appLanguageSubtitle": "Choose the language used by WebLibre",
+  "@appLanguageSubtitle": {
+    "description": "Subtitle for the app language setting"
+  },
+  "languageSystem": "System",
+  "@languageSystem": {
+    "description": "Use the operating system language"
+  },
+  "languageEnglish": "English",
+  "@languageEnglish": {
+    "description": "English app language option"
+  },
+  "languageChineseSimplified": "简体中文",
+  "@languageChineseSimplified": {
+    "description": "Simplified Chinese app language option"
+  },
   "theme": "Theme",
   "@theme": {
     "description": "Theme"
@@ -760,6 +804,14 @@
   "chooseSystemLightOrDark": "Choose between system, light, or dark theme",
   "@chooseSystemLightOrDark": {
     "description": "Choose between system, light, or dark theme"
+  },
+  "themeLight": "Light",
+  "@themeLight": {
+    "description": "Light theme option"
+  },
+  "themeDark": "Dark",
+  "@themeDark": {
+    "description": "Dark theme option"
   },
   "useTrueBlackOledSubtitle": "Use true black for OLED displays",
   "@useTrueBlackOledSubtitle": {
@@ -776,6 +828,10 @@
   "requestHighOrLowRefreshRate": "Request a high or low refresh rate",
   "@requestHighOrLowRefreshRate": {
     "description": "Request a high or low refresh rate"
+  },
+  "refreshRateSubtitle": "Choose High for smoother scrolling or Low to save battery",
+  "@refreshRateSubtitle": {
+    "description": "Description of the refresh rate setting"
   },
   "reduceMotionAndDisableAnimations": "Reduce motion and turn off app animations",
   "@reduceMotionAndDisableAnimations": {
