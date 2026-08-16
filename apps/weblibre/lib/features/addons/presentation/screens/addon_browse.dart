@@ -24,7 +24,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/addons/presentation/widgets/addon_listing_card.dart';
@@ -189,7 +189,9 @@ class _ListingList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (listings.isEmpty) {
-      return Center(child: Text(AppLocalizations.of(context)!.noExtensionsFound));
+      return Center(
+        child: Text(AppLocalizations.of(context)!.noExtensionsFound),
+      );
     }
 
     return FadingScroll(

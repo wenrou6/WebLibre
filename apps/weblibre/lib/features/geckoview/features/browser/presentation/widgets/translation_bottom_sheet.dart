@@ -21,7 +21,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -221,7 +221,9 @@ class TranslationBottomSheet extends HookConsumerWidget {
                                 if (context.mounted) {
                                   ui_helper.showErrorMessage(
                                     context,
-                                    AppLocalizations.of(context)!.failedToRestorePage,
+                                    AppLocalizations.of(
+                                      context,
+                                    )!.failedToRestorePage,
                                   );
                                 }
                               }
@@ -252,13 +254,19 @@ class TranslationBottomSheet extends HookConsumerWidget {
                               if (context.mounted) {
                                 ui_helper.showErrorMessage(
                                   context,
-                                  AppLocalizations.of(context)!.failedToTranslatePage,
+                                  AppLocalizations.of(
+                                    context,
+                                  )!.failedToTranslatePage,
                                 );
                               }
                             }
                           }
                         : null,
-                    child: Text(isTranslated ? AppLocalizations.of(context)!.retranslate : AppLocalizations.of(context)!.translate),
+                    child: Text(
+                      isTranslated
+                          ? AppLocalizations.of(context)!.retranslate
+                          : AppLocalizations.of(context)!.translate,
+                    ),
                   ),
                 ),
               ],

@@ -4,6 +4,22 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch or ref to build"
+        required: true
+        default: "feat/zh-cn-bugfix"
+        type: string
+      variants:
+        description: "Debug APK variants to build"
+        required: true
+        default: "both"
+        type: choice
+        options:
+          - both
+          - alpha
+          - alphaLegacy
 
 jobs:
   build:
@@ -28,6 +44,8 @@ jobs:
           swap-storage: false
 
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.ref || github.ref }}
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
@@ -66,11 +84,17 @@ jobs:
       - name: Determine build type
         id: build-type
         run: |
-          if [[ "${{ github.ref_name }}" =~ (pre|alpha) ]]; then
-            echo "is_prerelease=true" >> $GITHUB_OUTPUT
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "manual=true" >> "$GITHUB_OUTPUT"
+            echo "is_prerelease=true" >> "$GITHUB_OUTPUT"
+            echo "Build type: Manual debug APK artifacts"
+          elif [[ "${{ github.ref_name }}" =~ (pre|alpha) ]]; then
+            echo "manual=false" >> "$GITHUB_OUTPUT"
+            echo "is_prerelease=true" >> "$GITHUB_OUTPUT"
             echo "Build type: Prerelease (APK only)"
           else
-            echo "is_prerelease=false" >> $GITHUB_OUTPUT
+            echo "manual=false" >> "$GITHUB_OUTPUT"
+            echo "is_prerelease=false" >> "$GITHUB_OUTPUT"
             echo "Build type: Full release (APK + Bundle + Play Console)"
           fi
 
@@ -104,11 +128,25 @@ jobs:
           bundle config path vendor/bundle
           bundle install
 
-      - name: Create key file
+      - name: Create manual debug signing key
+        if: steps.build-type.outputs.manual == 'true'
         working-directory: apps/weblibre
         run: |
-          echo $KEY_JKS | base64 -di > key.jks
+          keytool -genkeypair \
+            -keystore key.jks \
+            -storepass android \
+            -keypass android \
+            -alias weblibre-manual \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 3650 \
+            -dname "CN=WebLibre manual build, OU=Development, O=WebLibre, L=NA, S=NA, C=US"
           chmod 600 key.jks
+          {
+            echo "KEY_PATH=$GITHUB_WORKSPACE/apps/weblibre/key.jks"
+            echo "KEY_PASSWORD=android"
+            echo "KEY_ALIAS=weblibre-manual"
+          } >> "$GITHUB_ENV"
 
       - uses: subosito/flutter-action@v2
         with:
@@ -148,11 +186,46 @@ jobs:
         run: melos run build-go-runtime --no-select
 
       - name: Build APK (Alpha)
-        if: steps.build-type.outputs.is_prerelease == 'true'
+        if: steps.build-type.outputs.manual == 'true' && (inputs.variants == 'both' || inputs.variants == 'alpha')
         run: melos run build-browser-alpha --no-select
 
       - name: Build APK (Alpha, Legacy renderer)
-        if: steps.build-type.outputs.is_prerelease == 'true'
+        if: steps.build-type.outputs.manual == 'true' && (inputs.variants == 'both' || inputs.variants == 'alphaLegacy')
+        run: melos run build-browser-alpha-legacy --no-select
+
+      - name: Upload manual APK artifacts
+        if: steps.build-type.outputs.manual == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: weblibre-${{ inputs.variants }}-${{ github.sha }}
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            apps/weblibre/build/app/outputs/apk/alpha/release/*.apk
+            apps/weblibre/build/app/outputs/apk/alphaLegacy/release/*.apk
+
+      - name: Summarize manual build
+        if: steps.build-type.outputs.manual == 'true'
+        working-directory: apps/weblibre
+        run: |
+          {
+            echo "## WebLibre manual APK build"
+            echo
+            echo "- Commit: \`${GITHUB_SHA}\`"
+            echo "- Ref: \`${{ inputs.ref }}\`"
+            echo "- Variants: \`${{ inputs.variants }}\`"
+            echo "- Flutter: $(flutter --version | sed -n '1p')"
+            echo
+            echo '### APK files'
+            find build/app/outputs/apk -type f -name '*.apk' -print | sort
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Build APK (Alpha)
+        if: steps.build-type.outputs.manual != 'true' && steps.build-type.outputs.is_prerelease == 'true'
+        run: melos run build-browser-alpha --no-select
+
+      - name: Build APK (Alpha, Legacy renderer)
+        if: steps.build-type.outputs.manual != 'true' && steps.build-type.outputs.is_prerelease == 'true'
         run: melos run build-browser-alpha-legacy --no-select
 
       - name: Build APK (Stable)
@@ -165,7 +238,7 @@ jobs:
         run: flutter build appbundle --flavor stable --target-platform android-arm,android-arm64 --no-tree-shake-icons
 
       - name: Create github artifact release (Prerelease)
-        if: steps.build-type.outputs.is_prerelease == 'true'
+        if: steps.build-type.outputs.manual != 'true' && steps.build-type.outputs.is_prerelease == 'true'
         uses: ncipollo/release-action@v1.17.0
         with:
           artifacts: "apps/weblibre/build/app/outputs/apk/alpha/release/*.apk,apps/weblibre/build/app/outputs/apk/alphaLegacy/release/*.apk"

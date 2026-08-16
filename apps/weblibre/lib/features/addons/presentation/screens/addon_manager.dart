@@ -21,7 +21,7 @@ import 'package:fading_scroll/fading_scroll.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/addons/extensions/addon_info.dart';
@@ -279,7 +279,11 @@ class _AddonCard extends ConsumerWidget {
                           spacing: 8,
                           children: [
                             if (addon.isAllowedInPrivateBrowsing)
-                              Chip(label: Text(AppLocalizations.of(context)!.privateBrowsing)),
+                              Chip(
+                                label: Text(
+                                  AppLocalizations.of(context)!.privateBrowsing,
+                                ),
+                              ),
                             if (addon.ratingAverage != null)
                               Chip(
                                 avatar: const Icon(Icons.star, size: 16),
@@ -328,7 +332,10 @@ class _AddonLoadError extends StatelessWidget {
             const SizedBox(height: 8),
             Text(error.toString(), textAlign: TextAlign.center),
             const SizedBox(height: 16),
-            FilledButton(onPressed: onRetry, child: Text(AppLocalizations.of(context)!.retry)),
+            FilledButton(
+              onPressed: onRetry,
+              child: Text(AppLocalizations.of(context)!.retry),
+            ),
           ],
         ),
       ),

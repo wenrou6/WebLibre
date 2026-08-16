@@ -736,5 +736,85 @@
   "extension": "Extension",
   "@extension": {
     "description": "Extension details screen title"
+  },
+  "clear": "Clear",
+  "@clear": {
+    "description": "Clear"
+  },
+  "defaultBrowser": "Default Browser",
+  "@defaultBrowser": {
+    "description": "Default Browser"
+  },
+  "setAsDefaultBrowser": "Set WebLibre as the default browser",
+  "@setAsDefaultBrowser": {
+    "description": "Set WebLibre as the default browser"
+  },
+  "appearance": "Appearance",
+  "@appearance": {
+    "description": "Appearance"
+  },
+  "theme": "Theme",
+  "@theme": {
+    "description": "Theme"
+  },
+  "chooseSystemLightOrDark": "Choose between system, light, or dark theme",
+  "@chooseSystemLightOrDark": {
+    "description": "Choose between system, light, or dark theme"
+  },
+  "useTrueBlackOledSubtitle": "Use true black for OLED displays",
+  "@useTrueBlackOledSubtitle": {
+    "description": "Use true black for OLED displays"
+  },
+  "userInterfaceZoom": "User Interface Zoom",
+  "@userInterfaceZoom": {
+    "description": "User Interface Zoom"
+  },
+  "makeUiSmallerOrLarger": "Make the user interface smaller or larger",
+  "@makeUiSmallerOrLarger": {
+    "description": "Make the user interface smaller or larger"
+  },
+  "requestHighOrLowRefreshRate": "Request a high or low refresh rate",
+  "@requestHighOrLowRefreshRate": {
+    "description": "Request a high or low refresh rate"
+  },
+  "reduceMotionAndDisableAnimations": "Reduce motion and turn off app animations",
+  "@reduceMotionAndDisableAnimations": {
+    "description": "Reduce motion and turn off app animations"
+  },
+  "showModalBarrier": "Show Modal Barrier",
+  "@showModalBarrier": {
+    "description": "Show Modal Barrier"
+  },
+  "dimBackgroundBehindDialogs": "Dim the background behind dialogs",
+  "@dimBackgroundBehindDialogs": {
+    "description": "Dim the background behind dialogs"
+  },
+  "addCloseButtonSubtitle": "Add a close button to the new tab screen",
+  "@addCloseButtonSubtitle": {
+    "description": "Add a close button to the new tab screen"
+  },
+  "useExternalDownloadManager": "Use External Download Manager",
+  "@useExternalDownloadManager": {
+    "description": "Use External Download Manager"
+  },
+  "manageDownloadsWithAnotherApp": "Manage downloads with another app",
+  "@manageDownloadsWithAnotherApp": {
+    "description": "Manage downloads with another app"
+  },
+  "generalSettingsSubtitle": "Appearance, downloads, and general behavior",
+  "@generalSettingsSubtitle": {
+    "description": "Appearance, downloads, and general behavior"
+  },
+  "webLibreIsDefaultBrowser": "WebLibre is the default browser",
+  "@webLibreIsDefaultBrowser": {
+    "description": "WebLibre is the default browser"
+  },
+  "defaultButton": "Default",
+  "@defaultButton": {
+    "description": "Default"
+  },
+  "setButton": "Set",
+  "@setButton": {
+    "description": "Set"
   }
 }

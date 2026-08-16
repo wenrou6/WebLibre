@@ -24,7 +24,7 @@ import 'package:flutter_material_design_icons/flutter_material_design_icons.dart
 import 'package:flutter_singbox_proxy/flutter_singbox_proxy.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/branding/proxy_brands.dart';
 import 'package:weblibre/features/proxy/data/forms/singbox_form_specs.dart';
 import 'package:weblibre/features/proxy/data/models/proxy_profile_seed.dart';
@@ -125,7 +125,11 @@ class _Editor extends ConsumerWidget {
               slivers: [
                 SliverAppBar.large(
                   centerTitle: false,
-                  title: Text(draft.isEditing ? AppLocalizations.of(context)!.editProfile : 'New Profile'),
+                  title: Text(
+                    draft.isEditing
+                        ? AppLocalizations.of(context)!.editProfile
+                        : 'New Profile',
+                  ),
                 ),
                 SliverPadding(
                   padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),

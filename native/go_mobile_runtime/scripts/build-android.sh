@@ -246,6 +246,7 @@ echo "Using Android NDK $actual_ndk_version at $ANDROID_NDK_HOME"
 echo "Using Android arm64 clang: $ndk_clang"
 
 GOPATH="${GOPATH:-$(go env GOPATH)}"
+export PATH="$GOPATH/bin:${PATH:-}"
 if [[ $INSTALL_GOMOBILE -eq 1 ]]; then
   needs_gomobile_install=0
   if [[ ! -x "$GOPATH/bin/gomobile" || ! -x "$GOPATH/bin/gobind" ]]; then

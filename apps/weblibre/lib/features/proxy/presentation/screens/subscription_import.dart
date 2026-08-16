@@ -20,7 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/logger.dart';
 import 'package:weblibre/features/proxy/data/forms/singbox_form_specs.dart';
 import 'package:weblibre/features/proxy/domain/repositories/singbox_proxy_profiles.dart';
@@ -114,7 +114,9 @@ class SubscriptionImportScreen extends HookConsumerWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(AppLocalizations.of(context)!.importSubscription)),
+      appBar: AppBar(
+        title: Text(AppLocalizations.of(context)!.importSubscription),
+      ),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -240,7 +242,11 @@ class _ResultsSection extends StatelessWidget {
           icon: isImporting
               ? const ButtonSpinner()
               : const Icon(Icons.download_done),
-          label: Text(AppLocalizations.of(context)!.importNProfiles(selectedIndices.length)),
+          label: Text(
+            AppLocalizations.of(
+              context,
+            )!.importNProfiles(selectedIndices.length),
+          ),
         ),
       ],
     );

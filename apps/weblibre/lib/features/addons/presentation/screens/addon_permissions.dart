@@ -20,7 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 
 const _permissionsLearnMoreUrl =
@@ -65,7 +65,7 @@ class AddonPermissionsScreen extends ConsumerWidget {
             ),
           ),
         ),
-        _ when addon == null => const Center(
+        _ when addon == null => Center(
           child: Text(AppLocalizations.of(context)!.extensionNotFound),
         ),
         _ => ListView(
@@ -74,9 +74,11 @@ class AddonPermissionsScreen extends ConsumerWidget {
             if (permissions.isEmpty && dataCollection.isEmpty)
               Card(
                 color: Theme.of(context).colorScheme.surfaceContainerHigh,
-                child: const ListTile(
+                child: ListTile(
                   leading: Icon(Icons.verified_user_outlined),
-                  title: Text(AppLocalizations.of(context)!.noSpecialPermissions),
+                  title: Text(
+                    AppLocalizations.of(context)!.noSpecialPermissions,
+                  ),
                   subtitle: Text(
                     'This extension does not currently expose any translated permission details.',
                   ),

@@ -29,7 +29,7 @@ import 'package:weblibre/features/user/data/models/general_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/general_settings.dart';
 import 'package:weblibre/presentation/hooks/cached_future.dart';
 import 'package:weblibre/presentation/hooks/keyed_state.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 List<SettingsSectionDefinition> buildGeneralSettingsSections(
   BuildContext context,
@@ -186,7 +186,9 @@ class _DefaultBrowserTile extends HookConsumerWidget {
                 defaultBrowserRefreshKey.value++;
               },
         icon: Icon(isCurrentDefaultBrowser ? Icons.check : Icons.open_in_new),
-        label: Text(isCurrentDefaultBrowser ? l10n.defaultButton : l10n.setButton),
+        label: Text(
+          isCurrentDefaultBrowser ? l10n.defaultButton : l10n.setButton,
+        ),
       ),
     );
   }

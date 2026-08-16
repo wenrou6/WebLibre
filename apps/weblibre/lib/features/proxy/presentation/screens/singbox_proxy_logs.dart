@@ -23,7 +23,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/branding/proxy_brands.dart';
 import 'package:weblibre/features/proxy/data/models/proxy_log_message.dart';
 import 'package:weblibre/features/proxy/domain/repositories/singbox_proxy_logs.dart';
@@ -109,12 +109,29 @@ class SingboxProxyLogsScreen extends HookConsumerWidget {
             icon: const Icon(Icons.filter_list),
             onSelected: (value) => filter.value = value,
             itemBuilder: (context) => [
-              PopupMenuItem<String?>(child: Text(AppLocalizations.of(context)!.allLevels)),
-              PopupMenuItem(value: 'error', child: Text(AppLocalizations.of(context)!.error2)),
-              PopupMenuItem(value: 'warn', child: Text(AppLocalizations.of(context)!.warning2)),
-              PopupMenuItem(value: 'info', child: Text(AppLocalizations.of(context)!.info)),
-              PopupMenuItem(value: 'debug', child: Text(AppLocalizations.of(context)!.debug)),
-              PopupMenuItem(value: 'trace', child: Text(AppLocalizations.of(context)!.trace)),
+              PopupMenuItem<String?>(
+                child: Text(AppLocalizations.of(context)!.allLevels),
+              ),
+              PopupMenuItem(
+                value: 'error',
+                child: Text(AppLocalizations.of(context)!.error2),
+              ),
+              PopupMenuItem(
+                value: 'warn',
+                child: Text(AppLocalizations.of(context)!.warning2),
+              ),
+              PopupMenuItem(
+                value: 'info',
+                child: Text(AppLocalizations.of(context)!.info),
+              ),
+              PopupMenuItem(
+                value: 'debug',
+                child: Text(AppLocalizations.of(context)!.debug),
+              ),
+              PopupMenuItem(
+                value: 'trace',
+                child: Text(AppLocalizations.of(context)!.trace),
+              ),
             ],
           ),
           IconButton(

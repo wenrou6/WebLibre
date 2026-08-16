@@ -18,7 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -137,7 +137,9 @@ class MainApp extends HookConsumerWidget {
             );
           },
           home: Scaffold(
-            appBar: AppBar(title: Text(AppLocalizations.of(context)!.initializationError)),
+            appBar: AppBar(
+              title: Text(AppLocalizations.of(context)!.initializationError),
+            ),
             body: Center(
               child: FailureWidget(
                 title: AppLocalizations.of(context)!.couldNotInitializeApp,
@@ -198,7 +200,9 @@ class _DownloadStoppedListener extends HookConsumerWidget {
           case DownloadStatus.failed:
             ui_helper.showErrorMessage(
               context,
-              AppLocalizations.of(context)!.downloadFailed(download.fileName ?? download.url),
+              AppLocalizations.of(
+                context,
+              )!.downloadFailed(download.fileName ?? download.url),
               persist: true,
             );
           case DownloadStatus.initiated:

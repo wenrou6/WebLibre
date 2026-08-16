@@ -44,7 +44,7 @@ class SettingsScreen extends HookWidget {
   Widget build(BuildContext context) {
     final search = useSettingsSearch();
 
-    final categories = _buildCategories();
+    final categories = _buildCategories(context);
     final sections = search.normalizedQuery.isEmpty
         ? _buildCategorySections(categories)
         : _buildSearchSections([
@@ -96,14 +96,14 @@ typedef _CategoryGroups = ({
   List<_SettingsCategoryDefinition> services,
 });
 
-_CategoryGroups _buildCategories() {
+_CategoryGroups _buildCategories(BuildContext context) {
   final browser = [
     _SettingsCategoryDefinition(
       title: 'General',
       subtitle: 'Appearance, downloads',
       icon: Icons.tune,
       keywords: const ['theme', 'ui zoom', 'default browser'],
-      sections: generalSettingsSections,
+      sections: buildGeneralSettingsSections(context),
       onTap: (context) => GeneralSettingsRoute().push(context),
     ),
     _SettingsCategoryDefinition(

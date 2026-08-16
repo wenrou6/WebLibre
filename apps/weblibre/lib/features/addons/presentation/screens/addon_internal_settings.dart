@@ -27,7 +27,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/addons/extensions/addon_info.dart';
@@ -118,9 +118,7 @@ class AddonInternalSettingsScreen extends ConsumerWidget {
             when addon == null ||
                 optionsPageUrl == null ||
                 optionsPageUrl.isEmpty =>
-          Center(
-            child: Text(AppLocalizations.of(context)!.noSettingsPage),
-          ),
+          Center(child: Text(AppLocalizations.of(context)!.noSettingsPage)),
         _ => _AddonSettingsPlatformView(optionsPageUrl: optionsPageUrl),
       },
     );

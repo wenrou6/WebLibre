@@ -24,7 +24,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/addons/presentation/widgets/addon_listing_card.dart';
 import 'package:weblibre/features/addons/utils/permissions.dart';
@@ -171,7 +171,8 @@ class _AuthorLink extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style = Theme.of(context).textTheme.bodyMedium;
-    if (url == null) return Text(AppLocalizations.of(context)!.byAuthor(name), style: style);
+    if (url == null)
+      return Text(AppLocalizations.of(context)!.byAuthor(name), style: style);
     return InkWell(
       onTap: () => launchUrl(Uri.parse(url!)),
       child: Text(
