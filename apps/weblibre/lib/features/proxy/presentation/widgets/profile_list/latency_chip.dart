@@ -30,7 +30,7 @@ class LatencyChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return switch (result) {
-      AsyncLoading() => const _LatencyStatusChip.loading(),
+      AsyncLoading() => _LatencyStatusChip.loading(),
       AsyncError(:final error) => _LatencyStatusChip.error(error),
       AsyncData(:final value) => _LatencySuccessChip(value: value),
     };
@@ -48,7 +48,7 @@ class _LatencyStatusChip extends StatelessWidget {
     required this.isError,
   });
 
-  const _LatencyStatusChip.loading()
+  _LatencyStatusChip.loading()
     : this(
         label: 'Testing...',
         tooltip: 'Latency test running',

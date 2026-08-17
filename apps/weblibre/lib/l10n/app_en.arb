@@ -3538,5 +3538,21 @@
   "gestureSuggestNextSubtitle": "Also show the other gestures you can complete",
   "@gestureSuggestNextSubtitle": {
     "description": "UI string for gestureSuggestNextSubtitle"
+  },
+  "granted": "Granted",
+  "@granted": {
+    "description": "UI string for granted"
+  },
+  "grant": "Grant",
+  "@grant": {
+    "description": "UI string for grant"
+  },
+  "couldNotReadPermissionState": "Could not read permission state: {error}",
+  "@couldNotReadPermissionState": {
+    "description": "UI string for couldNotReadPermissionState"
+  },
+  "noSiteSubscriptions": "No subscriptions",
+  "@noSiteSubscriptions": {
+    "description": "UI string for noSiteSubscriptions"
   }
 }

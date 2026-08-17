@@ -3749,4 +3749,18 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get gestureSuggestNextSubtitle =>
       'Also show the other gestures you can complete';
+
+  @override
+  String get granted => 'Granted';
+
+  @override
+  String get grant => 'Grant';
+
+  @override
+  String couldNotReadPermissionState(Object error) {
+    return 'Could not read permission state: $error';
+  }
+
+  @override
+  String get noSiteSubscriptions => 'No subscriptions';
 }

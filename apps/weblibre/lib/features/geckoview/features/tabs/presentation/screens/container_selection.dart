@@ -314,7 +314,7 @@ class _SelectionContainerCard extends ConsumerWidget {
                                     '$tabCount ${tabCount == 1 ? 'tab' : 'tabs'}',
                               ),
                               if (container.metadata.contextualIdentity != null)
-                                const _SelectionInfoChip(
+                                _SelectionInfoChip(
                                   icon: Icons.cookie_outlined,
                                   label: AppLocalizations.of(context)!.isolated,
                                 ),
@@ -330,12 +330,12 @@ class _SelectionContainerCard extends ConsumerWidget {
                               if (container.metadata.proxyConnectionId ==
                                       null &&
                                   container.metadata.bypassGlobalProxy)
-                                const _SelectionInfoChip(
+                                _SelectionInfoChip(
                                   icon: Icons.public,
                                   label: AppLocalizations.of(context)!.direct,
                                 ),
                               if (container.metadata.clearDataOnExit)
-                                const _SelectionInfoChip(
+                                _SelectionInfoChip(
                                   icon: Icons.cleaning_services_outlined,
                                   label: AppLocalizations.of(context)!.clearOnExit,
                                 ),

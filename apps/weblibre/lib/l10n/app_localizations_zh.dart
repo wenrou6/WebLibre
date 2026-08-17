@@ -3546,4 +3546,18 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get gestureSuggestNextSubtitle => '同时显示其他可以完成的手势';
+
+  @override
+  String get granted => '已授予';
+
+  @override
+  String get grant => '授予';
+
+  @override
+  String couldNotReadPermissionState(Object error) {
+    return '无法读取权限状态：$error';
+  }
+
+  @override
+  String get noSiteSubscriptions => '无订阅';
 }

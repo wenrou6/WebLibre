@@ -2889,5 +2889,21 @@
   "gestureSuggestNextSubtitle": "同时显示其他可以完成的手势",
   "@gestureSuggestNextSubtitle": {
     "description": "UI string for gestureSuggestNextSubtitle"
+  },
+  "granted": "已授予",
+  "@granted": {
+    "description": "UI string for granted"
+  },
+  "grant": "授予",
+  "@grant": {
+    "description": "UI string for grant"
+  },
+  "couldNotReadPermissionState": "无法读取权限状态：{error}",
+  "@couldNotReadPermissionState": {
+    "description": "UI string for couldNotReadPermissionState"
+  },
+  "noSiteSubscriptions": "无订阅",
+  "@noSiteSubscriptions": {
+    "description": "UI string for noSiteSubscriptions"
   }
 }

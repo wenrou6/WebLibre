@@ -152,7 +152,7 @@ class TorProxyScreen extends HookConsumerWidget {
       }
     });
 
-    return const SettingsDetailScaffold(
+    return SettingsDetailScaffold(
       title: torProxyLabel,
       subtitle:
           'Onion routing, pluggable transports, bridges and country restrictions.',

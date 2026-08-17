@@ -297,7 +297,7 @@ class FeedArticleScreen extends HookConsumerWidget {
         },
         error: (error, stackTrace) => Center(
           child: FailureWidget(
-            title: AppLocalizations.of(context)!.failedReadingArticle),
+            title: AppLocalizations.of(context)!.failedReadingArticle,
             exception: error,
           ),
         ),

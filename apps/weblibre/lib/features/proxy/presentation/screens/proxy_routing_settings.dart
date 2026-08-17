@@ -65,7 +65,7 @@ class ProxyRoutingSettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SettingsDetailScaffold(
+    return SettingsDetailScaffold(
       title: 'Proxy Routing',
       subtitle: 'Choose which proxy carries regular and private tab traffic.',
       icon: Icons.route_outlined,
@@ -75,7 +75,7 @@ class ProxyRoutingSettingsScreen extends StatelessWidget {
 }
 
 class _RegularTabsModeSection extends ConsumerWidget {
-  const _RegularTabsModeSection();
+  _RegularTabsModeSection();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

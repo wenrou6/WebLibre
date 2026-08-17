@@ -53,7 +53,7 @@ class GestureFeedbackScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SettingsDetailScaffold(
+    return SettingsDetailScaffold(
       title: 'Feedback',
       subtitle: 'Live overlay and gesture suggestions.',
       icon: Icons.bolt_outlined,

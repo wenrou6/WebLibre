@@ -253,12 +253,12 @@ class _ContainerCard extends HookConsumerWidget {
                                     '$tabCount ${tabCount == 1 ? 'tab' : 'tabs'}',
                               ),
                               if (container.isPinned)
-                                const _ContainerInfoChip(
+                                _ContainerInfoChip(
                                   icon: MdiIcons.pin,
                                   label: AppLocalizations.of(context)!.pinned,
                                 ),
                               if (container.metadata.contextualIdentity != null)
-                                const _ContainerInfoChip(
+                                _ContainerInfoChip(
                                   icon: Icons.cookie_outlined,
                                   label: 'Isolated',
                                 ),

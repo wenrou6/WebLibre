@@ -6955,6 +6955,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Also show the other gestures you can complete'**
   String get gestureSuggestNextSubtitle;
+
+  /// UI string for granted
+  ///
+  /// In en, this message translates to:
+  /// **'Granted'**
+  String get granted;
+
+  /// UI string for grant
+  ///
+  /// In en, this message translates to:
+  /// **'Grant'**
+  String get grant;
+
+  /// UI string for couldNotReadPermissionState
+  ///
+  /// In en, this message translates to:
+  /// **'Could not read permission state: {error}'**
+  String couldNotReadPermissionState(Object error);
+
+  /// UI string for noSiteSubscriptions
+  ///
+  /// In en, this message translates to:
+  /// **'No subscriptions'**
+  String get noSiteSubscriptions;
 }
 
 class _AppLocalizationsDelegate
