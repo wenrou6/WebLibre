@@ -26,6 +26,8 @@ import 'package:weblibre/features/gestures/domain/repositories/gesture_settings.
 import 'package:weblibre/features/gestures/presentation/widgets/gesture_binding_editor.dart';
 import 'package:weblibre/features/gestures/presentation/widgets/gesture_stroke_view.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/user_flow_localizations.dart';
 
 /// Lists the configured gesture → action bindings, grouped by action category,
 /// and lets the user add, edit and remove them.
@@ -34,6 +36,7 @@ class GestureBindingsScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final settings = ref.watch(gestureSettingsWithDefaultsProvider);
 
     Future<void> upsertBinding(
@@ -73,10 +76,10 @@ class GestureBindingsScreen extends HookConsumerWidget {
     }
 
     return SettingsCustomScrollScaffold(
-      title: 'Gesture bindings',
+      title: l10n.gestureBindings,
       floatingActionButton: FloatingActionButton.extended(
         icon: const Icon(Icons.add),
-        label: const Text('Add gesture'),
+        label: Text(l10n.addGesture),
         onPressed: () async {
           final result = await showGestureBindingEditor(
             context,
@@ -90,9 +93,9 @@ class GestureBindingsScreen extends HookConsumerWidget {
       ),
       slivers: [
         if (settings.bindings.isEmpty)
-          const SliverFillRemaining(
+          SliverFillRemaining(
             hasScrollBody: false,
-            child: Center(child: Text('No gestures assigned yet.')),
+            child: Center(child: Text(l10n.noGesturesAssigned)),
           )
         else
           SliverPadding(
@@ -205,7 +208,7 @@ class _GestureBindingTile extends StatelessWidget {
       subtitle: GestureStrokeView(stroke: stroke),
       trailing: IconButton(
         icon: const Icon(Icons.delete_outline),
-        tooltip: 'Remove',
+        tooltip: AppLocalizations.of(context)!.remove,
         onPressed: () => onRemove(),
       ),
       onTap: () => onEdit(),

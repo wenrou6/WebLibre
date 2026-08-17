@@ -24,6 +24,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:weblibre/features/onboarding/presentation/pages/abstract/i_form_page.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/user_flow_localizations.dart';
 import 'package:weblibre/presentation/hooks/cached_future.dart';
 import 'package:weblibre/presentation/widgets/browser_page.dart';
 
@@ -56,7 +58,7 @@ class PermissionsPage extends HookConsumerWidget implements IFormPage {
               const SizedBox(height: 24),
               Center(
                 child: Text(
-                  'Permissions',
+                  AppLocalizations.of(context)!.permissionsTitle,
                   style: theme.textTheme.headlineMedium,
                 ),
               ),
@@ -74,7 +76,9 @@ class PermissionsPage extends HookConsumerWidget implements IFormPage {
                   builder: (field) => SwitchListTile(
                     contentPadding: EdgeInsets.zero,
                     value: field.value ?? true,
-                    title: const Text('Notifications'),
+                    title: Text(
+                      AppLocalizations.of(context)!.notificationsTitle,
+                    ),
                     subtitle: const Text(
                       'Required to inform about download status',
                     ),
@@ -99,7 +103,9 @@ class PermissionsPage extends HookConsumerWidget implements IFormPage {
                   builder: (field) => SwitchListTile(
                     contentPadding: EdgeInsets.zero,
                     value: field.value ?? isCurrentDefaultBrowser,
-                    title: const Text('Default Browser'),
+                    title: Text(
+                      AppLocalizations.of(context)!.defaultBrowserTitle,
+                    ),
                     subtitle: const Text(
                       'Set WebLibre as your default browser',
                     ),

@@ -41,6 +41,8 @@ import 'package:weblibre/features/user/domain/presentation/screens/profile_backu
 import 'package:weblibre/features/user/domain/presentation/screens/profile_restore.dart';
 import 'package:weblibre/features/user/domain/repositories/onboarding.dart';
 import 'package:weblibre/features/user/domain/repositories/profile.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/user_flow_localizations.dart';
 import 'package:weblibre/utils/exit_app.dart';
 
 class OnboardingScreen extends HookConsumerWidget {
@@ -154,7 +156,7 @@ class OnboardingScreen extends HookConsumerWidget {
                           }
                         },
                         icon: const Icon(Icons.chevron_left),
-                        label: const Text('Previous'),
+                        label: Text(AppLocalizations.of(context)!.previous),
                       ),
                     ),
                   ),
@@ -190,7 +192,9 @@ class OnboardingScreen extends HookConsumerWidget {
                               },
                         iconAlignment: IconAlignment.end,
                         icon: const Icon(Icons.chevron_right),
-                        label: const Text('Next'),
+                        label: Text(
+                          AppLocalizations.of(context)!.onboardingNext,
+                        ),
                       ),
                     )
                   else if (onboardingMode == OnboardingMode.restore &&
@@ -245,7 +249,7 @@ class OnboardingScreen extends HookConsumerWidget {
                             : null,
                         iconAlignment: IconAlignment.end,
                         icon: const Icon(Icons.settings_backup_restore),
-                        label: const Text('Restore'),
+                        label: Text(AppLocalizations.of(context)!.restore),
                       ),
                     )
                   else
@@ -275,7 +279,7 @@ class OnboardingScreen extends HookConsumerWidget {
                         },
                         iconAlignment: IconAlignment.end,
                         icon: const Icon(Icons.done),
-                        label: const Text('Done'),
+                        label: Text(AppLocalizations.of(context)!.done),
                       ),
                     ),
                 ],

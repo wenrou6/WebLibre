@@ -19,6 +19,8 @@
  */
 import 'package:flutter/material.dart';
 import 'package:weblibre/features/gestures/data/models/gesture_action.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/user_flow_localizations.dart';
 
 /// Shows a modal bottom sheet listing every [GestureAction] grouped by category,
 /// each with its icon, title and description, and returns the chosen action (or
@@ -78,7 +80,10 @@ class _GestureActionPicker extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(24, 0, 24, 8),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Choose action', style: theme.textTheme.titleLarge),
+                child: Text(
+                  AppLocalizations.of(context)!.chooseAction,
+                  style: theme.textTheme.titleLarge,
+                ),
               ),
             ),
             Expanded(

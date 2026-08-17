@@ -25,6 +25,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/features/web_push/domain/providers.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/user_flow_localizations.dart';
 import 'package:weblibre/utils/ui_helper.dart';
 
 const List<SettingsSectionDefinition> webPushSettingsSections = [
@@ -117,7 +119,11 @@ class _DistributorTile extends HookConsumerWidget {
       error: (error, _) => ListTile(
         leading: const Icon(MdiIcons.alertCircleOutline),
         title: const Text('UnifiedPush Distributor'),
-        subtitle: Text('Could not read push status: $error'),
+        subtitle: Text(
+          AppLocalizations.of(
+            context,
+          )!.couldNotReadPushStatus(error.toString()),
+        ),
       ),
       data: (pushStatus) {
         final theme = Theme.of(context);
@@ -303,15 +309,19 @@ class _NotificationPermissionTile extends HookConsumerWidget {
           MdiIcons.alertCircleOutline,
           color: theme.colorScheme.error,
         ),
-        title: const Text('Notification Permission'),
-        subtitle: Text('Could not read permission state: $error'),
+        title: Text(AppLocalizations.of(context)!.notificationPermission),
+        subtitle: Text(
+          AppLocalizations.of(
+            context,
+          )!.couldNotReadPermissionState(error.toString()),
+        ),
       ),
       data: (isGranted) {
         if (isGranted) {
-          return const ListTile(
-            leading: Icon(MdiIcons.bellCheckOutline),
-            title: Text('Notification Permission'),
-            subtitle: Text('Granted'),
+          return ListTile(
+            leading: const Icon(MdiIcons.bellCheckOutline),
+            title: Text(AppLocalizations.of(context)!.notificationPermission),
+            subtitle: Text(AppLocalizations.of(context)!.granted),
           );
         }
 
@@ -358,7 +368,7 @@ class _NotificationPermissionTile extends HookConsumerWidget {
                     dimension: 18,
                     child: CircularProgressIndicator.adaptive(strokeWidth: 2),
                   )
-                : const Text('Grant'),
+                : Text(AppLocalizations.of(context)!.grant),
           ),
         );
       },
@@ -391,10 +401,10 @@ class _SubscriptionList extends HookConsumerWidget {
       ),
       data: (items) {
         if (items.isEmpty) {
-          return const ListTile(
-            leading: Icon(MdiIcons.webOff),
-            title: Text('No site subscriptions'),
-            subtitle: Text(
+          return ListTile(
+            leading: const Icon(MdiIcons.webOff),
+            title: Text(AppLocalizations.of(context)!.noSiteSubscriptions),
+            subtitle: const Text(
               'Websites you allow to send notifications will appear here.',
             ),
           );

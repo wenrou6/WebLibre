@@ -1,0 +1,187 @@
+{
+  "account": {
+    "en": "Account",
+    "zh": "账户",
+    "description": "Account settings section title"
+  },
+  "synchronization": {
+    "en": "Synchronization",
+    "zh": "同步",
+    "description": "Synchronization settings section title"
+  },
+  "searchAccountSettings": {
+    "en": "Search account settings",
+    "zh": "搜索账户设置",
+    "description": "Search hint for account settings"
+  },
+  "searchSyncSettings": {
+    "en": "Search sync settings",
+    "zh": "搜索同步设置",
+    "description": "Search hint for synchronization settings"
+  },
+  "failedToLoadAccount": {
+    "en": "Failed to load account",
+    "zh": "加载账户失败",
+    "description": "Error shown when account data cannot be loaded"
+  },
+  "signedInAccount": {
+    "en": "Signed in account",
+    "zh": "已登录账户",
+    "description": "Label for an authenticated account"
+  },
+  "signIn": {
+    "en": "Sign in",
+    "zh": "登录",
+    "description": "Sign-in action"
+  },
+  "signOut": {
+    "en": "Sign Out",
+    "zh": "退出登录",
+    "description": "Sign-out action"
+  },
+  "signOutQuestion": {
+    "en": "Sign out?",
+    "zh": "退出登录？",
+    "description": "Sign-out confirmation dialog title"
+  },
+  "syncHistory": {
+    "en": "Sync History",
+    "zh": "同步历史记录",
+    "description": "Toggle for synchronizing browsing history"
+  },
+  "syncBookmarks": {
+    "en": "Sync Bookmarks",
+    "zh": "同步书签",
+    "description": "Toggle for synchronizing bookmarks"
+  },
+  "syncOpenTabs": {
+    "en": "Sync Open Tabs",
+    "zh": "同步打开的标签页",
+    "description": "Toggle for synchronizing open tabs"
+  },
+  "deviceName": {
+    "en": "Device Name",
+    "zh": "设备名称",
+    "description": "Device name setting title"
+  },
+  "unknown": {
+    "en": "Unknown",
+    "zh": "未知",
+    "description": "Fallback for an unknown value"
+  },
+  "serverOverrides": {
+    "en": "Server Overrides",
+    "zh": "服务器覆盖",
+    "description": "Sync server override settings title"
+  },
+  "fxaServerOverride": {
+    "en": "FxA Server Override",
+    "zh": "FxA 服务器覆盖",
+    "description": "Firefox Account server override title"
+  },
+  "syncTokenServerOverride": {
+    "en": "Sync Token Server Override",
+    "zh": "同步令牌服务器覆盖",
+    "description": "Sync token server override title"
+  },
+  "defaultMozillaServer": {
+    "en": "Default Mozilla server",
+    "zh": "默认 Mozilla 服务器",
+    "description": "Fallback label for the default Mozilla server"
+  },
+  "automaticFromFxaServer": {
+    "en": "Automatic from FxA server",
+    "zh": "从 FxA 服务器自动获取",
+    "description": "Fallback label for an automatically discovered token server"
+  },
+  "lastSyncedAt": {
+    "en": "Last synced: {value}",
+    "zh": "上次同步：{value}",
+    "description": "Last synchronization timestamp",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "gestureBindings": {
+    "en": "Gesture bindings",
+    "zh": "手势绑定",
+    "description": "Gesture bindings screen title"
+  },
+  "addGesture": {
+    "en": "Add gesture",
+    "zh": "添加手势",
+    "description": "Action for adding a gesture binding"
+  },
+  "noGesturesAssigned": {
+    "en": "No gestures assigned yet.",
+    "zh": "尚未分配手势。",
+    "description": "Empty state for gesture bindings"
+  },
+  "chooseAction": {
+    "en": "Choose action",
+    "zh": "选择操作",
+    "description": "Gesture action picker title"
+  },
+  "notificationPermission": {
+    "en": "Notification Permission",
+    "zh": "通知权限",
+    "description": "Notification permission setting title"
+  },
+  "granted": {
+    "en": "Granted",
+    "zh": "已授予",
+    "description": "Granted permission status"
+  },
+  "grant": {
+    "en": "Grant",
+    "zh": "授予",
+    "description": "Action for granting a permission"
+  },
+  "noSiteSubscriptions": {
+    "en": "No site subscriptions",
+    "zh": "没有网站订阅",
+    "description": "Empty state for website push subscriptions"
+  },
+  "couldNotReadPushStatus": {
+    "en": "Could not read push status: {error}",
+    "zh": "无法读取推送状态：{error}",
+    "description": "Error shown when web push status cannot be read",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "couldNotReadPermissionState": {
+    "en": "Could not read permission state: {error}",
+    "zh": "无法读取权限状态：{error}",
+    "description": "Error shown when notification permission state cannot be read",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "previous": {
+    "en": "Previous",
+    "zh": "上一步",
+    "description": "Previous onboarding page action"
+  },
+  "restore": {
+    "en": "Restore",
+    "zh": "恢复",
+    "description": "Restore action"
+  },
+  "permissionsTitle": {
+    "en": "Permissions",
+    "zh": "权限",
+    "description": "Permissions onboarding page title"
+  },
+  "defaultBrowserTitle": {
+    "en": "Default Browser",
+    "zh": "默认浏览器",
+    "description": "Default browser onboarding option title"
+  }
+}
