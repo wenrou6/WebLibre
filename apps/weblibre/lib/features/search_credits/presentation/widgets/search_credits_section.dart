@@ -138,8 +138,8 @@ class SearchCreditsSection extends HookConsumerWidget {
             ),
           ),
         if (isRequesting)
-          const Padding(
-            padding: EdgeInsets.fromLTRB(16, 0, 16, 12),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
             child: Row(
               children: [
                 SizedBox(

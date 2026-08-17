@@ -150,8 +150,8 @@ class _SuggestAfterSection extends HookConsumerWidget {
                 : null,
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.fromLTRB(72, 0, 16, 8),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(72, 0, 16, 8),
           child: Text(AppLocalizations.of(context)!.gestureSuggestNextSubtitle),
         ),
       ],
