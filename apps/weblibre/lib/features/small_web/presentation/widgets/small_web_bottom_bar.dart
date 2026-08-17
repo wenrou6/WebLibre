@@ -24,6 +24,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/geckoview/features/bookmarks/domain/providers/bookmarks.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/services_localizations.dart';
 import 'package:weblibre/features/geckoview/features/bookmarks/domain/repositories/bookmarks.dart';
 import 'package:weblibre/utils/ui_helper.dart' as ui_helper;
 
@@ -191,7 +193,7 @@ class SmallWebBottomBar extends HookConsumerWidget {
         children: [
           IconButton(
             icon: const Icon(Icons.menu),
-            tooltip: 'Menu',
+            tooltip: AppLocalizations.of(context)!.smallWebMenuTooltip,
             onPressed: onMenuTap,
           ),
           Expanded(
@@ -220,7 +222,9 @@ class SmallWebBottomBar extends HookConsumerWidget {
           ),
           IconButton(
             icon: Icon(isBookmarked ? Icons.bookmark : Icons.bookmark_border),
-            tooltip: isBookmarked ? 'Remove bookmark' : 'Add bookmark',
+            tooltip: isBookmarked
+                ? AppLocalizations.of(context)!.removeBookmark
+                : AppLocalizations.of(context)!.addBookmark,
             onPressed: !canToggleBookmark
                 ? null
                 : () async {
@@ -231,7 +235,10 @@ class SmallWebBottomBar extends HookConsumerWidget {
                             .delete(guid);
                       }
                       if (context.mounted) {
-                        ui_helper.showInfoMessage(context, 'Bookmark removed');
+                        ui_helper.showInfoMessage(
+                          context,
+                          AppLocalizations.of(context)!.smallWebBookmarkRemoved,
+                        );
                       }
                     } else {
                       await ref
@@ -242,14 +249,17 @@ class SmallWebBottomBar extends HookConsumerWidget {
                             title: currentTabTitle ?? tabUrl.host,
                           );
                       if (context.mounted) {
-                        ui_helper.showInfoMessage(context, 'Bookmark added');
+                        ui_helper.showInfoMessage(
+                          context,
+                          AppLocalizations.of(context)!.smallWebBookmarkAdded,
+                        );
                       }
                     }
                   },
           ),
           IconButton(
             icon: const Icon(Icons.close),
-            tooltip: 'Exit Small Web',
+            tooltip: AppLocalizations.of(context)!.smallWebExitTooltip,
             onPressed: onExit,
           ),
         ],

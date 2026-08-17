@@ -22,6 +22,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/app_links/domain/services/app_links_coordinator.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/services_localizations.dart';
 import 'package:weblibre/features/app_links/presentation/widgets/app_link_prompt_dialog.dart';
 
 /// Non-modal banner for an http(s) app link (§2.2). The page is allowed to load
@@ -74,14 +76,18 @@ class AppLinkOpenBanner extends HookConsumerWidget {
                 Expanded(
                   child: Text(
                     appName != null
-                        ? 'Open this link in $appName?'
-                        : 'Open this link in an app?',
+                        ? AppLocalizations.of(
+                            context,
+                          )!.appLinkOpenNamedQuestion(appName)
+                        : AppLocalizations.of(
+                            context,
+                          )!.appLinkOpenGenericQuestion,
                     style: theme.textTheme.bodyMedium,
                   ),
                 ),
                 IconButton(
                   icon: const Icon(Icons.close),
-                  tooltip: 'Dismiss',
+                  tooltip: AppLocalizations.of(context)!.appLinkDismiss,
                   // A back/swipe/cancel resolves as dismiss (§2.6).
                   onPressed: () => resolve(AppLinkDecision.dismiss),
                 ),
@@ -94,7 +100,11 @@ class AppLinkOpenBanner extends HookConsumerWidget {
                     value: remember.value,
                     onChanged: (value) => remember.value = value ?? false,
                   ),
-                  const Flexible(child: Text('Remember for this site')),
+                  Flexible(
+                    child: Text(
+                      AppLocalizations.of(context)!.appLinkRememberForSite,
+                    ),
+                  ),
                 ],
               ),
             Align(
@@ -104,12 +114,14 @@ class AppLinkOpenBanner extends HookConsumerWidget {
                 children: [
                   TextButton(
                     onPressed: () => resolve(AppLinkDecision.cancel),
-                    child: const Text('Stay in browser'),
+                    child: Text(
+                      AppLocalizations.of(context)!.appLinkStayInBrowser,
+                    ),
                   ),
                   const SizedBox(width: 8),
                   FilledButton(
                     onPressed: () => resolve(AppLinkDecision.open),
-                    child: const Text('Open app'),
+                    child: Text(AppLocalizations.of(context)!.appLinkOpenApp),
                   ),
                 ],
               ),

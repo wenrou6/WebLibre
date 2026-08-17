@@ -22,6 +22,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/core/routing/routes.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/services_localizations.dart';
 import 'package:weblibre/features/web_feed/domain/providers/add_dialog_blocking.dart';
 import 'package:weblibre/utils/form_validators.dart';
 
@@ -39,13 +41,13 @@ class AddFeedDialog extends HookConsumerWidget {
     );
 
     return AlertDialog(
-      title: const Text('Add Feed'),
+      title: Text(AppLocalizations.of(context)!.feedAddTitle),
       // contentPadding: const EdgeInsets.fromLTRB(24.0, 12.0, 24.0, 16.0),
       content: Form(
         key: formKey,
         child: TextFormField(
-          decoration: const InputDecoration(
-            label: Text('URL'),
+          decoration: InputDecoration(
+            label: Text(AppLocalizations.of(context)!.address),
             hintText: 'https://example.com/feed',
             floatingLabelBehavior: FloatingLabelBehavior.always,
           ),
@@ -71,13 +73,13 @@ class AddFeedDialog extends HookConsumerWidget {
                   .ignore(initialUri!);
               context.pop();
             },
-            child: const Text('Ignore'),
+            child: Text(AppLocalizations.of(context)!.feedIgnore),
           ),
         TextButton(
           onPressed: () {
             context.pop();
           },
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         TextButton(
           onPressed: () {
@@ -94,7 +96,7 @@ class AddFeedDialog extends HookConsumerWidget {
               FeedCreateRoute(feedId: feedId).pushReplacement(context);
             }
           },
-          child: const Text('Add'),
+          child: Text(AppLocalizations.of(context)!.add),
         ),
       ],
     );

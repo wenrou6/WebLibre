@@ -22,6 +22,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/services_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/addons/extensions/addon_info.dart';
@@ -44,10 +45,14 @@ class AddonManagerScreen extends ConsumerWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(AppLocalizations.of(context)!.extensionsSettings),
-          bottom: const TabBar(
+          bottom: TabBar(
             tabs: [
-              Tab(text: 'Installed'),
-              Tab(text: 'Browse'),
+              Tab(text: AppLocalizations.of(context)!.installed),
+              Tab(
+                text: AppLocalizations.of(
+                  context,
+                )!.browseInstalledAndAvailableExtensions,
+              ),
             ],
           ),
           actions: [
@@ -119,7 +124,7 @@ class _AddonManagerOverflowMenu extends ConsumerWidget {
                   if (!context.mounted) return;
                   showInfoMessage(
                     context,
-                    'Background update checks started for installed extensions',
+                    AppLocalizations.of(context)!.addonUpdatesStarted,
                   );
                 }
               : null,
@@ -164,17 +169,17 @@ class _AddonList extends StatelessWidget {
           children: [
             if (enabled.isNotEmpty) ...[
               const SizedBox(height: 16),
-              const _Section(title: 'Enabled'),
+              _Section(title: AppLocalizations.of(context)!.enabled),
               for (final addon in enabled) _AddonCard(addon: addon),
             ],
             if (disabled.isNotEmpty) ...[
               const SizedBox(height: 16),
-              const _Section(title: 'Disabled'),
+              _Section(title: AppLocalizations.of(context)!.disabled),
               for (final addon in disabled) _AddonCard(addon: addon),
             ],
             if (unsupported.isNotEmpty) ...[
               const SizedBox(height: 16),
-              const _Section(title: 'Unsupported'),
+              _Section(title: AppLocalizations.of(context)!.addonUnsupported),
               for (final addon in unsupported)
                 _AddonCard(
                   addon: addon,
@@ -182,11 +187,11 @@ class _AddonList extends StatelessWidget {
                 ),
             ],
             if (installed == 0)
-              const Padding(
-                padding: EdgeInsets.only(top: 48),
+              Padding(
+                padding: const EdgeInsets.only(top: 48),
                 child: Center(
                   child: Text(
-                    'No extensions installed yet.\nBrowse the store to find some.',
+                    AppLocalizations.of(context)!.addonEmptyInstalled,
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -207,13 +212,16 @@ class _UninstallAction extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final busy = ref.watch(addonBusyIdsProvider).contains(addon.id);
     return IconButton(
-      tooltip: 'Remove extension',
+      tooltip: AppLocalizations.of(context)!.uninstallExtension,
       onPressed: busy
           ? null
           : () async {
               await ref.read(addonListProvider.notifier).uninstall(addon);
               if (!context.mounted) return;
-              showInfoMessage(context, '${addon.displayName} removed');
+              showInfoMessage(
+                context,
+                AppLocalizations.of(context)!.addonRemoved(addon.displayName),
+              );
             },
       icon: const Icon(Icons.delete_outline),
     );

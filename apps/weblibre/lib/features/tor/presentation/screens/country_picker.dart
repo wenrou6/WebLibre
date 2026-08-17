@@ -22,6 +22,8 @@ import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/services_localizations.dart';
 
 /// Sentinel value returned when the user selects "Automatic" (no country).
 /// Distinguished from `null` which means the user navigated back without
@@ -50,7 +52,7 @@ class CountryPickerScreen extends HookWidget {
             country.name ??
             country.alpha2Code ??
             country.countryCode ??
-            'Unnamed Country';
+            AppLocalizations.of(context)!.countryUnnamed;
         return (alpha2Code: country.alpha2Code, label: label);
       }).toList()..sort((a, b) => a.label.compareTo(b.label));
     });
@@ -76,7 +78,7 @@ class CountryPickerScreen extends HookWidget {
             child: TextField(
               controller: searchController,
               decoration: InputDecoration(
-                hintText: 'Search countries...',
+                hintText: AppLocalizations.of(context)!.countrySearchHint,
                 prefixIcon: const Icon(Icons.search),
                 suffixIcon: searchQuery.value.isNotEmpty
                     ? IconButton(
@@ -111,7 +113,7 @@ class CountryPickerScreen extends HookWidget {
                   height: 24,
                   child: Center(child: Icon(Icons.public)),
                 ),
-                title: const Text('Automatic'),
+                title: Text(AppLocalizations.of(context)!.countryAutomatic),
                 trailing: isSelected ? const Icon(Icons.check) : null,
                 onTap: () => context.pop(automaticCountry),
               );

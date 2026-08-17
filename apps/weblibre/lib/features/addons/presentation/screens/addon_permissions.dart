@@ -48,7 +48,7 @@ class AddonPermissionsScreen extends ConsumerWidget {
       appBar: AppBar(
         title: Text(
           addon == null
-              ? 'Extension Permissions'
+              ? AppLocalizations.of(context)!.permissions
               : '${addon.displayName} Permissions',
         ),
       ),
@@ -86,7 +86,7 @@ class AddonPermissionsScreen extends ConsumerWidget {
               ),
             if (permissions.isNotEmpty) ...[
               Text(
-                'Permissions',
+                AppLocalizations.of(context)!.permissions,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 8),

@@ -22,6 +22,8 @@ import 'package:flutter_material_design_icons/flutter_material_design_icons.dart
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/core/providers/defaults.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/services_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/about/domain/providers.dart';
 import 'package:weblibre/features/geckoview/domain/repositories/tab.dart';
@@ -50,7 +52,7 @@ class AboutDialogScreen extends HookConsumerWidget {
       children: [
         ListTile(
           contentPadding: EdgeInsets.zero,
-          title: const Text('Gecko Version'),
+          title: Text(AppLocalizations.of(context)!.aboutGeckoVersion),
           subtitle: Consumer(
             builder: (context, ref, child) {
               final geckoVersion = ref.watch(geckoVersionProvider);
@@ -63,7 +65,7 @@ class AboutDialogScreen extends HookConsumerWidget {
         ListTile(
           contentPadding: EdgeInsets.zero,
           leading: const Icon(MdiIcons.charity),
-          title: const Text('Feedback'),
+          title: Text(AppLocalizations.of(context)!.aboutFeedback),
           onTap: () async {
             await ref
                 .read(tabRepositoryProvider.notifier)
@@ -81,7 +83,7 @@ class AboutDialogScreen extends HookConsumerWidget {
         ListTile(
           contentPadding: EdgeInsets.zero,
           leading: const Icon(MdiIcons.handHeart),
-          title: const Text('Donate'),
+          title: Text(AppLocalizations.of(context)!.aboutDonate),
           onTap: () async {
             await ref
                 .read(tabRepositoryProvider.notifier)
@@ -100,7 +102,7 @@ class AboutDialogScreen extends HookConsumerWidget {
           contentPadding: EdgeInsets.zero,
           // ignore: deprecated_member_use
           leading: const Icon(Icons.book),
-          title: const Text('Documentation'),
+          title: Text(AppLocalizations.of(context)!.aboutDocumentation),
           onTap: () async {
             await ref
                 .read(tabRepositoryProvider.notifier)
@@ -119,7 +121,7 @@ class AboutDialogScreen extends HookConsumerWidget {
           contentPadding: EdgeInsets.zero,
           // ignore: deprecated_member_use
           leading: const Icon(MdiIcons.github),
-          title: const Text('Github'),
+          title: Text(AppLocalizations.of(context)!.aboutGitHub),
           onTap: () async {
             await ref
                 .read(tabRepositoryProvider.notifier)

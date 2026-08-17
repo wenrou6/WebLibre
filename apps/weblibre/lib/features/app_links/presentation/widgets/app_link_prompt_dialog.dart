@@ -22,6 +22,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/app_links/domain/entities/app_link_rule.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/services_localizations.dart';
 import 'package:weblibre/features/app_links/domain/services/app_links_coordinator.dart';
 
 /// Build the `alwaysOpen` rule for a target, or null when it cannot be remembered
@@ -88,13 +90,15 @@ class AppLinkPromptDialog extends HookConsumerWidget {
     return AlertDialog(
       icon: const Icon(Icons.open_in_new),
       title: Text(
-        appName != null ? 'Open in $appName?' : 'Open in another app?',
+        appName != null
+            ? AppLocalizations.of(context)!.appLinkOpenNamedTitle(appName)
+            : AppLocalizations.of(context)!.appLinkOpenGenericTitle,
       ),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('This link is handled by an app outside WebLibre.'),
+          Text(AppLocalizations.of(context)!.appLinkExternalDescription),
           const SizedBox(height: 8),
           Text(
             _displayScope(target.scopeKey),
@@ -106,18 +110,20 @@ class AppLinkPromptDialog extends HookConsumerWidget {
               controlAffinity: ListTileControlAffinity.leading,
               value: remember.value,
               onChanged: (value) => remember.value = value ?? false,
-              title: const Text('Remember my choice for this site'),
+              title: Text(
+                AppLocalizations.of(context)!.appLinkRememberChoiceForSite,
+              ),
             ),
         ],
       ),
       actions: [
         TextButton(
           onPressed: () => resolve(AppLinkDecision.cancel),
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         FilledButton(
           onPressed: () => resolve(AppLinkDecision.open),
-          child: const Text('Open'),
+          child: Text(AppLocalizations.of(context)!.open),
         ),
       ],
     );

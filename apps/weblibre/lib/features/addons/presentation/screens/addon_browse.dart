@@ -25,6 +25,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/l10n/app_localizations.dart';
+import 'package:weblibre/l10n/services_localizations.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/addons/domain/providers.dart';
 import 'package:weblibre/features/addons/presentation/widgets/addon_listing_card.dart';
@@ -89,7 +90,7 @@ class AddonBrowseView extends HookConsumerWidget {
           child: TextField(
             controller: searchController,
             decoration: InputDecoration(
-              hintText: 'Search addons.mozilla.org',
+              hintText: AppLocalizations.of(context)!.addonSearchStoreHint,
               prefixIcon: const Icon(Icons.search),
               suffixIcon: query.value.isEmpty
                   ? null
@@ -166,8 +167,7 @@ class _DesktopCompatibilityWarning extends StatelessWidget {
           const SizedBox(width: 8),
           Expanded(
             child: Text(
-              'Desktop extensions are not reviewed for mobile. Some may not '
-              'work, may crash, or may behave unexpectedly on Android.',
+              AppLocalizations.of(context)!.addonDesktopCompatibilityWarning,
               style: TextStyle(
                 color: theme.colorScheme.onTertiaryContainer,
                 fontSize: 12,
