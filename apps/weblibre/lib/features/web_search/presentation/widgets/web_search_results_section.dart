@@ -16,6 +16,7 @@ import 'package:weblibre/features/web_search/presentation/screens/page_preview.d
 import 'package:weblibre/features/web_search/presentation/widgets/search_result_card.dart';
 import 'package:weblibre/features/web_search/presentation/widgets/web_search_infobox_card.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Number of result cards from the bottom at which to prefetch the next
 /// page. With a backend page size of 10, four cards of look-ahead means
@@ -108,7 +109,7 @@ class WebSearchResultsSection extends HookConsumerWidget {
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: FailureWidget(
-            title: 'Search failed',
+            title: AppLocalizations.of(context)!.searchFailed,
             exception: state.errorMessage,
           ),
         ),
@@ -124,7 +125,7 @@ class WebSearchResultsSection extends HookConsumerWidget {
             children: [
               CircularProgressIndicator(),
               SizedBox(height: 16),
-              Text('Searching the web...'),
+              Text(AppLocalizations.of(context)!.searchingTheWeb),
             ],
           ),
         ),
@@ -288,7 +289,7 @@ class _NeedsCredits extends StatelessWidget {
           const SizedBox(height: 16),
           FilledButton.icon(
             icon: const Icon(Icons.shopping_cart_outlined),
-            label: const Text('Buy a search pack'),
+            label: Text(AppLocalizations.of(context)!.buySearchPack),
             onPressed: () async {
               await launchUrl(
                 Uri.parse('${SupabaseConfig.accountWebUrl}?view=search-pack'),

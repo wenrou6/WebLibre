@@ -20,6 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mozilla_components/flutter_mozilla_components.dart';
 import 'package:weblibre/utils/number_format.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class AddonListingIcon extends StatelessWidget {
   final String? iconUrl;
@@ -109,7 +110,7 @@ class AddonListingCard extends StatelessWidget {
                         if (listing.promoted == AddonStorePromoted.recommended)
                           const Chip(
                             avatar: Icon(Icons.verified, size: 16),
-                            label: Text('Recommended'),
+                            label: Text(AppLocalizations.of(context)!.recommended),
                           ),
                         if (listing.ratingAverage != null)
                           Chip(
@@ -128,7 +129,7 @@ class AddonListingCard extends StatelessWidget {
                         if (isInstalled)
                           const Chip(
                             avatar: Icon(Icons.check, size: 16),
-                            label: Text('Installed'),
+                            label: Text(AppLocalizations.of(context)!.installed),
                           ),
                       ],
                     ),

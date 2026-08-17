@@ -35,6 +35,7 @@ import 'package:weblibre/features/proxy/presentation/widgets/profile_list/share_
 import 'package:weblibre/features/user/data/database/definitions.drift.dart'
     show ProxyProfile;
 import 'package:weblibre/utils/ui_helper.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 enum ProfileAction { edit, testLatency, share, delete }
 
@@ -94,7 +95,7 @@ class ProfileTile extends ConsumerWidget {
             itemBuilder: (context) => [
               const PopupMenuItem(
                 value: ProfileAction.edit,
-                child: MenuRow(icon: Icons.edit_outlined, label: 'Edit'),
+                child: MenuRow(icon: Icons.edit_outlined, label: AppLocalizations.of(context)!.edit),
               ),
               PopupMenuItem(
                 value: ProfileAction.testLatency,
@@ -103,16 +104,16 @@ class ProfileTile extends ConsumerWidget {
                   icon: latencyResult is AsyncLoading
                       ? Icons.hourglass_bottom
                       : Icons.network_check,
-                  label: 'Test connection',
+                  label: AppLocalizations.of(context)!.testConnection,
                 ),
               ),
               const PopupMenuItem(
                 value: ProfileAction.share,
-                child: MenuRow(icon: Icons.share_outlined, label: 'Share'),
+                child: MenuRow(icon: Icons.share_outlined, label: AppLocalizations.of(context)!.share),
               ),
               const PopupMenuItem(
                 value: ProfileAction.delete,
-                child: MenuRow(icon: Icons.delete_outline, label: 'Delete'),
+                child: MenuRow(icon: Icons.delete_outline, label: AppLocalizations.of(context)!.delete),
               ),
             ],
           ),

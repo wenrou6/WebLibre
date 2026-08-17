@@ -33,6 +33,7 @@ import 'package:weblibre/features/small_web/presentation/widgets/small_web_histo
 import 'package:weblibre/features/small_web/presentation/widgets/small_web_mode_chips.dart';
 import 'package:weblibre/features/small_web/presentation/widgets/wander_console_sheet.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Hand-off between the small-web menu and the wander-console sheet. Each
 /// sheet pops with one of these so [openSmallWebMenuFlow] can re-present the
@@ -865,7 +866,7 @@ class _SmallWebMenuError extends StatelessWidget {
             SizedBox(
               height: 240,
               child: FailureWidget(
-                title: 'Small Web unavailable',
+                title: AppLocalizations.of(context)!.smallWebUnavailable,
                 exception: error,
                 onRetry: onRetry,
               ),

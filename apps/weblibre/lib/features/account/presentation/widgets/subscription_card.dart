@@ -25,6 +25,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:weblibre/features/account/data/models/subscription_status.dart';
 import 'package:weblibre/features/account/data/supabase_config.dart';
 import 'package:weblibre/features/account/domain/repositories/subscription_repository.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Visual presentation of one subscription state. All branches of the
 /// subscription UI render through the same ListTile + badge + note + manage
@@ -106,7 +107,7 @@ class _SubscriptionErrorTile extends StatelessWidget {
     final scheme = Theme.of(context).colorScheme;
     return ListTile(
       leading: Icon(Icons.error_outline, color: scheme.error),
-      title: const Text('Could not load subscription'),
+      title: Text(AppLocalizations.of(context)!.couldNotLoadSubscription),
       subtitle: const Text('Check your connection and try again.'),
       trailing: IconButton(
         icon: const Icon(Icons.refresh),

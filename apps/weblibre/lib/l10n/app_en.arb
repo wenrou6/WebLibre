@@ -3102,5 +3102,437 @@
   "uBlockAssetSubGroupSocialLabel": "Social Widgets",
   "@uBlockAssetSubGroupSocialLabel": {
     "description": "Label for the social widgets uBlock filter-list subgroup"
+  },
+  "torTrademark": "Trademark",
+  "@torTrademark": {
+    "description": "UI string for torTrademark"
+  },
+  "torStartAutomatically": "Start Automatically",
+  "@torStartAutomatically": {
+    "description": "UI string for torStartAutomatically"
+  },
+  "torStartOrStopService": "Start or stop the {brand} service",
+  "@torStartOrStopService": {
+    "description": "UI string for torStartOrStopService"
+  },
+  "torRequestNewIdentity": "Request New Identity",
+  "@torRequestNewIdentity": {
+    "description": "UI string for torRequestNewIdentity"
+  },
+  "torUseFreshCircuit": "Use a fresh circuit for new connections",
+  "@torUseFreshCircuit": {
+    "description": "UI string for torUseFreshCircuit"
+  },
+  "torAutoConfigureTransport": "Auto Configure Transport",
+  "@torAutoConfigureTransport": {
+    "description": "UI string for torAutoConfigureTransport"
+  },
+  "torCannotConnectWithoutBridge": "I'm sure I cannot connect without a bridge",
+  "@torCannotConnectWithoutBridge": {
+    "description": "UI string for torCannotConnectWithoutBridge"
+  },
+  "torAutoConfigured": "Auto-configured",
+  "@torAutoConfigured": {
+    "description": "UI string for torAutoConfigured"
+  },
+  "torDirectConnection": "Direct Connection",
+  "@torDirectConnection": {
+    "description": "UI string for torDirectConnection"
+  },
+  "torFetchFreshBridges": "Fetch fresh Bridges before connecting",
+  "@torFetchFreshBridges": {
+    "description": "UI string for torFetchFreshBridges"
+  },
+  "torSuitableForHeavyCensorship": "Suitable for heavy censorship",
+  "@torSuitableForHeavyCensorship": {
+    "description": "UI string for torSuitableForHeavyCensorship"
+  },
+  "userBangs": "User Bangs",
+  "@userBangs": {
+    "description": "UI string for userBangs"
+  },
+  "manageUserBangs": "Manage User Bangs",
+  "@manageUserBangs": {
+    "description": "UI string for manageUserBangs"
+  },
+  "searchBangs": "Search Bangs",
+  "@searchBangs": {
+    "description": "UI string for searchBangs"
+  },
+  "browseCategories": "Browse Categories",
+  "@browseCategories": {
+    "description": "UI string for browseCategories"
+  },
+  "bangCategories": "Bang Categories",
+  "@bangCategories": {
+    "description": "UI string for bangCategories"
+  },
+  "deleteBang": "Delete Bang",
+  "@deleteBang": {
+    "description": "UI string for deleteBang"
+  },
+  "deleteBangConfirm": "Are you sure you want to delete this Bang?",
+  "@deleteBangConfirm": {
+    "description": "UI string for deleteBangConfirm"
+  },
+  "openBasePath": "Open Base Path",
+  "@openBasePath": {
+    "description": "UI string for openBasePath"
+  },
+  "urlEncodePlaceholder": "URL Encode Placeholder",
+  "@urlEncodePlaceholder": {
+    "description": "UI string for urlEncodePlaceholder"
+  },
+  "urlEncodeSpaceToPlus": "URL Encode Space to Plus",
+  "@urlEncodeSpaceToPlus": {
+    "description": "UI string for urlEncodeSpaceToPlus"
+  },
+  "trigger": "Trigger",
+  "@trigger": {
+    "description": "UI string for trigger"
+  },
+  "url": "URL",
+  "@url": {
+    "description": "UI string for url"
+  },
+  "category": "Category",
+  "@category": {
+    "description": "UI string for category"
+  },
+  "subCategory": "Sub Category",
+  "@subCategory": {
+    "description": "UI string for subCategory"
+  },
+  "enableSync": "Enable Sync",
+  "@enableSync": {
+    "description": "UI string for enableSync"
+  },
+  "storeCurrent": "Store Current",
+  "@storeCurrent": {
+    "description": "UI string for storeCurrent"
+  },
+  "storeSnapshot": "Store Snapshot",
+  "@storeSnapshot": {
+    "description": "UI string for storeSnapshot"
+  },
+  "editLabel": "Edit Label",
+  "@editLabel": {
+    "description": "UI string for editLabel"
+  },
+  "restoreSnapshot": "Restore Snapshot",
+  "@restoreSnapshot": {
+    "description": "UI string for restoreSnapshot"
+  },
+  "deleteSnapshot": "Delete Snapshot",
+  "@deleteSnapshot": {
+    "description": "UI string for deleteSnapshot"
+  },
+  "restoreSnapshotOverwrite": "This will overwrite your current local settings.",
+  "@restoreSnapshotOverwrite": {
+    "description": "UI string for restoreSnapshotOverwrite"
+  },
+  "deleteSnapshotConfirm": "Are you sure you want to delete {label}?",
+  "@deleteSnapshotConfirm": {
+    "description": "UI string for deleteSnapshotConfirm"
+  },
+  "becomeSupporter": "Become a Supporter",
+  "@becomeSupporter": {
+    "description": "UI string for becomeSupporter"
+  },
+  "couldNotLoadSubscription": "Could not load subscription",
+  "@couldNotLoadSubscription": {
+    "description": "UI string for couldNotLoadSubscription"
+  },
+  "delivery": "Delivery",
+  "@delivery": {
+    "description": "UI string for delivery"
+  },
+  "unifiedPushDistributor": "UnifiedPush Distributor",
+  "@unifiedPushDistributor": {
+    "description": "UI string for unifiedPushDistributor"
+  },
+  "unifiedPushDistributorSubtitle": "The app that delivers website push notifications",
+  "@unifiedPushDistributorSubtitle": {
+    "description": "UI string for unifiedPushDistributorSubtitle"
+  },
+  "notificationPermission": "Notification Permission",
+  "@notificationPermission": {
+    "description": "UI string for notificationPermission"
+  },
+  "notificationPermissionSubtitle": "Required to display website notifications",
+  "@notificationPermissionSubtitle": {
+    "description": "UI string for notificationPermissionSubtitle"
+  },
+  "subscriptions": "Subscriptions",
+  "@subscriptions": {
+    "description": "UI string for subscriptions"
+  },
+  "siteSubscriptions": "Site Subscriptions",
+  "@siteSubscriptions": {
+    "description": "UI string for siteSubscriptions"
+  },
+  "siteSubscriptionsSubtitle": "Websites subscribed to push notifications",
+  "@siteSubscriptionsSubtitle": {
+    "description": "UI string for siteSubscriptionsSubtitle"
+  },
+  "webPushNotifications": "Notifications",
+  "@webPushNotifications": {
+    "description": "UI string for webPushNotifications"
+  },
+  "webPushNotificationsSubtitle": "Web push delivery, distributor, and site subscriptions.",
+  "@webPushNotificationsSubtitle": {
+    "description": "UI string for webPushNotificationsSubtitle"
+  },
+  "gestureConfiguration": "Configuration",
+  "@gestureConfiguration": {
+    "description": "UI string for gestureConfiguration"
+  },
+  "gestureBindings": "Gesture bindings",
+  "@gestureBindings": {
+    "description": "UI string for gestureBindings"
+  },
+  "gestureBehaviorTiming": "Behavior & timing",
+  "@gestureBehaviorTiming": {
+    "description": "UI string for gestureBehaviorTiming"
+  },
+  "gestureExcludedSites": "Excluded sites",
+  "@gestureExcludedSites": {
+    "description": "UI string for gestureExcludedSites"
+  },
+  "gestureFeedback": "Feedback",
+  "@gestureFeedback": {
+    "description": "UI string for gestureFeedback"
+  },
+  "gestureOverlay": "Overlay",
+  "@gestureOverlay": {
+    "description": "UI string for gestureOverlay"
+  },
+  "gestureLiveFeedback": "Live feedback",
+  "@gestureLiveFeedback": {
+    "description": "UI string for gestureLiveFeedback"
+  },
+  "gestureLiveFeedbackSubtitle": "Show the stroke and its action while you draw",
+  "@gestureLiveFeedbackSubtitle": {
+    "description": "UI string for gestureLiveFeedbackSubtitle"
+  },
+  "gestureSuggestNext": "Suggest next",
+  "@gestureSuggestNext": {
+    "description": "UI string for gestureSuggestNext"
+  },
+  "searchingTheWeb": "Searching the web...",
+  "@searchingTheWeb": {
+    "description": "UI string for searchingTheWeb"
+  },
+  "buySearchPack": "Buy a search pack",
+  "@buySearchPack": {
+    "description": "UI string for buySearchPack"
+  },
+  "checkConnectionRetry": "Check your connection and tap refresh to retry.",
+  "@checkConnectionRetry": {
+    "description": "UI string for checkConnectionRetry"
+  },
+  "buySearchPackToStart": "Buy a search pack to get started",
+  "@buySearchPackToStart": {
+    "description": "UI string for buySearchPackToStart"
+  },
+  "requestingTokens": "Requesting tokens...",
+  "@requestingTokens": {
+    "description": "UI string for requestingTokens"
+  },
+  "getTokens": "Get tokens",
+  "@getTokens": {
+    "description": "UI string for getTokens"
+  },
+  "requestTokens": "Request {count} tokens",
+  "@requestTokens": {
+    "description": "UI string for requestTokens"
+  },
+  "noCreditsRemaining": "No credits remaining",
+  "@noCreditsRemaining": {
+    "description": "UI string for noCreditsRemaining"
+  },
+  "buyMore": "Buy more",
+  "@buyMore": {
+    "description": "UI string for buyMore"
+  },
+  "fetchPageData": "Fetch Page Data",
+  "@fetchPageData": {
+    "description": "UI string for fetchPageData"
+  },
+  "find": "Find",
+  "@find": {
+    "description": "UI string for find"
+  },
+  "show": "Show",
+  "@show": {
+    "description": "UI string for show"
+  },
+  "switch_": "Switch",
+  "@switch_": {
+    "description": "UI string for switch_"
+  },
+  "dismiss": "Dismiss",
+  "@dismiss": {
+    "description": "UI string for dismiss"
+  },
+  "navigateBackToCloseTab": "Navigate BACK again to close current tab",
+  "@navigateBackToCloseTab": {
+    "description": "UI string for navigateBackToCloseTab"
+  },
+  "navigateBackToExitApp": "Navigate BACK again to exit app",
+  "@navigateBackToExitApp": {
+    "description": "UI string for navigateBackToExitApp"
+  },
+  "openLinkFromClipboard": "Want to open link from clipboard?",
+  "@openLinkFromClipboard": {
+    "description": "UI string for openLinkFromClipboard"
+  },
+  "tabsClosed": "{count} Tabs closed",
+  "@tabsClosed": {
+    "description": "UI string for tabsClosed"
+  },
+  "tabClosed": "Tab closed",
+  "@tabClosed": {
+    "description": "UI string for tabClosed"
+  },
+  "closeIsolatedTabs": "Close isolated tabs?",
+  "@closeIsolatedTabs": {
+    "description": "UI string for closeIsolatedTabs"
+  },
+  "hidingDisabledBySite": "Hiding disabled by site",
+  "@hidingDisabledBySite": {
+    "description": "UI string for hidingDisabledBySite"
+  },
+  "quickStart": "Quick Start",
+  "@quickStart": {
+    "description": "UI string for quickStart"
+  },
+  "quickStartSubtitle": "Use recommended defaults and get browsing.",
+  "@quickStartSubtitle": {
+    "description": "UI string for quickStartSubtitle"
+  },
+  "customSetup": "Custom Setup",
+  "@customSetup": {
+    "description": "UI string for customSetup"
+  },
+  "customSetupSubtitle": "Configure DNS, toolbar, extensions, and more.",
+  "@customSetupSubtitle": {
+    "description": "UI string for customSetupSubtitle"
+  },
+  "restoreFromBackup": "Restore from Backup",
+  "@restoreFromBackup": {
+    "description": "UI string for restoreFromBackup"
+  },
+  "restoreFromBackupSubtitle": "Import a profile from an encrypted backup file.",
+  "@restoreFromBackupSubtitle": {
+    "description": "UI string for restoreFromBackupSubtitle"
+  },
+  "endUserLicenseAgreement": "End User License Agreement",
+  "@endUserLicenseAgreement": {
+    "description": "UI string for endUserLicenseAgreement"
+  },
+  "couldNotLoadSearchEngines": "Could not load search engines",
+  "@couldNotLoadSearchEngines": {
+    "description": "UI string for couldNotLoadSearchEngines"
+  },
+  "failedToLoadFeeds": "Failed to load Feeds",
+  "@failedToLoadFeeds": {
+    "description": "UI string for failedToLoadFeeds"
+  },
+  "failedToLoadFeed": "Failed to load feed",
+  "@failedToLoadFeed": {
+    "description": "UI string for failedToLoadFeed"
+  },
+  "failedToLoadArticles": "Failed to load Articles",
+  "@failedToLoadArticles": {
+    "description": "UI string for failedToLoadArticles"
+  },
+  "failedReadingArticle": "Failed reading article",
+  "@failedReadingArticle": {
+    "description": "UI string for failedReadingArticle"
+  },
+  "testConnection": "Test connection",
+  "@testConnection": {
+    "description": "UI string for testConnection"
+  },
+  "testing": "Testing...",
+  "@testing": {
+    "description": "UI string for testing"
+  },
+  "failed": "Failed",
+  "@failed": {
+    "description": "UI string for failed"
+  },
+  "direct": "Direct",
+  "@direct": {
+    "description": "UI string for direct"
+  },
+  "clearOnExit": "Clear on exit",
+  "@clearOnExit": {
+    "description": "UI string for clearOnExit"
+  },
+  "pinned": "Pinned",
+  "@pinned": {
+    "description": "UI string for pinned"
+  },
+  "hue": "Hue",
+  "@hue": {
+    "description": "UI string for hue"
+  },
+  "saturation": "Saturation",
+  "@saturation": {
+    "description": "UI string for saturation"
+  },
+  "lightness": "Lightness",
+  "@lightness": {
+    "description": "UI string for lightness"
+  },
+  "smallWebUnavailable": "Small Web unavailable",
+  "@smallWebUnavailable": {
+    "description": "UI string for smallWebUnavailable"
+  },
+  "couldNotLoadSmallWebSession": "Could not load Small Web session",
+  "@couldNotLoadSmallWebSession": {
+    "description": "UI string for couldNotLoadSmallWebSession"
+  },
+  "autoDeviceDefault": "Auto (device default)",
+  "@autoDeviceDefault": {
+    "description": "UI string for autoDeviceDefault"
+  },
+  "anyRegion": "Any region",
+  "@anyRegion": {
+    "description": "UI string for anyRegion"
+  },
+  "anyTime": "Any time",
+  "@anyTime": {
+    "description": "UI string for anyTime"
+  },
+  "defaultModerate": "Default (moderate)",
+  "@defaultModerate": {
+    "description": "UI string for defaultModerate"
+  },
+  "syncSettingsSubtitle": "Account status, QR pairing, and device name",
+  "@syncSettingsSubtitle": {
+    "description": "UI string for syncSettingsSubtitle"
+  },
+  "syncServerOverridesSubtitle": "Custom Firefox Account and token server endpoints",
+  "@syncServerOverridesSubtitle": {
+    "description": "UI string for syncServerOverridesSubtitle"
+  },
+  "restore": "Restore",
+  "@restore": {
+    "description": "UI string for restore"
+  },
+  "store": "Store",
+  "@store": {
+    "description": "UI string for store"
+  },
+  "previewUnavailable": "Preview unavailable",
+  "@previewUnavailable": {
+    "description": "UI string for previewUnavailable"
+  },
+  "searchFailed": "Search failed",
+  "@searchFailed": {
+    "description": "UI string for searchFailed"
   }
 }

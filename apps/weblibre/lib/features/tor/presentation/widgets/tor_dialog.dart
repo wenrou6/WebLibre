@@ -22,6 +22,7 @@ import 'package:go_router/go_router.dart';
 import 'package:weblibre/core/branding/proxy_brands.dart';
 import 'package:weblibre/core/design/app_colors.dart';
 import 'package:weblibre/presentation/icons/tor_icons.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class TorDialog extends StatelessWidget {
   const TorDialog({super.key});
@@ -40,13 +41,13 @@ class TorDialog extends StatelessWidget {
           onPressed: () {
             context.pop(false);
           },
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         TextButton(
           onPressed: () {
             context.pop(true);
           },
-          child: const Text('Enable'),
+          child: Text(AppLocalizations.of(context)!.enable),
         ),
       ],
     );

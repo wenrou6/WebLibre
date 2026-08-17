@@ -30,6 +30,7 @@ import 'package:weblibre/features/search_credits/domain/controllers/search_token
 import 'package:weblibre/features/search_credits/domain/repositories/search_credits_repository.dart';
 import 'package:weblibre/features/search_credits/domain/repositories/search_token_stash_repository.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_content_card.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class SearchCreditsSection extends HookConsumerWidget {
   final bool embedded;
@@ -99,9 +100,9 @@ class SearchCreditsSection extends HookConsumerWidget {
             creditsError ? 'Could not load credits' : 'Search credits',
           ),
           subtitle: creditsError
-              ? const Text('Check your connection and tap refresh to retry.')
+              ? Text(AppLocalizations.of(context)!.checkConnectionRetry)
               : isEmpty
-              ? const Text('Buy a search pack to get started')
+              ? Text(AppLocalizations.of(context)!.buySearchPackToStart)
               : Text(
                   monthlyAllowance > 0
                       ? 'Credits: $credits / $monthlyAllowance  ·  '
@@ -147,7 +148,7 @@ class SearchCreditsSection extends HookConsumerWidget {
                   child: CircularProgressIndicator(strokeWidth: 2),
                 ),
                 SizedBox(width: 12),
-                Text('Requesting tokens...'),
+                Text(AppLocalizations.of(context)!.requestingTokens),
               ],
             ),
           ),
@@ -171,7 +172,7 @@ class SearchCreditsSection extends HookConsumerWidget {
         if (isEmpty)
           ListTile(
             leading: const Icon(Icons.shopping_cart_outlined),
-            title: const Text('Buy a search pack'),
+            title: Text(AppLocalizations.of(context)!.buySearchPack),
             contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
             onTap: openBuyMore,
           )
@@ -179,17 +180,17 @@ class SearchCreditsSection extends HookConsumerWidget {
           ListTile(
             leading: const Icon(Icons.download_for_offline_outlined),
             enabled: canIssue,
-            title: const Text('Get tokens'),
+            title: Text(AppLocalizations.of(context)!.getTokens),
             subtitle: credits > 0
                 ? Text('Request ${min(25, credits)} tokens')
-                : const Text('No credits remaining'),
+                : Text(AppLocalizations.of(context)!.noCreditsRemaining),
             contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
             onTap: canIssue ? onIssue : null,
           ),
           const Divider(height: 1),
           ListTile(
             leading: const Icon(Icons.shopping_cart_outlined),
-            title: const Text('Buy more'),
+            title: Text(AppLocalizations.of(context)!.buyMore),
             contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
             onTap: openBuyMore,
           ),

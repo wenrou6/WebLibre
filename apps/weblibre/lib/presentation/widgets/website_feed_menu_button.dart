@@ -26,6 +26,7 @@ import 'package:skeletonizer/skeletonizer.dart';
 import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/presentation/controllers/website_title.dart';
 import 'package:weblibre/presentation/widgets/rounded_text.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class WebsiteFeedMenuButton extends HookConsumerWidget {
   final String tabId;
@@ -64,7 +65,7 @@ class WebsiteFeedMenuButton extends HookConsumerWidget {
                 ),
               ).push(context);
             },
-            child: const Text('Available Web Feeds'),
+            child: Text(AppLocalizations.of(context)!.availableWebFeeds),
           );
         },
         error: (error, stackTrace) {

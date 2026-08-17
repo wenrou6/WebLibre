@@ -28,6 +28,7 @@ import 'package:weblibre/features/web_feed/presentation/controllers/fetch_articl
 import 'package:weblibre/features/web_feed/presentation/widgets/feed_article_card.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
 import 'package:weblibre/presentation/widgets/speech_to_text_button.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class FeedArticleListScreen extends HookConsumerWidget {
   final Uri? feedId;
@@ -186,7 +187,7 @@ class FeedArticleListScreen extends HookConsumerWidget {
           },
           error: (error, stackTrace) => Center(
             child: FailureWidget(
-              title: 'Failed to load Articles',
+              title: AppLocalizations.of(context)!.failedToLoadArticles),
               exception: error,
             ),
           ),

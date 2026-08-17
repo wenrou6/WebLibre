@@ -3400,4 +3400,349 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get uBlockAssetSubGroupSocialLabel => 'Social Widgets';
+
+  @override
+  String get torTrademark => 'Trademark';
+
+  @override
+  String get torStartAutomatically => 'Start Automatically';
+
+  @override
+  String torStartOrStopService(Object brand) {
+    return 'Start or stop the $brand service';
+  }
+
+  @override
+  String get torRequestNewIdentity => 'Request New Identity';
+
+  @override
+  String get torUseFreshCircuit => 'Use a fresh circuit for new connections';
+
+  @override
+  String get torAutoConfigureTransport => 'Auto Configure Transport';
+
+  @override
+  String get torCannotConnectWithoutBridge =>
+      'I\'m sure I cannot connect without a bridge';
+
+  @override
+  String get torAutoConfigured => 'Auto-configured';
+
+  @override
+  String get torDirectConnection => 'Direct Connection';
+
+  @override
+  String get torFetchFreshBridges => 'Fetch fresh Bridges before connecting';
+
+  @override
+  String get torSuitableForHeavyCensorship => 'Suitable for heavy censorship';
+
+  @override
+  String get userBangs => 'User Bangs';
+
+  @override
+  String get manageUserBangs => 'Manage User Bangs';
+
+  @override
+  String get searchBangs => 'Search Bangs';
+
+  @override
+  String get browseCategories => 'Browse Categories';
+
+  @override
+  String get bangCategories => 'Bang Categories';
+
+  @override
+  String get deleteBang => 'Delete Bang';
+
+  @override
+  String get deleteBangConfirm => 'Are you sure you want to delete this Bang?';
+
+  @override
+  String get openBasePath => 'Open Base Path';
+
+  @override
+  String get urlEncodePlaceholder => 'URL Encode Placeholder';
+
+  @override
+  String get urlEncodeSpaceToPlus => 'URL Encode Space to Plus';
+
+  @override
+  String get trigger => 'Trigger';
+
+  @override
+  String get url => 'URL';
+
+  @override
+  String get category => 'Category';
+
+  @override
+  String get subCategory => 'Sub Category';
+
+  @override
+  String get enableSync => 'Enable Sync';
+
+  @override
+  String get storeCurrent => 'Store Current';
+
+  @override
+  String get storeSnapshot => 'Store Snapshot';
+
+  @override
+  String get editLabel => 'Edit Label';
+
+  @override
+  String get restoreSnapshot => 'Restore Snapshot';
+
+  @override
+  String get deleteSnapshot => 'Delete Snapshot';
+
+  @override
+  String get restoreSnapshotOverwrite =>
+      'This will overwrite your current local settings.';
+
+  @override
+  String deleteSnapshotConfirm(Object label) {
+    return 'Are you sure you want to delete $label?';
+  }
+
+  @override
+  String get becomeSupporter => 'Become a Supporter';
+
+  @override
+  String get couldNotLoadSubscription => 'Could not load subscription';
+
+  @override
+  String get delivery => 'Delivery';
+
+  @override
+  String get unifiedPushDistributor => 'UnifiedPush Distributor';
+
+  @override
+  String get unifiedPushDistributorSubtitle =>
+      'The app that delivers website push notifications';
+
+  @override
+  String get notificationPermission => 'Notification Permission';
+
+  @override
+  String get notificationPermissionSubtitle =>
+      'Required to display website notifications';
+
+  @override
+  String get subscriptions => 'Subscriptions';
+
+  @override
+  String get siteSubscriptions => 'Site Subscriptions';
+
+  @override
+  String get siteSubscriptionsSubtitle =>
+      'Websites subscribed to push notifications';
+
+  @override
+  String get webPushNotifications => 'Notifications';
+
+  @override
+  String get webPushNotificationsSubtitle =>
+      'Web push delivery, distributor, and site subscriptions.';
+
+  @override
+  String get gestureConfiguration => 'Configuration';
+
+  @override
+  String get gestureBindings => 'Gesture bindings';
+
+  @override
+  String get gestureBehaviorTiming => 'Behavior & timing';
+
+  @override
+  String get gestureExcludedSites => 'Excluded sites';
+
+  @override
+  String get gestureFeedback => 'Feedback';
+
+  @override
+  String get gestureOverlay => 'Overlay';
+
+  @override
+  String get gestureLiveFeedback => 'Live feedback';
+
+  @override
+  String get gestureLiveFeedbackSubtitle =>
+      'Show the stroke and its action while you draw';
+
+  @override
+  String get gestureSuggestNext => 'Suggest next';
+
+  @override
+  String get searchingTheWeb => 'Searching the web...';
+
+  @override
+  String get buySearchPack => 'Buy a search pack';
+
+  @override
+  String get checkConnectionRetry =>
+      'Check your connection and tap refresh to retry.';
+
+  @override
+  String get buySearchPackToStart => 'Buy a search pack to get started';
+
+  @override
+  String get requestingTokens => 'Requesting tokens...';
+
+  @override
+  String get getTokens => 'Get tokens';
+
+  @override
+  String requestTokens(Object count) {
+    return 'Request $count tokens';
+  }
+
+  @override
+  String get noCreditsRemaining => 'No credits remaining';
+
+  @override
+  String get buyMore => 'Buy more';
+
+  @override
+  String get fetchPageData => 'Fetch Page Data';
+
+  @override
+  String get find => 'Find';
+
+  @override
+  String get show => 'Show';
+
+  @override
+  String get switch_ => 'Switch';
+
+  @override
+  String get dismiss => 'Dismiss';
+
+  @override
+  String get navigateBackToCloseTab =>
+      'Navigate BACK again to close current tab';
+
+  @override
+  String get navigateBackToExitApp => 'Navigate BACK again to exit app';
+
+  @override
+  String get openLinkFromClipboard => 'Want to open link from clipboard?';
+
+  @override
+  String tabsClosed(Object count) {
+    return '$count Tabs closed';
+  }
+
+  @override
+  String get tabClosed => 'Tab closed';
+
+  @override
+  String get closeIsolatedTabs => 'Close isolated tabs?';
+
+  @override
+  String get hidingDisabledBySite => 'Hiding disabled by site';
+
+  @override
+  String get quickStart => 'Quick Start';
+
+  @override
+  String get quickStartSubtitle => 'Use recommended defaults and get browsing.';
+
+  @override
+  String get customSetup => 'Custom Setup';
+
+  @override
+  String get customSetupSubtitle =>
+      'Configure DNS, toolbar, extensions, and more.';
+
+  @override
+  String get restoreFromBackup => 'Restore from Backup';
+
+  @override
+  String get restoreFromBackupSubtitle =>
+      'Import a profile from an encrypted backup file.';
+
+  @override
+  String get endUserLicenseAgreement => 'End User License Agreement';
+
+  @override
+  String get couldNotLoadSearchEngines => 'Could not load search engines';
+
+  @override
+  String get failedToLoadFeeds => 'Failed to load Feeds';
+
+  @override
+  String get failedToLoadFeed => 'Failed to load feed';
+
+  @override
+  String get failedToLoadArticles => 'Failed to load Articles';
+
+  @override
+  String get failedReadingArticle => 'Failed reading article';
+
+  @override
+  String get testConnection => 'Test connection';
+
+  @override
+  String get testing => 'Testing...';
+
+  @override
+  String get failed => 'Failed';
+
+  @override
+  String get direct => 'Direct';
+
+  @override
+  String get clearOnExit => 'Clear on exit';
+
+  @override
+  String get pinned => 'Pinned';
+
+  @override
+  String get hue => 'Hue';
+
+  @override
+  String get saturation => 'Saturation';
+
+  @override
+  String get lightness => 'Lightness';
+
+  @override
+  String get smallWebUnavailable => 'Small Web unavailable';
+
+  @override
+  String get couldNotLoadSmallWebSession => 'Could not load Small Web session';
+
+  @override
+  String get autoDeviceDefault => 'Auto (device default)';
+
+  @override
+  String get anyRegion => 'Any region';
+
+  @override
+  String get anyTime => 'Any time';
+
+  @override
+  String get defaultModerate => 'Default (moderate)';
+
+  @override
+  String get syncSettingsSubtitle =>
+      'Account status, QR pairing, and device name';
+
+  @override
+  String get syncServerOverridesSubtitle =>
+      'Custom Firefox Account and token server endpoints';
+
+  @override
+  String get restore => 'Restore';
+
+  @override
+  String get store => 'Store';
+
+  @override
+  String get previewUnavailable => 'Preview unavailable';
+
+  @override
+  String get searchFailed => 'Search failed';
 }

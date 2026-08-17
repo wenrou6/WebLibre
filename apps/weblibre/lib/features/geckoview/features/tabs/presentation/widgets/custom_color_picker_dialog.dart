@@ -21,6 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:weblibre/features/geckoview/features/tabs/utils/container_colors.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Freeform color picker for power users.
 ///
@@ -97,7 +98,7 @@ class CustomColorPickerDialog extends HookWidget {
             ),
             const SizedBox(height: 12),
             _GradientSlider(
-              label: 'Hue',
+              label: AppLocalizations.of(context)!.hue,
               value: hsl.value.hue,
               max: 360,
               gradient: const LinearGradient(
@@ -114,7 +115,7 @@ class CustomColorPickerDialog extends HookWidget {
               onChanged: (v) => updateHsl(hsl.value.withHue(v)),
             ),
             _GradientSlider(
-              label: 'Saturation',
+              label: AppLocalizations.of(context)!.saturation,
               value: hsl.value.saturation,
               max: 1,
               gradient: LinearGradient(
@@ -136,7 +137,7 @@ class CustomColorPickerDialog extends HookWidget {
               onChanged: (v) => updateHsl(hsl.value.withSaturation(v)),
             ),
             _GradientSlider(
-              label: 'Lightness',
+              label: AppLocalizations.of(context)!.lightness,
               value: hsl.value.lightness,
               max: 1,
               gradient: LinearGradient(

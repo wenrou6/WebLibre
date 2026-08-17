@@ -26,6 +26,7 @@ import 'package:weblibre/core/design/app_colors.dart';
 import 'package:weblibre/features/onboarding/domain/entities/onboarding_mode.dart';
 import 'package:weblibre/features/onboarding/domain/providers.dart';
 import 'package:weblibre/presentation/widgets/browser_page.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class WelcomePage extends ConsumerWidget {
   final bool isReturningUser;
@@ -73,8 +74,8 @@ class WelcomePage extends ConsumerWidget {
               const SizedBox(height: 12),
               _ModeOption(
                 mode: OnboardingMode.express,
-                title: 'Quick Start',
-                subtitle: 'Use recommended defaults and get browsing.',
+                title: AppLocalizations.of(context)!.quickStart,
+                subtitle: AppLocalizations.of(context)!.quickStartSubtitle,
                 icon: Icons.bolt,
                 selected: selectedMode == OnboardingMode.express,
                 onTap: () => ref
@@ -84,8 +85,8 @@ class WelcomePage extends ConsumerWidget {
               const SizedBox(height: 12),
               _ModeOption(
                 mode: OnboardingMode.detailed,
-                title: 'Custom Setup',
-                subtitle: 'Configure DNS, toolbar, extensions, and more.',
+                title: AppLocalizations.of(context)!.customSetup,
+                subtitle: AppLocalizations.of(context)!.customSetupSubtitle,
                 icon: Icons.tune,
                 selected: selectedMode == OnboardingMode.detailed,
                 onTap: () => ref
@@ -95,8 +96,8 @@ class WelcomePage extends ConsumerWidget {
               const SizedBox(height: 12),
               _ModeOption(
                 mode: OnboardingMode.restore,
-                title: 'Restore from Backup',
-                subtitle: 'Import a profile from an encrypted backup file.',
+                title: AppLocalizations.of(context)!.restoreFromBackup,
+                subtitle: AppLocalizations.of(context)!.restoreFromBackupSubtitle,
                 icon: Icons.settings_backup_restore,
                 selected: selectedMode == OnboardingMode.restore,
                 onTap: () => ref
@@ -327,7 +328,7 @@ class _EulaCheckbox extends StatelessWidget {
           GestureDetector(
             onTap: () => _showLegalDocument(
               context,
-              title: 'End User License Agreement',
+              title: AppLocalizations.of(context)!.endUserLicenseAgreement,
               assetPath: 'assets/legal/EULA.md',
             ),
             child: Text(
@@ -348,7 +349,7 @@ class _EulaCheckbox extends StatelessWidget {
           GestureDetector(
             onTap: () => _showLegalDocument(
               context,
-              title: 'Privacy Policy',
+              title: AppLocalizations.of(context)!.privacyPolicy,
               assetPath: 'assets/legal/PRIVACY_POLICY.md',
             ),
             child: Text(

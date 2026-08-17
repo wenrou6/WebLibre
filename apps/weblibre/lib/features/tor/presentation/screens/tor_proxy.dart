@@ -35,6 +35,7 @@ import 'package:weblibre/features/user/domain/repositories/tor_settings.dart';
 import 'package:weblibre/presentation/hooks/on_initialization.dart';
 import 'package:weblibre/presentation/icons/tor_icons.dart';
 import 'package:weblibre/utils/ui_helper.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 const List<SettingsSectionDefinition> torProxySettingsSections = [
   SettingsSectionDefinition(
@@ -108,7 +109,7 @@ const List<SettingsSectionDefinition> torProxySettingsSections = [
         keywords: ['legal'],
         child: ListTile(
           leading: Icon(Icons.info_outline),
-          title: Text('Trademark'),
+          title: Text(AppLocalizations.of(context)!.torTrademark),
           subtitle: Text(
             '$torBrand is a trademark of The Tor Project; all rights reserved. '
             'WebLibre is not endorsed or sponsored by, or affiliated with, '
@@ -197,7 +198,7 @@ class _TorServiceTile extends HookConsumerWidget {
         SwitchListTile.adaptive(
           secondary: const Icon(MdiIcons.power),
           title: const Text(torServiceLabel),
-          subtitle: const Text('Start or stop the $torBrand service'),
+          subtitle: Text(AppLocalizations.of(context)!.torStartOrStopService(torBrand)),
           value: pendingRequest.value ?? isRunning,
           onChanged: isBusy
               ? null
@@ -236,7 +237,7 @@ class _TorAutostartTile extends ConsumerWidget {
 
     return SwitchListTile.adaptive(
       secondary: const Icon(MdiIcons.rocketLaunchOutline),
-      title: const Text('Start Automatically'),
+      title: Text(AppLocalizations.of(context)!.torStartAutomatically),
       subtitle: const Text(
         'Connect the $torBrand service when WebLibre starts, so tabs using it '
         'are ready without a prompt',
@@ -264,8 +265,8 @@ class _RequestNewIdentityTile extends ConsumerWidget {
     return ListTile(
       enabled: enabled,
       leading: const Icon(MdiIcons.refresh),
-      title: const Text('Request New Identity'),
-      subtitle: const Text('Use a fresh circuit for new connections'),
+      title: Text(AppLocalizations.of(context)!.torRequestNewIdentity),
+      subtitle: Text(AppLocalizations.of(context)!.torUseFreshCircuit),
       trailing: const Icon(Icons.chevron_right),
       onTap: () async {
         await ref.read(torProxyServiceProvider.notifier).requestNewIdentity();
@@ -291,7 +292,7 @@ class _AutoConfigureTransportTile extends ConsumerWidget {
       children: [
         SwitchListTile.adaptive(
           secondary: const Icon(MdiIcons.arrowDecisionAuto),
-          title: const Text('Auto Configure Transport'),
+          title: Text(AppLocalizations.of(context)!.torAutoConfigureTransport),
           subtitle: const Text(
             'From some locations, it is necessary to use a pluggable transport to connect to $torBrand',
           ),
@@ -313,7 +314,7 @@ class _AutoConfigureTransportTile extends ConsumerWidget {
         if (torSettings.config == TorConnectionConfig.auto)
           SwitchListTile.adaptive(
             contentPadding: const EdgeInsets.only(left: 56, right: 24),
-            title: const Text("I'm sure I cannot connect without a bridge"),
+            title: Text(AppLocalizations.of(context)!.torCannotConnectWithoutBridge),
             value: torSettings.requireBridge,
             onChanged: isBusy
                 ? null
@@ -343,7 +344,7 @@ class _TransportSection extends ConsumerWidget {
     if (torSettings.config == TorConnectionConfig.auto) {
       return const ListTile(
         leading: Icon(Icons.info_outline),
-        title: Text('Auto-configured'),
+        title: Text(AppLocalizations.of(context)!.torAutoConfigured),
         subtitle: Text(
           'Disable auto-configure above to pick a transport manually.',
         ),
@@ -366,7 +367,7 @@ class _TransportSection extends ConsumerWidget {
               RadioListTile<TorConnectionConfig>.adaptive(
                 value: TorConnectionConfig.direct,
                 enabled: !isBusy,
-                title: const Text('Direct Connection'),
+                title: Text(AppLocalizations.of(context)!.torDirectConnection),
                 subtitle: const Text(
                   'The best way to connect to $torBrand if $torBrand is not blocked',
                 ),
@@ -383,7 +384,7 @@ class _TransportSection extends ConsumerWidget {
                 value: TorConnectionConfig.snowflake,
                 enabled: !isBusy,
                 title: const Text('Snowflake'),
-                subtitle: const Text('Suitable for heavy censorship'),
+                subtitle: Text(AppLocalizations.of(context)!.torSuitableForHeavyCensorship),
               ),
             ],
           ),
@@ -392,7 +393,7 @@ class _TransportSection extends ConsumerWidget {
           controlAffinity: ListTileControlAffinity.leading,
           enabled: !isBusy && torSettings.config != TorConnectionConfig.direct,
           value: torSettings.fetchRemoteBridges,
-          title: const Text('Fetch fresh Bridges before connecting'),
+          title: Text(AppLocalizations.of(context)!.torFetchFreshBridges),
           onChanged: isBusy
               ? null
               : (value) async {

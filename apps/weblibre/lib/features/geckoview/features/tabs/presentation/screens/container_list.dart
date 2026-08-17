@@ -36,6 +36,7 @@ import 'package:weblibre/features/proxy/domain/providers/proxy_connection_option
 import 'package:weblibre/features/proxy/domain/repositories/singbox_proxy_profiles.dart';
 import 'package:weblibre/features/proxy/presentation/controllers/ensure_proxy_started.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class ContainerListScreen extends HookConsumerWidget {
   const ContainerListScreen({super.key});
@@ -254,7 +255,7 @@ class _ContainerCard extends HookConsumerWidget {
                               if (container.isPinned)
                                 const _ContainerInfoChip(
                                   icon: MdiIcons.pin,
-                                  label: 'Pinned',
+                                  label: AppLocalizations.of(context)!.pinned,
                                 ),
                               if (container.metadata.contextualIdentity != null)
                                 const _ContainerInfoChip(

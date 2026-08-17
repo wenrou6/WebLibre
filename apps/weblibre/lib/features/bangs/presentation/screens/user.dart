@@ -29,6 +29,7 @@ import 'package:weblibre/features/bangs/domain/providers/bangs.dart';
 import 'package:weblibre/features/bangs/domain/repositories/data.dart';
 import 'package:weblibre/features/bangs/presentation/widgets/bang_details.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class UserBangs extends HookConsumerWidget {
   static const _userGroupFilter = [BangGroup.user];
@@ -40,7 +41,7 @@ class UserBangs extends HookConsumerWidget {
     final bangsAsync = ref.watch(bangListProvider(groups: _userGroupFilter));
 
     return Scaffold(
-      appBar: AppBar(title: const Text('User Bangs')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.userBangs)),
       body: bangsAsync.when(
         skipLoadingOnReload: true,
         data: (bangs) {

@@ -6301,6 +6301,654 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Social Widgets'**
   String get uBlockAssetSubGroupSocialLabel;
+
+  /// UI string for torTrademark
+  ///
+  /// In en, this message translates to:
+  /// **'Trademark'**
+  String get torTrademark;
+
+  /// UI string for torStartAutomatically
+  ///
+  /// In en, this message translates to:
+  /// **'Start Automatically'**
+  String get torStartAutomatically;
+
+  /// UI string for torStartOrStopService
+  ///
+  /// In en, this message translates to:
+  /// **'Start or stop the {brand} service'**
+  String torStartOrStopService(Object brand);
+
+  /// UI string for torRequestNewIdentity
+  ///
+  /// In en, this message translates to:
+  /// **'Request New Identity'**
+  String get torRequestNewIdentity;
+
+  /// UI string for torUseFreshCircuit
+  ///
+  /// In en, this message translates to:
+  /// **'Use a fresh circuit for new connections'**
+  String get torUseFreshCircuit;
+
+  /// UI string for torAutoConfigureTransport
+  ///
+  /// In en, this message translates to:
+  /// **'Auto Configure Transport'**
+  String get torAutoConfigureTransport;
+
+  /// UI string for torCannotConnectWithoutBridge
+  ///
+  /// In en, this message translates to:
+  /// **'I\'m sure I cannot connect without a bridge'**
+  String get torCannotConnectWithoutBridge;
+
+  /// UI string for torAutoConfigured
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-configured'**
+  String get torAutoConfigured;
+
+  /// UI string for torDirectConnection
+  ///
+  /// In en, this message translates to:
+  /// **'Direct Connection'**
+  String get torDirectConnection;
+
+  /// UI string for torFetchFreshBridges
+  ///
+  /// In en, this message translates to:
+  /// **'Fetch fresh Bridges before connecting'**
+  String get torFetchFreshBridges;
+
+  /// UI string for torSuitableForHeavyCensorship
+  ///
+  /// In en, this message translates to:
+  /// **'Suitable for heavy censorship'**
+  String get torSuitableForHeavyCensorship;
+
+  /// UI string for userBangs
+  ///
+  /// In en, this message translates to:
+  /// **'User Bangs'**
+  String get userBangs;
+
+  /// UI string for manageUserBangs
+  ///
+  /// In en, this message translates to:
+  /// **'Manage User Bangs'**
+  String get manageUserBangs;
+
+  /// UI string for searchBangs
+  ///
+  /// In en, this message translates to:
+  /// **'Search Bangs'**
+  String get searchBangs;
+
+  /// UI string for browseCategories
+  ///
+  /// In en, this message translates to:
+  /// **'Browse Categories'**
+  String get browseCategories;
+
+  /// UI string for bangCategories
+  ///
+  /// In en, this message translates to:
+  /// **'Bang Categories'**
+  String get bangCategories;
+
+  /// UI string for deleteBang
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Bang'**
+  String get deleteBang;
+
+  /// UI string for deleteBangConfirm
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this Bang?'**
+  String get deleteBangConfirm;
+
+  /// UI string for openBasePath
+  ///
+  /// In en, this message translates to:
+  /// **'Open Base Path'**
+  String get openBasePath;
+
+  /// UI string for urlEncodePlaceholder
+  ///
+  /// In en, this message translates to:
+  /// **'URL Encode Placeholder'**
+  String get urlEncodePlaceholder;
+
+  /// UI string for urlEncodeSpaceToPlus
+  ///
+  /// In en, this message translates to:
+  /// **'URL Encode Space to Plus'**
+  String get urlEncodeSpaceToPlus;
+
+  /// UI string for trigger
+  ///
+  /// In en, this message translates to:
+  /// **'Trigger'**
+  String get trigger;
+
+  /// UI string for url
+  ///
+  /// In en, this message translates to:
+  /// **'URL'**
+  String get url;
+
+  /// UI string for category
+  ///
+  /// In en, this message translates to:
+  /// **'Category'**
+  String get category;
+
+  /// UI string for subCategory
+  ///
+  /// In en, this message translates to:
+  /// **'Sub Category'**
+  String get subCategory;
+
+  /// UI string for enableSync
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Sync'**
+  String get enableSync;
+
+  /// UI string for storeCurrent
+  ///
+  /// In en, this message translates to:
+  /// **'Store Current'**
+  String get storeCurrent;
+
+  /// UI string for storeSnapshot
+  ///
+  /// In en, this message translates to:
+  /// **'Store Snapshot'**
+  String get storeSnapshot;
+
+  /// UI string for editLabel
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Label'**
+  String get editLabel;
+
+  /// UI string for restoreSnapshot
+  ///
+  /// In en, this message translates to:
+  /// **'Restore Snapshot'**
+  String get restoreSnapshot;
+
+  /// UI string for deleteSnapshot
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Snapshot'**
+  String get deleteSnapshot;
+
+  /// UI string for restoreSnapshotOverwrite
+  ///
+  /// In en, this message translates to:
+  /// **'This will overwrite your current local settings.'**
+  String get restoreSnapshotOverwrite;
+
+  /// UI string for deleteSnapshotConfirm
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete {label}?'**
+  String deleteSnapshotConfirm(Object label);
+
+  /// UI string for becomeSupporter
+  ///
+  /// In en, this message translates to:
+  /// **'Become a Supporter'**
+  String get becomeSupporter;
+
+  /// UI string for couldNotLoadSubscription
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load subscription'**
+  String get couldNotLoadSubscription;
+
+  /// UI string for delivery
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery'**
+  String get delivery;
+
+  /// UI string for unifiedPushDistributor
+  ///
+  /// In en, this message translates to:
+  /// **'UnifiedPush Distributor'**
+  String get unifiedPushDistributor;
+
+  /// UI string for unifiedPushDistributorSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'The app that delivers website push notifications'**
+  String get unifiedPushDistributorSubtitle;
+
+  /// UI string for notificationPermission
+  ///
+  /// In en, this message translates to:
+  /// **'Notification Permission'**
+  String get notificationPermission;
+
+  /// UI string for notificationPermissionSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Required to display website notifications'**
+  String get notificationPermissionSubtitle;
+
+  /// UI string for subscriptions
+  ///
+  /// In en, this message translates to:
+  /// **'Subscriptions'**
+  String get subscriptions;
+
+  /// UI string for siteSubscriptions
+  ///
+  /// In en, this message translates to:
+  /// **'Site Subscriptions'**
+  String get siteSubscriptions;
+
+  /// UI string for siteSubscriptionsSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Websites subscribed to push notifications'**
+  String get siteSubscriptionsSubtitle;
+
+  /// UI string for webPushNotifications
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get webPushNotifications;
+
+  /// UI string for webPushNotificationsSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Web push delivery, distributor, and site subscriptions.'**
+  String get webPushNotificationsSubtitle;
+
+  /// UI string for gestureConfiguration
+  ///
+  /// In en, this message translates to:
+  /// **'Configuration'**
+  String get gestureConfiguration;
+
+  /// UI string for gestureBindings
+  ///
+  /// In en, this message translates to:
+  /// **'Gesture bindings'**
+  String get gestureBindings;
+
+  /// UI string for gestureBehaviorTiming
+  ///
+  /// In en, this message translates to:
+  /// **'Behavior & timing'**
+  String get gestureBehaviorTiming;
+
+  /// UI string for gestureExcludedSites
+  ///
+  /// In en, this message translates to:
+  /// **'Excluded sites'**
+  String get gestureExcludedSites;
+
+  /// UI string for gestureFeedback
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback'**
+  String get gestureFeedback;
+
+  /// UI string for gestureOverlay
+  ///
+  /// In en, this message translates to:
+  /// **'Overlay'**
+  String get gestureOverlay;
+
+  /// UI string for gestureLiveFeedback
+  ///
+  /// In en, this message translates to:
+  /// **'Live feedback'**
+  String get gestureLiveFeedback;
+
+  /// UI string for gestureLiveFeedbackSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Show the stroke and its action while you draw'**
+  String get gestureLiveFeedbackSubtitle;
+
+  /// UI string for gestureSuggestNext
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest next'**
+  String get gestureSuggestNext;
+
+  /// UI string for searchingTheWeb
+  ///
+  /// In en, this message translates to:
+  /// **'Searching the web...'**
+  String get searchingTheWeb;
+
+  /// UI string for buySearchPack
+  ///
+  /// In en, this message translates to:
+  /// **'Buy a search pack'**
+  String get buySearchPack;
+
+  /// UI string for checkConnectionRetry
+  ///
+  /// In en, this message translates to:
+  /// **'Check your connection and tap refresh to retry.'**
+  String get checkConnectionRetry;
+
+  /// UI string for buySearchPackToStart
+  ///
+  /// In en, this message translates to:
+  /// **'Buy a search pack to get started'**
+  String get buySearchPackToStart;
+
+  /// UI string for requestingTokens
+  ///
+  /// In en, this message translates to:
+  /// **'Requesting tokens...'**
+  String get requestingTokens;
+
+  /// UI string for getTokens
+  ///
+  /// In en, this message translates to:
+  /// **'Get tokens'**
+  String get getTokens;
+
+  /// UI string for requestTokens
+  ///
+  /// In en, this message translates to:
+  /// **'Request {count} tokens'**
+  String requestTokens(Object count);
+
+  /// UI string for noCreditsRemaining
+  ///
+  /// In en, this message translates to:
+  /// **'No credits remaining'**
+  String get noCreditsRemaining;
+
+  /// UI string for buyMore
+  ///
+  /// In en, this message translates to:
+  /// **'Buy more'**
+  String get buyMore;
+
+  /// UI string for fetchPageData
+  ///
+  /// In en, this message translates to:
+  /// **'Fetch Page Data'**
+  String get fetchPageData;
+
+  /// UI string for find
+  ///
+  /// In en, this message translates to:
+  /// **'Find'**
+  String get find;
+
+  /// UI string for show
+  ///
+  /// In en, this message translates to:
+  /// **'Show'**
+  String get show;
+
+  /// UI string for switch_
+  ///
+  /// In en, this message translates to:
+  /// **'Switch'**
+  String get switch_;
+
+  /// UI string for dismiss
+  ///
+  /// In en, this message translates to:
+  /// **'Dismiss'**
+  String get dismiss;
+
+  /// UI string for navigateBackToCloseTab
+  ///
+  /// In en, this message translates to:
+  /// **'Navigate BACK again to close current tab'**
+  String get navigateBackToCloseTab;
+
+  /// UI string for navigateBackToExitApp
+  ///
+  /// In en, this message translates to:
+  /// **'Navigate BACK again to exit app'**
+  String get navigateBackToExitApp;
+
+  /// UI string for openLinkFromClipboard
+  ///
+  /// In en, this message translates to:
+  /// **'Want to open link from clipboard?'**
+  String get openLinkFromClipboard;
+
+  /// UI string for tabsClosed
+  ///
+  /// In en, this message translates to:
+  /// **'{count} Tabs closed'**
+  String tabsClosed(Object count);
+
+  /// UI string for tabClosed
+  ///
+  /// In en, this message translates to:
+  /// **'Tab closed'**
+  String get tabClosed;
+
+  /// UI string for closeIsolatedTabs
+  ///
+  /// In en, this message translates to:
+  /// **'Close isolated tabs?'**
+  String get closeIsolatedTabs;
+
+  /// UI string for hidingDisabledBySite
+  ///
+  /// In en, this message translates to:
+  /// **'Hiding disabled by site'**
+  String get hidingDisabledBySite;
+
+  /// UI string for quickStart
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Start'**
+  String get quickStart;
+
+  /// UI string for quickStartSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Use recommended defaults and get browsing.'**
+  String get quickStartSubtitle;
+
+  /// UI string for customSetup
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Setup'**
+  String get customSetup;
+
+  /// UI string for customSetupSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Configure DNS, toolbar, extensions, and more.'**
+  String get customSetupSubtitle;
+
+  /// UI string for restoreFromBackup
+  ///
+  /// In en, this message translates to:
+  /// **'Restore from Backup'**
+  String get restoreFromBackup;
+
+  /// UI string for restoreFromBackupSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Import a profile from an encrypted backup file.'**
+  String get restoreFromBackupSubtitle;
+
+  /// UI string for endUserLicenseAgreement
+  ///
+  /// In en, this message translates to:
+  /// **'End User License Agreement'**
+  String get endUserLicenseAgreement;
+
+  /// UI string for couldNotLoadSearchEngines
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load search engines'**
+  String get couldNotLoadSearchEngines;
+
+  /// UI string for failedToLoadFeeds
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load Feeds'**
+  String get failedToLoadFeeds;
+
+  /// UI string for failedToLoadFeed
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load feed'**
+  String get failedToLoadFeed;
+
+  /// UI string for failedToLoadArticles
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load Articles'**
+  String get failedToLoadArticles;
+
+  /// UI string for failedReadingArticle
+  ///
+  /// In en, this message translates to:
+  /// **'Failed reading article'**
+  String get failedReadingArticle;
+
+  /// UI string for testConnection
+  ///
+  /// In en, this message translates to:
+  /// **'Test connection'**
+  String get testConnection;
+
+  /// UI string for testing
+  ///
+  /// In en, this message translates to:
+  /// **'Testing...'**
+  String get testing;
+
+  /// UI string for failed
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get failed;
+
+  /// UI string for direct
+  ///
+  /// In en, this message translates to:
+  /// **'Direct'**
+  String get direct;
+
+  /// UI string for clearOnExit
+  ///
+  /// In en, this message translates to:
+  /// **'Clear on exit'**
+  String get clearOnExit;
+
+  /// UI string for pinned
+  ///
+  /// In en, this message translates to:
+  /// **'Pinned'**
+  String get pinned;
+
+  /// UI string for hue
+  ///
+  /// In en, this message translates to:
+  /// **'Hue'**
+  String get hue;
+
+  /// UI string for saturation
+  ///
+  /// In en, this message translates to:
+  /// **'Saturation'**
+  String get saturation;
+
+  /// UI string for lightness
+  ///
+  /// In en, this message translates to:
+  /// **'Lightness'**
+  String get lightness;
+
+  /// UI string for smallWebUnavailable
+  ///
+  /// In en, this message translates to:
+  /// **'Small Web unavailable'**
+  String get smallWebUnavailable;
+
+  /// UI string for couldNotLoadSmallWebSession
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load Small Web session'**
+  String get couldNotLoadSmallWebSession;
+
+  /// UI string for autoDeviceDefault
+  ///
+  /// In en, this message translates to:
+  /// **'Auto (device default)'**
+  String get autoDeviceDefault;
+
+  /// UI string for anyRegion
+  ///
+  /// In en, this message translates to:
+  /// **'Any region'**
+  String get anyRegion;
+
+  /// UI string for anyTime
+  ///
+  /// In en, this message translates to:
+  /// **'Any time'**
+  String get anyTime;
+
+  /// UI string for defaultModerate
+  ///
+  /// In en, this message translates to:
+  /// **'Default (moderate)'**
+  String get defaultModerate;
+
+  /// UI string for syncSettingsSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Account status, QR pairing, and device name'**
+  String get syncSettingsSubtitle;
+
+  /// UI string for syncServerOverridesSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Firefox Account and token server endpoints'**
+  String get syncServerOverridesSubtitle;
+
+  /// UI string for restore
+  ///
+  /// In en, this message translates to:
+  /// **'Restore'**
+  String get restore;
+
+  /// UI string for store
+  ///
+  /// In en, this message translates to:
+  /// **'Store'**
+  String get store;
+
+  /// UI string for previewUnavailable
+  ///
+  /// In en, this message translates to:
+  /// **'Preview unavailable'**
+  String get previewUnavailable;
+
+  /// UI string for searchFailed
+  ///
+  /// In en, this message translates to:
+  /// **'Search failed'**
+  String get searchFailed;
 }
 
 class _AppLocalizationsDelegate

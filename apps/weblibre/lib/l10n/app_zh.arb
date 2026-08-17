@@ -2453,5 +2453,437 @@
   "uBlockAssetSubGroupSocialLabel": "社交组件",
   "@uBlockAssetSubGroupSocialLabel": {
     "description": "Label for the social widgets uBlock filter-list subgroup"
+  },
+  "torTrademark": "商标",
+  "@torTrademark": {
+    "description": "UI string for torTrademark"
+  },
+  "torStartAutomatically": "自动启动",
+  "@torStartAutomatically": {
+    "description": "UI string for torStartAutomatically"
+  },
+  "torStartOrStopService": "启动或停止 {brand} 服务",
+  "@torStartOrStopService": {
+    "description": "UI string for torStartOrStopService"
+  },
+  "torRequestNewIdentity": "请求新身份",
+  "@torRequestNewIdentity": {
+    "description": "UI string for torRequestNewIdentity"
+  },
+  "torUseFreshCircuit": "为新连接使用新的电路",
+  "@torUseFreshCircuit": {
+    "description": "UI string for torUseFreshCircuit"
+  },
+  "torAutoConfigureTransport": "自动配置传输",
+  "@torAutoConfigureTransport": {
+    "description": "UI string for torAutoConfigureTransport"
+  },
+  "torCannotConnectWithoutBridge": "我确定没有网桥无法连接",
+  "@torCannotConnectWithoutBridge": {
+    "description": "UI string for torCannotConnectWithoutBridge"
+  },
+  "torAutoConfigured": "自动配置",
+  "@torAutoConfigured": {
+    "description": "UI string for torAutoConfigured"
+  },
+  "torDirectConnection": "直连",
+  "@torDirectConnection": {
+    "description": "UI string for torDirectConnection"
+  },
+  "torFetchFreshBridges": "连接前获取新网桥",
+  "@torFetchFreshBridges": {
+    "description": "UI string for torFetchFreshBridges"
+  },
+  "torSuitableForHeavyCensorship": "适用于严格审查环境",
+  "@torSuitableForHeavyCensorship": {
+    "description": "UI string for torSuitableForHeavyCensorship"
+  },
+  "userBangs": "用户快捷搜索",
+  "@userBangs": {
+    "description": "UI string for userBangs"
+  },
+  "manageUserBangs": "管理用户快捷搜索",
+  "@manageUserBangs": {
+    "description": "UI string for manageUserBangs"
+  },
+  "searchBangs": "搜索快捷搜索",
+  "@searchBangs": {
+    "description": "UI string for searchBangs"
+  },
+  "browseCategories": "浏览分类",
+  "@browseCategories": {
+    "description": "UI string for browseCategories"
+  },
+  "bangCategories": "快捷搜索分类",
+  "@bangCategories": {
+    "description": "UI string for bangCategories"
+  },
+  "deleteBang": "删除快捷搜索",
+  "@deleteBang": {
+    "description": "UI string for deleteBang"
+  },
+  "deleteBangConfirm": "确定要删除此快捷搜索吗？",
+  "@deleteBangConfirm": {
+    "description": "UI string for deleteBangConfirm"
+  },
+  "openBasePath": "打开基础路径",
+  "@openBasePath": {
+    "description": "UI string for openBasePath"
+  },
+  "urlEncodePlaceholder": "URL 编码占位符",
+  "@urlEncodePlaceholder": {
+    "description": "UI string for urlEncodePlaceholder"
+  },
+  "urlEncodeSpaceToPlus": "URL 编码空格为加号",
+  "@urlEncodeSpaceToPlus": {
+    "description": "UI string for urlEncodeSpaceToPlus"
+  },
+  "trigger": "触发词",
+  "@trigger": {
+    "description": "UI string for trigger"
+  },
+  "url": "URL",
+  "@url": {
+    "description": "UI string for url"
+  },
+  "category": "分类",
+  "@category": {
+    "description": "UI string for category"
+  },
+  "subCategory": "子分类",
+  "@subCategory": {
+    "description": "UI string for subCategory"
+  },
+  "enableSync": "启用同步",
+  "@enableSync": {
+    "description": "UI string for enableSync"
+  },
+  "storeCurrent": "存储当前",
+  "@storeCurrent": {
+    "description": "UI string for storeCurrent"
+  },
+  "storeSnapshot": "存储快照",
+  "@storeSnapshot": {
+    "description": "UI string for storeSnapshot"
+  },
+  "editLabel": "编辑标签",
+  "@editLabel": {
+    "description": "UI string for editLabel"
+  },
+  "restoreSnapshot": "恢复快照",
+  "@restoreSnapshot": {
+    "description": "UI string for restoreSnapshot"
+  },
+  "deleteSnapshot": "删除快照",
+  "@deleteSnapshot": {
+    "description": "UI string for deleteSnapshot"
+  },
+  "restoreSnapshotOverwrite": "这将覆盖当前的本地设置。",
+  "@restoreSnapshotOverwrite": {
+    "description": "UI string for restoreSnapshotOverwrite"
+  },
+  "deleteSnapshotConfirm": "确定要删除 {label} 吗？",
+  "@deleteSnapshotConfirm": {
+    "description": "UI string for deleteSnapshotConfirm"
+  },
+  "becomeSupporter": "成为支持者",
+  "@becomeSupporter": {
+    "description": "UI string for becomeSupporter"
+  },
+  "couldNotLoadSubscription": "无法加载订阅",
+  "@couldNotLoadSubscription": {
+    "description": "UI string for couldNotLoadSubscription"
+  },
+  "delivery": "投递",
+  "@delivery": {
+    "description": "UI string for delivery"
+  },
+  "unifiedPushDistributor": "UnifiedPush 分发器",
+  "@unifiedPushDistributor": {
+    "description": "UI string for unifiedPushDistributor"
+  },
+  "unifiedPushDistributorSubtitle": "投递网站推送通知的应用",
+  "@unifiedPushDistributorSubtitle": {
+    "description": "UI string for unifiedPushDistributorSubtitle"
+  },
+  "notificationPermission": "通知权限",
+  "@notificationPermission": {
+    "description": "UI string for notificationPermission"
+  },
+  "notificationPermissionSubtitle": "显示网站通知所需",
+  "@notificationPermissionSubtitle": {
+    "description": "UI string for notificationPermissionSubtitle"
+  },
+  "subscriptions": "订阅",
+  "@subscriptions": {
+    "description": "UI string for subscriptions"
+  },
+  "siteSubscriptions": "网站订阅",
+  "@siteSubscriptions": {
+    "description": "UI string for siteSubscriptions"
+  },
+  "siteSubscriptionsSubtitle": "已订阅推送通知的网站",
+  "@siteSubscriptionsSubtitle": {
+    "description": "UI string for siteSubscriptionsSubtitle"
+  },
+  "webPushNotifications": "通知",
+  "@webPushNotifications": {
+    "description": "UI string for webPushNotifications"
+  },
+  "webPushNotificationsSubtitle": "Web 推送投递、分发器和网站订阅。",
+  "@webPushNotificationsSubtitle": {
+    "description": "UI string for webPushNotificationsSubtitle"
+  },
+  "gestureConfiguration": "配置",
+  "@gestureConfiguration": {
+    "description": "UI string for gestureConfiguration"
+  },
+  "gestureBindings": "手势绑定",
+  "@gestureBindings": {
+    "description": "UI string for gestureBindings"
+  },
+  "gestureBehaviorTiming": "行为与计时",
+  "@gestureBehaviorTiming": {
+    "description": "UI string for gestureBehaviorTiming"
+  },
+  "gestureExcludedSites": "排除的网站",
+  "@gestureExcludedSites": {
+    "description": "UI string for gestureExcludedSites"
+  },
+  "gestureFeedback": "反馈",
+  "@gestureFeedback": {
+    "description": "UI string for gestureFeedback"
+  },
+  "gestureOverlay": "叠加层",
+  "@gestureOverlay": {
+    "description": "UI string for gestureOverlay"
+  },
+  "gestureLiveFeedback": "实时反馈",
+  "@gestureLiveFeedback": {
+    "description": "UI string for gestureLiveFeedback"
+  },
+  "gestureLiveFeedbackSubtitle": "绘制时显示手势轨迹及其动作",
+  "@gestureLiveFeedbackSubtitle": {
+    "description": "UI string for gestureLiveFeedbackSubtitle"
+  },
+  "gestureSuggestNext": "建议下一个",
+  "@gestureSuggestNext": {
+    "description": "UI string for gestureSuggestNext"
+  },
+  "searchingTheWeb": "正在搜索网页...",
+  "@searchingTheWeb": {
+    "description": "UI string for searchingTheWeb"
+  },
+  "buySearchPack": "购买搜索包",
+  "@buySearchPack": {
+    "description": "UI string for buySearchPack"
+  },
+  "checkConnectionRetry": "请检查网络连接并点击重试。",
+  "@checkConnectionRetry": {
+    "description": "UI string for checkConnectionRetry"
+  },
+  "buySearchPackToStart": "购买搜索包以开始",
+  "@buySearchPackToStart": {
+    "description": "UI string for buySearchPackToStart"
+  },
+  "requestingTokens": "正在请求令牌...",
+  "@requestingTokens": {
+    "description": "UI string for requestingTokens"
+  },
+  "getTokens": "获取令牌",
+  "@getTokens": {
+    "description": "UI string for getTokens"
+  },
+  "requestTokens": "请求 {count} 个令牌",
+  "@requestTokens": {
+    "description": "UI string for requestTokens"
+  },
+  "noCreditsRemaining": "没有剩余额度",
+  "@noCreditsRemaining": {
+    "description": "UI string for noCreditsRemaining"
+  },
+  "buyMore": "购买更多",
+  "@buyMore": {
+    "description": "UI string for buyMore"
+  },
+  "fetchPageData": "获取页面数据",
+  "@fetchPageData": {
+    "description": "UI string for fetchPageData"
+  },
+  "find": "查找",
+  "@find": {
+    "description": "UI string for find"
+  },
+  "show": "显示",
+  "@show": {
+    "description": "UI string for show"
+  },
+  "switch_": "切换",
+  "@switch_": {
+    "description": "UI string for switch_"
+  },
+  "dismiss": "忽略",
+  "@dismiss": {
+    "description": "UI string for dismiss"
+  },
+  "navigateBackToCloseTab": "再按一次返回键关闭当前标签页",
+  "@navigateBackToCloseTab": {
+    "description": "UI string for navigateBackToCloseTab"
+  },
+  "navigateBackToExitApp": "再按一次返回键退出应用",
+  "@navigateBackToExitApp": {
+    "description": "UI string for navigateBackToExitApp"
+  },
+  "openLinkFromClipboard": "要打开剪贴板中的链接吗？",
+  "@openLinkFromClipboard": {
+    "description": "UI string for openLinkFromClipboard"
+  },
+  "tabsClosed": "已关闭 {count} 个标签页",
+  "@tabsClosed": {
+    "description": "UI string for tabsClosed"
+  },
+  "tabClosed": "已关闭标签页",
+  "@tabClosed": {
+    "description": "UI string for tabClosed"
+  },
+  "closeIsolatedTabs": "关闭隔离标签页？",
+  "@closeIsolatedTabs": {
+    "description": "UI string for closeIsolatedTabs"
+  },
+  "hidingDisabledBySite": "网站已禁用隐藏",
+  "@hidingDisabledBySite": {
+    "description": "UI string for hidingDisabledBySite"
+  },
+  "quickStart": "快速开始",
+  "@quickStart": {
+    "description": "UI string for quickStart"
+  },
+  "quickStartSubtitle": "使用推荐默认设置并开始浏览。",
+  "@quickStartSubtitle": {
+    "description": "UI string for quickStartSubtitle"
+  },
+  "customSetup": "自定义设置",
+  "@customSetup": {
+    "description": "UI string for customSetup"
+  },
+  "customSetupSubtitle": "配置 DNS、工具栏、扩展等。",
+  "@customSetupSubtitle": {
+    "description": "UI string for customSetupSubtitle"
+  },
+  "restoreFromBackup": "从备份恢复",
+  "@restoreFromBackup": {
+    "description": "UI string for restoreFromBackup"
+  },
+  "restoreFromBackupSubtitle": "从加密备份文件导入配置。",
+  "@restoreFromBackupSubtitle": {
+    "description": "UI string for restoreFromBackupSubtitle"
+  },
+  "endUserLicenseAgreement": "最终用户许可协议",
+  "@endUserLicenseAgreement": {
+    "description": "UI string for endUserLicenseAgreement"
+  },
+  "couldNotLoadSearchEngines": "无法加载搜索引擎",
+  "@couldNotLoadSearchEngines": {
+    "description": "UI string for couldNotLoadSearchEngines"
+  },
+  "failedToLoadFeeds": "加载订阅源失败",
+  "@failedToLoadFeeds": {
+    "description": "UI string for failedToLoadFeeds"
+  },
+  "failedToLoadFeed": "加载订阅源失败",
+  "@failedToLoadFeed": {
+    "description": "UI string for failedToLoadFeed"
+  },
+  "failedToLoadArticles": "加载文章失败",
+  "@failedToLoadArticles": {
+    "description": "UI string for failedToLoadArticles"
+  },
+  "failedReadingArticle": "阅读文章失败",
+  "@failedReadingArticle": {
+    "description": "UI string for failedReadingArticle"
+  },
+  "testConnection": "测试连接",
+  "@testConnection": {
+    "description": "UI string for testConnection"
+  },
+  "testing": "测试中...",
+  "@testing": {
+    "description": "UI string for testing"
+  },
+  "failed": "失败",
+  "@failed": {
+    "description": "UI string for failed"
+  },
+  "direct": "直连",
+  "@direct": {
+    "description": "UI string for direct"
+  },
+  "clearOnExit": "退出时清除",
+  "@clearOnExit": {
+    "description": "UI string for clearOnExit"
+  },
+  "pinned": "已固定",
+  "@pinned": {
+    "description": "UI string for pinned"
+  },
+  "hue": "色相",
+  "@hue": {
+    "description": "UI string for hue"
+  },
+  "saturation": "饱和度",
+  "@saturation": {
+    "description": "UI string for saturation"
+  },
+  "lightness": "亮度",
+  "@lightness": {
+    "description": "UI string for lightness"
+  },
+  "smallWebUnavailable": "Small Web 不可用",
+  "@smallWebUnavailable": {
+    "description": "UI string for smallWebUnavailable"
+  },
+  "couldNotLoadSmallWebSession": "无法加载 Small Web 会话",
+  "@couldNotLoadSmallWebSession": {
+    "description": "UI string for couldNotLoadSmallWebSession"
+  },
+  "autoDeviceDefault": "自动（设备默认）",
+  "@autoDeviceDefault": {
+    "description": "UI string for autoDeviceDefault"
+  },
+  "anyRegion": "任意地区",
+  "@anyRegion": {
+    "description": "UI string for anyRegion"
+  },
+  "anyTime": "任意时间",
+  "@anyTime": {
+    "description": "UI string for anyTime"
+  },
+  "defaultModerate": "默认（适中）",
+  "@defaultModerate": {
+    "description": "UI string for defaultModerate"
+  },
+  "syncSettingsSubtitle": "账户状态、二维码配对和设备名称",
+  "@syncSettingsSubtitle": {
+    "description": "UI string for syncSettingsSubtitle"
+  },
+  "syncServerOverridesSubtitle": "自定义 Firefox 账户和令牌服务器端点",
+  "@syncServerOverridesSubtitle": {
+    "description": "UI string for syncServerOverridesSubtitle"
+  },
+  "restore": "恢复",
+  "@restore": {
+    "description": "UI string for restore"
+  },
+  "store": "存储",
+  "@store": {
+    "description": "UI string for store"
+  },
+  "previewUnavailable": "预览不可用",
+  "@previewUnavailable": {
+    "description": "UI string for previewUnavailable"
+  },
+  "searchFailed": "搜索失败",
+  "@searchFailed": {
+    "description": "UI string for searchFailed"
   }
 }

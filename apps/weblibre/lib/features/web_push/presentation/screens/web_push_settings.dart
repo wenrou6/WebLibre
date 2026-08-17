@@ -31,28 +31,28 @@ import 'package:weblibre/utils/ui_helper.dart';
 
 const List<SettingsSectionDefinition> webPushSettingsSections = [
   SettingsSectionDefinition(
-    title: 'Delivery',
+    title: AppLocalizations.of(context)!.delivery,
     entries: [
       SettingsEntryDefinition(
-        title: 'UnifiedPush Distributor',
-        subtitle: 'The app that delivers website push notifications',
+        title: AppLocalizations.of(context)!.unifiedPushDistributor,
+        subtitle: AppLocalizations.of(context)!.unifiedPushDistributorSubtitle,
         keywords: ['notifications', 'push', 'unifiedpush', 'ntfy'],
         child: _DistributorTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Notification Permission',
-        subtitle: 'Required to display website notifications',
+        title: AppLocalizations.of(context)!.notificationPermission,
+        subtitle: AppLocalizations.of(context)!.notificationPermissionSubtitle,
         keywords: ['notifications', 'permission'],
         child: _NotificationPermissionTile(),
       ),
     ],
   ),
   SettingsSectionDefinition(
-    title: 'Subscriptions',
+    title: AppLocalizations.of(context)!.subscriptions,
     entries: [
       SettingsEntryDefinition(
-        title: 'Site Subscriptions',
-        subtitle: 'Websites subscribed to push notifications',
+        title: AppLocalizations.of(context)!.siteSubscriptions,
+        subtitle: AppLocalizations.of(context)!.siteSubscriptionsSubtitle,
         keywords: ['sites', 'subscriptions'],
         child: _SubscriptionList(),
       ),
@@ -66,8 +66,8 @@ class WebPushSettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SettingsDetailScaffold(
-      title: 'Notifications',
-      subtitle: 'Web push delivery, distributor, and site subscriptions.',
+      title: AppLocalizations.of(context)!.webPushNotifications,
+      subtitle: AppLocalizations.of(context)!.webPushNotificationsSubtitle,
       icon: MdiIcons.bellBadgeOutline,
       sections: webPushSettingsSections,
     );

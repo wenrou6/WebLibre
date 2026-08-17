@@ -29,6 +29,7 @@ import 'package:weblibre/features/gestures/presentation/screens/gesture_bindings
 import 'package:weblibre/features/gestures/presentation/screens/gesture_excluded_sites_screen.dart';
 import 'package:weblibre/features/gestures/presentation/screens/gesture_feedback_screen.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Overview screen for gesture configuration: a master switch plus entries that
 /// open the dedicated bindings / behavior / excluded-sites / feedback subpages.
@@ -50,7 +51,7 @@ class GestureSettingsScreen extends HookConsumerWidget {
     }
 
     return SettingsCustomScrollScaffold(
-      title: 'Gestures',
+      title: AppLocalizations.of(context)!.gestures,
       slivers: [
         SliverPadding(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
@@ -101,10 +102,10 @@ class GestureSettingsScreen extends HookConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: buildSettingsSectionWidgets(context, [
                   SettingsSectionDefinition(
-                    title: 'Configuration',
+                    title: AppLocalizations.of(context)!.gestureConfiguration,
                     entries: [
                       SettingsEntryDefinition(
-                        title: 'Gesture bindings',
+                        title: AppLocalizations.of(context)!.gestureBindings,
                         child: ListTile(
                           leading: const Icon(MdiIcons.gestureDoubleTap),
                           title: const Text('Gesture bindings'),
@@ -116,7 +117,7 @@ class GestureSettingsScreen extends HookConsumerWidget {
                         ),
                       ),
                       SettingsEntryDefinition(
-                        title: 'Behavior & timing',
+                        title: AppLocalizations.of(context)!.gestureBehaviorTiming,
                         child: ListTile(
                           leading: const Icon(Icons.tune),
                           title: const Text('Behavior & timing'),
@@ -128,7 +129,7 @@ class GestureSettingsScreen extends HookConsumerWidget {
                         ),
                       ),
                       SettingsEntryDefinition(
-                        title: 'Excluded sites',
+                        title: AppLocalizations.of(context)!.gestureExcludedSites,
                         child: ListTile(
                           leading: const Icon(Icons.public_off),
                           title: const Text('Excluded sites'),
@@ -140,7 +141,7 @@ class GestureSettingsScreen extends HookConsumerWidget {
                         ),
                       ),
                       SettingsEntryDefinition(
-                        title: 'Feedback',
+                        title: AppLocalizations.of(context)!.gestureFeedback,
                         child: ListTile(
                           leading: const Icon(Icons.bolt_outlined),
                           title: const Text('Feedback'),

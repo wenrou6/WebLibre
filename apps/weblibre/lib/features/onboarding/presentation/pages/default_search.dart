@@ -33,6 +33,7 @@ import 'package:weblibre/features/user/domain/repositories/general_settings.dart
 import 'package:weblibre/presentation/widgets/browser_page.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
 import 'package:weblibre/presentation/widgets/url_icon.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 const defaultBangs = ['ddg', 'brave', 'startpage', 'qwant'];
 
@@ -169,7 +170,7 @@ class DefaultSearchPage extends HookConsumerWidget {
           },
           error: (error, stackTrace) => Center(
             child: FailureWidget(
-              title: 'Could not load search engines',
+              title: AppLocalizations.of(context)!.couldNotLoadSearchEngines,
               exception: error,
               onRetry: () =>
                   ref.refresh(bangListProvider(triggers: defaultBangs)),

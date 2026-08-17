@@ -99,7 +99,7 @@ class SyncSettingsScreen extends HookConsumerWidget {
             title: syncInfo?.authenticated == true
                 ? 'Signed in account'
                 : 'Sign in',
-            subtitle: 'Account status, QR pairing, and device name',
+            subtitle: AppLocalizations.of(context)!.syncSettingsSubtitle,
             keywords: const ['pairing', 'device name'],
             child: Column(
               children: [
@@ -288,7 +288,7 @@ class SyncSettingsScreen extends HookConsumerWidget {
         entries: [
           SettingsEntryDefinition(
             title: l10n.serverOverrides,
-            subtitle: 'Custom Firefox Account and token server endpoints',
+            subtitle: AppLocalizations.of(context)!.syncServerOverridesSubtitle,
             keywords: const ['fxa', 'token server'],
             child: Column(
               children: [

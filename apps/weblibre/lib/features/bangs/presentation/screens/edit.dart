@@ -30,6 +30,7 @@ import 'package:weblibre/features/bangs/domain/repositories/data.dart';
 import 'package:weblibre/features/bangs/presentation/dialogs/delete_bang_dialog.dart';
 import 'package:weblibre/utils/form_validators.dart';
 import 'package:weblibre/utils/ui_helper.dart' as ui_helper;
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class EditBangScreen extends HookConsumerWidget {
   final Bang? initialBang;
@@ -160,7 +161,7 @@ class EditBangScreen extends HookConsumerWidget {
                 TextFormField(
                   controller: nameTextController,
                   decoration: const InputDecoration(
-                    label: Text('Name'),
+                    label: Text(AppLocalizations.of(context)!.name),
                     helper: Text(
                       'The name of the website associated with the bang',
                     ),
@@ -172,7 +173,7 @@ class EditBangScreen extends HookConsumerWidget {
                 TextFormField(
                   controller: triggerTextController,
                   decoration: const InputDecoration(
-                    label: Text('Trigger'),
+                    label: Text(AppLocalizations.of(context)!.trigger),
                     helper: Text(
                       'The specific trigger word or phrase used to invoke the bang.',
                     ),
@@ -185,7 +186,7 @@ class EditBangScreen extends HookConsumerWidget {
                   controller: urlTextController,
                   keyboardType: TextInputType.url,
                   decoration: const InputDecoration(
-                    label: Text('URL'),
+                    label: Text(AppLocalizations.of(context)!.url),
                     helper: Text(
                       "The URL template to use when the bang is invoked, where `{{{s}}}` is replaced by the user's query.",
                     ),
@@ -210,7 +211,7 @@ class EditBangScreen extends HookConsumerWidget {
                   key: ValueKey(EquatableValue([category.value, categories])),
                   enableFilter: true,
                   requestFocusOnTap: true,
-                  label: const Text('Category'),
+                  label: Text(AppLocalizations.of(context)!.category),
                   expandedInsets: EdgeInsets.zero,
                   initialSelection: category.value,
                   dropdownMenuEntries: [
@@ -232,7 +233,7 @@ class EditBangScreen extends HookConsumerWidget {
                   ),
                   enableFilter: true,
                   requestFocusOnTap: true,
-                  label: const Text('Sub Category'),
+                  label: Text(AppLocalizations.of(context)!.subCategory),
                   expandedInsets: EdgeInsets.zero,
                   initialSelection: subCategory.value,
                   dropdownMenuEntries: [
@@ -252,7 +253,7 @@ class EditBangScreen extends HookConsumerWidget {
                 CheckboxListTile(
                   contentPadding: EdgeInsets.zero,
                   value: formatFlags.value.contains(BangFormat.openBasePath),
-                  title: const Text('Open Base Path'),
+                  title: Text(AppLocalizations.of(context)!.openBasePath),
                   subtitle: const Text(
                     'When the bang is invoked with no query, opens the base path of the URL (/) instead of any path given in the template (g., /search)',
                   ),
@@ -267,7 +268,7 @@ class EditBangScreen extends HookConsumerWidget {
                   value: formatFlags.value.contains(
                     BangFormat.urlEncodePlaceholder,
                   ),
-                  title: const Text('URL Encode Placeholder'),
+                  title: Text(AppLocalizations.of(context)!.urlEncodePlaceholder),
                   subtitle: const Text(
                     'URL encode the search terms. Some sites do not work with this, so it can be disabled by omitting this.',
                   ),
@@ -282,7 +283,7 @@ class EditBangScreen extends HookConsumerWidget {
                   value: formatFlags.value.contains(
                     BangFormat.urlEncodeSpaceToPlus,
                   ),
-                  title: const Text('URL Encode Space to Plus'),
+                  title: Text(AppLocalizations.of(context)!.urlEncodeSpaceToPlus),
                   subtitle: const Text(
                     'URL encodes spaces as +, instead of %20. Some sites only work correctly with one or the other.',
                   ),
@@ -303,7 +304,7 @@ class EditBangScreen extends HookConsumerWidget {
                         foregroundColor: Theme.of(context).colorScheme.error,
                         iconColor: Theme.of(context).colorScheme.error,
                       ),
-                      label: const Text('Delete'),
+                      label: Text(AppLocalizations.of(context)!.delete),
                       icon: const Icon(Icons.delete),
                       onPressed: () async {
                         final result = await showDeleteBangDialog(context);

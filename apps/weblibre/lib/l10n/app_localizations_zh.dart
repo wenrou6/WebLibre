@@ -3211,4 +3211,336 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get uBlockAssetSubGroupSocialLabel => '社交组件';
+
+  @override
+  String get torTrademark => '商标';
+
+  @override
+  String get torStartAutomatically => '自动启动';
+
+  @override
+  String torStartOrStopService(Object brand) {
+    return '启动或停止 $brand 服务';
+  }
+
+  @override
+  String get torRequestNewIdentity => '请求新身份';
+
+  @override
+  String get torUseFreshCircuit => '为新连接使用新的电路';
+
+  @override
+  String get torAutoConfigureTransport => '自动配置传输';
+
+  @override
+  String get torCannotConnectWithoutBridge => '我确定没有网桥无法连接';
+
+  @override
+  String get torAutoConfigured => '自动配置';
+
+  @override
+  String get torDirectConnection => '直连';
+
+  @override
+  String get torFetchFreshBridges => '连接前获取新网桥';
+
+  @override
+  String get torSuitableForHeavyCensorship => '适用于严格审查环境';
+
+  @override
+  String get userBangs => '用户快捷搜索';
+
+  @override
+  String get manageUserBangs => '管理用户快捷搜索';
+
+  @override
+  String get searchBangs => '搜索快捷搜索';
+
+  @override
+  String get browseCategories => '浏览分类';
+
+  @override
+  String get bangCategories => '快捷搜索分类';
+
+  @override
+  String get deleteBang => '删除快捷搜索';
+
+  @override
+  String get deleteBangConfirm => '确定要删除此快捷搜索吗？';
+
+  @override
+  String get openBasePath => '打开基础路径';
+
+  @override
+  String get urlEncodePlaceholder => 'URL 编码占位符';
+
+  @override
+  String get urlEncodeSpaceToPlus => 'URL 编码空格为加号';
+
+  @override
+  String get trigger => '触发词';
+
+  @override
+  String get url => 'URL';
+
+  @override
+  String get category => '分类';
+
+  @override
+  String get subCategory => '子分类';
+
+  @override
+  String get enableSync => '启用同步';
+
+  @override
+  String get storeCurrent => '存储当前';
+
+  @override
+  String get storeSnapshot => '存储快照';
+
+  @override
+  String get editLabel => '编辑标签';
+
+  @override
+  String get restoreSnapshot => '恢复快照';
+
+  @override
+  String get deleteSnapshot => '删除快照';
+
+  @override
+  String get restoreSnapshotOverwrite => '这将覆盖当前的本地设置。';
+
+  @override
+  String deleteSnapshotConfirm(Object label) {
+    return '确定要删除 $label 吗？';
+  }
+
+  @override
+  String get becomeSupporter => '成为支持者';
+
+  @override
+  String get couldNotLoadSubscription => '无法加载订阅';
+
+  @override
+  String get delivery => '投递';
+
+  @override
+  String get unifiedPushDistributor => 'UnifiedPush 分发器';
+
+  @override
+  String get unifiedPushDistributorSubtitle => '投递网站推送通知的应用';
+
+  @override
+  String get notificationPermission => '通知权限';
+
+  @override
+  String get notificationPermissionSubtitle => '显示网站通知所需';
+
+  @override
+  String get subscriptions => '订阅';
+
+  @override
+  String get siteSubscriptions => '网站订阅';
+
+  @override
+  String get siteSubscriptionsSubtitle => '已订阅推送通知的网站';
+
+  @override
+  String get webPushNotifications => '通知';
+
+  @override
+  String get webPushNotificationsSubtitle => 'Web 推送投递、分发器和网站订阅。';
+
+  @override
+  String get gestureConfiguration => '配置';
+
+  @override
+  String get gestureBindings => '手势绑定';
+
+  @override
+  String get gestureBehaviorTiming => '行为与计时';
+
+  @override
+  String get gestureExcludedSites => '排除的网站';
+
+  @override
+  String get gestureFeedback => '反馈';
+
+  @override
+  String get gestureOverlay => '叠加层';
+
+  @override
+  String get gestureLiveFeedback => '实时反馈';
+
+  @override
+  String get gestureLiveFeedbackSubtitle => '绘制时显示手势轨迹及其动作';
+
+  @override
+  String get gestureSuggestNext => '建议下一个';
+
+  @override
+  String get searchingTheWeb => '正在搜索网页...';
+
+  @override
+  String get buySearchPack => '购买搜索包';
+
+  @override
+  String get checkConnectionRetry => '请检查网络连接并点击重试。';
+
+  @override
+  String get buySearchPackToStart => '购买搜索包以开始';
+
+  @override
+  String get requestingTokens => '正在请求令牌...';
+
+  @override
+  String get getTokens => '获取令牌';
+
+  @override
+  String requestTokens(Object count) {
+    return '请求 $count 个令牌';
+  }
+
+  @override
+  String get noCreditsRemaining => '没有剩余额度';
+
+  @override
+  String get buyMore => '购买更多';
+
+  @override
+  String get fetchPageData => '获取页面数据';
+
+  @override
+  String get find => '查找';
+
+  @override
+  String get show => '显示';
+
+  @override
+  String get switch_ => '切换';
+
+  @override
+  String get dismiss => '忽略';
+
+  @override
+  String get navigateBackToCloseTab => '再按一次返回键关闭当前标签页';
+
+  @override
+  String get navigateBackToExitApp => '再按一次返回键退出应用';
+
+  @override
+  String get openLinkFromClipboard => '要打开剪贴板中的链接吗？';
+
+  @override
+  String tabsClosed(Object count) {
+    return '已关闭 $count 个标签页';
+  }
+
+  @override
+  String get tabClosed => '已关闭标签页';
+
+  @override
+  String get closeIsolatedTabs => '关闭隔离标签页？';
+
+  @override
+  String get hidingDisabledBySite => '网站已禁用隐藏';
+
+  @override
+  String get quickStart => '快速开始';
+
+  @override
+  String get quickStartSubtitle => '使用推荐默认设置并开始浏览。';
+
+  @override
+  String get customSetup => '自定义设置';
+
+  @override
+  String get customSetupSubtitle => '配置 DNS、工具栏、扩展等。';
+
+  @override
+  String get restoreFromBackup => '从备份恢复';
+
+  @override
+  String get restoreFromBackupSubtitle => '从加密备份文件导入配置。';
+
+  @override
+  String get endUserLicenseAgreement => '最终用户许可协议';
+
+  @override
+  String get couldNotLoadSearchEngines => '无法加载搜索引擎';
+
+  @override
+  String get failedToLoadFeeds => '加载订阅源失败';
+
+  @override
+  String get failedToLoadFeed => '加载订阅源失败';
+
+  @override
+  String get failedToLoadArticles => '加载文章失败';
+
+  @override
+  String get failedReadingArticle => '阅读文章失败';
+
+  @override
+  String get testConnection => '测试连接';
+
+  @override
+  String get testing => '测试中...';
+
+  @override
+  String get failed => '失败';
+
+  @override
+  String get direct => '直连';
+
+  @override
+  String get clearOnExit => '退出时清除';
+
+  @override
+  String get pinned => '已固定';
+
+  @override
+  String get hue => '色相';
+
+  @override
+  String get saturation => '饱和度';
+
+  @override
+  String get lightness => '亮度';
+
+  @override
+  String get smallWebUnavailable => 'Small Web 不可用';
+
+  @override
+  String get couldNotLoadSmallWebSession => '无法加载 Small Web 会话';
+
+  @override
+  String get autoDeviceDefault => '自动（设备默认）';
+
+  @override
+  String get anyRegion => '任意地区';
+
+  @override
+  String get anyTime => '任意时间';
+
+  @override
+  String get defaultModerate => '默认（适中）';
+
+  @override
+  String get syncSettingsSubtitle => '账户状态、二维码配对和设备名称';
+
+  @override
+  String get syncServerOverridesSubtitle => '自定义 Firefox 账户和令牌服务器端点';
+
+  @override
+  String get restore => '恢复';
+
+  @override
+  String get store => '存储';
+
+  @override
+  String get previewUnavailable => '预览不可用';
+
+  @override
+  String get searchFailed => '搜索失败';
 }

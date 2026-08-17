@@ -29,6 +29,7 @@ import 'package:weblibre/core/routing/routes.dart';
 import 'package:weblibre/features/account/domain/repositories/account_auth.dart';
 import 'package:weblibre/features/account/domain/repositories/subscription_repository.dart';
 import 'package:weblibre/features/geckoview/features/open_link_tools/presentation/utils/open_in_custom_tab.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Promotional banner shown above the quote card on the browser home page,
 /// inviting non-subscribers to become a WebLibre Supporter.
@@ -213,7 +214,7 @@ class SupporterHomeBanner extends HookConsumerWidget {
                   foregroundColor: colorScheme.surface,
                 ),
                 icon: const Icon(MdiIcons.heart, size: 18),
-                label: const Text('Become a Supporter'),
+                label: Text(AppLocalizations.of(context)!.becomeSupporter),
               ),
             ),
           ],

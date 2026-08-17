@@ -22,14 +22,15 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/gestures/data/models/gesture_settings.dart';
 import 'package:weblibre/features/gestures/domain/repositories/gesture_settings.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 const List<SettingsSectionDefinition> _feedbackSections = [
   SettingsSectionDefinition(
-    title: 'Overlay',
+    title: AppLocalizations.of(context)!.gestureOverlay,
     entries: [
       SettingsEntryDefinition(
-        title: 'Live feedback',
-        subtitle: 'Show the stroke and its action while you draw',
+        title: AppLocalizations.of(context)!.gestureLiveFeedback,
+        subtitle: AppLocalizations.of(context)!.gestureLiveFeedbackSubtitle,
         child: _LiveFeedbackTile(),
       ),
       SettingsEntryDefinition(

@@ -22,6 +22,7 @@ import 'package:nullability/nullability.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:weblibre/core/logger.dart';
 import 'package:weblibre/utils/clipboard.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Creates a floating snackbar.
 /// The margin is controlled by the scaffold's snackBarTheme for proper
@@ -114,7 +115,7 @@ void showFindInPageSuggestion(
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
     ),
-    action: SnackBarAction(label: 'Find', onPressed: onFind),
+    action: SnackBarAction(label: AppLocalizations.of(context)!.find, onPressed: onFind),
     duration: duration,
     persist: persist,
   );
@@ -147,8 +148,8 @@ void showTabBackButtonMessage(
 }) {
   final snackbar = _createFloatingSnackBar(
     content: (tabCount > 1)
-        ? const Text('Navigate BACK again to close current tab')
-        : const Text('Navigate BACK again to exit app'),
+        ? Text(AppLocalizations.of(context)!.navigateBackToCloseTab)
+        : Text(AppLocalizations.of(context)!.navigateBackToExitApp),
     duration: duration,
     persist: persist,
   );
@@ -173,7 +174,7 @@ void showTabOpenedMessage(
   final snackBar = _createFloatingSnackBar(
     content: Text(message),
     action: onShow.mapNotNull(
-      (onPressed) => SnackBarAction(label: 'Show', onPressed: onPressed),
+      (onPressed) => SnackBarAction(label: AppLocalizations.of(context)!.show, onPressed: onPressed),
     ),
     duration: duration,
     persist: persist,
@@ -192,9 +193,9 @@ Future<void> showSuggestNewTabMessage(
 
   if (clipboardUrl != null) {
     final snackBar = _createFloatingSnackBar(
-      content: const Text('Want to open link from clipboard?'),
+      content: Text(AppLocalizations.of(context)!.openLinkFromClipboard),
       action: SnackBarAction(
-        label: 'Open',
+        label: AppLocalizations.of(context)!.open,
         onPressed: () {
           onAdd(clipboardUrl.toString());
         },
@@ -226,7 +227,7 @@ void showTabSwitchMessage(
   final snackBar = _createFloatingSnackBar(
     content: Text(message),
     action: onSwitch.mapNotNull(
-      (onPressed) => SnackBarAction(label: 'Switch', onPressed: onPressed),
+      (onPressed) => SnackBarAction(label: AppLocalizations.of(context)!.switch_, onPressed: onPressed),
     ),
     duration: duration,
     persist: persist,
@@ -273,7 +274,7 @@ void showTabUndoClose(
     content: (count > 1)
         ? Text('$count Tabs closed')
         : const Text('Tab closed'),
-    action: SnackBarAction(label: 'Undo', onPressed: onUndo),
+    action: SnackBarAction(label: AppLocalizations.of(context)!.undo, onPressed: onUndo),
     duration: duration,
     persist: persist,
   );
@@ -294,16 +295,16 @@ Future<bool> confirmIsolatedTabClose(
   final result = await showDialog<bool>(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Close isolated tabs?'),
+      title: Text(AppLocalizations.of(context)!.closeIsolatedTabs),
       content: Text(message),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(false),
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         FilledButton(
           onPressed: () => Navigator.of(context).pop(true),
-          child: const Text('Close'),
+          child: Text(AppLocalizations.of(context)!.close),
         ),
       ],
     ),
@@ -321,8 +322,8 @@ void showDismissOverrideMessage(
   ScaffoldMessenger.of(context).clearSnackBars();
 
   final snackBar = _createFloatingSnackBar(
-    content: const Text('Hiding disabled by site'),
-    action: SnackBarAction(label: 'Dismiss', onPressed: onDismiss),
+    content: Text(AppLocalizations.of(context)!.hidingDisabledBySite),
+    action: SnackBarAction(label: AppLocalizations.of(context)!.dismiss, onPressed: onDismiss),
     duration: duration,
     persist: persist,
   );

@@ -26,6 +26,7 @@ import 'package:weblibre/features/web_feed/domain/providers.dart';
 import 'package:weblibre/features/web_feed/presentation/controllers/fetch_articles.dart';
 import 'package:weblibre/features/web_feed/presentation/widgets/feed_card.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class FeedListScreen extends HookConsumerWidget {
   const FeedListScreen({super.key});
@@ -86,7 +87,7 @@ class FeedListScreen extends HookConsumerWidget {
           },
           error: (error, stackTrace) => Center(
             child: FailureWidget(
-              title: 'Failed to load Feeds',
+              title: AppLocalizations.of(context)!.failedToLoadFeeds,
               exception: error,
               onRetry: () {
                 // ignore: unused_result

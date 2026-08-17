@@ -37,6 +37,7 @@ import 'package:weblibre/features/geckoview/features/tabs/utils/container_icons.
 import 'package:weblibre/features/proxy/domain/providers/proxy_connection_options.dart';
 import 'package:weblibre/features/proxy/domain/repositories/singbox_proxy_profiles.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class ContainerSelectionScreen extends HookConsumerWidget {
   const ContainerSelectionScreen({super.key});
@@ -315,7 +316,7 @@ class _SelectionContainerCard extends ConsumerWidget {
                               if (container.metadata.contextualIdentity != null)
                                 const _SelectionInfoChip(
                                   icon: Icons.cookie_outlined,
-                                  label: 'Isolated',
+                                  label: AppLocalizations.of(context)!.isolated,
                                 ),
                               if (container.metadata.proxyConnectionId != null)
                                 _SelectionInfoChip(
@@ -331,12 +332,12 @@ class _SelectionContainerCard extends ConsumerWidget {
                                   container.metadata.bypassGlobalProxy)
                                 const _SelectionInfoChip(
                                   icon: Icons.public,
-                                  label: 'Direct',
+                                  label: AppLocalizations.of(context)!.direct,
                                 ),
                               if (container.metadata.clearDataOnExit)
                                 const _SelectionInfoChip(
                                   icon: Icons.cleaning_services_outlined,
-                                  label: 'Clear on exit',
+                                  label: AppLocalizations.of(context)!.clearOnExit,
                                 ),
                             ],
                           ),

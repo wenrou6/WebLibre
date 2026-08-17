@@ -26,6 +26,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:secure_archive/secure_archive.dart';
 import 'package:weblibre/features/account/data/repositories/account_sync_repository.dart';
 import 'package:weblibre/features/account/domain/repositories/account_auth.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 /// Lets a signed-in user derive an end-to-end encryption key from their
 /// account password.
@@ -170,7 +171,7 @@ class SyncSetupCard extends HookConsumerWidget {
                       width: 20,
                       child: CircularProgressIndicator(strokeWidth: 2),
                     )
-                  : const Text('Enable Sync'),
+                  : Text(AppLocalizations.of(context)!.enableSync),
             ),
           ),
         ],

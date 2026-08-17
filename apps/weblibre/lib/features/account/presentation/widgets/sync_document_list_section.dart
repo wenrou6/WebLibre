@@ -29,6 +29,7 @@ import 'package:weblibre/features/account/domain/services/sync_document_service.
 import 'package:weblibre/features/account/presentation/widgets/sync_document_dialogs.dart';
 import 'package:weblibre/features/settings/presentation/widgets/settings_content_card.dart';
 import 'package:weblibre/utils/ui_helper.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class SyncDocumentListSection extends HookWidget {
   const SyncDocumentListSection({
@@ -246,7 +247,7 @@ class SyncDocumentListSection extends HookWidget {
                   child: CircularProgressIndicator(strokeWidth: 2),
                 )
               : const Icon(Icons.cloud_upload_outlined),
-          title: const Text('Store Current'),
+          title: Text(AppLocalizations.of(context)!.storeCurrent),
           subtitle: Text(
             'Encrypt and upload current ${service.kind.displayName.toLowerCase()}',
           ),
@@ -331,12 +332,12 @@ class _DocumentTile extends StatelessWidget {
           MenuItemButton(
             leadingIcon: const Icon(Icons.cloud_download_outlined),
             onPressed: onRestore,
-            child: const Text('Restore'),
+            child: Text(AppLocalizations.of(context)!.restore),
           ),
           MenuItemButton(
             leadingIcon: const Icon(Icons.edit_outlined),
             onPressed: onEditLabel,
-            child: const Text('Edit Label'),
+            child: Text(AppLocalizations.of(context)!.editLabel),
           ),
           MenuItemButton(
             leadingIcon: Icon(

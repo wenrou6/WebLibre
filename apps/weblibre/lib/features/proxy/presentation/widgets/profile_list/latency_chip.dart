@@ -20,6 +20,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/features/proxy/domain/services/proxy_latency_tester.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class LatencyChip extends StatelessWidget {
   final AsyncValue<ProxyLatencyData> result;
@@ -49,13 +50,13 @@ class _LatencyStatusChip extends StatelessWidget {
 
   const _LatencyStatusChip.loading()
     : this(
-        label: 'Testing...',
+        label: AppLocalizations.of(context)!.testing,
         tooltip: 'Latency test running',
         isError: false,
       );
 
   _LatencyStatusChip.error(Object error)
-    : this(label: 'Failed', tooltip: error.toString(), isError: true);
+    : this(label: AppLocalizations.of(context)!.failed, tooltip: error.toString(), isError: true);
 
   @override
   Widget build(BuildContext context) {

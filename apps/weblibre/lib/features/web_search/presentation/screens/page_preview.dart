@@ -8,6 +8,7 @@ import 'package:weblibre/features/web_search/presentation/widgets/search_result_
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
 import 'package:weblibre/presentation/widgets/uri_breadcrumb.dart';
 import 'package:weblibre/presentation/widgets/url_icon.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class PagePreviewScreen extends ConsumerWidget {
   final Uri uri;
@@ -39,7 +40,7 @@ class PagePreviewScreen extends ConsumerWidget {
       return Scaffold(
         appBar: AppBar(title: Text(title)),
         body: const FailureWidget(
-          title: 'Preview unavailable',
+          title: AppLocalizations.of(context)!.previewUnavailable,
           exception:
               'Fetch the page from the result list before opening a preview.',
         ),

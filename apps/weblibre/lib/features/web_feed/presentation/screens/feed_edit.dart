@@ -34,6 +34,7 @@ import 'package:weblibre/features/web_feed/presentation/widgets/tag_field.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
 import 'package:weblibre/presentation/widgets/url_icon.dart';
 import 'package:weblibre/utils/form_validators.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 enum _DialogMode { create, edit }
 
@@ -72,7 +73,7 @@ class FeedEditScreen extends HookConsumerWidget {
             key: const ValueKey('data'),
             appBar: AppBar(),
             body: const Center(
-              child: FailureWidget(title: 'Failed to load feed'),
+              child: FailureWidget(title: AppLocalizations.of(context)!.failedToLoadFeed),
             ),
           );
         }
@@ -83,7 +84,7 @@ class FeedEditScreen extends HookConsumerWidget {
         key: const ValueKey('error'),
         appBar: AppBar(),
         body: Center(
-          child: FailureWidget(title: 'Failed to load feed', exception: error),
+          child: FailureWidget(title: AppLocalizations.of(context)!.failedToLoadFeed, exception: error),
         ),
       ),
       loading: () => Scaffold(

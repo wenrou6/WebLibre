@@ -22,6 +22,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:search_protocol/search_protocol.dart';
 import 'package:weblibre/features/search_credits/domain/repositories/web_search_settings.dart';
 import 'package:weblibre/features/web_search/data/locale_options.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class _FilterPill extends StatelessWidget {
   final IconData icon;
@@ -187,7 +188,7 @@ class LanguageSelector extends ConsumerWidget {
                 .setLanguage(null);
           },
           child: _MenuRow(
-            label: 'Auto (device default)',
+            label: AppLocalizations.of(context)!.autoDeviceDefault,
             subtitle: defaultOption?.code ?? locale.languageCode,
             isSelected: selected == null,
           ),
@@ -248,7 +249,7 @@ class CountrySelector extends ConsumerWidget {
                 .read(webSearchSettingsControllerProvider.notifier)
                 .setRegion(null);
           },
-          child: _MenuRow(label: 'Any region', isSelected: selected == null),
+          child: _MenuRow(label: AppLocalizations.of(context)!.anyRegion, isSelected: selected == null),
         ),
         if (defaultOption != null) ...[
           const Divider(),
@@ -317,7 +318,7 @@ class SafeSearchSelector extends ConsumerWidget {
                 .setSafeSearch(null);
           },
           child: _MenuRow(
-            label: 'Default (moderate)',
+            label: AppLocalizations.of(context)!.defaultModerate,
             isSelected: selected == null,
           ),
         ),
@@ -329,7 +330,7 @@ class SafeSearchSelector extends ConsumerWidget {
                 .setSafeSearch(SafeSearch.none);
           },
           child: _MenuRow(
-            label: 'Off',
+            label: AppLocalizations.of(context)!.off,
             isSelected: selected == SafeSearch.none,
             isHighlighted: true,
           ),
@@ -395,7 +396,7 @@ class FreshnessSelector extends ConsumerWidget {
                 .read(webSearchSettingsControllerProvider.notifier)
                 .setTimeRange(null);
           },
-          child: _MenuRow(label: 'Any time', isSelected: selected == null),
+          child: _MenuRow(label: AppLocalizations.of(context)!.anyTime, isSelected: selected == null),
         ),
         const Divider(),
         for (final value in TimeRange.values)

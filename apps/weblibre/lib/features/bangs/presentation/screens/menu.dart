@@ -21,6 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:weblibre/core/routing/routes.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class BangMenuScreen extends HookConsumerWidget {
   const BangMenuScreen({super.key});
@@ -28,13 +29,13 @@ class BangMenuScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bangs')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.bangs)),
       body: SafeArea(
         child: ListView(
           children: [
             ListTile(
               leading: const Icon(MdiIcons.accountAlert),
-              title: const Text('Manage User Bangs'),
+              title: Text(AppLocalizations.of(context)!.manageUserBangs),
               trailing: const Icon(Icons.chevron_right),
               onTap: () async {
                 await const UserBangsRoute().push(context);
@@ -42,7 +43,7 @@ class BangMenuScreen extends HookConsumerWidget {
             ),
             ListTile(
               leading: const Icon(Icons.search),
-              title: const Text('Search Bangs'),
+              title: Text(AppLocalizations.of(context)!.searchBangs),
               trailing: const Icon(Icons.chevron_right),
               onTap: () async {
                 await const BangSearchRoute().push(context);
@@ -50,7 +51,7 @@ class BangMenuScreen extends HookConsumerWidget {
             ),
             ListTile(
               leading: const Icon(MdiIcons.fileTree),
-              title: const Text('Browse Categories'),
+              title: Text(AppLocalizations.of(context)!.browseCategories),
               trailing: const Icon(Icons.chevron_right),
               onTap: () async {
                 await const BangCategoriesRoute().push(context);

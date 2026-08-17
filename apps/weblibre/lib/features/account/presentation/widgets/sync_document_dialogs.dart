@@ -19,6 +19,7 @@
  */
 import 'package:flutter/material.dart';
 import 'package:weblibre/features/account/data/repositories/account_sync_repository.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 // -- Metadata display helpers ------------------------------------------------
 
@@ -69,7 +70,7 @@ Future<String?> showStoreLabelDialog(BuildContext context) {
   return showDialog<String?>(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Store Snapshot'),
+      title: Text(AppLocalizations.of(context)!.storeSnapshot),
       content: TextField(
         controller: controller,
         decoration: const InputDecoration(
@@ -83,14 +84,14 @@ Future<String?> showStoreLabelDialog(BuildContext context) {
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(),
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         FilledButton(
           onPressed: () {
             final label = controller.text.trim();
             Navigator.of(context).pop(label.isEmpty ? '' : label);
           },
-          child: const Text('Store'),
+          child: Text(AppLocalizations.of(context)!.store),
         ),
       ],
     ),
@@ -106,7 +107,7 @@ Future<String?> showEditLabelDialog(
   return showDialog<String?>(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Edit Label'),
+      title: Text(AppLocalizations.of(context)!.editLabel),
       content: TextField(
         controller: controller,
         decoration: const InputDecoration(
@@ -119,14 +120,14 @@ Future<String?> showEditLabelDialog(
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(),
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         FilledButton(
           onPressed: () {
             final label = controller.text.trim();
             Navigator.of(context).pop(label.isEmpty ? '' : label);
           },
-          child: const Text('Save'),
+          child: Text(AppLocalizations.of(context)!.save),
         ),
       ],
     ),
@@ -140,12 +141,12 @@ Future<bool?> showRestoreConfirmation(
   return showDialog<bool>(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Restore Snapshot'),
+      title: Text(AppLocalizations.of(context)!.restoreSnapshot),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('This will overwrite your current local settings.'),
+          Text(AppLocalizations.of(context)!.restoreSnapshotOverwrite),
           const SizedBox(height: 16),
           if (metadata.label != null && metadata.label!.isNotEmpty)
             MetadataRow(label: 'Label', value: metadata.label!),
@@ -165,11 +166,11 @@ Future<bool?> showRestoreConfirmation(
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(false),
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         FilledButton(
           onPressed: () => Navigator.of(context).pop(true),
-          child: const Text('Restore'),
+          child: Text(AppLocalizations.of(context)!.restore),
         ),
       ],
     ),
@@ -187,19 +188,19 @@ Future<bool?> showDeleteConfirmation(
   return showDialog<bool>(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('Delete Snapshot'),
+      title: Text(AppLocalizations.of(context)!.deleteSnapshot),
       content: Text('Are you sure you want to delete $label?'),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(false),
-          child: const Text('Cancel'),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
         FilledButton(
           style: FilledButton.styleFrom(
             backgroundColor: Theme.of(context).colorScheme.error,
           ),
           onPressed: () => Navigator.of(context).pop(true),
-          child: const Text('Delete'),
+          child: Text(AppLocalizations.of(context)!.delete),
         ),
       ],
     ),

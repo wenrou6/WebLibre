@@ -26,6 +26,7 @@ import 'package:weblibre/features/bangs/data/models/bang_key.dart';
 import 'package:weblibre/features/bangs/domain/providers/bangs.dart';
 import 'package:weblibre/features/geckoview/features/browser/domain/providers.dart';
 import 'package:weblibre/presentation/widgets/failure_widget.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 class BangCategoriesScreen extends HookConsumerWidget {
   const BangCategoriesScreen({super.key});
@@ -35,7 +36,7 @@ class BangCategoriesScreen extends HookConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bang Categories'),
+        title: Text(AppLocalizations.of(context)!.bangCategories),
         actions: [
           IconButton(
             onPressed: () async {

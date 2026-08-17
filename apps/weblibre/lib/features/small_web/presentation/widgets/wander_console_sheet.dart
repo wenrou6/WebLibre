@@ -30,6 +30,7 @@ import 'package:weblibre/presentation/widgets/sliding_pill_toggle.dart';
 import 'package:weblibre/presentation/widgets/url_icon.dart';
 import 'package:weblibre/utils/form_validators.dart';
 import 'package:weblibre/utils/ui_helper.dart';
+import 'package:weblibre/l10n/app_localizations.dart';
 
 Future<SmallWebSheetRequest?> showWanderConsoleSheet(BuildContext context) {
   return showModalBottomSheet<SmallWebSheetRequest>(
@@ -341,7 +342,7 @@ class _WanderConsoleSheetError extends StatelessWidget {
             SizedBox(
               height: 240,
               child: FailureWidget(
-                title: 'Could not load Small Web session',
+                title: AppLocalizations.of(context)!.couldNotLoadSmallWebSession,
                 exception: error,
                 onRetry: onRetry,
               ),
