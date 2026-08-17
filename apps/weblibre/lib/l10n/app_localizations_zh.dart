@@ -3543,4 +3543,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get searchFailed => '搜索失败';
+
+  @override
+  String get gestureSuggestNextSubtitle => '同时显示其他可以完成的手势';
 }

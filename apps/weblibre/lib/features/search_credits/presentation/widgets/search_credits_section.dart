@@ -168,17 +168,17 @@ class SearchCreditsSection extends HookConsumerWidget {
               style: TextStyle(color: theme.colorScheme.error),
             ),
           ),
-        const Divider(height: 1),
+        Divider(height: 1),
         if (isEmpty)
           ListTile(
-            leading: const Icon(Icons.shopping_cart_outlined),
+            leading: Icon(Icons.shopping_cart_outlined),
             title: Text(AppLocalizations.of(context)!.buySearchPack),
             contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
             onTap: openBuyMore,
           )
         else ...[
           ListTile(
-            leading: const Icon(Icons.download_for_offline_outlined),
+            leading: Icon(Icons.download_for_offline_outlined),
             enabled: canIssue,
             title: Text(AppLocalizations.of(context)!.getTokens),
             subtitle: credits > 0
@@ -187,9 +187,9 @@ class SearchCreditsSection extends HookConsumerWidget {
             contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
             onTap: canIssue ? onIssue : null,
           ),
-          const Divider(height: 1),
+          Divider(height: 1),
           ListTile(
-            leading: const Icon(Icons.shopping_cart_outlined),
+            leading: Icon(Icons.shopping_cart_outlined),
             title: Text(AppLocalizations.of(context)!.buyMore),
             contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
             onTap: openBuyMore,

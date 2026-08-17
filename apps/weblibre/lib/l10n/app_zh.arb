@@ -2885,5 +2885,9 @@
   "searchFailed": "搜索失败",
   "@searchFailed": {
     "description": "UI string for searchFailed"
+  },
+  "gestureSuggestNextSubtitle": "同时显示其他可以完成的手势",
+  "@gestureSuggestNextSubtitle": {
+    "description": "UI string for gestureSuggestNextSubtitle"
   }
 }

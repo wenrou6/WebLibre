@@ -42,7 +42,7 @@ class _LatencyStatusChip extends StatelessWidget {
   final String tooltip;
   final bool isError;
 
-  const _LatencyStatusChip({
+  _LatencyStatusChip({
     required this.label,
     required this.tooltip,
     required this.isError,

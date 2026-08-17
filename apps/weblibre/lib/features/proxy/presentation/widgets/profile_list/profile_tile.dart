@@ -93,7 +93,7 @@ class ProfileTile extends ConsumerWidget {
             enabled: !isBusy,
             onSelected: (action) => _onAction(context, ref, action),
             itemBuilder: (context) => [
-              const PopupMenuItem(
+              PopupMenuItem(
                 value: ProfileAction.edit,
                 child: MenuRow(icon: Icons.edit_outlined, label: AppLocalizations.of(context)!.edit),
               ),
@@ -107,11 +107,11 @@ class ProfileTile extends ConsumerWidget {
                   label: AppLocalizations.of(context)!.testConnection,
                 ),
               ),
-              const PopupMenuItem(
+              PopupMenuItem(
                 value: ProfileAction.share,
                 child: MenuRow(icon: Icons.share_outlined, label: AppLocalizations.of(context)!.share),
               ),
-              const PopupMenuItem(
+              PopupMenuItem(
                 value: ProfileAction.delete,
                 child: MenuRow(icon: Icons.delete_outline, label: AppLocalizations.of(context)!.delete),
               ),

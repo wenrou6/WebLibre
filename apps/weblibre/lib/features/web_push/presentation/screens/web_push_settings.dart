@@ -61,11 +61,11 @@ const List<SettingsSectionDefinition> webPushSettingsSections = [
 ];
 
 class WebPushSettingsScreen extends StatelessWidget {
-  const WebPushSettingsScreen({super.key});
+  WebPushSettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SettingsDetailScaffold(
+    return SettingsDetailScaffold(
       title: AppLocalizations.of(context)!.webPushNotifications,
       subtitle: AppLocalizations.of(context)!.webPushNotificationsSubtitle,
       icon: MdiIcons.bellBadgeOutline,
@@ -319,7 +319,7 @@ class _NotificationPermissionTile extends HookConsumerWidget {
       data: (isGranted) {
         if (isGranted) {
           return ListTile(
-            leading: const Icon(MdiIcons.bellCheckOutline),
+            leading: Icon(MdiIcons.bellCheckOutline),
             title: Text(AppLocalizations.of(context)!.notificationPermission),
             subtitle: Text(AppLocalizations.of(context)!.granted),
           );
@@ -395,14 +395,14 @@ class _SubscriptionList extends HookConsumerWidget {
         title: Text('Loading subscriptions…'),
       ),
       error: (error, _) => ListTile(
-        leading: const Icon(MdiIcons.alertCircleOutline),
-        title: const Text('Could not read subscriptions'),
+        leading: Icon(MdiIcons.alertCircleOutline),
+        title: Text('Could not read subscriptions'),
         subtitle: Text('$error'),
       ),
       data: (items) {
         if (items.isEmpty) {
           return ListTile(
-            leading: const Icon(MdiIcons.webOff),
+            leading: Icon(MdiIcons.webOff),
             title: Text(AppLocalizations.of(context)!.noSiteSubscriptions),
             subtitle: const Text(
               'Websites you allow to send notifications will appear here.',

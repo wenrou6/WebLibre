@@ -70,9 +70,9 @@ class FeedEditScreen extends HookConsumerWidget {
       data: (initialFeed) {
         if (initialFeed == null) {
           return Scaffold(
-            key: const ValueKey('data'),
+            key: ValueKey('data'),
             appBar: AppBar(),
-            body: const Center(
+            body: Center(
               child: FailureWidget(title: AppLocalizations.of(context)!.failedToLoadFeed),
             ),
           );
@@ -81,7 +81,7 @@ class FeedEditScreen extends HookConsumerWidget {
         return _FeedEditContent(mode: _mode, initialFeed: initialFeed);
       },
       error: (error, stackTrace) => Scaffold(
-        key: const ValueKey('error'),
+        key: ValueKey('error'),
         appBar: AppBar(),
         body: Center(
           child: FailureWidget(title: AppLocalizations.of(context)!.failedToLoadFeed, exception: error),

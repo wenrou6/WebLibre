@@ -101,7 +101,7 @@ class WebSearchResultsSection extends HookConsumerWidget {
     final state = ref.watch(metaSearchControllerProvider);
 
     if (state.status == WebSearchStatus.needsCredits) {
-      return const SliverToBoxAdapter(child: _NeedsCredits());
+      return SliverToBoxAdapter(child: _NeedsCredits());
     }
 
     if (state.status == WebSearchStatus.error && state.results.isEmpty) {
@@ -117,7 +117,7 @@ class WebSearchResultsSection extends HookConsumerWidget {
     }
 
     if (state.status == WebSearchStatus.submitting && state.results.isEmpty) {
-      return const SliverToBoxAdapter(
+      return SliverToBoxAdapter(
         child: Padding(
           padding: EdgeInsets.all(24),
           child: Column(
@@ -282,13 +282,13 @@ class _NeedsCredits extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
+          Text(
             'No search credits or tokens are available for a new web search.',
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           FilledButton.icon(
-            icon: const Icon(Icons.shopping_cart_outlined),
+            icon: Icon(Icons.shopping_cart_outlined),
             label: Text(AppLocalizations.of(context)!.buySearchPack),
             onPressed: () async {
               await launchUrl(

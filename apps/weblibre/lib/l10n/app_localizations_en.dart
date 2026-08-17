@@ -3745,4 +3745,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get searchFailed => 'Search failed';
+
+  @override
+  String get gestureSuggestNextSubtitle =>
+      'Also show the other gestures you can complete';
 }

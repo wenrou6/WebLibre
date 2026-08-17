@@ -103,12 +103,12 @@ class AddonListingCard extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                     ],
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8),
                     Wrap(
                       spacing: 8,
                       children: [
                         if (listing.promoted == AddonStorePromoted.recommended)
-                          const Chip(
+                          Chip(
                             avatar: Icon(Icons.verified, size: 16),
                             label: Text(AppLocalizations.of(context)!.recommended),
                           ),
@@ -121,13 +121,13 @@ class AddonListingCard extends StatelessWidget {
                           ),
                         if (listing.averageDailyUsers != null)
                           Chip(
-                            avatar: const Icon(Icons.group_outlined, size: 16),
+                            avatar: Icon(Icons.group_outlined, size: 16),
                             label: Text(
                               formatCompactNumber(listing.averageDailyUsers!),
                             ),
                           ),
                         if (isInstalled)
-                          const Chip(
+                          Chip(
                             avatar: Icon(Icons.check, size: 16),
                             label: Text(AppLocalizations.of(context)!.installed),
                           ),

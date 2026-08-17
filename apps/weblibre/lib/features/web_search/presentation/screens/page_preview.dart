@@ -39,7 +39,7 @@ class PagePreviewScreen extends ConsumerWidget {
     if (document == null) {
       return Scaffold(
         appBar: AppBar(title: Text(title)),
-        body: const FailureWidget(
+        body: FailureWidget(
           title: AppLocalizations.of(context)!.previewUnavailable,
           exception:
               'Fetch the page from the result list before opening a preview.',

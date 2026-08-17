@@ -6949,6 +6949,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Search failed'**
   String get searchFailed;
+
+  /// UI string for gestureSuggestNextSubtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Also show the other gestures you can complete'**
+  String get gestureSuggestNextSubtitle;
 }
 
 class _AppLocalizationsDelegate

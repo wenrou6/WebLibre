@@ -104,7 +104,7 @@ class TorProfileTile extends ConsumerWidget {
               }
             },
             itemBuilder: (context) => [
-              const PopupMenuItem(
+              PopupMenuItem(
                 value: TorAction.edit,
                 child: MenuRow(icon: Icons.edit_outlined, label: AppLocalizations.of(context)!.edit),
               ),

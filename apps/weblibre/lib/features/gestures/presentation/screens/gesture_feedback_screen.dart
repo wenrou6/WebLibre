@@ -24,7 +24,7 @@ import 'package:weblibre/features/gestures/domain/repositories/gesture_settings.
 import 'package:weblibre/features/settings/presentation/widgets/settings_detail.dart';
 import 'package:weblibre/l10n/app_localizations.dart';
 
-const List<SettingsSectionDefinition> _feedbackSections = [
+List<SettingsSectionDefinition> _feedbackSections(BuildContext context) => [
   SettingsSectionDefinition(
     title: AppLocalizations.of(context)!.gestureOverlay,
     entries: [
@@ -34,8 +34,8 @@ const List<SettingsSectionDefinition> _feedbackSections = [
         child: _LiveFeedbackTile(),
       ),
       SettingsEntryDefinition(
-        title: 'Suggest next',
-        subtitle: 'Also show the other gestures you can complete',
+        title: AppLocalizations.of(context)!.gestureSuggestNext,
+        subtitle: AppLocalizations.of(context)!.gestureSuggestNextSubtitle,
         child: _SuggestNextTile(),
       ),
       SettingsEntryDefinition(
@@ -57,7 +57,7 @@ class GestureFeedbackScreen extends StatelessWidget {
       title: 'Feedback',
       subtitle: 'Live overlay and gesture suggestions.',
       icon: Icons.bolt_outlined,
-      sections: _feedbackSections,
+      sections: _feedbackSections(context),
     );
   }
 }
@@ -152,7 +152,7 @@ class _SuggestAfterSection extends HookConsumerWidget {
         ),
         const Padding(
           padding: EdgeInsets.fromLTRB(72, 0, 16, 8),
-          child: Text('Number of strokes to draw before suggestions appear.'),
+          child: Text(AppLocalizations.of(context)!.gestureSuggestNextSubtitle),
         ),
       ],
     );
