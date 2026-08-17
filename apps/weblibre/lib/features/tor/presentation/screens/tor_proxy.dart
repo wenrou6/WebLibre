@@ -37,7 +37,7 @@ import 'package:weblibre/presentation/icons/tor_icons.dart';
 import 'package:weblibre/utils/ui_helper.dart';
 import 'package:weblibre/l10n/app_localizations.dart';
 
-const List<SettingsSectionDefinition> torProxySettingsSections = [
+List<SettingsSectionDefinition> torProxySettingsSections(BuildContext context) => [
   SettingsSectionDefinition(
     title: 'Service',
     keywords: ['power', 'start', 'stop'],
@@ -157,7 +157,7 @@ class TorProxyScreen extends HookConsumerWidget {
       subtitle:
           'Onion routing, pluggable transports, bridges and country restrictions.',
       icon: TorIcons.onionAlt,
-      sections: torProxySettingsSections,
+      sections: torProxySettingsSections(context),
     );
   }
 }
@@ -342,7 +342,7 @@ class _TransportSection extends ConsumerWidget {
     );
 
     if (torSettings.config == TorConnectionConfig.auto) {
-      return const ListTile(
+      return ListTile(
         leading: Icon(Icons.info_outline),
         title: Text(AppLocalizations.of(context)!.torAutoConfigured),
         subtitle: Text(

@@ -161,7 +161,7 @@ _CategoryGroups _buildCategories(BuildContext context) {
       subtitle: l10n.notificationsSettingsSubtitle,
       icon: MdiIcons.bellBadgeOutline,
       keywords: const ['push', 'unifiedpush', 'ntfy', 'distributor'],
-      sections: webPushSettingsSections,
+      sections: webPushSettingsSections(context),
       onTap: (context) => WebPushSettingsRoute().push(context),
     ),
     _SettingsCategoryDefinition(

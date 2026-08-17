@@ -248,7 +248,7 @@ class ExperimentalSettingsRoute extends GoRouteData
 class WebPushSettingsRoute extends GoRouteData with $WebPushSettingsRoute {
   @override
   Widget build(BuildContext context, GoRouterState state) {
-    return const WebPushSettingsScreen();
+    return WebPushSettingsScreen();
   }
 }
 

@@ -50,13 +50,13 @@ class _LatencyStatusChip extends StatelessWidget {
 
   const _LatencyStatusChip.loading()
     : this(
-        label: AppLocalizations.of(context)!.testing,
+        label: 'Testing...',
         tooltip: 'Latency test running',
         isError: false,
       );
 
   _LatencyStatusChip.error(Object error)
-    : this(label: AppLocalizations.of(context)!.failed, tooltip: error.toString(), isError: true);
+    : this(label: 'Failed', tooltip: error.toString(), isError: true);
 
   @override
   Widget build(BuildContext context) {

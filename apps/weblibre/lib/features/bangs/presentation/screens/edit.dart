@@ -160,7 +160,7 @@ class EditBangScreen extends HookConsumerWidget {
               children: [
                 TextFormField(
                   controller: nameTextController,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     label: Text(AppLocalizations.of(context)!.name),
                     helper: Text(
                       'The name of the website associated with the bang',
@@ -172,7 +172,7 @@ class EditBangScreen extends HookConsumerWidget {
                 const SizedBox(height: 16),
                 TextFormField(
                   controller: triggerTextController,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     label: Text(AppLocalizations.of(context)!.trigger),
                     helper: Text(
                       'The specific trigger word or phrase used to invoke the bang.',
@@ -185,7 +185,7 @@ class EditBangScreen extends HookConsumerWidget {
                 TextFormField(
                   controller: urlTextController,
                   keyboardType: TextInputType.url,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     label: Text(AppLocalizations.of(context)!.url),
                     helper: Text(
                       "The URL template to use when the bang is invoked, where `{{{s}}}` is replaced by the user's query.",

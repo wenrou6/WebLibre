@@ -27,7 +27,7 @@ import 'package:weblibre/features/settings/presentation/widgets/settings_detail.
 import 'package:weblibre/features/user/data/models/proxy_routing_settings.dart';
 import 'package:weblibre/features/user/domain/repositories/proxy_routing_settings.dart';
 
-const List<SettingsSectionDefinition> proxyRoutingSettingsSections = [
+List<SettingsSectionDefinition> proxyRoutingSettingsSections(BuildContext context) => [
   SettingsSectionDefinition(
     title: 'Regular Tabs',
     keywords: ['routing'],
@@ -69,7 +69,7 @@ class ProxyRoutingSettingsScreen extends StatelessWidget {
       title: 'Proxy Routing',
       subtitle: 'Choose which proxy carries regular and private tab traffic.',
       icon: Icons.route_outlined,
-      sections: proxyRoutingSettingsSections,
+      sections: proxyRoutingSettingsSections(context),
     );
   }
 }

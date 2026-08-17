@@ -29,7 +29,7 @@ import 'package:weblibre/l10n/app_localizations.dart';
 import 'package:weblibre/l10n/user_flow_localizations.dart';
 import 'package:weblibre/utils/ui_helper.dart';
 
-const List<SettingsSectionDefinition> webPushSettingsSections = [
+List<SettingsSectionDefinition> webPushSettingsSections(BuildContext context) => [
   SettingsSectionDefinition(
     title: AppLocalizations.of(context)!.delivery,
     entries: [
@@ -69,7 +69,7 @@ class WebPushSettingsScreen extends StatelessWidget {
       title: AppLocalizations.of(context)!.webPushNotifications,
       subtitle: AppLocalizations.of(context)!.webPushNotificationsSubtitle,
       icon: MdiIcons.bellBadgeOutline,
-      sections: webPushSettingsSections,
+      sections: webPushSettingsSections(context),
     );
   }
 }
